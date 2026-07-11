@@ -40,6 +40,12 @@ public class PlayerDataSO : ScriptableObject
         triggers = data.triggers;
     }
 
+    public void AddToInventory(string item)
+    {
+        Debug.Log($"adding {item} to inventory");
+        Inventory.Add(item);
+    }
+
     PlayerData SOToData()
     {
         PlayerData info = new();
