@@ -9,16 +9,15 @@ public class Collectible : MonoBehaviour
     // be added to the inventory. Once the object is clicked on, `Collect` can be 
     // triggered by registering it to the onClick of the object.
 
-    public PlayerDataSO PDSO; 
+    [SerializeField]
+    private CollectibleType type;
+    
+    public PlayerDataSO PDSO;
 
     public void Collect()
     {
         Debug.Log("collect triggered");
-
-        Image image = GetComponent<Image>();
-        string imageName = image.sprite.name;
-        PDSO.AddToInventory(imageName);
-        
+        PDSO.AddToInventory(type.ToString());
         gameObject.SetActive(false);
     }
 }
