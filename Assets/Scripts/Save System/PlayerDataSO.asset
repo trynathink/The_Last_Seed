@@ -15,5 +15,7 @@ MonoBehaviour:
   SaveFile: 
   PlayerLocation: 
   Fire: 0
-  Inventory: []
+  Inventory:
+  - Crowbar
+  - Blanket
   triggers: []
