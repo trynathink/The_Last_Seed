@@ -25,4 +25,7 @@ public class PlayerData
     // example could be if the player has finished a certain puzzle or reached a certain dialogue point
     // If the player has not met a trigger then it isn't in the list
     public List<string> triggers;
+
+    // this maps directly to a collectibleType that has been equipped by the player
+    public string equippedItem;
 }
