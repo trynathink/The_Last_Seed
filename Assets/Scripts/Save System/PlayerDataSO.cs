@@ -6,7 +6,7 @@ public class PlayerDataSO : ScriptableObject
 {
     SaveSystem Saver = new SaveSystem();
 
-    public string SaveFile, PlayerLocation;
+    public string SaveFile, PlayerLocation, equippedItem;
     public float Fire;
     public List<string> Inventory;
     public List<string> triggers;
@@ -38,12 +38,18 @@ public class PlayerDataSO : ScriptableObject
         Fire = data.Fire;
         Inventory = data.Inventory;
         triggers = data.triggers;
+        equippedItem = data.equippedItem;
     }
 
     public void AddToInventory(string item)
     {
         Debug.Log($"adding {item} to inventory");
         Inventory.Add(item);
+    }
+
+    public void SetEquipped(string item)
+    {
+        equippedItem = item;
     }
 
     PlayerData SOToData()
@@ -55,6 +61,7 @@ public class PlayerDataSO : ScriptableObject
         info.Fire = Fire;
         info.Inventory = Inventory;
         info.triggers = triggers;
+        info.equippedItem = equippedItem;
 
         return info;
     }
