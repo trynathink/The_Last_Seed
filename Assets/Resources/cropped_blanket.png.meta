@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b607faebce4758d2284995f73d2cfc30
+guid: 62f58c71d18ac760489eb3866d203e9a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3448481294604292008
-    second: cropped_crowbar_0
+      213: 1838329045250030594
+    second: cropped_blanket_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cropped_crowbar_0
+      name: cropped_blanket_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 5
-        width: 227
-        height: 296
+        x: 4
+        y: 3
+        width: 789
+        height: 353
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 850388c88888420d0800000000000000
-      internalID: -3448481294604292008
+      spriteID: 20c396ad68e038910800000000000000
+      internalID: 1838329045250030594
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cropped_crowbar_0: -3448481294604292008
+      cropped_blanket_0: 1838329045250030594
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
