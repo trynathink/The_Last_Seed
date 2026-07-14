@@ -21,4 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/A1 Kitchen.unity
     guid: 576ccb1900fdbde429ffc47f1a58a0cb
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 8513d655cc69b7b4eaadc65c0701f2d5, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
