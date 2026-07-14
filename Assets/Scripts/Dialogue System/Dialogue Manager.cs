@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -82,7 +83,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             Inner.GetComponent<Image>().enabled = true;
 
             Inner.GetComponent<Animator>().SetTrigger("Open");
-            
+
             var t = Inner.transform.GetChild(0).GetComponent<TMP_Text>();
             t.enabled = true;
             t.text = givenscript.Lines[0];
@@ -90,6 +91,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             TalkingToMyself();
         }
     }
+
 
     void TalkingToMyself()
     {

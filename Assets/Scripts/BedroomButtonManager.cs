@@ -11,16 +11,12 @@ public class BedroomButtonManager : MonoBehaviour
     public PlayerDataSO PDSO;
     private bool isAlarmOff = false;
 
+    public ScriptsSO AlarmOn, AlarmOff;
+
     public void BedroomWindow()
     {
         Debug.Log("bedroom window clicked");
         NextScene("A1 Bed Window");
-    }
-
-    public void Blanket()
-    {
-        Debug.Log("blanket clicked");
-        // will add inventory code here and maybe make this more general later
     }
 
     public void Clock()
@@ -29,7 +25,7 @@ public class BedroomButtonManager : MonoBehaviour
 
         if (!isAlarmOff)
         {
-            // turn alarm off
+            isAlarmOff = true;
         }
     }
 
@@ -37,7 +33,8 @@ public class BedroomButtonManager : MonoBehaviour
     {
         if(!isAlarmOff)
         {
-            // disable alarm dialogue
+            GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>().SetLines(AlarmOn);
+
             return;
         }
 
