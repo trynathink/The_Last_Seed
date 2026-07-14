@@ -38,12 +38,6 @@ public class InventoryManager : MonoBehaviour
         inventoryPanel.SetActive(isOpening);
     }
 
-    public void SetSelectedItem(CollectibleType type)
-    {
-        Debug.Log($"Equipped {type}");
-        PDSO.SetEquipped(type.ToString());
-    }
-
     private void ClearInventory()
     {
         foreach (Transform child in itemContainer)
@@ -71,23 +65,18 @@ public class InventoryManager : MonoBehaviour
     {
         Sprite sprite = spriteMap[collectible];
 
-        GameObject gameObject = new GameObject(
+        GameObject iconObject = new GameObject(
             collectible.ToString(),
             typeof(RectTransform),
             typeof(CanvasRenderer),
-            typeof(Image),
-            typeof(InventoryItem)
+            typeof(Image)
         );
 
-        gameObject.transform.SetParent(itemContainer, false);
+        iconObject.transform.SetParent(itemContainer, false);
 
-        Image image = gameObject.GetComponent<Image>();
+        Image image = iconObject.GetComponent<Image>();
         image.sprite = sprite;
         image.preserveAspect = true;
-        image.raycastTarget = true;
-
-        InventoryItem item = gameObject.GetComponent<InventoryItem>();
-        item.Initialize(collectible, this);
     }
 
     private void PopulateSpriteMap()
