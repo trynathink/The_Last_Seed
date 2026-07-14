@@ -10,6 +10,7 @@ public class BedroomButtonManager : MonoBehaviour
 
     [SerializeField] private PlayerDataSO PDSO;
     [SerializeField] private GameObject blanket;
+	[SerializeField] private AudioSource alarm;
 
     private bool isAlarmOff = false;
 
@@ -27,8 +28,7 @@ public class BedroomButtonManager : MonoBehaviour
 	public void Clock()
 	{
 		isAlarmOff = true;
-		Debug.Log("clock clicked");
-		// TODO: get rid of sound
+		alarm.Stop();
 	}
 
 	public void OnClockClick()
