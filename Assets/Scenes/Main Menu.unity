@@ -1810,6 +1810,7 @@ GameObject:
   - component: {fileID: 903452526}
   - component: {fileID: 903452525}
   - component: {fileID: 903452527}
+  - component: {fileID: 903452528}
   m_Layer: 0
   m_Name: SFX
   m_TagString: Untagged
@@ -1944,6 +1945,20 @@ MonoBehaviour:
   clickSound: {fileID: 8300000, guid: 26090a3017e178643b33b6fb447fa55e, type: 3}
   source: {fileID: 903452525}
   canvas: {fileID: 956225477}
+--- !u!114 &903452528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903452524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff981337ddc76494f910b60121323ab5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollectibleSFX
+  source: {fileID: 903452525}
+  collectSound: {fileID: 8300000, guid: 6348178c14f9e9c468de8d33a33cb3f6, type: 3}
 --- !u!1 &956225477
 GameObject:
   m_ObjectHideFlags: 0
