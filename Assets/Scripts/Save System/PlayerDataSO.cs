@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Gaurav Singh
+
 [CreateAssetMenu(fileName = "PlayerDataSO", menuName = "Scriptable Objects/PlayerDataSO")]
 public class PlayerDataSO : ScriptableObject
 {
@@ -62,5 +64,10 @@ public class PlayerDataSO : ScriptableObject
     public bool CheckSave(string FileName)
     {
         return Saver.CheckData<PlayerData>($"/{FileName}.json");
+    }
+
+    public void DeleteSave(string FileName)
+    {
+        Saver.DeleteData<PlayerData>($"/{FileName}.json");
     }
 }
