@@ -65,7 +65,6 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         // Reseting Vars
         LineNum = 0;
         script = givenscript;
-        Dia = true;
         DiaImg.enabled = true;
         //SceneChange = string.Empty;
 
@@ -81,17 +80,23 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             Self = true;
 
             Inner.GetComponent<Image>().enabled = true;
-
-            Inner.GetComponent<Animator>().SetTrigger("Open");
-
-            var t = Inner.transform.GetChild(0).GetComponent<TMP_Text>();
-            t.enabled = true;
-            t.text = givenscript.Lines[0];
-
-            TalkingToMyself();
+            
+            var anim = Inner.GetComponent<Animator>();
+            anim.SetTrigger("Open");
+            StartCoroutine(AnimWait(anim.GetCurrentAnimatorStateInfo(0).length));
         }
     }
 
+    IEnumerator AnimWait(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        Dia = true;
+
+        var t = Inner.transform.GetChild(0).GetComponent<TMP_Text>();
+        t.enabled = true;
+        t.text = script.Lines[0];
+    }
 
     void TalkingToMyself()
     {
@@ -117,6 +122,11 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             {
                 CS.TriggerChoice(choiceTrigger);
             }*/
+        }
+
+        if (script.itemGain != string.Empty)
+        {
+            GameObject.Find(script.itemGain).GetComponent<Collectible>().Collect();
         }
 
         

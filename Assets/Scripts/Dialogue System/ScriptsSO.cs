@@ -9,7 +9,7 @@ public class ScriptsSO : ScriptableObject
     [SerializeReference]
     public List<string> Lines;
 
-
+    public string itemGain;
 
     public string SceneChange;
 }

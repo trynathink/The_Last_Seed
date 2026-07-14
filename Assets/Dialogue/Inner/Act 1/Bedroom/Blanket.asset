@@ -16,4 +16,5 @@ MonoBehaviour:
   Lines:
   - "my special blanket\u2026"
   - maybe I should take it with me
+  itemGain: Blanket
   SceneChange: 

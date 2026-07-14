@@ -1061,18 +1061,6 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 702136763}
-        m_TargetAssemblyTypeName: Collectible, Assembly-CSharp
-        m_MethodName: Collect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 936069334}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: SetLines
@@ -2498,6 +2486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BedroomButtonManager
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  blanket: {fileID: 0}
+  alarm: {fileID: 0}
   AlarmOn: {fileID: 11400000, guid: 5d7ce30a60904344cb14bda9fceda9c6, type: 2}
   AlarmOff: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
@@ -2505,6 +2495,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 328684707}
-  - {fileID: 1222818326}
-  - {fileID: 1247774286}
   - {fileID: 2140936947}

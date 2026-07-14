@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayerDataSO
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDataSO
   SaveFile: 
-  PlayerLocation: 
+  PlayerLocation: A1 Bedroom
   Fire: 0
   Inventory:
   - Blanket

@@ -18,6 +18,14 @@ public class Collectible : MonoBehaviour
     [SerializeField]
     private PlayerDataSO PDSO;
 
+    private void OnEnable()
+    {
+        if (PDSO.Inventory.Contains(type.ToString()))
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
     public void Collect()
     {
         Debug.Log("collect triggered");

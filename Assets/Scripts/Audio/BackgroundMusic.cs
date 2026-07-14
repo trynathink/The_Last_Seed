@@ -12,6 +12,8 @@ public class BackgroundMusic : MonoBehaviour
 	[SerializeField] private List<AudioClip> backgroundSongs;
 	[SerializeField] private AudioSource source;
 
+	static GameObject BGsfx;
+
 	private void OnEnable()
 	{
 		SceneManager.sceneLoaded += OnSceneLoaded;
@@ -19,8 +21,17 @@ public class BackgroundMusic : MonoBehaviour
 
 	private void Awake()
 	{
-		DontDestroyOnLoad(gameObject);
-	}
+        DontDestroyOnLoad(gameObject);
+
+        if (BGsfx == null)
+        {
+            BGsfx = gameObject;
+        }
+        else
+        {
+            Object.Destroy(gameObject);
+        }
+    }
 
 	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
