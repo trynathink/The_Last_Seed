@@ -16,6 +16,5 @@ MonoBehaviour:
   PlayerLocation: 
   Fire: 0
   Inventory:
-  - Crowbar
   - Blanket
   triggers: []

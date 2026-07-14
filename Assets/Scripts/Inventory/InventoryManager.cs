@@ -13,16 +13,26 @@ public class InventoryManager : MonoBehaviour
     private GameObject inventoryPanel;
     private Transform itemContainer;
 
+    [SerializeField]
+    RuntimeAnimatorController closed, open;
+
+    [SerializeField]
+    Animator anim;
+
     public PlayerDataSO PDSO;
 
     private Dictionary<CollectibleType, Sprite> spriteMap;
 
     private void Awake()
     {
+        anim = transform.GetChild(0).GetComponent<Animator>();
+
+        anim.runtimeAnimatorController = closed;
+
         inventoryPanel.SetActive(false);
         spriteMap = new Dictionary<CollectibleType, Sprite>();
         itemContainer = inventoryPanel.transform.Find("Panel");
-        PopulateSpriteMap();
+        //PopulateSpriteMap();
     }
 
     public void ToggleInventory()
@@ -31,11 +41,39 @@ public class InventoryManager : MonoBehaviour
         bool isOpening = !inventoryPanel.activeSelf;
         if (isOpening)
         {
+            GameObject.Find("Inventory Image").GetComponent<Image>().enabled = true;
+            anim.runtimeAnimatorController = open;
+
             // clear and populate inventory
-            ClearInventory();
-            PopulateInventory();
+            //ClearInventory();
+            //PopulateInventory();
+
+            ItemsHeld();
+        }
+        else
+        {
+            GameObject.Find("Inventory Image").GetComponent<Image>().enabled = false;
+
+            anim.runtimeAnimatorController = closed;
         }
         inventoryPanel.SetActive(isOpening);
+    }
+
+    void ItemsHeld()
+    {
+        foreach (Transform child in itemContainer)
+        {
+            var item = child.GetComponent<Image>();
+
+            if (PDSO.Inventory.Contains(child.name))
+            {
+                item.enabled = true;
+            }
+            else
+            {
+                item.enabled= false;
+            }
+        }
     }
 
     private void ClearInventory()
