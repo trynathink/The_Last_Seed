@@ -8,7 +8,10 @@ public class BedroomButtonManager : MonoBehaviour
     // This class is responsible for handling all button interactions
     // in the bedroom scene
 
-    public PlayerDataSO PDSO;
+    [SerializeField] private PlayerDataSO PDSO;
+    [SerializeField] private GameObject blanket;
+	[SerializeField] private AudioSource alarm;
+
     private bool isAlarmOff = false;
 
     public ScriptsSO AlarmOn, AlarmOff;
@@ -19,15 +22,25 @@ public class BedroomButtonManager : MonoBehaviour
         NextScene("A1 Bed Window");
     }
 
-    public void Clock()
+    public void Blanket()
     {
-        Debug.Log("clock clicked");
-
-        if (!isAlarmOff)
-        {
-            isAlarmOff = true;
-        }
+		PDSO.Inventory.Add(blanket.name);
     }
+
+	public void Clock()
+	{
+		isAlarmOff = true;
+		alarm.Stop();
+	}
+
+	public void OnClockClick()
+	{
+		if (!isAlarmOff)
+		{
+			Clock();
+			PDSO.triggers.Add("Clock");
+		}
+	}
 
     public void ExitBedroom()
     {
