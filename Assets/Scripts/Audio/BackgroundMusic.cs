@@ -24,6 +24,7 @@ public class BackgroundMusic : MonoBehaviour
 
 	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
+		// TODO: need a way to use the same song uninterrupted across multiple scenes, for now this is good enough
 		if (scene.buildIndex < backgroundSongs.Count)
 		{
 			source.clip = backgroundSongs[scene.buildIndex];

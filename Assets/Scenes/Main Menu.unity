@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundMusic
   backgroundSongs:
+  - {fileID: 8300000, guid: 2aa08ecfd2fb75040b2cb188b5e13404, type: 3}
   - {fileID: 8300000, guid: f0603736f1efd12468cd9ffc211faf30, type: 3}
   source: {fileID: 820863}
 --- !u!4 &820865
