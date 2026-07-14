@@ -1,14 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 // Alexander Gottuso
 
 /* Put this in an empty game object in each scene that the player can move to
  * so that we can correctly load the state of that scene based off what the player has already done */
 
-public class PlayerMovement : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
 	[SerializeField] private PlayerDataSO data;
+	[SerializeField] private MonoBehaviour sceneLogic;
 	
 	private void OnEnable()
 	{
@@ -30,10 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
 		foreach (string trigger in data.triggers)
 		{
-			if (GameObject.Find(trigger).TryGetComponent(out ITriggerObject obj))
-			{
-				obj.TriggerEffect();
-			}
+			sceneLogic.Invoke(trigger, 0);
 		}
 	}
 
