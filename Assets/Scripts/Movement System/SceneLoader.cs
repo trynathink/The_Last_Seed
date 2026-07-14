@@ -10,6 +10,7 @@ using System.Collections.Generic;
 public class SceneLoader : MonoBehaviour
 {
 	[SerializeField] private PlayerDataSO data;
+	[SerializeField] private MonoBehaviour sceneLogic;
 	
 	private void OnEnable()
 	{
@@ -31,19 +32,8 @@ public class SceneLoader : MonoBehaviour
 
 		foreach (string trigger in data.triggers)
 		{
-			Invoke(trigger, 0);
+			sceneLogic.Invoke(trigger, 0);
 		}
-	}
-
-	private void CuckooClockOff()
-	{
-		Debug.Log("Turned off!");
-	}
-
-	private void OnCuckooClockClick()
-	{
-		CuckooClockOff();
-		data.Inventory.Add("CuckooClockOff");
 	}
 
 	private void OnDisable()
