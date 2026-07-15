@@ -30,7 +30,7 @@ public class Collectible : MonoBehaviour
     {
         Debug.Log("collect triggered");
         PDSO.AddToInventory(type.ToString());
-        GetComponent<Image>().enabled = false;
-		OnCollect?.Invoke();
+        OnCollect?.Invoke();
+        gameObject.SetActive(false);
     }
 }

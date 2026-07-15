@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: PlayerDataSO
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDataSO
   SaveFile: Save1
-  PlayerLocation: A1 Living Room
+  PlayerLocation: A1 Kitchen
   HeldItem: 
   Fire: 0
   Inventory:
   - Crowbar
   triggers:
-  - Clock
   - Goal Heard

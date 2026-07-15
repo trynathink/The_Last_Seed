@@ -82,6 +82,8 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         DiaImg.enabled = true;
         ResetChoice();
 
+        GameObject.Find("Inventory").GetComponent<InventoryManager>().HoldItem("");
+
         // Finding Which Textbox to use.
         if (givenscript.Character != string.Empty)
         {

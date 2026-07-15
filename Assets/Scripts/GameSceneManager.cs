@@ -13,6 +13,7 @@ public class GameSceneManager : MonoBehaviour
     PlayerDataSO PDSO;
 
     DialogueManager DM;
+    InventoryManager IM;
     MoveSFX MSFX;
 
     [SerializeField] private AudioSource alarm;
@@ -25,6 +26,7 @@ public class GameSceneManager : MonoBehaviour
     private void OnEnable()
     {
         DM = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
+        IM = GameObject.Find("Inventory").GetComponent<InventoryManager>();
         MSFX = GameObject.Find("SFX").GetComponent<MoveSFX>();
 
         switch (SceneManager.GetActiveScene().name)
@@ -170,6 +172,7 @@ public class GameSceneManager : MonoBehaviour
             case "":
                 GameObject.Find("Closet Closed").GetComponent<Image>().enabled = !open;
                 GameObject.Find("Closet Open").GetComponent<Image>().enabled = open;
+                GameObject.Find("Close Open Hitbox").GetComponent<Image>().enabled = open;
 
                 MSFX.Play();
                 break;
