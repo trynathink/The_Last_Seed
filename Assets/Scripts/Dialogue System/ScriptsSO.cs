@@ -10,8 +10,8 @@ public class ScriptsSO : ScriptableObject
     public List<string> Lines;
 
     // Defunct
-    [SerializeField]
-    public List<int> NPCplacement, WordCount;
+    /*[SerializeField]
+    public List<int> NPCplacement, WordCount;*/
 
     public string trigger, itemGain;
 

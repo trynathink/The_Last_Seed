@@ -14,13 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Bear
   Lines:
-  - Cough
-  - Cough
-  - Cough
-  - Hi
-  - Dear
-  - Thanks
-  NPCplacement: 000000000400000008000000010000000400000008000000
-  WordCount: 030000000200000001000000
+  - '*cough cough*  hi dear...'
+  trigger: 
   itemGain: 
   SceneChange: 
+  choice: {fileID: 0}

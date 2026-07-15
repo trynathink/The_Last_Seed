@@ -37,6 +37,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         Choice = transform.Find("Choice Text").gameObject;
     }
 
+    // switch to IA
     public void OnPointerClick(PointerEventData pointerEventData)
     {
         if (Dia)
@@ -88,7 +89,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 
             Dia = true;
 
-            NPCSpeak(0);
+            NPCSpeak();
         }
         else
         {
@@ -98,11 +99,11 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             
             var anim = Inner.GetComponent<Animator>();
             anim.SetTrigger("Open");
-            StartCoroutine(AnimWait(anim.GetCurrentAnimatorStateInfo(0).length));
+            StartCoroutine(InnerMonoAnimWait(anim.GetCurrentAnimatorStateInfo(0).length));
         }
     }
 
-    IEnumerator AnimWait(float time)
+    IEnumerator InnerMonoAnimWait(float time)
     {
         yield return new WaitForSeconds(time);
 
@@ -123,20 +124,23 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 
     // Remove wN
     // Use LineNum to switch to next line
-    void NPCSpeak(int wN)
+    // Method that gets called to switch to next line
+    void NPCSpeak()
     {
         NPCReset();
 
         string line = script.Lines[LineNum];
 
-        for (int i = wN; i < wN+script.WordCount[LineNum]; i++)
+        /*for (int i = wN; i < wN+script.WordCount[LineNum]; i++)
         {
             NPCWord(script.NPCplacement[i], script.Lines[i]);
 
             WordNum = i+1;
-        }
+        }*/
     }
 
+    // Vector 2 & string word
+    // Method that places the strips of paper
     void NPCWord(int placement, string word)
     {
         var bubble = NPC.transform.GetChild(placement);
@@ -147,6 +151,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         bubble.GetChild(0).GetComponent<TMP_Text>().text = word;
     }
 
+    // Reset
     void NPCReset()
     {
         foreach(Transform bubble in NPC.transform)
