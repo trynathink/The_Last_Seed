@@ -16,5 +16,9 @@ MonoBehaviour:
   Lines:
   - The fires are growing outside
   - I should find another way out.
+  NPCplacement: 
+  WordCount: 
+  trigger: Front Door
   itemGain: 
   SceneChange: 
+  choice: {fileID: 0}

@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7b060ba08e6b440847ecdea19e04b1, type: 3}
   m_Name: PlayerDataSO
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDataSO
-  SaveFile: Save3
-  PlayerLocation: A1 Bedroom
+  SaveFile: Save1
+  PlayerLocation: A1 Living Room
   HeldItem: 
   Fire: 0
-  Inventory: []
+  Inventory:
+  - Crowbar
   triggers:
   - Clock
+  - Goal Heard

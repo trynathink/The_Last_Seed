@@ -175,6 +175,11 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             GameObject.Find("Canvas").GetComponent<GameSceneManager>().addTrigger(script.trigger);
         }
 
+        if (script.SceneChange != string.Empty && script.SceneChange != null)
+        {
+            GameObject.Find("Canvas").GetComponent<GameSceneManager>().NextScene(script.SceneChange);
+        }
+
         if (script.choice != null)
         {
             SetChoice();
