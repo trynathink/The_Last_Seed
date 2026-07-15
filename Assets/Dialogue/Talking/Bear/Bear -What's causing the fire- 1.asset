@@ -10,23 +10,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Bear -Are the fires getting worse-
+  m_Name: Bear -What's causing the fire- 1
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Bear
   Lines:
-  - The
-  - fires
+  - We
+  - Cough
+  - Forgot
+  - how to
+  - respect
   - cough
-  - grow..
+  - this
+  - land
+  - a long
+  - time
+  - ago
+  - I think
   - cough
-  - ..with
-  - mother
-  - nature's
-  - rage
-  - every
+  - A change
+  - is in
+  - order
+  - Before
+  - any of
+  - us
+  - cough
+  - see a
+  - kinder
   - day
-  NPCplacement: 0000000003000000060000000500000008000000060000000100000004000000070000000500000008000000
-  WordCount: 0500000006000000
+  NPCplacement: 0300000006000000010000000400000007000000080000000300000006000000010000000400000008000000000000000400000002000000050000000800000000000000030000000600000004000000020000000500000008000000
+  WordCount: 060000000500000005000000
+  trigger: Mother Nature's Rage
   itemGain: 
   SceneChange: 
   choice: {fileID: 11400000, guid: 5e2e9ffd3c5b41b48bc713e0c95ef748, type: 2}

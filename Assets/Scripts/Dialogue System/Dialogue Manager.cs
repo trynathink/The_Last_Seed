@@ -170,6 +170,11 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             GameObject.Find(script.itemGain).GetComponent<Collectible>().Collect();
         }
 
+        if(script.trigger != string.Empty && script.trigger != null)
+        {
+            GameObject.Find("Canvas").GetComponent<GameSceneManager>().addTrigger(script.trigger);
+        }
+
         if (script.choice != null)
         {
             SetChoice();
@@ -189,7 +194,9 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         {
             Transform c = Choice.transform.GetChild(i);
 
-            c.GetComponent<Button>().interactable = true;
+            
+            c.GetComponent<Button>().enabled = true;
+            c.GetComponent<Image>().enabled = true;
             c.GetChild(0).GetComponent<TMP_Text>().text = script.choice.Choices[i];
         }
     }
@@ -203,7 +210,8 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     {
         foreach(Transform c in Choice.transform)
         {
-            c.GetComponent<Button>().interactable = false;
+            c.GetComponent<Button>().enabled = false;
+            c.GetComponent<Image>().enabled = false;            
             c.GetChild(0).GetComponent<TMP_Text>().text = "";
         }
     }

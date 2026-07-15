@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class BedroomButtonManager : MonoBehaviour
+public class GameSceneManager : MonoBehaviour
 {
     // Gaurav Singh
 
@@ -62,6 +62,14 @@ public class BedroomButtonManager : MonoBehaviour
             default:
                 DM.SetLines(DefaultItemFail);
                 break;
+        }
+    }
+
+    public void addTrigger(string t)
+    {
+        if (!PDSO.triggers.Contains(t))
+        {
+            PDSO.triggers.Add(t);
         }
     }
 

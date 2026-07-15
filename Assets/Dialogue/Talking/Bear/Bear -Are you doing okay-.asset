@@ -14,9 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Bear
   Lines:
-  - test
-  NPCplacement: 00000000
-  WordCount: 01000000
+  - Oh
+  - Yes
+  - My old
+  - lungs
+  - can't take
+  - this
+  - smoke
+  NPCplacement: 03000000070000000000000003000000060000000100000008000000
+  WordCount: 0200000005000000
+  trigger: 
   itemGain: 
   SceneChange: 
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: 8e1bdb2992b9747479335e524c1f2156, type: 2}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bc00b0163cb4c408dcbe8105759903, type: 3}
+  m_Name: Bear -Are the fires getting worse- Choice
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  Choices:
+  - What's causing the fire?
+  - What can we do?
+  Outcomes:
+  - {fileID: 11400000, guid: 02236ac354342af48b961dba0fd3c7a2, type: 2}
+  - {fileID: 11400000, guid: c65471fe5dca1624e859a234c79ed229, type: 2}

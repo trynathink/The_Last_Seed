@@ -12,7 +12,7 @@ public class ScriptsSO : ScriptableObject
     [SerializeField]
     public List<int> NPCplacement, WordCount;
 
-    public string itemGain;
+    public string trigger, itemGain;
 
     public string SceneChange;
 
