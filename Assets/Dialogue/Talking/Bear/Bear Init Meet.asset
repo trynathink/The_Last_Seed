@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Tester Mc Teserson
+  m_Name: Bear Init Meet
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Bear
   Lines:
@@ -20,7 +20,13 @@ MonoBehaviour:
   - Hi
   - Dear
   - Thanks
-  NPCplacement: 000000000400000008000000010000000400000008000000
-  WordCount: 030000000200000001000000
+  - for
+  - turning
+  - off
+  - that
+  - alarm
+  NPCplacement: 0000000004000000080000000100000004000000000000000300000006000000010000000500000008000000
+  WordCount: 030000000200000006000000
   itemGain: 
   SceneChange: 
+  choice: {fileID: 11400000, guid: 8e1bdb2992b9747479335e524c1f2156, type: 2}

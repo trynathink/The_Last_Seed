@@ -6,6 +6,8 @@ public class MoveSFX : MonoBehaviour
 	[SerializeField] private AudioClip clip; // Can later be an array for each respective transition
 	[SerializeField] private AudioSource source;
 
+	public bool door;
+
     void Awake()
     {
 		if(GameObject.FindObjectsByType<MoveSFX>().Length > 1)
@@ -23,11 +25,18 @@ public class MoveSFX : MonoBehaviour
 		SceneManager.sceneLoaded += OnSceneLoaded;	
 	}
 
-	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    public void Play()
+    {
+        source.PlayOneShot(clip);
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
-		if (scene.name == "A1 Living Room")
+		if (door)
 		{
 			source.PlayOneShot(clip);
+
+			door = false;
 		}
 	}
 

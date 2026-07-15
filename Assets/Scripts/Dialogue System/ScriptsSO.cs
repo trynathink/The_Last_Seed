@@ -9,7 +9,12 @@ public class ScriptsSO : ScriptableObject
     [SerializeReference]
     public List<string> Lines;
 
+    [SerializeField]
+    public List<int> NPCplacement, WordCount;
+
     public string itemGain;
 
     public string SceneChange;
+
+    public ChoiceSO choice;
 }

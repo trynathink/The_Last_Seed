@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO.Pipes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -18,7 +19,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     ScriptsSO script;
 
     [SerializeField]
-    int LineNum;
+    int LineNum, WordNum;
 
     [SerializeField]
     Image DiaImg;
@@ -27,13 +28,15 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     private UnityEvent onClick;
 
     [SerializeField]
-    GameObject Inner;
+    GameObject Inner, NPC, Choice;
 
     void Start()
     {
         DiaImg = GameObject.Find("Dialogue Image").GetComponent<Image>();
 
         Inner = transform.Find("Inner Text").gameObject;
+        NPC = transform.Find("NPC Text").gameObject;
+        Choice = transform.Find("Choice Text").gameObject;
     }
 
     public void OnPointerClick(PointerEventData pointerEventData)
@@ -50,7 +53,16 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
                 }
                 else
                 {
+                    Debug.Log($"Line Num :{LineNum}, Word Count :{script.WordCount.Count}");
 
+                    if (!(LineNum >= script.WordCount.Count))
+                    {
+                        NPCSpeak(WordNum);
+                    }
+                    else
+                    {
+                        StageLeft();
+                    }
                 }
             }
             else
@@ -64,8 +76,10 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     {
         // Reseting Vars
         LineNum = 0;
+        WordNum = 0;
         script = givenscript;
         DiaImg.enabled = true;
+        ResetChoice();
         //SceneChange = string.Empty;
 
         // Finding Which Textbox to use.
@@ -73,7 +87,9 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         {
             Self = false;
 
-            // script for character dia
+            Dia = true;
+
+            NPCSpeak(0);
         }
         else
         {
@@ -106,6 +122,35 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         t.text = script.Lines[LineNum];
     }
 
+    void NPCSpeak(int wN)
+    {
+        NPCReset();
+
+        for (int i = wN; i < wN+script.WordCount[LineNum]; i++)
+        {
+            NPCWord(script.NPCplacement[i], script.Lines[i]);
+
+            WordNum = i+1;
+        }
+    }
+
+    void NPCWord(int placement, string word)
+    {
+        var bubble = NPC.transform.GetChild(placement);
+        
+        bubble.GetComponent<Image>().enabled = true;
+        bubble.GetChild(0).GetComponent<TMP_Text>().text = word;
+    }
+
+    void NPCReset()
+    {
+        foreach(Transform bubble in NPC.transform)
+        {
+            bubble.GetComponent<Image>().enabled = false;
+            bubble.GetChild(0).GetComponent<TMP_Text>().text = "";
+        }
+    }
+
     void StageLeft()
     {
         if (Self)
@@ -117,24 +162,49 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         }
         else
         {
-            // See if the player has a choice to make here
-            /*if (choiceTrigger != null)
-            {
-                CS.TriggerChoice(choiceTrigger);
-            }*/
+            NPCReset();
         }
 
-        Debug.Log(script.itemGain);
-        Debug.Log(script.itemGain != string.Empty && script.itemGain != null);
         if (script.itemGain != string.Empty && script.itemGain != null)
         {
             GameObject.Find(script.itemGain).GetComponent<Collectible>().Collect();
         }
 
-        
-        Dia = false;
-        DiaImg.enabled = false;
-        LineNum = 0;
-        script = null;
+        if (script.choice != null)
+        {
+            SetChoice();
+        }
+        else
+        {
+            Dia = false;
+            DiaImg.enabled = false;
+            LineNum = 0;
+            script = null;
+        }
+    }
+
+    void SetChoice()
+    {
+        for (int i = 0; i < script.choice.Choices.Count; i++)
+        {
+            Transform c = Choice.transform.GetChild(i);
+
+            c.GetComponent<Button>().interactable = true;
+            c.GetChild(0).GetComponent<TMP_Text>().text = script.choice.Choices[i];
+        }
+    }
+
+    public void Chose(int c)
+    {
+        SetLines(script.choice.Outcomes[c]);
+    }
+
+    void ResetChoice()
+    {
+        foreach(Transform c in Choice.transform)
+        {
+            c.GetComponent<Button>().interactable = false;
+            c.GetChild(0).GetComponent<TMP_Text>().text = "";
+        }
     }
 }

@@ -2,8 +2,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// Gaurav Singh
-
 [RequireComponent(typeof(Image))]
 public class BedroomWindowButtonManager : MonoBehaviour
 {
@@ -12,16 +10,21 @@ public class BedroomWindowButtonManager : MonoBehaviour
     
     // This class manages button clicks for the window scene
 
-    // this may be a small 
-
     [SerializeField]
     AudioSource alarm;
 
-    public PlayerDataSO PDSO;
+    [SerializeField]
+    PlayerDataSO PDSO;
 
+    [SerializeReference]
+    DialogueManager DM;
+
+    public ScriptsSO DefaultItemFail;
 
     private void OnEnable()
     {
+        DM = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
+
         if (PDSO.triggers.Contains("Clock"))
         {
             Clock();
@@ -35,7 +38,15 @@ public class BedroomWindowButtonManager : MonoBehaviour
 
     public void ExitWindow()
     {
-        NextScene("A1 Bedroom");
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                NextScene("A1 Bedroom");
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
+                break;
+        }
     }
 
     private void NextScene(string sceneName)

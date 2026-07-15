@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d7b060ba08e6b440847ecdea19e04b1, type: 3}
-  m_Name: PlayerDataSO
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerDataSO
-  SaveFile: Save3
-  PlayerLocation: A1 Bedroom
-  HeldItem: 
-  Fire: 0
-  Inventory: []
-  triggers:
-  - Clock
+  m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
+  m_Name: Front Door Pre Goal
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
+  Character: 
+  Lines:
+  - "I don\u2019t think I need to leave right now."
+  itemGain: 
+  SceneChange: 

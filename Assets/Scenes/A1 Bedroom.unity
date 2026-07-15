@@ -147,7 +147,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 42ada19ecc0fe4842bddcf4e2f8fac90, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 1814a076e3ca13148991a99be62daf4f, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0c94bde5818f2cd459fa4aaae15ad838, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2275,6 +2275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveSFX
   clip: {fileID: 8300000, guid: 77234faaad5f4194f82e339ac8eeb6a1, type: 3}
   source: {fileID: 1226874094}
+  door: 0
 --- !u!82 &1226874094
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2578,6 +2579,7 @@ GameObject:
   - component: {fileID: 1403714405}
   - component: {fileID: 1403714404}
   - component: {fileID: 1403714406}
+  - component: {fileID: 1403714407}
   m_Layer: 0
   m_Name: Living Room Arrow
   m_TagString: Untagged
@@ -2624,7 +2626,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7259676065821924026, guid: 1a305b883b6d92736930291b79fc3240, type: 3}
+  m_Sprite: {fileID: 5311608454513549931, guid: 9bc6ba421dabe4d5d9c81ec712ba4a66, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2710,6 +2712,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!95 &1403714407
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403714402}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 848f1a894aff108418abcc6804cbbee9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1624448571
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,9 +3026,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BedroomButtonManager
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
-  DM: {fileID: 0}
   alarm: {fileID: 130778596}
   AlarmOn: {fileID: 11400000, guid: 5d7ce30a60904344cb14bda9fceda9c6, type: 2}
+  FrontDoorLock: {fileID: 0}
+  FrontDoorGoal: {fileID: 0}
   DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
