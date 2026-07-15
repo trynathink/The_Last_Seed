@@ -265,25 +265,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &47122783
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 40954467}
-  - component: {fileID: 40954470}
-  - component: {fileID: 40954469}
-  - component: {fileID: 40954468}
-  m_Layer: 0
-  m_Name: Delete S2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!224 &40954467
 RectTransform:
   m_ObjectHideFlags: 0
@@ -397,6 +378,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47122783}
   m_CullTransparentMesh: 1
+--- !u!1 &47122783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 40954467}
+  - component: {fileID: 40954470}
+  - component: {fileID: 40954469}
+  - component: {fileID: 40954468}
+  m_Layer: 0
+  m_Name: Delete S2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &65960020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,6 +1931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveSFX
   clip: {fileID: 8300000, guid: 77234faaad5f4194f82e339ac8eeb6a1, type: 3}
   source: {fileID: 903452525}
+  door: 0
 --- !u!1 &956225477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,6 +1974,7 @@ MonoBehaviour:
   - {fileID: 6663597970138554853, guid: 905d596f6a45d8245866fcca3544974b, type: 3}
   - {fileID: -667082692954076147, guid: 8f338da1871844d4387bf6f9ea4d6dc2, type: 3}
   - {fileID: -7280195142636798135, guid: a856d03550d4b1f4e95f0cc9a5e230d8, type: 3}
+  defaultCursor: {fileID: 7581796962388170804, guid: 190d87ff215f8404fa76ff4709e055e1, type: 3}
   Saves:
   - {fileID: 65960020}
   - {fileID: 620832880}
@@ -2006,7 +2008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}

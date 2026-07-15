@@ -21,6 +21,9 @@ public class MainMenuButtonManager : MonoBehaviour
     List<Sprite> SImg, NImg;
 
     [SerializeReference]
+    Sprite defaultCursor;
+
+    [SerializeReference]
     List<GameObject> Saves;
 
     void Start()

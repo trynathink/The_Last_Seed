@@ -22,6 +22,9 @@ public class InventoryManager : MonoBehaviour
 
     public PlayerDataSO PDSO;
 
+    [SerializeReference]
+    public Sprite defaultCursor;
+
     private Dictionary<CollectibleType, Sprite> spriteMap;
 
     private void Awake()
@@ -91,9 +94,7 @@ public class InventoryManager : MonoBehaviour
         else
         {
             Cursor.SetCursor(default, default, default);
-        }
-
-        
+        } 
     }
 
     Texture2D CreateCursor(Sprite s)
@@ -110,11 +111,6 @@ public class InventoryManager : MonoBehaviour
         cursor.SetPixels(pixels);
         cursor.Apply();
         return cursor;
-    }
-
-    public void ItemInteraction(string InteractedObj, ScriptsSO scripts)
-    {
-        
     }
 
     private void ClearInventory()

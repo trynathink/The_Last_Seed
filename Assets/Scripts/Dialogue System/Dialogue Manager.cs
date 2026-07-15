@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.IO.Pipes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -53,7 +51,9 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
                 }
                 else
                 {
-                    Debug.Log($"Line Num :{LineNum}, Word Count :{script.WordCount.Count}");
+                    NPCSpeak();
+
+                    /*Debug.Log($"Line Num :{LineNum}, Word Count :{script.WordCount.Count}");
 
                     if (!(LineNum >= script.WordCount.Count))
                     {
@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
                     else
                     {
                         StageLeft();
-                    }
+                    }*/
                 }
             }
             else
@@ -80,7 +80,6 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         script = givenscript;
         DiaImg.enabled = true;
         ResetChoice();
-        //SceneChange = string.Empty;
 
         // Finding Which Textbox to use.
         if (givenscript.Character != string.Empty)
@@ -122,9 +121,13 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         t.text = script.Lines[LineNum];
     }
 
+    // Remove wN
+    // Use LineNum to switch to next line
     void NPCSpeak(int wN)
     {
         NPCReset();
+
+        string line = script.Lines[LineNum];
 
         for (int i = wN; i < wN+script.WordCount[LineNum]; i++)
         {

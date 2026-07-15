@@ -41,6 +41,12 @@ public class GameSceneManager : MonoBehaviour
                     Clock();
                 }
                 break;
+            case "A1 Living Room":
+                if (PDSO.Inventory.Contains("Crowbar"))
+                {
+                    GameObject.Find("Crowbar Hitbox").SetActive(false);
+                }
+                break;
             case "A1 Kitchen":
                 if (PDSO.triggers.Contains("Boards Removed"))
                 {
