@@ -8,45 +8,86 @@ public class BedroomButtonManager : MonoBehaviour
     // This class is responsible for handling all button interactions
     // in the bedroom scene
 
-    [SerializeField] private PlayerDataSO PDSO;
-    [SerializeField] private GameObject blanket;
-	[SerializeField] private AudioSource alarm;
+    [SerializeField] 
+    PlayerDataSO PDSO;
+
+    [SerializeReference]
+    DialogueManager DM;
+
+    [SerializeField] private AudioSource alarm;
 
     private bool isAlarmOff = false;
 
-    public ScriptsSO AlarmOn, AlarmOff;
+
+
+    public ScriptsSO AlarmOn, DefaultItemFail;
+
+    private void OnEnable()
+    {
+        DM = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
+
+        if (PDSO.triggers.Contains("Clock"))
+        {
+            Clock();
+        }
+    }
+
+    public void OnClockClick()
+    {
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                if (!isAlarmOff)
+                {
+                    Clock();
+                    PDSO.triggers.Add("Clock");
+                }
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
+                break;
+        }
+    }
+
+    public void Clock()
+    {
+        isAlarmOff = true;
+        alarm.Stop();
+    }
 
     public void BedroomWindow()
     {
-        Debug.Log("bedroom window clicked");
-        NextScene("A1 Bed Window");
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                NextScene("A1 Bed Window");
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
+                break;
+        }
     }
 
-    public void Blanket()
+    // for any items without item specific interactions
+	public void Item(ScriptsSO script)
     {
-		PDSO.Inventory.Add(blanket.name);
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                DM.SetLines(script);
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
+                break;
+        }
     }
 
-	public void Clock()
-	{
-		isAlarmOff = true;
-		alarm.Stop();
-	}
-
-	public void OnClockClick()
-	{
-		if (!isAlarmOff)
-		{
-			Clock();
-			PDSO.triggers.Add("Clock");
-		}
-	}
 
     public void ExitBedroom()
     {
         if(!isAlarmOff)
         {
-            GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>().SetLines(AlarmOn);
+            DM.SetLines(AlarmOn);
 
             return;
         }

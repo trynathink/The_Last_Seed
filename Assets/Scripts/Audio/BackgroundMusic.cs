@@ -12,26 +12,22 @@ public class BackgroundMusic : MonoBehaviour
 	[SerializeField] private List<AudioClip> backgroundSongs;
 	[SerializeField] private AudioSource source;
 
-	static GameObject BGsfx;
-
-	private void OnEnable()
-	{
-		SceneManager.sceneLoaded += OnSceneLoaded;
-	}
-
-	private void Awake()
-	{
-        DontDestroyOnLoad(gameObject);
-
-        if (BGsfx == null)
+    void Awake()
+    {
+        if (GameObject.FindObjectsByType<BackgroundMusic>().Length > 1)
         {
-            BGsfx = gameObject;
+            GameObject.Destroy(gameObject);
         }
         else
         {
-            Object.Destroy(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
     }
+
+    private void OnEnable()
+	{
+		SceneManager.sceneLoaded += OnSceneLoaded;
+	}
 
 	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
@@ -49,6 +45,6 @@ public class BackgroundMusic : MonoBehaviour
 
 	private void OnDisable()
 	{
-		SceneManager.sceneLoaded += OnSceneLoaded;
+		SceneManager.sceneLoaded -= OnSceneLoaded;
 	}
 }

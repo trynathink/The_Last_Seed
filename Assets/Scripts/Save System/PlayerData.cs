@@ -12,7 +12,7 @@ public class PlayerData
     // Save File is the name of the file as it's saved through JSON
     // it is either, "Save1", "Save2", or "Save3"
     // Player Location is the name of the Scene the player is in
-    public string SaveFile, PlayerLocation;
+    public string SaveFile, PlayerLocation, HeldItem;
 
     // Fire is the tracker for how much the Burning Page System has progressed
     public float Fire;

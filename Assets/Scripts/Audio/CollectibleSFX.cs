@@ -5,22 +5,21 @@ public class CollectibleSFX : MonoBehaviour
 	[SerializeField] private AudioSource source;
 	[SerializeField] private AudioClip collectSound;
 
-	static GameObject Csfx;
-
-	private void OnEnable()
-	{
-		Collectible.OnCollect += Play;
-
-        DontDestroyOnLoad(gameObject);
-
-        if (Csfx == null)
+    void Awake()
+    {
+        if (GameObject.FindObjectsByType<CollectibleSFX>().Length > 1)
         {
-            Csfx = gameObject;
+            GameObject.Destroy(gameObject);
         }
         else
         {
-            Object.Destroy(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
+    }
+
+    private void OnEnable()
+	{
+		Collectible.OnCollect += Play;
     }
 
 	private void Play()

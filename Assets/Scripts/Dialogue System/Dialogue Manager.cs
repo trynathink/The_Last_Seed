@@ -124,7 +124,9 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             }*/
         }
 
-        if (script.itemGain != string.Empty)
+        Debug.Log(script.itemGain);
+        Debug.Log(script.itemGain != string.Empty && script.itemGain != null);
+        if (script.itemGain != string.Empty && script.itemGain != null)
         {
             GameObject.Find(script.itemGain).GetComponent<Collectible>().Collect();
         }
@@ -132,5 +134,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         
         Dia = false;
         DiaImg.enabled = false;
+        LineNum = 0;
+        script = null;
     }
 }

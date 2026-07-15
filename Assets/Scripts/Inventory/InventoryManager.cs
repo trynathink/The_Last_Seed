@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
@@ -48,6 +49,7 @@ public class InventoryManager : MonoBehaviour
             //ClearInventory();
             //PopulateInventory();
 
+            HoldItem(string.Empty);
             ItemsHeld();
         }
         else
@@ -74,6 +76,45 @@ public class InventoryManager : MonoBehaviour
                 item.enabled= false;
             }
         }
+    }
+
+    public void HoldItem(string item)
+    {
+        PDSO.HeldItem = item;
+
+        if(item != string.Empty)
+        {
+            var cursor = CreateCursor(itemContainer.Find(item).GetComponent<Image>().sprite);
+
+            Cursor.SetCursor(cursor, default, CursorMode.ForceSoftware);
+        }
+        else
+        {
+            Cursor.SetCursor(default, default, default);
+        }
+
+        
+    }
+
+    Texture2D CreateCursor(Sprite s)
+    {
+        int width = Mathf.FloorToInt(s.rect.width);
+        int height = Mathf.FloorToInt(s.rect.height);
+        Texture2D cursor = new Texture2D(width, height);
+
+        int x = Mathf.FloorToInt(s.textureRect.x);
+        int y = Mathf.FloorToInt(s.textureRect.y);
+
+        Color[] pixels = s.texture.GetPixels(x, y, width, height);
+
+        cursor.SetPixels(pixels);
+        cursor.Apply();
+        return cursor;
+    }
+
+    public void ItemInteraction(string InteractedObj, ScriptsSO scripts)
+    {
+        
     }
 
     private void ClearInventory()

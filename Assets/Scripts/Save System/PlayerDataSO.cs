@@ -8,7 +8,7 @@ public class PlayerDataSO : ScriptableObject
 {
     SaveSystem Saver = new SaveSystem();
 
-    public string SaveFile, PlayerLocation;
+    public string SaveFile, PlayerLocation, HeldItem;
     public float Fire;
     public List<string> Inventory;
     public List<string> triggers;
@@ -20,6 +20,7 @@ public class PlayerDataSO : ScriptableObject
         Fire = 0;
         Inventory = new List<string>();
         triggers = new List<string>();
+        HeldItem = string.Empty;
 
         SaveGame();
     }
@@ -37,6 +38,7 @@ public class PlayerDataSO : ScriptableObject
 
         SaveFile = data.SaveFile;
         PlayerLocation = data.PlayerLocation;
+        HeldItem = data.HeldItem; 
         Fire = data.Fire;
         Inventory = data.Inventory;
         triggers = data.triggers;
@@ -54,6 +56,7 @@ public class PlayerDataSO : ScriptableObject
 
         info.SaveFile = SaveFile;
         info.PlayerLocation = PlayerLocation;
+        info.HeldItem = HeldItem;
         info.Fire = Fire;
         info.Inventory = Inventory;
         info.triggers = triggers;
