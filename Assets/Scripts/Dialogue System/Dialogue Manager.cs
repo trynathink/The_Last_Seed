@@ -137,7 +137,9 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     void NPCWord(int placement, string word)
     {
         var bubble = NPC.transform.GetChild(placement);
-        
+
+        bubble.gameObject.SetActive(true);
+
         bubble.GetComponent<Image>().enabled = true;
         bubble.GetChild(0).GetComponent<TMP_Text>().text = word;
     }
@@ -146,8 +148,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     {
         foreach(Transform bubble in NPC.transform)
         {
-            bubble.GetComponent<Image>().enabled = false;
-            bubble.GetChild(0).GetComponent<TMP_Text>().text = "";
+            bubble.gameObject.SetActive(false);
         }
     }
 
@@ -199,6 +200,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         {
             Transform c = Choice.transform.GetChild(i);
 
+            c.gameObject.SetActive(true);
             
             c.GetComponent<Button>().enabled = true;
             c.GetComponent<Image>().enabled = true;
@@ -215,9 +217,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     {
         foreach(Transform c in Choice.transform)
         {
-            c.GetComponent<Button>().enabled = false;
-            c.GetComponent<Image>().enabled = false;            
-            c.GetChild(0).GetComponent<TMP_Text>().text = "";
+            c.gameObject.SetActive(false);
         }
     }
 }
