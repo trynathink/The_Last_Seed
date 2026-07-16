@@ -14,31 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Bear
   Lines:
-  - We
-  - Cough
-  - Forgot
-  - how to
-  - respect
-  - cough
-  - this
-  - land
-  - a long
-  - time
-  - ago
-  - I think
-  - cough
-  - A change
-  - is in
-  - order
-  - Before
-  - any of
-  - us
-  - cough
-  - see a
-  - kinder
-  - day
-  NPCplacement: 0300000006000000010000000400000007000000080000000300000006000000010000000400000008000000000000000400000002000000050000000800000000000000030000000600000004000000020000000500000008000000
-  WordCount: 060000000500000005000000
+  - We forgot how to respect this land long ago...
+  - I think a change is in order...
+  - ...before any of us see a kinder day.
   trigger: Mother Nature's Rage
   itemGain: 
   SceneChange: 
