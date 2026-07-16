@@ -10,6 +10,35 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour, IPointerClickHandler
 {
+	[Header("Randomization Variables")]
+	[SerializeField]
+	private GameObject[] Bubbles;
+
+	[SerializeField]
+	private float[] BubbleChances;
+
+	[SerializeField]
+	private float CurrentBubbleChance;
+
+	[SerializeField][Range(0, 1)]
+	private float MoveDownChance;
+
+	[SerializeField]
+	private Vector2 MoveDownRange;
+
+	[SerializeField]
+	private Vector2 MoveRightBufferRange;
+
+	[SerializeField]
+	private Vector2 LinePaddingRange;
+
+	[SerializeField]
+	private int[] CharacterLimits;
+
+	[SerializeField]
+	private RectTransform TextArea;
+
+	[Header("Core")]
     [SerializeField]
     bool Dia, Self;
 
@@ -20,21 +49,25 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     int LineNum, WordNum;
 
     [SerializeField]
-    Image DiaImg;
-
-    [SerializeField]
     private UnityEvent onClick;
 
-    [SerializeField]
+    Image DiaImg;
     GameObject Inner, NPC, Choice;
 
     void Start()
     {
         DiaImg = GameObject.Find("Dialogue Image").GetComponent<Image>();
-
         Inner = transform.Find("Inner Text").gameObject;
         NPC = transform.Find("NPC Text").gameObject;
         Choice = transform.Find("Choice Text").gameObject;
+
+		// Modify bubble chances to work as thresholds when using a random number > 0 < 1
+		float current = BubbleChances[0];
+		for (int i = 1; i < BubbleChances.Length; i++)
+		{
+			current += BubbleChances[i];
+			BubbleChances[i] = current;
+		}
     }
 
     // switch to IA
@@ -124,41 +157,90 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
         t.text = script.Lines[LineNum];
     }
 
+
+	int RandBubble(int previous)
+	{
+		float choice = Random.value;
+
+		for (int i = 0; i < BubbleChances.Length; i++)
+		{
+			if (choice <= BubbleChances[i])
+			{
+				if (i != previous || Random.value < CurrentBubbleChance)
+					return i;
+			}
+		}
+
+		return 0;
+	}
+
     // Remove wN
     // Use LineNum to switch to next line
     // Method that gets called to switch to next line
     void NPCSpeak()
     {
-        NPCReset();
+		NPCReset();
 
-        string line = script.Lines[LineNum];
+        string[] line = script.Lines[LineNum].Split(' ');
+		Vector2 placement = TextArea.rect.position;
+		placement.y += TextArea.rect.height;
+		float end = placement.x + TextArea.rect.width;
 
-        /*for (int i = wN; i < wN+script.WordCount[LineNum]; i++)
-        {
-            NPCWord(script.NPCplacement[i], script.Lines[i]);
+		int bubble = RandBubble(0);
+		GameObject bubblePrefab = Bubbles[bubble];
+		int limit = CharacterLimits[bubble];
+		string words = "";
 
-            WordNum = i+1;
-        }*/
+		for (int i = 0; i < line.Length; i++)
+		{
+			string word = line[i];
+
+			if ((words.Length > 0 && words.Length + word.Length > limit) || i == line.Length - 1)
+			{
+				if (i == line.Length - 1)
+				{
+					bubblePrefab = Bubbles[2];
+					words += word;
+				}
+
+				NPCBubble(bubblePrefab, placement, words);
+				float moveRightBuffer = Random.Range(MoveRightBufferRange.x, MoveRightBufferRange.y);
+				placement.x += bubblePrefab.GetComponent<RectTransform>().rect.width + moveRightBuffer;
+				// TODO: possibly change y position just a little bit each time
+
+				if (Random.value <= MoveDownChance || placement.x > end)
+				{
+					placement.y -= Random.Range(MoveDownRange.x, MoveDownRange.y);
+					float padding = Random.Range(LinePaddingRange.x, LinePaddingRange.y);
+					placement.x = TextArea.rect.x + padding;
+				}
+
+				bubble = RandBubble(bubble);
+				bubblePrefab = Bubbles[bubble];
+				limit = CharacterLimits[bubble];
+				words = "";
+			}
+
+			words += word + ' ';
+			// TODO: try to handle last words differently; some not being shown
+		}
     }
 
-    // Vector 2 & string word
     // Method that places the strips of paper
-    void NPCWord(int placement, string word)
+    void NPCBubble(GameObject bubblePrefab, Vector2 placement, string words)
     {
-        var bubble = NPC.transform.GetChild(placement);
-
-        bubble.gameObject.SetActive(true);
-
-        bubble.GetComponent<Image>().enabled = true;
-        bubble.GetChild(0).GetComponent<TMP_Text>().text = word;
+        GameObject bubble = Instantiate(bubblePrefab, NPC.transform);
+		RectTransform transform = bubble.GetComponent<RectTransform>();
+		transform.localPosition = placement;
+        bubble.transform.GetChild(0).GetComponent<TMP_Text>().text = words;
     }
 
-    // Reset
+    // Reset // TODO: call this when done instead
     void NPCReset()
     {
         foreach(Transform bubble in NPC.transform)
         {
-            bubble.gameObject.SetActive(false);
+			Destroy(bubble.gameObject);
         }
     }
 
