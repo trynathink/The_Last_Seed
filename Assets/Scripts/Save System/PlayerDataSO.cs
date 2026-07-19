@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Gaurav Singh
+
 [CreateAssetMenu(fileName = "PlayerDataSO", menuName = "Scriptable Objects/PlayerDataSO")]
 public class PlayerDataSO : ScriptableObject
 {
     SaveSystem Saver = new SaveSystem();
 
-    public string SaveFile, PlayerLocation, equippedItem;
+    public string SaveFile, PlayerLocation, HeldItem;
     public float Fire;
     public List<string> Inventory;
     public List<string> triggers;
@@ -18,6 +20,7 @@ public class PlayerDataSO : ScriptableObject
         Fire = 0;
         Inventory = new List<string>();
         triggers = new List<string>();
+        HeldItem = string.Empty;
 
         SaveGame();
     }
@@ -35,10 +38,10 @@ public class PlayerDataSO : ScriptableObject
 
         SaveFile = data.SaveFile;
         PlayerLocation = data.PlayerLocation;
+        HeldItem = data.HeldItem; 
         Fire = data.Fire;
         Inventory = data.Inventory;
         triggers = data.triggers;
-        equippedItem = data.equippedItem;
     }
 
     public void AddToInventory(string item)
@@ -47,21 +50,16 @@ public class PlayerDataSO : ScriptableObject
         Inventory.Add(item);
     }
 
-    public void SetEquipped(string item)
-    {
-        equippedItem = item;
-    }
-
     PlayerData SOToData()
     {
         PlayerData info = new();
 
         info.SaveFile = SaveFile;
         info.PlayerLocation = PlayerLocation;
+        info.HeldItem = HeldItem;
         info.Fire = Fire;
         info.Inventory = Inventory;
         info.triggers = triggers;
-        info.equippedItem = equippedItem;
 
         return info;
     }
@@ -69,5 +67,10 @@ public class PlayerDataSO : ScriptableObject
     public bool CheckSave(string FileName)
     {
         return Saver.CheckData<PlayerData>($"/{FileName}.json");
+    }
+
+    public void DeleteSave(string FileName)
+    {
+        Saver.DeleteData<PlayerData>($"/{FileName}.json");
     }
 }

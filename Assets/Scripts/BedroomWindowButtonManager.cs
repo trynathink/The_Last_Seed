@@ -1,22 +1,57 @@
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
-public class BedroomWindowButtonManager : MonoBehaviour, IPointerClickHandler
+public class BedroomWindowButtonManager : MonoBehaviour
 {
     // Vinayak Karuppasamy
-
+    // Gaurav Singh (this may be a small ship of theseus moment)
+    
     // This class manages button clicks for the window scene
 
-    public PlayerDataSO PDSO; 
+    [SerializeField]
+    AudioSource alarm;
 
-    public void OnPointerClick(PointerEventData pointerEventData)
+    [SerializeField]
+    PlayerDataSO PDSO;
+
+    [SerializeReference]
+    DialogueManager DM;
+
+    public ScriptsSO DefaultItemFail;
+
+    private void OnEnable()
     {
-        Debug.Log("back to room");
-        PDSO.PlayerLocation = "A1 Bedroom";
+        DM = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
+
+        if (PDSO.triggers.Contains("Clock"))
+        {
+            Clock();
+        }
+    }
+
+    public void Clock()
+    {
+        alarm.Stop();
+    }
+
+    public void ExitWindow()
+    {
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                NextScene("A1 Bedroom");
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
+                break;
+        }
+    }
+
+    private void NextScene(string sceneName)
+    {
+        PDSO.PlayerLocation = sceneName;
         SceneManager.LoadScene(PDSO.PlayerLocation);
     }
 }

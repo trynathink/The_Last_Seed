@@ -12,7 +12,7 @@ public class PlayerData
     // Save File is the name of the file as it's saved through JSON
     // it is either, "Save1", "Save2", or "Save3"
     // Player Location is the name of the Scene the player is in
-    public string SaveFile, PlayerLocation;
+    public string SaveFile, PlayerLocation, HeldItem;
 
     // Fire is the tracker for how much the Burning Page System has progressed
     public float Fire;
@@ -25,7 +25,4 @@ public class PlayerData
     // example could be if the player has finished a certain puzzle or reached a certain dialogue point
     // If the player has not met a trigger then it isn't in the list
     public List<string> triggers;
-
-    // this maps directly to a collectibleType that has been equipped by the player
-    public string equippedItem;
 }
