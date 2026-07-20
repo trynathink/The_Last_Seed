@@ -16,11 +16,11 @@ MonoBehaviour:
   - are the fires getting worse?
   - What's causing the fires?
   - What can we do?
-  - Never mind, I'm okay.
   - Lets talk about something else.
+  - Never mind, I'm okay.
   Outcomes:
   - {fileID: 11400000, guid: 45709d03755b2eab9b7a7f2b91c118c0, type: 2}
   - {fileID: 11400000, guid: 02236ac354342af48b961dba0fd3c7a2, type: 2}
-  - {fileID: 11400000, guid: c65471fe5dca1624e859a234c79ed229, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 39dc2deb94acd0a7ba3ce0fff1ad2635, type: 2}
   - {fileID: 11400000, guid: 0b00db84655203fceaa309d277647b99, type: 2}
+  - {fileID: 11400000, guid: 0299530891192dd828d89f04fd87ef11, type: 2}

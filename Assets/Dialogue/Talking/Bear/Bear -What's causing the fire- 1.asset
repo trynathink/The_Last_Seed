@@ -20,4 +20,4 @@ MonoBehaviour:
   trigger: Mother Nature's Rage
   itemGain: 
   SceneChange: 
-  choice: {fileID: 11400000, guid: 5e2e9ffd3c5b41b48bc713e0c95ef748, type: 2}
+  choice: {fileID: 11400000, guid: 9387296335d89718ba4757dc28d4c637, type: 2}
