@@ -9,10 +9,6 @@ public class ScriptsSO : ScriptableObject
     [SerializeReference]
     public List<string> Lines;
 
-    // Defunct
-    /*[SerializeField]
-    public List<int> NPCplacement, WordCount;*/
-
     public string trigger, itemGain;
 
     public string SceneChange;

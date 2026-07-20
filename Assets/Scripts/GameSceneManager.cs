@@ -7,7 +7,7 @@ public class GameSceneManager : MonoBehaviour
 {
     // Gaurav Singh
 
-    // This script manages every scene minus the main menu
+    // This script manages every scene in Act 1 minus the main menu
 
     [SerializeField] 
     PlayerDataSO PDSO;
@@ -43,12 +43,6 @@ public class GameSceneManager : MonoBehaviour
                     Clock();
                 }
                 break;
-            case "A1 Living Room":
-                if (PDSO.Inventory.Contains("Crowbar"))
-                {
-                    GameObject.Find("Crowbar Hitbox").SetActive(false);
-                }
-                break;
             case "A1 Kitchen":
                 if (PDSO.triggers.Contains("Boards Removed"))
                 {
@@ -61,6 +55,8 @@ public class GameSceneManager : MonoBehaviour
     // All scenes
     public void Item(ScriptsSO script)
     {
+        IM.HoldItem("");
+
         // for any items without item specific interactions
         switch (PDSO.HeldItem)
         {
