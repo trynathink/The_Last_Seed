@@ -15,6 +15,9 @@ public class DialogueManager : MonoBehaviour
 	private GameObject[] Bubbles;
 
 	[SerializeField]
+	private GameObject interactableBubble;
+
+	[SerializeField]
 	private float[] BubbleChances;
 
 	[SerializeField]
@@ -79,7 +82,6 @@ public class DialogueManager : MonoBehaviour
 
     private void OnPointerClick(InputAction.CallbackContext context)
     {
-		Debug.Log("call");
         if (Dia)
         {
             if (++LineNum < script.Lines.Count)
@@ -238,14 +240,13 @@ public class DialogueManager : MonoBehaviour
     // Method that places the strips of paper
     void NPCBubble(GameObject bubblePrefab, Vector2 placement, string words)
     {
-        GameObject bubble = Instantiate(bubblePrefab, NPC.transform);
-		RectTransform transform = bubble.GetComponent<RectTransform>();
-		transform.localPosition = placement;
+		GameObject bubble;
 		int clickSymIdx = words.IndexOf('^');
 
 		if (clickSymIdx >= 0)
 		{
 			words = words.Remove(clickSymIdx, 1);
+			bubble = Instantiate(interactableBubble, NPC.transform);
 			bubble.AddComponent<Button>().onClick.AddListener(OnWordClick);
 			EventTrigger trigger = bubble.AddComponent<EventTrigger>();
 
@@ -259,7 +260,13 @@ public class DialogueManager : MonoBehaviour
 			entry.callback.AddListener((eventData) => { OnWordHoverExit(); });
 			trigger.triggers.Add(entry);
 		}
+		else
+		{
+			bubble = Instantiate(bubblePrefab, NPC.transform);
+		}
 		
+		RectTransform transform = bubble.GetComponent<RectTransform>();
+		transform.localPosition = placement;
         bubble.transform.GetChild(0).GetComponent<TMP_Text>().text = words;
     }
 
