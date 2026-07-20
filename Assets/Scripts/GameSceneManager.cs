@@ -18,10 +18,15 @@ public class GameSceneManager : MonoBehaviour
 
     [SerializeField] private AudioSource alarm;
 
+    [SerializeReference]
+    ScriptsSO bearIdle, bearInit;
+
     private bool isAlarmOff = false;
 
     // there is clearly a better way to do this, not rn
     public ScriptsSO AlarmOn, FrontDoorLock, FrontDoorGoal, InitWindow, leaveWindow, questionWindow, DefaultItemFail;
+
+
 
     private void OnEnable()
     {
@@ -182,6 +187,26 @@ public class GameSceneManager : MonoBehaviour
         }
     }
 
+    public void BearDia()
+    {
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                    if(PDSO.triggers.Contains("goal heard"))
+                    {
+                        DM.SetLines(bearIdle);
+                    }
+                    else
+                    {
+                        DM.SetLines(bearInit);
+                    }
+                break;
+            default:
+            DM.SetLines(DefaultItemFail);
+            break;
+        }
+    }
+
     public void LRtoBR()
     {
         MSFX.door = true;
@@ -233,5 +258,7 @@ public class GameSceneManager : MonoBehaviour
                 break;
         }
     }
+
+    
 
 }
