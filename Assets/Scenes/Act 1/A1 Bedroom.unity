@@ -1564,6 +1564,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BedroomButtonManager
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
   alarm: {fileID: 130778596}
+  bearIdle: {fileID: 0}
+  bearInit: {fileID: 0}
   AlarmOn: {fileID: 11400000, guid: 5d7ce30a60904344cb14bda9fceda9c6, type: 2}
   FrontDoorLock: {fileID: 0}
   FrontDoorGoal: {fileID: 0}
@@ -2121,7 +2123,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7933521252010654944, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+    - {fileID: 7818626135669506053, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+    - {fileID: 1972689139487806475, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+    - {fileID: 4120665372338863130, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+    - {fileID: 2608280264153572563, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+    - {fileID: 5660487706522350196, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+    - {fileID: 2001001942007708257, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+    - {fileID: 3452670932554133978, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+    - {fileID: 6704088744926185673, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
