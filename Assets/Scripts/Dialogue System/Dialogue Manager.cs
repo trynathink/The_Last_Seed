@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 // Gaurav Singh
 
-public class DialogueManager : MonoBehaviour, IPointerClickHandler
+public class DialogueManager : MonoBehaviour
 {
 	[Header("Randomization Variables")]
 	[SerializeField]
@@ -46,13 +46,17 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     ScriptsSO script;
 
     [SerializeField]
-    int LineNum, WordNum;
+    int LineNum;
 
     [SerializeField]
     private UnityEvent onClick;
 
+    [SerializeField]
+    private InputActionReference click;
+
     Image DiaImg;
     GameObject Inner, NPC, Choice;
+	private bool keepWord = false;
 
     void Start()
     {
@@ -68,16 +72,17 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 			current += BubbleChances[i];
 			BubbleChances[i] = current;
 		}
+
+		click.action.performed += OnPointerClick;
+		click.action.Enable();
     }
 
-    // switch to IA
-    public void OnPointerClick(PointerEventData pointerEventData)
+    private void OnPointerClick(InputAction.CallbackContext context)
     {
+		Debug.Log("call");
         if (Dia)
         {
-            LineNum++;
-
-            if (!(LineNum >= script.Lines.Count))
+            if (++LineNum < script.Lines.Count)
             {
                 if (Self)
                 {
@@ -86,20 +91,9 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
                 else
                 {
                     NPCSpeak();
-
-                    /*Debug.Log($"Line Num :{LineNum}, Word Count :{script.WordCount.Count}");
-
-                    if (!(LineNum >= script.WordCount.Count))
-                    {
-                        NPCSpeak(WordNum);
-                    }
-                    else
-                    {
-                        StageLeft();
-                    }*/
                 }
             }
-            else
+			else if (!keepWord)
             {
                 StageLeft();
             }
@@ -110,7 +104,6 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     {
         // Reseting Vars
         LineNum = 0;
-        WordNum = 0;
         script = givenscript;
         DiaImg.enabled = true;
         ResetChoice();
@@ -226,16 +219,50 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 		}
     }
 
+	private void OnWordClick()
+	{
+		SetLines(script.choice.Outcomes[0]);
+		Invoke("OnWordHoverExit", 0.25f);
+	}
+
+	private void OnWordHover()
+	{
+		keepWord = true;
+	}
+
+	private void OnWordHoverExit()
+	{
+		keepWord = false;
+	}
+
     // Method that places the strips of paper
     void NPCBubble(GameObject bubblePrefab, Vector2 placement, string words)
     {
         GameObject bubble = Instantiate(bubblePrefab, NPC.transform);
 		RectTransform transform = bubble.GetComponent<RectTransform>();
 		transform.localPosition = placement;
+		int clickSymIdx = words.IndexOf('^');
+
+		if (clickSymIdx >= 0)
+		{
+			words = words.Remove(clickSymIdx, 1);
+			bubble.AddComponent<Button>().onClick.AddListener(OnWordClick);
+			EventTrigger trigger = bubble.AddComponent<EventTrigger>();
+
+			EventTrigger.Entry entry = new EventTrigger.Entry();
+			entry.eventID = EventTriggerType.PointerEnter;
+			entry.callback.AddListener((eventData) => { OnWordHover(); });
+			trigger.triggers.Add(entry);
+
+			entry = new EventTrigger.Entry();
+			entry.eventID = EventTriggerType.PointerExit;
+			entry.callback.AddListener((eventData) => { OnWordHoverExit(); });
+			trigger.triggers.Add(entry);
+		}
+		
         bubble.transform.GetChild(0).GetComponent<TMP_Text>().text = words;
     }
 
-    // Reset // TODO: call this when done instead
     void NPCReset()
     {
         foreach(Transform bubble in NPC.transform)
@@ -273,7 +300,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             GameObject.Find("Canvas").GetComponent<GameSceneManager>().NextScene(script.SceneChange);
         }
 
-        if (script.choice != null)
+        if (script.choice != null && script.choice.Choices.Count > 0)
         {
             SetChoice();
         }
