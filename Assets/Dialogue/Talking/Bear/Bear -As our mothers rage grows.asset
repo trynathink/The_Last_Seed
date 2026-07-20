@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Bear -What's causing the fire- 1
+  m_Name: Bear -As our mothers rage grows
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
-  Character: Bear
+  Character: 
   Lines:
-  - We forgot how to respect this land long ago...
-  - I think a change is in order...
-  - ...before any of us see a kinder day.
-  trigger: Mother Nature's Rage
+  - As our mother's rage grows, so do the flames around us...
+  trigger: 
   itemGain: 
   SceneChange: 
-  choice: {fileID: 11400000, guid: 5e2e9ffd3c5b41b48bc713e0c95ef748, type: 2}
+  choice: {fileID: 0}

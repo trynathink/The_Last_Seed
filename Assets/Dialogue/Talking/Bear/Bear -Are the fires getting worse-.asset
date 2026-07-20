@@ -14,19 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Bear
   Lines:
-  - The
-  - fires
-  - cough
-  - grow..
-  - cough
-  - ..with
-  - mother
-  - nature's
-  - rage
-  - every
-  - day
-  NPCplacement: 0000000003000000060000000500000008000000060000000100000004000000070000000500000008000000
-  WordCount: 0500000006000000
+  - The fires grow with mother nature's rage every day....
+  trigger: 
   itemGain: 
   SceneChange: 
   choice: {fileID: 11400000, guid: 5e2e9ffd3c5b41b48bc713e0c95ef748, type: 2}
