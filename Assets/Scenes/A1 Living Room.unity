@@ -4333,6 +4333,7 @@ MonoBehaviour:
   - {fileID: 2796048855900594582, guid: 1a09be2c25936b046a57ad06540208f2, type: 3}
   - {fileID: 2808264593536406702, guid: bad2c4b3a5be85d49a6a8032498f40d1, type: 3}
   - {fileID: 5194724763292896191, guid: ad1d2301ae31b2a448d17e46fa4f37e7, type: 3}
+  interactableBubble: {fileID: 1954538899116268603, guid: d880cecd535943c4f885811e3cabdc70, type: 3}
   BubbleChances:
   - 0.25
   - 0.5
@@ -4348,10 +4349,10 @@ MonoBehaviour:
   Self: 0
   script: {fileID: 0}
   LineNum: 0
-  WordNum: 0
   onClick:
     m_PersistentCalls:
       m_Calls: []
+  click: {fileID: 1120369429361536294, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!1 &1906512052
 GameObject:
   m_ObjectHideFlags: 0
