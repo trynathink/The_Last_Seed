@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Bear -Are you sure you're ok
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
-  Lines: []
+  Lines:
+  - 'don''t worry about me dear... '
+  - '...Though I wish my lungs could work as they once did... '
   trigger: 
   itemGain: 
   SceneChange: 
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: 2cca84d29f208c43780e53637251e913, type: 2}
