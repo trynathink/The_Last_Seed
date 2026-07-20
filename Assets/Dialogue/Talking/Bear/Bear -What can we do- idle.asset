@@ -10,12 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Bear -As our mothers rage grows
+  m_Name: Bear -What can we do- idle
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Bear
   Lines:
-  - As our mother's rage grows, so do the flames around us...
-  trigger: 
+  - I heard that there's still one seed out there...
+  - A mighty tree seed...
+  - Maybe...
+  - Maybe if you found it...
+  - We could show mother nature we are still willing
+  - to grow...
+  trigger: Goal Heard
   itemGain: 
   SceneChange: 
   choice: {fileID: 11400000, guid: 9387296335d89718ba4757dc28d4c637, type: 2}

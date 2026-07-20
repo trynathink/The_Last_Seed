@@ -21,4 +21,4 @@ MonoBehaviour:
   trigger: Bird Story
   itemGain: 
   SceneChange: 
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: 7da7e9729a08c49d79921b3738db440d, type: 2}
