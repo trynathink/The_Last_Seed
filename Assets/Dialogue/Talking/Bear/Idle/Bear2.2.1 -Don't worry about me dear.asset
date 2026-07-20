@@ -10,13 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9bc00b0163cb4c408dcbe8105759903, type: 3}
-  m_Name: Bear Subsequent Meet Choice
+  m_Name: Bear2.2.1 -Don't worry about me dear
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
   Choices:
-  - Could I ask you about that again?
-  - That's all for now.
-  - Are you sure you're okay?
+  - Do you think about the past often?
   Outcomes:
-  - {fileID: 11400000, guid: e6b149443eeba1f03b911537526892ae, type: 2}
-  - {fileID: 11400000, guid: 0299530891192dd828d89f04fd87ef11, type: 2}
-  - {fileID: 11400000, guid: 0981c2d4c1a8126e2aab485285a14848, type: 2}
+  - {fileID: 11400000, guid: cb6e1b6b150b607d581112cac5fe29d8, type: 2}

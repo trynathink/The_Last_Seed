@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9bc00b0163cb4c408dcbe8105759903, type: 3}
-  m_Name: Bear init Meet Choice
+  m_Name: Bear0 init Meet Choice
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
   Choices:
   - Are you doing okay?

@@ -190,17 +190,23 @@ public class GameSceneManager : MonoBehaviour
         switch (PDSO.HeldItem)
         {
             case "":
-                    if(PDSO.triggers.Contains("Goal Heard"))
-                    {
-                        DM.SetLines(bearIdle);
-                    }
-                    else
-                    {
-                        DM.SetLines(bearInit);
-                    }
+                
+
+                if(PDSO.triggers.Contains("Goal Heard"))
+                {
+                    Debug.Log("Idle");
+
+                    DM.SetLines(bearIdle);
+                }
+                else
+                {
+                    Debug.Log("Init");
+
+                    DM.SetLines(bearInit);
+                }
                 break;
             default:
-            DM.SetLines(DefaultItemFail);
+                DM.SetLines(DefaultItemFail);
             break;
         }
     }
@@ -213,6 +219,8 @@ public class GameSceneManager : MonoBehaviour
 
     public void LRtoK()
     {
+        Debug.Log("move kitchen");
+
         NextScene("A1 Kitchen");
     }
 

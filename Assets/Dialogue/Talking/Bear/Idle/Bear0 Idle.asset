@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Bear -Ofc dear what do you want to know
+  m_Name: Bear0 Idle
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Bear
   Lines:
-  - Of course, dear...
-  - what do you want to know?
+  - '*Cough cough*'
   trigger: 
   itemGain: 
   SceneChange: 
-  choice: {fileID: 11400000, guid: 9387296335d89718ba4757dc28d4c637, type: 2}
+  choice: {fileID: 11400000, guid: 7da7e9729a08c49d79921b3738db440d, type: 2}

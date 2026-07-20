@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Bear -Are you sure you're ok
+  m_Name: Bear1.2 - Okay
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Bear
   Lines:
-  - 'don''t worry about me dear... '
-  - '...Though I wish my lungs could work as they once did... '
+  - Okay...
   trigger: 
   itemGain: 
   SceneChange: 
-  choice: {fileID: 11400000, guid: 2cca84d29f208c43780e53637251e913, type: 2}
+  choice: {fileID: 0}
