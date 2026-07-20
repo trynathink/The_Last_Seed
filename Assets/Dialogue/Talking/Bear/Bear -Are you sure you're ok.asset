@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
   m_Name: Bear -Are you sure you're ok
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
-  Character: 
+  Character: Bear
   Lines:
   - 'don''t worry about me dear... '
   - '...Though I wish my lungs could work as they once did... '

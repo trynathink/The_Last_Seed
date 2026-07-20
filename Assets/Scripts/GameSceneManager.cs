@@ -189,10 +189,12 @@ public class GameSceneManager : MonoBehaviour
 
     public void BearDia()
     {
+        Debug.Log(PDSO.triggers);
+
         switch (PDSO.HeldItem)
         {
             case "":
-                    if(PDSO.triggers.Contains("goal heard"))
+                    if(PDSO.triggers.Contains("Goal Heard"))
                     {
                         DM.SetLines(bearIdle);
                     }
