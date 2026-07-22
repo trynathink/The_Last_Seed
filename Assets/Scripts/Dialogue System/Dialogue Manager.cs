@@ -177,6 +177,7 @@ public class DialogueManager : MonoBehaviour
 		NPCReset();
 
         string[] line = script.Lines[LineNum].Split(' ');
+		const char interactable = '^';
 		Vector2 placement = TextArea.rect.position;
 		placement.y += TextArea.rect.height;
 		float end = placement.x + TextArea.rect.width;
@@ -184,20 +185,14 @@ public class DialogueManager : MonoBehaviour
 		int bubble = RandBubble(0);
 		GameObject bubblePrefab = Bubbles[bubble];
 		int limit = CharacterLimits[bubble];
-		string words = "";
+		string words = line[0] + ' ';
 
-		for (int i = 0; i < line.Length; i++)
+		for (int i = 1; i < line.Length; i++)
 		{
 			string word = line[i];
 
-			if ((words.Length > 0 && words.Length + word.Length > limit) || i == line.Length - 1)
+			if (words.Length + word.Length > limit || word[0] == interactable || words[0] == interactable)
 			{
-				if (i == line.Length - 1)
-				{
-					bubblePrefab = Bubbles[2];
-					words += word;
-				}
-
 				NPCBubble(bubblePrefab, placement, words);
 				float moveRightBuffer = Random.Range(MoveRightBufferRange.x, MoveRightBufferRange.y);
 				placement.x += bubblePrefab.GetComponent<RectTransform>().rect.width + moveRightBuffer;
@@ -217,14 +212,15 @@ public class DialogueManager : MonoBehaviour
 			}
 
 			words += word + ' ';
-			// TODO: try to handle last words differently; some not being shown
 		}
+
+		NPCBubble(bubblePrefab, placement, words);
     }
 
 	private void OnWordClick()
 	{
-		SetLines(script.choice.Outcomes[0]);
-		Invoke("OnWordHoverExit", 0.25f);
+		SetLines(script.choice.Outcomes[1]);
+		keepWord = false;
 	}
 
 	private void OnWordHover()
@@ -307,9 +303,14 @@ public class DialogueManager : MonoBehaviour
             GameObject.Find("Canvas").GetComponent<GameSceneManager>().NextScene(script.SceneChange);
         }
 
-        if (script.choice != null && script.choice.Choices.Count > 0)
+        if (script.choice != null)
         {
-            SetChoice();
+			if (!keepWord)
+			{
+				script = script.choice.Outcomes[0];
+			}
+
+			SetChoice();
         }
         else
         {
