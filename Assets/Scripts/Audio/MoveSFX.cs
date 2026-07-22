@@ -1,24 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MoveSFX : MonoBehaviour
+public class MoveSFX : AudioSingleton<MoveSFX>
 {
 	[SerializeField] private AudioClip clip; // Can later be an array for each respective transition
-	[SerializeField] private AudioSource source;
 
 	public bool door;
-
-    void Awake()
-    {
-		if(GameObject.FindObjectsByType<MoveSFX>().Length > 1)
-		{
-            GameObject.Destroy(gameObject);
-        }
-		else
-		{
-            DontDestroyOnLoad(gameObject);
-        }
-    }
 
     private void OnEnable()
 	{
@@ -35,7 +22,6 @@ public class MoveSFX : MonoBehaviour
 		if (door)
 		{
 			source.PlayOneShot(clip);
-
 			door = false;
 		}
 	}

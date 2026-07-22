@@ -16,7 +16,7 @@ public class GameSceneManager : MonoBehaviour
     InventoryManager IM;
     MoveSFX MSFX;
 
-    [SerializeField] private AudioSource alarm;
+    [SerializeField] private AudioClip alarm;
 
     private bool isAlarmOff = false;
 
@@ -31,17 +31,15 @@ public class GameSceneManager : MonoBehaviour
 
         switch (SceneManager.GetActiveScene().name)
         {
-            case "A1 Bedroom":
+            case "A1 Bedroom" or "A1 Bed Window":
                 if (PDSO.triggers.Contains("Clock"))
                 {
                     Clock();
                 }
-                break;
-            case "A1 Bed Window":
-                if (PDSO.triggers.Contains("Clock"))
-                {
-                    Clock();
-                }
+				else
+				{
+					BackgroundSFX.PlayLoop(alarm);
+				}
                 break;
             case "A1 Living Room":
                 if (PDSO.Inventory.Contains("Crowbar"))
@@ -108,7 +106,7 @@ public class GameSceneManager : MonoBehaviour
     public void Clock()
     {
         isAlarmOff = true;
-        alarm.Stop();
+		BackgroundSFX.StopLoop();
     }
 
     // Bedroom Scene
