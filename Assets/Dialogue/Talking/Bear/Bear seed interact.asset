@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
   Choices: []
   Outcomes:
-  - {fileID: 11400000, guid: c65471fe5dca1624e859a234c79ed229, type: 2}
+  - {fileID: 11400000, guid: 8c211cbf32830bc4cac088cbf67d6599, type: 2}
+  - {fileID: 11400000, guid: 771450e8b796cd0458841934fc8a9bd0, type: 2}

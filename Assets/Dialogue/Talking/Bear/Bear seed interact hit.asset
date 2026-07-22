@@ -17,4 +17,4 @@ MonoBehaviour:
   trigger: 
   itemGain: 
   SceneChange: 
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: 1e2641a7a60ddf9459cde91de15cf6f3, type: 2}

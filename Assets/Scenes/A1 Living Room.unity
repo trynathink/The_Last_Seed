@@ -4338,6 +4338,10 @@ MonoBehaviour:
   - 0.25
   - 0.5
   - 0.25
+  BubbleAudio:
+  - {fileID: 6418180475301049370, guid: b689c21f58daf86448f3cb7f64c20143, type: 2}
+  - {fileID: 6418180475301049370, guid: f8eb7a1b4326cae4e99864441ebc35bd, type: 2}
+  - {fileID: 6418180475301049370, guid: 6f8c12ad5aa3ffc4fb3bbcd4d919096f, type: 2}
   CurrentBubbleChance: 0.1
   MoveDownChance: 0.1
   MoveDownRange: {x: 75, y: 125}
@@ -4353,6 +4357,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   click: {fileID: 1120369429361536294, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  sound: {fileID: 1111102852}
 --- !u!1 &1906512052
 GameObject:
   m_ObjectHideFlags: 0
