@@ -1,10 +1,12 @@
 using System.Collections;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 // Gaurav Singh
 
@@ -19,6 +21,10 @@ public class DialogueManager : MonoBehaviour
 
 	[SerializeField]
 	private float[] BubbleChances;
+
+	// NOTE: Should list the audio generators in order by short, medium, long
+	[SerializeField]
+	private AudioResource[] BubbleAudio;
 
 	[SerializeField]
 	private float CurrentBubbleChance;
@@ -57,6 +63,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private InputActionReference click;
 
+    [SerializeField]
+    private AudioSource sound;
+
     Image DiaImg;
     GameObject Inner, NPC, Choice;
 	private bool keepWord = false;
@@ -75,6 +84,9 @@ public class DialogueManager : MonoBehaviour
 			current += BubbleChances[i];
 			BubbleChances[i] = current;
 		}
+
+		// Generate BubbleAudio[][] from serializable type
+
 
 		click.action.performed += OnPointerClick;
 		click.action.Enable();
@@ -181,7 +193,6 @@ public class DialogueManager : MonoBehaviour
 		float end = placement.x + TextArea.rect.width;
 
 		int bubble = RandBubble(0);
-		GameObject bubblePrefab = Bubbles[bubble];
 		int limit = CharacterLimits[bubble];
 		string words = line[0] + ' ';
 
@@ -191,9 +202,10 @@ public class DialogueManager : MonoBehaviour
 
 			if (words.Length + word.Length > limit || word[0] == interactable || words[0] == interactable)
 			{
-				NPCBubble(bubblePrefab, placement, words);
+				// TODO: prefab not always small for interactable word
+				float bubbleWidth = NPCBubble(bubble, placement, words);
 				float moveRightBuffer = Random.Range(MoveRightBufferRange.x, MoveRightBufferRange.y);
-				placement.x += bubblePrefab.GetComponent<RectTransform>().rect.width + moveRightBuffer;
+				placement.x += bubbleWidth + moveRightBuffer;
 				// TODO: possibly change y position just a little bit each time
 
 				if (Random.value <= MoveDownChance || placement.x > end)
@@ -204,7 +216,6 @@ public class DialogueManager : MonoBehaviour
 				}
 
 				bubble = RandBubble(bubble);
-				bubblePrefab = Bubbles[bubble];
 				limit = CharacterLimits[bubble];
 				words = "";
 			}
@@ -212,7 +223,8 @@ public class DialogueManager : MonoBehaviour
 			words += word + ' ';
 		}
 
-		NPCBubble(bubblePrefab, placement, words);
+		// TODO: prefab not always right size for last word(s)
+		NPCBubble(bubble, placement, words);
     }
 
 	private void OnWordClick()
@@ -234,18 +246,29 @@ public class DialogueManager : MonoBehaviour
 		keepWord = false;
 	}
 
-    // Method that places the strips of paper
-    void NPCBubble(GameObject bubblePrefab, Vector2 placement, string words)
+	private IEnumerator PlayAudio(AudioResource audio)
+	{
+		while (sound.isPlaying)
+		{
+			yield return new WaitForEndOfFrame();
+		}
+
+		sound.generator = (IAudioGenerator) audio;
+		sound.Play();
+	}
+
+    // Method that places the strips of paper; returns paper object width for convenience
+    float NPCBubble(int bubble, Vector2 placement, string words)
     {
-		GameObject bubble;
+		GameObject bubbleObject;
 		int clickSymIdx = words.IndexOf('^');
 
 		if (clickSymIdx >= 0)
 		{
 			words = words.Remove(clickSymIdx, 1);
-			bubble = Instantiate(interactableBubble, NPC.transform);
-			bubble.AddComponent<Button>().onClick.AddListener(OnWordClick);
-			EventTrigger trigger = bubble.AddComponent<EventTrigger>();
+			bubbleObject = Instantiate(interactableBubble, NPC.transform);
+			bubbleObject.AddComponent<Button>().onClick.AddListener(OnWordClick);
+			EventTrigger trigger = bubbleObject.AddComponent<EventTrigger>();
 
 			EventTrigger.Entry entry = new EventTrigger.Entry();
 			entry.eventID = EventTriggerType.PointerEnter;
@@ -259,16 +282,21 @@ public class DialogueManager : MonoBehaviour
 		}
 		else
 		{
-			bubble = Instantiate(bubblePrefab, NPC.transform);
+			bubbleObject = Instantiate(Bubbles[bubble], NPC.transform);
 		}
 		
-		RectTransform transform = bubble.GetComponent<RectTransform>();
+		StartCoroutine(PlayAudio(BubbleAudio[bubble]));
+		RectTransform transform = bubbleObject.GetComponent<RectTransform>();
 		transform.localPosition = placement;
-        bubble.transform.GetChild(0).GetComponent<TMP_Text>().text = words;
+        bubbleObject.transform.GetChild(0).GetComponent<TMP_Text>().text = words;
+		return transform.rect.width;
     }
 
     void NPCReset()
     {
+		StopAllCoroutines();
+		sound.Stop();
+
         foreach(Transform bubble in NPC.transform)
         {
 			Destroy(bubble.gameObject);
