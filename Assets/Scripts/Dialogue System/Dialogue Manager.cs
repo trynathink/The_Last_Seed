@@ -95,7 +95,7 @@ public class DialogueManager : MonoBehaviour
                     NPCSpeak();
                 }
             }
-			else if (!keepWord)
+			else if (!keepWord && LineNum == script.Lines.Count)
             {
                 StageLeft();
             }
@@ -146,8 +146,6 @@ public class DialogueManager : MonoBehaviour
 
     void TalkingToMyself()
     {
-        Debug.Log(Inner.transform.GetChild(0).GetComponent<TMP_Text>());
-
         var t = Inner.transform.GetChild(0).GetComponent<TMP_Text>();
         t.text = script.Lines[LineNum];
     }
@@ -219,8 +217,11 @@ public class DialogueManager : MonoBehaviour
 
 	private void OnWordClick()
 	{
-		SetLines(script.choice.Outcomes[1]);
+		NPCReset();
 		keepWord = false;
+		script = script.choice.Outcomes[1];
+		SetChoice();
+
 	}
 
 	private void OnWordHover()
