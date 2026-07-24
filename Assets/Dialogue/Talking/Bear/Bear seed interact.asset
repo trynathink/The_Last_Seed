@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9bc00b0163cb4c408dcbe8105759903, type: 3}
-  m_Name: Bear -Are the fires getting worse- Choice
+  m_Name: Bear seed interact
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
-  Choices:
-  - What's causing the fire?
-  - What can we do?
+  Choices: []
   Outcomes:
-  - {fileID: 11400000, guid: 02236ac354342af48b961dba0fd3c7a2, type: 2}
-  - {fileID: 11400000, guid: 11036cc0fdc12ce4dbab2bf375dbdc88, type: 2}
+  - {fileID: 11400000, guid: 8c211cbf32830bc4cac088cbf67d6599, type: 2}
+  - {fileID: 11400000, guid: 771450e8b796cd0458841934fc8a9bd0, type: 2}
