@@ -20,17 +20,20 @@ public class Collectible : MonoBehaviour
 
     private void OnEnable()
     {
-        if (PDSO.Inventory.Contains(type.ToString()))
+        if (PDSO.ItemContains(gameObject.name))
         {
             gameObject.SetActive(false);
         }
     }
 
-    public void Collect()
+    public void Collect(ItemSO i)
     {
         Debug.Log("collect triggered");
-        PDSO.AddToInventory(type.ToString());
+
+        PDSO.AddToInventory(i);
+
         OnCollect?.Invoke();
+
         gameObject.SetActive(false);
     }
 }

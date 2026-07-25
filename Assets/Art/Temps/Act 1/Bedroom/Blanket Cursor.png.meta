@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 190d87ff215f8404fa76ff4709e055e1
+guid: 84cda86fbdbb6584cb6359b528c3b56b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7581796962388170804
-    second: Cursor_Placeholder_0
+      213: 4172723044427190317
+    second: Act1_Bedroom_blanket_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 2
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 32
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cursor_Placeholder_0
+      name: Act1_Bedroom_blanket_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 104
-        width: 104
-        height: 107
+        x: 1331
+        y: 698
+        width: 828
+        height: 390
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 438584eca24f73960800000000000000
-      internalID: 7581796962388170804
+      spriteID: 5e06c42bbf022ce4ea297ef591ffdfe4
+      internalID: -276591211
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8625c017a1e8c0e459dada932666b2bf
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +146,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3840.0,"y":2160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Cursor_Placeholder_0: 7581796962388170804
+      Act1_Bedroom_blanket_0: 4172723044427190317
+      Act1_Bedroom_blanket_1: -276591211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

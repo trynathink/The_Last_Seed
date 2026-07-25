@@ -4602,18 +4602,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b431f6b87c3a14fa423f7eacfe3811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+  Bubbles:
+  - {fileID: 2796048855900594582, guid: 1a09be2c25936b046a57ad06540208f2, type: 3}
+  - {fileID: 2808264593536406702, guid: bad2c4b3a5be85d49a6a8032498f40d1, type: 3}
+  - {fileID: 5194724763292896191, guid: ad1d2301ae31b2a448d17e46fa4f37e7, type: 3}
+  BubbleChances:
+  - 0.25
+  - 0.5
+  - 0.25
+  CurrentBubbleChance: 0.1
+  MoveDownChance: 0.1
+  MoveDownRange: {x: 75, y: 125}
+  MoveRightBufferRange: {x: -25, y: 10}
+  LinePaddingRange: {x: 10, y: 300}
+  CharacterLimits: 05000000080000000d000000
+  TextArea: {fileID: 1216645322}
   Dia: 0
   Self: 0
   script: {fileID: 0}
   LineNum: 0
   WordNum: 0
-  DiaImg: {fileID: 0}
   onClick:
     m_PersistentCalls:
       m_Calls: []
-  Inner: {fileID: 0}
-  NPC: {fileID: 0}
-  Choice: {fileID: 0}
 --- !u!1 &1906512052
 GameObject:
   m_ObjectHideFlags: 0

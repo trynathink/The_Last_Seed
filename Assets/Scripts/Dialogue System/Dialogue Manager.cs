@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     ScriptsSO script;
 
     [SerializeField]
-    int LineNum, WordNum;
+    int LineNum;
 
     [SerializeField]
     private UnityEvent onClick;
@@ -110,7 +110,6 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     {
         // Reseting Vars
         LineNum = 0;
-        WordNum = 0;
         script = givenscript;
         DiaImg.enabled = true;
         ResetChoice();
@@ -258,9 +257,9 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
             NPCReset();
         }
 
-        if (script.itemGain != string.Empty && script.itemGain != null)
+        if (script.itemGain != null)
         {
-            GameObject.Find(script.itemGain).GetComponent<Collectible>().Collect();
+            GameObject.Find(script.itemGain.Name).GetComponent<Collectible>().Collect(script.itemGain);
         }
 
         if(script.trigger != string.Empty && script.trigger != null)

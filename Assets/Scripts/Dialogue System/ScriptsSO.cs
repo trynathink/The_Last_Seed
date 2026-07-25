@@ -9,7 +9,9 @@ public class ScriptsSO : ScriptableObject
     [SerializeReference]
     public List<string> Lines;
 
-    public string trigger, itemGain;
+    public string trigger;
+
+    public ItemSO itemGain;
 
     public string SceneChange;
 

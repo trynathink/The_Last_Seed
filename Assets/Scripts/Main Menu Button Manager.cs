@@ -104,7 +104,7 @@ public class MainMenuButtonManager : MonoBehaviour
             {
 
                 s.GetComponent<Image>().sprite = NImg[i];
-                var sD = s.transform.GetChild(0).GetComponent<Image>();
+                var sD = s.transform.GetChild(0).GetChild(0).GetComponent<Image>();
 
                 sD.sprite = null;
                 sD.color = new Color(0, 0, 0, 0);

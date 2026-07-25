@@ -56,7 +56,20 @@ public class GameSceneManagerACT2 : MonoBehaviour
 
     public void NextScene(string sceneName)
     {
-
+        switch (PDSO.FireStage)
+        {
+            case 0:
+                PDSO.Fire += 0.5f;
+                break;
+            case 1:
+                PDSO.Fire += 1.5f;
+                break;
+            case 2:
+                PDSO.Fire += 2.5f;
+                break;
+            case 3:
+                break;
+        }
 
         PDSO.PlayerLocation = sceneName;
         SceneManager.LoadScene(PDSO.PlayerLocation);

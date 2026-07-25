@@ -64,13 +64,15 @@ public class InventoryManager : MonoBehaviour
         inventoryPanel.SetActive(isOpening);
     }
 
+    
+
     void ItemsHeld()
     {
         foreach (Transform child in itemContainer)
         {
             var item = child.GetComponent<Image>();
 
-            if (PDSO.Inventory.Contains(child.name))
+            if (PDSO.ItemContains(child.name))
             {
                 item.enabled = true;
             }
@@ -87,7 +89,8 @@ public class InventoryManager : MonoBehaviour
 
         if(item != string.Empty)
         {
-            var cursor = CreateCursor(itemContainer.Find(item).GetComponent<Image>().sprite);
+            //var cursor = CreateCursor(itemContainer.Find(item).GetComponent<Image>().sprite);
+            var cursor = PDSO.GetItem(item).CursorSprite;
 
             Cursor.SetCursor(cursor, default, CursorMode.ForceSoftware);
         }
@@ -97,6 +100,7 @@ public class InventoryManager : MonoBehaviour
         } 
     }
 
+    // no longer needed
     Texture2D CreateCursor(Sprite s)
     {
         int width = Mathf.FloorToInt(s.rect.width);
@@ -121,6 +125,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    /*
     private void PopulateInventory()
     {
         foreach (string item in PDSO.Inventory)
@@ -135,6 +140,7 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
+    */
 
     private void AddToInventory(CollectibleType collectible)
     {

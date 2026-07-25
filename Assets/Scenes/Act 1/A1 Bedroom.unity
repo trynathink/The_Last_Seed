@@ -2122,6 +2122,90 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: TextArea
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: MoveDownChance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: MoveDownRange.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: MoveDownRange.y
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: Bubbles.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: LinePaddingRange.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: LinePaddingRange.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: CurrentBubbleChance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: 'Bubbles.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2796048855900594582, guid: 1a09be2c25936b046a57ad06540208f2, type: 3}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: 'Bubbles.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2808264593536406702, guid: bad2c4b3a5be85d49a6a8032498f40d1, type: 3}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: 'Bubbles.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5194724763292896191, guid: ad1d2301ae31b2a448d17e46fa4f37e7, type: 3}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: MoveRightBufferRange.x
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: MoveRightBufferRange.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: BubbleChances.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: CharacterLimits.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: 'BubbleChances.Array.data[0]'
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: 'BubbleChances.Array.data[1]'
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: 'BubbleChances.Array.data[2]'
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: 'CharacterLimits.Array.data[0]'
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: 'CharacterLimits.Array.data[1]'
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261536760416554118, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}
+      propertyPath: 'CharacterLimits.Array.data[2]'
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7933521252010654944, guid: f2f78fab72ecc24488122d43fe22e734, type: 3}

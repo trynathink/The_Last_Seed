@@ -16,5 +16,7 @@ MonoBehaviour:
   Lines:
   - "my special blanket\u2026"
   - maybe I should take it with me
-  itemGain: Blanket
+  trigger: 
+  itemGain: {fileID: 11400000, guid: abb076894db46844e95f6276dfb17677, type: 2}
   SceneChange: 
+  choice: {fileID: 0}
