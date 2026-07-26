@@ -5,7 +5,7 @@ public class GameSceneManagerACT2 : MonoBehaviour
 {
     // Gaurav Singh
 
-    // This script manages every scene in Act 1 minus the main menu
+    // This script manages every scene in Act 2 minus the main menu
 
     [SerializeField]
     PlayerDataSO PDSO;
@@ -73,5 +73,15 @@ public class GameSceneManagerACT2 : MonoBehaviour
 
         PDSO.PlayerLocation = sceneName;
         SceneManager.LoadScene(PDSO.PlayerLocation);
+    }
+
+    public void HareDialogue()
+    {
+
+    }
+
+    public void ScarecrowDialogue()
+    {
+        
     }
 }
