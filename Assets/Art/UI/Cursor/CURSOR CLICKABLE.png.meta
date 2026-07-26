@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b54b6ff5948566e4992363f088e159eb
+guid: d8689d86e5e333d4186a1f810ba1e8af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5311608454513549931
-    second: ARROW DOWN IDLE_0
+      213: -3627417548090843771
+    second: CURSOR CLICKABLE_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,13 +51,13 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 2
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 32
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ARROW DOWN IDLE_0
+      name: CURSOR CLICKABLE_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 4
-        width: 240
-        height: 108
+        x: 18
+        y: 6
+        width: 109
+        height: 116
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b62ed3d4fbf96b940800000000000000
-      internalID: 5311608454513549931
+      spriteID: 58dd60a75f2d8adc0800000000000000
+      internalID: -3627417548090843771
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ARROW DOWN IDLE_0: 5311608454513549931
+      CURSOR CLICKABLE_0: -3627417548090843771
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

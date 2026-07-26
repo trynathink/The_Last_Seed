@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4b42525b51a9bbfa3a5513a5a19910e1
+guid: 5dca2182ec63c4d4ba0a2a19496e3a8b
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -116,10 +116,10 @@ TextureImporter:
       name: ARROW LEFT IDLE_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 40
-        width: 102
-        height: 241
+        x: 0
+        y: 9
+        width: 104
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

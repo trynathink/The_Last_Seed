@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b54b6ff5948566e4992363f088e159eb
+guid: 09cb404fa0d0ad443b352880bc444573
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5311608454513549931
-    second: ARROW DOWN IDLE_0
+      213: 4450303540043236522
+    second: SETTINGS BUTTON SAVE IDLE_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ARROW DOWN IDLE_0
+      name: SETTINGS BUTTON SAVE IDLE_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 5
         y: 4
-        width: 240
-        height: 108
+        width: 128
+        height: 154
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b62ed3d4fbf96b940800000000000000
-      internalID: 5311608454513549931
+      spriteID: aa4c0fead77a2cd30800000000000000
+      internalID: 4450303540043236522
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ARROW DOWN IDLE_0: 5311608454513549931
+      SETTINGS BUTTON SAVE IDLE_0: 4450303540043236522
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
