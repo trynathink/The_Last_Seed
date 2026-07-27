@@ -14,16 +14,20 @@ public class PlayerDataSO : ScriptableObject
     public List<ItemSO> Inventory;
     public List<string> triggers;
 
-    public void NewGame(string FileName)
-    {
-        SaveFile = FileName;
+	public void Clear()
+	{
         PlayerLocation = "A1 Bedroom";
         Fire = 0;
         FireStage = 0;
         Inventory = new List<ItemSO>();
         triggers = new List<string>();
         HeldItem = string.Empty;
+	}
 
+    public void NewGame(string FileName)
+    {
+		Clear();
+		SaveFile = FileName;
         SaveGame();
     }
 
