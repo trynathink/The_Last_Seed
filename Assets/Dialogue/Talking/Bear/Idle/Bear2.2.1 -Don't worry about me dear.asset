@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bc00b0163cb4c408dcbe8105759903, type: 3}
+  m_Name: Bear2.2.1 -Don't worry about me dear
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  Choices:
+  - Do you think about the past often?
+  Outcomes:
+  - {fileID: 11400000, guid: cb6e1b6b150b607d581112cac5fe29d8, type: 2}

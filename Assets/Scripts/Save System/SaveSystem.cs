@@ -91,7 +91,7 @@ public class SaveSystem : IDataService
 
         if (!File.Exists(path))
         {
-            Debug.LogError($"Cannot load file at {path}. No file found");
+            Debug.LogError($"Cannot delete file at {path}. No file found");
             throw new FileNotFoundException();
         }
 
@@ -109,16 +109,18 @@ public class SaveSystem : IDataService
 
     public bool CheckData<T>(string rPath)
     {
-        Debug.Log("This is happening");
-
         string path = Application.persistentDataPath + rPath;
 
         if (File.Exists(path))
         {
+            Debug.Log("true");
+
             return true;
         }
         else
         {
+            Debug.Log("false");
+
             return false;
         }
     }
