@@ -4,7 +4,7 @@ public class AudioSingleton<T> : MonoBehaviour where T : UnityEngine.Object
 {
 	protected static AudioSource source;
 
-    void Awake()
+    protected virtual void Awake()
 	{
 		if (GameObject.FindObjectsByType<T>().Length > 1)
         {
