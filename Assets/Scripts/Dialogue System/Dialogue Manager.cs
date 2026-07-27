@@ -85,11 +85,11 @@ public class DialogueManager : MonoBehaviour
 			BubbleChances[i] = current;
 		}
 
-		// Generate BubbleAudio[][] from serializable type
-
-
-		click.action.performed += OnPointerClick;
-		click.action.Enable();
+		if (click != null)
+		{
+			click.action.performed += OnPointerClick;
+			click.action.Enable();
+		}
     }
 
     private void OnPointerClick(InputAction.CallbackContext context)
@@ -285,7 +285,7 @@ public class DialogueManager : MonoBehaviour
 			bubbleObject = Instantiate(Bubbles[bubble], NPC.transform);
 		}
 		
-		StartCoroutine(PlayAudio(BubbleAudio[bubble]));
+		if (sound != null) StartCoroutine(PlayAudio(BubbleAudio[bubble]));
 		RectTransform transform = bubbleObject.GetComponent<RectTransform>();
 		transform.localPosition = placement;
         bubbleObject.transform.GetChild(0).GetComponent<TMP_Text>().text = words;
