@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 public class GameSceneManagerACT2 : MonoBehaviour
 {
@@ -13,6 +16,14 @@ public class GameSceneManagerACT2 : MonoBehaviour
     DialogueManager DM;
     InventoryManager IM;
     MoveSFX MSFX;
+
+    // scarecrow
+    public ScriptsSO ScarecrowIdle;
+    public ScriptsSO ScarecrowFabric;
+
+    // hare
+    public ScriptsSO HareInit;
+    public ScriptsSO HareIdle;
 
     // there is clearly a better way to do this, not rn
     public ScriptsSO DefaultItemFail;
@@ -77,11 +88,22 @@ public class GameSceneManagerACT2 : MonoBehaviour
 
     public void HareDialogue()
     {
-
+        DM.SetLines(HareInit);
     }
 
     public void ScarecrowDialogue()
     {
+        HashSet<string> inventory = PDSO.Inventory
+                        .Select(item => item.Name)
+                        .ToHashSet(StringComparer.OrdinalIgnoreCase);
         
+        if(inventory.Contains(CollectibleType.Blanket.ToString()))
+        {
+            DM.SetLines(ScarecrowIdle);
+        }
+        else
+        {
+            DM.SetLines(ScarecrowFabric);
+        }
     }
 }

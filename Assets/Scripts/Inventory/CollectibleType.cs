@@ -8,5 +8,6 @@ public enum CollectibleType
 {
     Blanket,
     Crowbar,
-    Pitchfork
+    Pitchfork,
+    Fabric
 }

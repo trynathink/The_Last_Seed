@@ -1956,6 +1956,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameSceneManagerACT2
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  ScarecrowIdle: {fileID: 11400000, guid: 83e78edbba868e851a894f2a4ec768bb, type: 2}
+  ScarecrowFabric: {fileID: 11400000, guid: a6bdf2a71afcd7a038b72b95c8836ee7, type: 2}
+  HareInit: {fileID: 11400000, guid: 7584c9a7f1413e7c4a2d6384e8c8e3c1, type: 2}
+  HareIdle: {fileID: 11400000, guid: 9fff33103c462c0ef88dfb40d668b30c, type: 2}
   DefaultItemFail: {fileID: 0}
 --- !u!1 &803519714
 GameObject:
