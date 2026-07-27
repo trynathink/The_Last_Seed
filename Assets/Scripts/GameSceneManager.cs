@@ -24,7 +24,7 @@ public class GameSceneManager : MonoBehaviour
     private bool isAlarmOff = false;
 
     // there is clearly a better way to do this, not rn
-    public ScriptsSO AlarmOn, FrontDoorLock, FrontDoorGoal, InitWindow, leaveWindow, questionWindow, DefaultItemFail;
+    public ScriptsSO AlarmOn, FrontDoorLock, FrontDoorGoal, InitWindow, leaveWindow, questionWindow, DefaultItemFail, FrontDoorHint;
 
 
 
@@ -253,10 +253,12 @@ public class GameSceneManager : MonoBehaviour
                 {
                     GameObject.Find("Boards").GetComponent<Image>().enabled = false;
                     PDSO.triggers.Add("Boards Removed");
+
+                    IM.HoldItem("");
                 }
                 else
                 {
-                    DM.SetLines(DefaultItemFail);
+                    DM.SetLines(FrontDoorHint);
                 }
                 break;
             default:

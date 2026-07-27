@@ -71,6 +71,8 @@ public class GameSceneManagerACT2 : MonoBehaviour
                 break;
         }
 
+        IM.HoldItem("");
+
         PDSO.PlayerLocation = sceneName;
         SceneManager.LoadScene(PDSO.PlayerLocation);
     }
