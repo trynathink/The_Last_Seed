@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d2731d9c1a18f144e884f2dff49a2565
+guid: 14074cfbfe0672142bcadf17c2a5cdba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6457004015948499409
-    second: HOW IT SHOULD LOOK LIKE_0
+      213: 912841566734904402
+    second: LANDING SAVE SAVED 1 BURN 0_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HOW IT SHOULD LOOK LIKE_0
+      name: LANDING SAVE SAVED 1 BURN 0_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 313
+        y: 330
+        width: 421
+        height: 505
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d981eb11f2eb9950800000000000000
-      internalID: 6457004015948499409
+      spriteID: 25ce17981901bac00800000000000000
+      internalID: 912841566734904402
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      HOW IT SHOULD LOOK LIKE_0: 6457004015948499409
+      LANDING SAVE SAVED 1 BURN 0_0: 912841566734904402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -173,7 +173,7 @@ public class GameSceneManager : MonoBehaviour
             case "":
                 GameObject.Find("Closet Closed").GetComponent<Image>().enabled = !open;
                 GameObject.Find("Closet Open").GetComponent<Image>().enabled = open;
-                GameObject.Find("Close Open Hitbox").GetComponent<Image>().enabled = open;
+                GameObject.Find("Closet Open").transform.Find("Close Open Hitbox").gameObject.SetActive(open);
 
                 MSFX.Play();
                 break;
