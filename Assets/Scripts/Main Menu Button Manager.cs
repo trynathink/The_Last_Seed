@@ -102,7 +102,6 @@ public class MainMenuButtonManager : MonoBehaviour
             }
             else
             {
-
                 s.GetComponent<Image>().sprite = NImg[i];
                 var sD = s.transform.GetChild(0).GetComponent<Image>();
 

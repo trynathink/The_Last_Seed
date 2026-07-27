@@ -16,10 +16,11 @@ public class PlayerData
 
     // Fire is the tracker for how much the Burning Page System has progressed
     public float Fire;
+    public int FireStage;
 
     // Inventory is a list which contains every item the player has
     // If the player does not have an item then it isn't in the list
-    public List<string> Inventory;
+    public List<ItemSO> Inventory;
 
     // triggers are a list of triggers the player has met
     // example could be if the player has finished a certain puzzle or reached a certain dialogue point

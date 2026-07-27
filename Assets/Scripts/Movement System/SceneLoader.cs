@@ -25,9 +25,9 @@ public class SceneLoader : MonoBehaviour
 		// NOTE: This will be much less expensive if we have a list of potential affected items
 		// and a list of potential trigger game objects serialized at the top of this script,
 		// but for ease of use we can try like this
-		foreach (string item in data.Inventory)
+		foreach (ItemSO item in data.Inventory)
 		{
-			Destroy(GameObject.Find(item));
+			Destroy(GameObject.Find(item.name));
 		}
 
 		foreach (string trigger in data.triggers)

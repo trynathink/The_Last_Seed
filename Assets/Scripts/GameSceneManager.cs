@@ -7,7 +7,7 @@ public class GameSceneManager : MonoBehaviour
 {
     // Gaurav Singh
 
-    // This script manages every scene minus the main menu
+    // This script manages every scene in Act 1 minus the main menu
 
     [SerializeField] 
     PlayerDataSO PDSO;
@@ -18,10 +18,15 @@ public class GameSceneManager : MonoBehaviour
 
     [SerializeField] private AudioClip alarm;
 
+    [SerializeReference]
+    ScriptsSO bearIdle, bearInit;
+
     private bool isAlarmOff = false;
 
     // there is clearly a better way to do this, not rn
     public ScriptsSO AlarmOn, FrontDoorLock, FrontDoorGoal, InitWindow, leaveWindow, questionWindow, DefaultItemFail;
+
+
 
     private void OnEnable()
     {
@@ -41,12 +46,6 @@ public class GameSceneManager : MonoBehaviour
 					BackgroundSFX.PlayLoop(alarm);
 				}
                 break;
-            case "A1 Living Room":
-                if (PDSO.Inventory.Contains("Crowbar"))
-                {
-                    GameObject.Find("Crowbar Hitbox").SetActive(false);
-                }
-                break;
             case "A1 Kitchen":
                 if (PDSO.triggers.Contains("Boards Removed"))
                 {
@@ -59,6 +58,8 @@ public class GameSceneManager : MonoBehaviour
     // All scenes
     public void Item(ScriptsSO script)
     {
+        IM.HoldItem("");
+
         // for any items without item specific interactions
         switch (PDSO.HeldItem)
         {
@@ -170,13 +171,41 @@ public class GameSceneManager : MonoBehaviour
             case "":
                 GameObject.Find("Closet Closed").GetComponent<Image>().enabled = !open;
                 GameObject.Find("Closet Open").GetComponent<Image>().enabled = open;
-                GameObject.Find("Close Open Hitbox").GetComponent<Image>().enabled = open;
+                GameObject.Find("Closet Open").transform.Find("Close Open Hitbox").gameObject.SetActive(open);
 
                 MSFX.Play();
                 break;
             default:
                 DM.SetLines(DefaultItemFail);
                 break;
+        }
+    }
+
+    public void BearDia()
+    {
+        Debug.Log(PDSO.triggers);
+
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                
+
+                if(PDSO.triggers.Contains("Goal Heard"))
+                {
+                    Debug.Log("Idle");
+
+                    DM.SetLines(bearIdle);
+                }
+                else
+                {
+                    Debug.Log("Init");
+
+                    DM.SetLines(bearInit);
+                }
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
+            break;
         }
     }
 
@@ -188,6 +217,8 @@ public class GameSceneManager : MonoBehaviour
 
     public void LRtoK()
     {
+        Debug.Log("move kitchen");
+
         NextScene("A1 Kitchen");
     }
 
@@ -231,5 +262,7 @@ public class GameSceneManager : MonoBehaviour
                 break;
         }
     }
+
+    
 
 }
