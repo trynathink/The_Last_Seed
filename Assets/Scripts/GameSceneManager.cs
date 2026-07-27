@@ -1,20 +1,14 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameSceneManager : MonoBehaviour
+public class GameSceneManager : GameSceneManagerBase
 {
     // Gaurav Singh
 
     // This script manages every scene in Act 1 minus the main menu
-
-    [SerializeField] 
-    PlayerDataSO PDSO;
-
-    DialogueManager DM;
-    InventoryManager IM;
-    MoveSFX MSFX;
 
     [SerializeField] private AudioClip alarm;
 
@@ -24,15 +18,11 @@ public class GameSceneManager : MonoBehaviour
     private bool isAlarmOff = false;
 
     // there is clearly a better way to do this, not rn
-    public ScriptsSO AlarmOn, FrontDoorLock, FrontDoorGoal, InitWindow, leaveWindow, questionWindow, DefaultItemFail;
+    public ScriptsSO AlarmOn, FrontDoorLock, FrontDoorGoal, InitWindow, leaveWindow, questionWindow;
 
-
-
-    private void OnEnable()
+    protected override void OnEnable()
     {
-        DM = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
-        IM = GameObject.Find("Inventory").GetComponent<InventoryManager>();
-        MSFX = GameObject.Find("SFX").GetComponent<MoveSFX>();
+		base.OnEnable();
 
         switch (SceneManager.GetActiveScene().name)
         {
@@ -55,53 +45,17 @@ public class GameSceneManager : MonoBehaviour
         }
     }
 
-    // All scenes
-    public void Item(ScriptsSO script)
-    {
-        IM.HoldItem("");
-
-        // for any items without item specific interactions
-        switch (PDSO.HeldItem)
-        {
-            case "":
-                DM.SetLines(script);
-                break;
-            default:
-                DM.SetLines(DefaultItemFail);
-                break;
-        }
-    }
-
-    public void addTrigger(string t)
-    {
-        if (!PDSO.triggers.Contains(t))
-        {
-            PDSO.triggers.Add(t);
-        }
-    }
-
-    public void NextScene(string sceneName)
-    {
-        PDSO.PlayerLocation = sceneName;
-        SceneManager.LoadScene(PDSO.PlayerLocation);
-    }
-
     // Bedroom & Bed Window Scene 
     public void OnClockClick()
     {
-        switch (PDSO.HeldItem)
-        {
-            case "":
-                if (!isAlarmOff)
-                {
-                    Clock();
-                    PDSO.triggers.Add("Clock");
-                }
-                break;
-            default:
-                DM.SetLines(DefaultItemFail);
-                break;
-        }
+		Action click = () => {
+			if (!isAlarmOff)
+			{
+				Clock();
+				PDSO.triggers.Add("Clock");
+			}
+		};
+		CatchAnyItemHeld(click);
     }
 
     public void Clock()
@@ -113,15 +67,7 @@ public class GameSceneManager : MonoBehaviour
     // Bedroom Scene
     public void BedroomWindow()
     {
-        switch (PDSO.HeldItem)
-        {
-            case "":
-                NextScene("A1 Bed Window");
-                break;
-            default:
-                DM.SetLines(DefaultItemFail);
-                break;
-        }
+		CatchAnyItemHeld(() => NextScene("A1 Bed Window"));
     }
 
     public void ExitBedroom()
@@ -129,11 +75,10 @@ public class GameSceneManager : MonoBehaviour
         if (!isAlarmOff)
         {
             DM.SetLines(AlarmOn);
-
             return;
         }
 
-        MSFX.door = true;
+		MoveSFX.Play();
         NextScene("A1 Living Room");
     }
 
@@ -146,79 +91,53 @@ public class GameSceneManager : MonoBehaviour
     // Living Room Scene
     public void FrontDoor()
     {
-        switch (PDSO.HeldItem)
-        {
-            case "":
-                if (PDSO.triggers.Contains("Goal Heard"))
-                {
-                    DM.SetLines(FrontDoorGoal);
-                }
-                else
-                {
-                    DM.SetLines(FrontDoorLock);
-                }
-                break;
-            default:
-                DM.SetLines(DefaultItemFail);
-                break;
-        }
+		Action click = () => {
+			if (PDSO.triggers.Contains("Goal Heard"))
+			{
+				DM.SetLines(FrontDoorGoal);
+			}
+			else
+			{
+				DM.SetLines(FrontDoorLock);
+			}
+		};
+		CatchAnyItemHeld(click);
     }
 
     public void Closet(bool open)
     {
-        switch (PDSO.HeldItem)
-        {
-            case "":
-                GameObject.Find("Closet Closed").GetComponent<Image>().enabled = !open;
-                GameObject.Find("Closet Open").GetComponent<Image>().enabled = open;
-                GameObject.Find("Closet Open").transform.Find("Close Open Hitbox").gameObject.SetActive(open);
-
-                MSFX.Play();
-                break;
-            default:
-                DM.SetLines(DefaultItemFail);
-                break;
-        }
+		Action click = () => {
+			GameObject.Find("Closet Closed").GetComponent<Image>().enabled = !open;
+			GameObject.Find("Closet Open").GetComponent<Image>().enabled = open;
+			GameObject.Find("Closet Open").transform.Find("Close Open Hitbox").gameObject.SetActive(open);
+			MoveSFX.Play();
+		};
+		CatchAnyItemHeld(click);
     }
 
     public void BearDia()
     {
-        Debug.Log(PDSO.triggers);
-
-        switch (PDSO.HeldItem)
-        {
-            case "":
-                
-
-                if(PDSO.triggers.Contains("Goal Heard"))
-                {
-                    Debug.Log("Idle");
-
-                    DM.SetLines(bearIdle);
-                }
-                else
-                {
-                    Debug.Log("Init");
-
-                    DM.SetLines(bearInit);
-                }
-                break;
-            default:
-                DM.SetLines(DefaultItemFail);
-            break;
-        }
+		Action click = () => {
+			if(PDSO.triggers.Contains("Goal Heard"))
+			{
+				DM.SetLines(bearIdle);
+			}
+			else
+			{
+				DM.SetLines(bearInit);
+			}
+		};
+		CatchAnyItemHeld(click);
     }
 
     public void LRtoBR()
     {
-        MSFX.door = true;
+		MoveSFX.Play();
         NextScene("A1 Bedroom");
     }
 
     public void LRtoK()
     {
-        Debug.Log("move kitchen");
-
         NextScene("A1 Kitchen");
     }
 

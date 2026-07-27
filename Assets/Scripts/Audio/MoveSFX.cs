@@ -3,31 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class MoveSFX : AudioSingleton<MoveSFX>
 {
-	[SerializeField] private AudioClip clip; // Can later be an array for each respective transition
+	[SerializeField] private AudioClip _clip; // Can later be an array for each respective transition
+	private static AudioClip clip;
 
-	public bool door;
-
-    private void OnEnable()
+	protected override void Awake()
 	{
-		SceneManager.sceneLoaded += OnSceneLoaded;	
+		base.Awake();
+		clip = _clip;
 	}
 
-    public void Play()
+    public static void Play()
     {
         source.PlayOneShot(clip);
     }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-	{
-		if (door)
-		{
-			source.PlayOneShot(clip);
-			door = false;
-		}
-	}
-
-	private void OnDisable()
-	{
-		SceneManager.sceneLoaded -= OnSceneLoaded;
-	}
 }

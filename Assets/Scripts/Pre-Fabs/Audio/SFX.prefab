@@ -143,8 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02dcc9824c258341a180c9160aed3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveSFX
-  clip: {fileID: 8300000, guid: 77234faaad5f4194f82e339ac8eeb6a1, type: 3}
-  door: 0
+  _clip: {fileID: 8300000, guid: 77234faaad5f4194f82e339ac8eeb6a1, type: 3}
 --- !u!114 &3093203304456958755
 MonoBehaviour:
   m_ObjectHideFlags: 0
