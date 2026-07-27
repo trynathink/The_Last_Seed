@@ -4,17 +4,11 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameSceneManager : MonoBehaviour
+public class GameSceneManager : GameSceneManagerBase
 {
     // Gaurav Singh
 
     // This script manages every scene in Act 1 minus the main menu
-
-    [SerializeField] 
-    PlayerDataSO PDSO;
-
-    DialogueManager DM;
-    InventoryManager IM;
 
     [SerializeField] private AudioClip alarm;
 
@@ -24,12 +18,11 @@ public class GameSceneManager : MonoBehaviour
     private bool isAlarmOff = false;
 
     // there is clearly a better way to do this, not rn
-    public ScriptsSO AlarmOn, FrontDoorLock, FrontDoorGoal, InitWindow, leaveWindow, questionWindow, DefaultItemFail;
+    public ScriptsSO AlarmOn, FrontDoorLock, FrontDoorGoal, InitWindow, leaveWindow, questionWindow;
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
-        DM = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
-        IM = GameObject.Find("Inventory").GetComponent<InventoryManager>();
+		base.OnEnable();
 
         switch (SceneManager.GetActiveScene().name)
         {
@@ -50,35 +43,6 @@ public class GameSceneManager : MonoBehaviour
                 }
                 break;
         }
-    }
-
-	private void CatchAnyItemHeld(Action actionIfNoneHeld)
-	{
-		if (PDSO.HeldItem == "")
-			actionIfNoneHeld();
-		else
-			DM.SetLines(DefaultItemFail);
-	}
-
-    // All scenes
-    public void Item(ScriptsSO script)
-    {
-        IM.HoldItem("");
-		CatchAnyItemHeld(() => DM.SetLines(script));
-    }
-
-    public void addTrigger(string t)
-    {
-        if (!PDSO.triggers.Contains(t))
-        {
-            PDSO.triggers.Add(t);
-        }
-    }
-
-    public void NextScene(string sceneName)
-    {
-        PDSO.PlayerLocation = sceneName;
-        SceneManager.LoadScene(PDSO.PlayerLocation);
     }
 
     // Bedroom & Bed Window Scene 
