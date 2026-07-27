@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 public class GameSceneManagerACT2 : MonoBehaviour
 {
     // Gaurav Singh
 
-    // This script manages every scene in Act 1 minus the main menu
+    // This script manages every scene in Act 2 minus the main menu
 
     [SerializeField]
     PlayerDataSO PDSO;
@@ -13,6 +16,14 @@ public class GameSceneManagerACT2 : MonoBehaviour
     DialogueManager DM;
     InventoryManager IM;
     MoveSFX MSFX;
+
+    // scarecrow
+    public ScriptsSO ScarecrowIdle;
+    public ScriptsSO ScarecrowFabric;
+
+    // hare
+    public ScriptsSO HareInit;
+    public ScriptsSO HareIdle;
 
     // there is clearly a better way to do this, not rn
     public ScriptsSO DefaultItemFail;
@@ -73,5 +84,26 @@ public class GameSceneManagerACT2 : MonoBehaviour
 
         PDSO.PlayerLocation = sceneName;
         SceneManager.LoadScene(PDSO.PlayerLocation);
+    }
+
+    public void HareDialogue()
+    {
+        DM.SetLines(HareInit);
+    }
+
+    public void ScarecrowDialogue()
+    {
+        bool containsBlanketOrFabric = PDSO.Inventory
+                        .Any(item => item.Name == CollectibleType.Blanket.ToString()
+                                || item.Name == CollectibleType.Fabric.ToString());
+        
+        if(!containsBlanketOrFabric && PDSO.triggers.Contains("WindmillScarecrowCloth"))
+        {
+            DM.SetLines(ScarecrowFabric);
+        }
+        else
+        {
+            DM.SetLines(ScarecrowIdle);
+        }
     }
 }

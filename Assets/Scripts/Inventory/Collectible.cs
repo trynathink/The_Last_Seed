@@ -18,6 +18,9 @@ public class Collectible : MonoBehaviour
     [SerializeField]
     private PlayerDataSO PDSO;
 
+    [SerializeField]
+    private bool destroyOnCollect = true;
+
     private void OnEnable()
     {
         if (PDSO.ItemContains(gameObject.name))
@@ -34,6 +37,7 @@ public class Collectible : MonoBehaviour
 
         OnCollect?.Invoke();
 
-        gameObject.SetActive(false);
+        if(destroyOnCollect)
+            gameObject.SetActive(false);
     }
 }
