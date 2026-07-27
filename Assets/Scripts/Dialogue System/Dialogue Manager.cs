@@ -49,7 +49,10 @@ public class DialogueManager : MonoBehaviour
 
 	[Header("Core")]
     [SerializeField]
-    bool Dia, Self;
+    bool Dia;
+
+    [SerializeField]
+    bool Self;
 
     [SerializeField]
     ScriptsSO script;
@@ -233,7 +236,6 @@ public class DialogueManager : MonoBehaviour
 		keepWord = false;
 		script = script.choice.Outcomes[1];
 		SetChoice();
-
 	}
 
 	private void OnWordHover()
@@ -334,7 +336,7 @@ public class DialogueManager : MonoBehaviour
 
         if (script.choice != null)
         {
-			if (!keepWord)
+			if (!keepWord && script.choice.Choices.Count == 0)
 			{
 				script = script.choice.Outcomes[0];
 			}
@@ -355,9 +357,7 @@ public class DialogueManager : MonoBehaviour
         for (int i = 0; i < script.choice.Choices.Count; i++)
         {
             Transform c = Choice.transform.GetChild(i);
-
             c.gameObject.SetActive(true);
-            
             c.GetComponent<Button>().enabled = true;
             c.GetComponent<Image>().enabled = true;
             c.GetChild(0).GetComponent<TMP_Text>().text = script.choice.Choices[i];
