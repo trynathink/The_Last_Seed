@@ -93,17 +93,17 @@ public class GameSceneManagerACT2 : MonoBehaviour
 
     public void ScarecrowDialogue()
     {
-        HashSet<string> inventory = PDSO.Inventory
-                        .Select(item => item.Name)
-                        .ToHashSet(StringComparer.OrdinalIgnoreCase);
+        bool containsBlanketOrFabric = PDSO.Inventory
+                        .Any(item => item.Name == CollectibleType.Blanket.ToString()
+                                || item.Name == CollectibleType.Fabric.ToString());
         
-        if(inventory.Contains(CollectibleType.Blanket.ToString()))
+        if(!containsBlanketOrFabric && PDSO.triggers.Contains("WindmillScarecrowCloth"))
         {
-            DM.SetLines(ScarecrowIdle);
+            DM.SetLines(ScarecrowFabric);
         }
         else
         {
-            DM.SetLines(ScarecrowFabric);
+            DM.SetLines(ScarecrowIdle);
         }
     }
 }
