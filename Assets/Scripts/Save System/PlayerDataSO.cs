@@ -10,18 +10,24 @@ public class PlayerDataSO : ScriptableObject
 
     public string SaveFile, PlayerLocation, HeldItem;
     public float Fire;
-    public List<string> Inventory;
+    public int FireStage;
+    public List<ItemSO> Inventory;
     public List<string> triggers;
+
+	public void Clear()
+	{
+        PlayerLocation = "A1 Bedroom";
+        Fire = 0;
+        FireStage = 0;
+        Inventory = new List<ItemSO>();
+        triggers = new List<string>();
+        HeldItem = string.Empty;
+	}
 
     public void NewGame(string FileName)
     {
-        SaveFile = FileName;
-        PlayerLocation = "A1 Bedroom";
-        Fire = 0;
-        Inventory = new List<string>();
-        triggers = new List<string>();
-        HeldItem = string.Empty;
-
+		Clear();
+		SaveFile = FileName;
         SaveGame();
     }
 
@@ -40,14 +46,41 @@ public class PlayerDataSO : ScriptableObject
         PlayerLocation = data.PlayerLocation;
         HeldItem = data.HeldItem; 
         Fire = data.Fire;
+        FireStage = data.FireStage;
         Inventory = data.Inventory;
         triggers = data.triggers;
     }
 
-    public void AddToInventory(string item)
+    public void AddToInventory(ItemSO item)
     {
-        Debug.Log($"adding {item} to inventory");
+        Debug.Log($"adding {item.name} to inventory");
         Inventory.Add(item);
+    }
+
+    public bool ItemContains(string name)
+    {
+        foreach (ItemSO i in Inventory)
+        {
+            if (i.name == name)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public ItemSO GetItem(string name)
+    {
+        foreach (ItemSO i in Inventory)
+        {
+            if (i.name == name)
+            {
+                return i;
+            }
+        }
+
+        return null;
     }
 
     PlayerData SOToData()
@@ -58,6 +91,7 @@ public class PlayerDataSO : ScriptableObject
         info.PlayerLocation = PlayerLocation;
         info.HeldItem = HeldItem;
         info.Fire = Fire;
+        info.FireStage = FireStage;
         info.Inventory = Inventory;
         info.triggers = triggers;
 

@@ -7,22 +7,9 @@ using System.Collections.Generic;
 /* For now, this is designed to use one background song per scene in the build index,
  * but this won't be the final design since there are no transitions implemented yet. */
 
-public class BackgroundMusic : MonoBehaviour
+public class BackgroundMusic : AudioSingleton<BackgroundMusic>
 {
 	[SerializeField] private List<AudioClip> backgroundSongs;
-	[SerializeField] private AudioSource source;
-
-    void Awake()
-    {
-        if (GameObject.FindObjectsByType<BackgroundMusic>().Length > 1)
-        {
-            GameObject.Destroy(gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
-    }
 
     private void OnEnable()
 	{

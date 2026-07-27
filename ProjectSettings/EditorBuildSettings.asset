@@ -9,20 +9,41 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/A1 Bedroom.unity
+    path: Assets/Scenes/Act 1/A1 Bedroom.unity
     guid: d2cd303c60b558a4aa12f93247b5f7f0
   - enabled: 1
-    path: Assets/Scenes/A1 Bed Window.unity
+    path: Assets/Scenes/Act 1/A1 Bed Window.unity
     guid: a836617556464cb479ca199e58016bf0
   - enabled: 1
-    path: Assets/Scenes/A1 Living Room.unity
+    path: Assets/Scenes/Act 1/A1 Living Room.unity
     guid: 83eef8235d1933148885a9a86127d5dc
   - enabled: 1
-    path: Assets/Scenes/A1 Kitchen.unity
+    path: Assets/Scenes/Act 1/A1 Kitchen.unity
     guid: 576ccb1900fdbde429ffc47f1a58a0cb
   - enabled: 1
-    path: Assets/Scenes/Demo End.unity
+    path: Assets/Scenes/Act 1/Demo End.unity
     guid: 82a188f456ebb374181dfab592a84222
+  - enabled: 1
+    path: Assets/Scenes/Act 2/A2 Beaver's River.unity
+    guid: b92c820d7eb37cd44a9b32fcab912b9e
+  - enabled: 1
+    path: Assets/Scenes/Act 2/A2 Bird's Forest.unity
+    guid: d962037c1a356f348b42e24de7ce81de
+  - enabled: 1
+    path: Assets/Scenes/Act 2/A2 Hare's Farm.unity
+    guid: c4e00f4749600dd4b8b539632d574e6c
+  - enabled: 1
+    path: Assets/Scenes/Act 2/A2 Intro Pathways.unity
+    guid: f9c44666d30375f4cbac7a57833e25c4
+  - enabled: 1
+    path: Assets/Scenes/Act 2/A2 Lion's Crowd.unity
+    guid: 05cf48710c12326459791e724e6b3b85
+  - enabled: 1
+    path: Assets/Scenes/Act 2/A2 Windmill Inside.unity
+    guid: 93f5222ab7d93e64ba8f3636de144212
+  - enabled: 1
+    path: Assets/Scenes/Act 2/A2 Windmill Outside.unity
+    guid: cc3fcd84d2db9dc40960b486570fa5c3
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8513d655cc69b7b4eaadc65c0701f2d5, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

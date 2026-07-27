@@ -49,7 +49,10 @@ public class DialogueManager : MonoBehaviour
 
 	[Header("Core")]
     [SerializeField]
-    bool Dia, Self;
+    bool Dia;
+
+    [SerializeField]
+    bool Self;
 
     [SerializeField]
     ScriptsSO script;
@@ -85,11 +88,11 @@ public class DialogueManager : MonoBehaviour
 			BubbleChances[i] = current;
 		}
 
-		// Generate BubbleAudio[][] from serializable type
-
-
-		click.action.performed += OnPointerClick;
-		click.action.Enable();
+		if (click != null)
+		{
+			click.action.performed += OnPointerClick;
+			click.action.Enable();
+		}
     }
 
     private void OnPointerClick(InputAction.CallbackContext context)
@@ -233,7 +236,6 @@ public class DialogueManager : MonoBehaviour
 		keepWord = false;
 		script = script.choice.Outcomes[1];
 		SetChoice();
-
 	}
 
 	private void OnWordHover()
@@ -285,7 +287,7 @@ public class DialogueManager : MonoBehaviour
 			bubbleObject = Instantiate(Bubbles[bubble], NPC.transform);
 		}
 		
-		StartCoroutine(PlayAudio(BubbleAudio[bubble]));
+		if (sound != null) StartCoroutine(PlayAudio(BubbleAudio[bubble]));
 		RectTransform transform = bubbleObject.GetComponent<RectTransform>();
 		transform.localPosition = placement;
         bubbleObject.transform.GetChild(0).GetComponent<TMP_Text>().text = words;
@@ -317,9 +319,9 @@ public class DialogueManager : MonoBehaviour
             NPCReset();
         }
 
-        if (script.itemGain != string.Empty && script.itemGain != null)
+        if (script.itemGain != null)
         {
-            GameObject.Find(script.itemGain).GetComponent<Collectible>().Collect();
+            GameObject.Find(script.itemGain.Name).GetComponent<Collectible>().Collect(script.itemGain);
         }
 
         if(script.trigger != string.Empty && script.trigger != null)
@@ -334,7 +336,7 @@ public class DialogueManager : MonoBehaviour
 
         if (script.choice != null)
         {
-			if (!keepWord)
+			if (!keepWord && script.choice.Choices.Count == 0)
 			{
 				script = script.choice.Outcomes[0];
 			}
@@ -355,9 +357,7 @@ public class DialogueManager : MonoBehaviour
         for (int i = 0; i < script.choice.Choices.Count; i++)
         {
             Transform c = Choice.transform.GetChild(i);
-
             c.gameObject.SetActive(true);
-            
             c.GetComponent<Button>().enabled = true;
             c.GetComponent<Image>().enabled = true;
             c.GetChild(0).GetComponent<TMP_Text>().text = script.choice.Choices[i];

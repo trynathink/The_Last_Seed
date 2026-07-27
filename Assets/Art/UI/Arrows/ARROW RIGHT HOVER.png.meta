@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aee1d928e975581f08e9fc12aea14133
+guid: 274c9d87eab9ca740ba7f90c04020ddb
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -116,10 +116,10 @@ TextureImporter:
       name: ARROW RIGHT HOVER_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 29
-        width: 108
-        height: 262
+        x: 0
+        y: 4
+        width: 116
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

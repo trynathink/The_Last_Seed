@@ -15,9 +15,7 @@ MonoBehaviour:
   Character: 
   Lines:
   - Time to find that seed
-  NPCplacement: 
-  WordCount: 
   trigger: 
   itemGain: 
-  SceneChange: Demo End
+  SceneChange: A2 Windmill Outside
   choice: {fileID: 0}
