@@ -1,21 +1,30 @@
 using System.Collections;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 // Gaurav Singh
 
-public class DialogueManager : MonoBehaviour, IPointerClickHandler
+public class DialogueManager : MonoBehaviour
 {
 	[Header("Randomization Variables")]
 	[SerializeField]
 	private GameObject[] Bubbles;
 
 	[SerializeField]
+	private GameObject interactableBubble;
+
+	[SerializeField]
 	private float[] BubbleChances;
+
+	// NOTE: Should list the audio generators in order by short, medium, long
+	[SerializeField]
+	private AudioResource[] BubbleAudio;
 
 	[SerializeField]
 	private float CurrentBubbleChance;
@@ -51,8 +60,15 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     private UnityEvent onClick;
 
+    [SerializeField]
+    private InputActionReference click;
+
+    [SerializeField]
+    private AudioSource sound;
+
     Image DiaImg;
     GameObject Inner, NPC, Choice;
+	private bool keepWord = false;
 
     void Start()
     {
@@ -68,16 +84,19 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 			current += BubbleChances[i];
 			BubbleChances[i] = current;
 		}
+
+		// Generate BubbleAudio[][] from serializable type
+
+
+		click.action.performed += OnPointerClick;
+		click.action.Enable();
     }
 
-    // switch to IA
-    public void OnPointerClick(PointerEventData pointerEventData)
+    private void OnPointerClick(InputAction.CallbackContext context)
     {
         if (Dia)
         {
-            LineNum++;
-
-            if (!(LineNum >= script.Lines.Count))
+            if (++LineNum < script.Lines.Count)
             {
                 if (Self)
                 {
@@ -86,20 +105,9 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
                 else
                 {
                     NPCSpeak();
-
-                    /*Debug.Log($"Line Num :{LineNum}, Word Count :{script.WordCount.Count}");
-
-                    if (!(LineNum >= script.WordCount.Count))
-                    {
-                        NPCSpeak(WordNum);
-                    }
-                    else
-                    {
-                        StageLeft();
-                    }*/
                 }
             }
-            else
+			else if (!keepWord && LineNum == script.Lines.Count)
             {
                 StageLeft();
             }
@@ -150,8 +158,6 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 
     void TalkingToMyself()
     {
-        Debug.Log(Inner.transform.GetChild(0).GetComponent<TMP_Text>());
-
         var t = Inner.transform.GetChild(0).GetComponent<TMP_Text>();
         t.text = script.Lines[LineNum];
     }
@@ -181,30 +187,25 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 		NPCReset();
 
         string[] line = script.Lines[LineNum].Split(' ');
+		const char interactable = '^';
 		Vector2 placement = TextArea.rect.position;
 		placement.y += TextArea.rect.height;
 		float end = placement.x + TextArea.rect.width;
 
 		int bubble = RandBubble(0);
-		GameObject bubblePrefab = Bubbles[bubble];
 		int limit = CharacterLimits[bubble];
-		string words = "";
+		string words = line[0] + ' ';
 
-		for (int i = 0; i < line.Length; i++)
+		for (int i = 1; i < line.Length; i++)
 		{
 			string word = line[i];
 
-			if ((words.Length > 0 && words.Length + word.Length > limit) || i == line.Length - 1)
+			if (words.Length + word.Length > limit || word[0] == interactable || words[0] == interactable)
 			{
-				if (i == line.Length - 1)
-				{
-					bubblePrefab = Bubbles[2];
-					words += word;
-				}
-
-				NPCBubble(bubblePrefab, placement, words);
+				// TODO: prefab not always small for interactable word
+				float bubbleWidth = NPCBubble(bubble, placement, words);
 				float moveRightBuffer = Random.Range(MoveRightBufferRange.x, MoveRightBufferRange.y);
-				placement.x += bubblePrefab.GetComponent<RectTransform>().rect.width + moveRightBuffer;
+				placement.x += bubbleWidth + moveRightBuffer;
 				// TODO: possibly change y position just a little bit each time
 
 				if (Random.value <= MoveDownChance || placement.x > end)
@@ -215,28 +216,87 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 				}
 
 				bubble = RandBubble(bubble);
-				bubblePrefab = Bubbles[bubble];
 				limit = CharacterLimits[bubble];
 				words = "";
 			}
 
 			words += word + ' ';
-			// TODO: try to handle last words differently; some not being shown
 		}
+
+		// TODO: prefab not always right size for last word(s)
+		NPCBubble(bubble, placement, words);
     }
 
-    // Method that places the strips of paper
-    void NPCBubble(GameObject bubblePrefab, Vector2 placement, string words)
+	private void OnWordClick()
+	{
+		NPCReset();
+		keepWord = false;
+		script = script.choice.Outcomes[1];
+		SetChoice();
+
+	}
+
+	private void OnWordHover()
+	{
+		keepWord = true;
+	}
+
+	private void OnWordHoverExit()
+	{
+		keepWord = false;
+	}
+
+	private IEnumerator PlayAudio(AudioResource audio)
+	{
+		while (sound.isPlaying)
+		{
+			yield return new WaitForEndOfFrame();
+		}
+
+		sound.generator = (IAudioGenerator) audio;
+		sound.Play();
+	}
+
+    // Method that places the strips of paper; returns paper object width for convenience
+    float NPCBubble(int bubble, Vector2 placement, string words)
     {
-        GameObject bubble = Instantiate(bubblePrefab, NPC.transform);
-		RectTransform transform = bubble.GetComponent<RectTransform>();
+		GameObject bubbleObject;
+		int clickSymIdx = words.IndexOf('^');
+
+		if (clickSymIdx >= 0)
+		{
+			words = words.Remove(clickSymIdx, 1);
+			bubbleObject = Instantiate(interactableBubble, NPC.transform);
+			bubbleObject.AddComponent<Button>().onClick.AddListener(OnWordClick);
+			EventTrigger trigger = bubbleObject.AddComponent<EventTrigger>();
+
+			EventTrigger.Entry entry = new EventTrigger.Entry();
+			entry.eventID = EventTriggerType.PointerEnter;
+			entry.callback.AddListener((eventData) => { OnWordHover(); });
+			trigger.triggers.Add(entry);
+
+			entry = new EventTrigger.Entry();
+			entry.eventID = EventTriggerType.PointerExit;
+			entry.callback.AddListener((eventData) => { OnWordHoverExit(); });
+			trigger.triggers.Add(entry);
+		}
+		else
+		{
+			bubbleObject = Instantiate(Bubbles[bubble], NPC.transform);
+		}
+		
+		StartCoroutine(PlayAudio(BubbleAudio[bubble]));
+		RectTransform transform = bubbleObject.GetComponent<RectTransform>();
 		transform.localPosition = placement;
-        bubble.transform.GetChild(0).GetComponent<TMP_Text>().text = words;
+        bubbleObject.transform.GetChild(0).GetComponent<TMP_Text>().text = words;
+		return transform.rect.width;
     }
 
-    // Reset // TODO: call this when done instead
     void NPCReset()
     {
+		StopAllCoroutines();
+		sound.Stop();
+
         foreach(Transform bubble in NPC.transform)
         {
 			Destroy(bubble.gameObject);
@@ -274,7 +334,12 @@ public class DialogueManager : MonoBehaviour, IPointerClickHandler
 
         if (script.choice != null)
         {
-            SetChoice();
+			if (!keepWord)
+			{
+				script = script.choice.Outcomes[0];
+			}
+
+			SetChoice();
         }
         else
         {
