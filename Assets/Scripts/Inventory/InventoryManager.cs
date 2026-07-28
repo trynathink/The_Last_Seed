@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
@@ -11,7 +12,7 @@ public class InventoryManager : MonoBehaviour
     // This class is responsible for all Inventory display related operations
 
     [SerializeField]
-    private GameObject inventoryPanel;
+    private GameObject inventoryPanel, informationPanel;
     private Transform itemContainer;
 
     [SerializeField]
@@ -66,7 +67,7 @@ public class InventoryManager : MonoBehaviour
 
     
 
-    void ItemsHeld()
+    public void ItemsHeld()
     {
         foreach (Transform child in itemContainer)
         {
@@ -100,23 +101,6 @@ public class InventoryManager : MonoBehaviour
         } 
     }
 
-    // no longer needed
-    Texture2D CreateCursor(Sprite s)
-    {
-        int width = Mathf.FloorToInt(s.rect.width);
-        int height = Mathf.FloorToInt(s.rect.height);
-        Texture2D cursor = new Texture2D(width, height);
-
-        int x = Mathf.FloorToInt(s.textureRect.x);
-        int y = Mathf.FloorToInt(s.textureRect.y);
-
-        Color[] pixels = s.texture.GetPixels(x, y, width, height);
-
-        cursor.SetPixels(pixels);
-        cursor.Apply();
-        return cursor;
-    }
-
     private void ClearInventory()
     {
         foreach (Transform child in itemContainer)
@@ -125,47 +109,16 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    /*
-    private void PopulateInventory()
+    public void ToggleInfo()
     {
-        foreach (string item in PDSO.Inventory)
-        {
-            if (Enum.TryParse<CollectibleType>(item, out CollectibleType t))
-            {
-                AddToInventory(t);
-            }
-            else
-            {
-                Debug.Log($"Invalid collectible type recorded: {item}");
-            }
-        }
-    }
-    */
-
-    private void AddToInventory(CollectibleType collectible)
-    {
-        Sprite sprite = spriteMap[collectible];
-
-        GameObject iconObject = new GameObject(
-            collectible.ToString(),
-            typeof(RectTransform),
-            typeof(CanvasRenderer),
-            typeof(Image)
-        );
-
-        iconObject.transform.SetParent(itemContainer, false);
-
-        Image image = iconObject.GetComponent<Image>();
-        image.sprite = sprite;
-        image.preserveAspect = true;
+        informationPanel.SetActive(!informationPanel.activeSelf);
     }
 
-    private void PopulateSpriteMap()
+    public List<ItemSO> GetAllItems()
     {
-        Sprite blanketSprite = Resources.Load<Sprite>("cropped_blanket");
-        spriteMap.Add(CollectibleType.Blanket, blanketSprite);
-
-        Sprite crowbarSprite = Resources.Load<Sprite>("cropped_crowbar");
-        spriteMap.Add(CollectibleType.Crowbar, crowbarSprite);
+        return itemContainer
+                .Cast<Transform>()
+                .Select(child => child.GetComponent<DraggableInventoryItem>().itemSo)
+                .ToList();
     }
 }

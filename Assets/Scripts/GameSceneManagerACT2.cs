@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.UI;
 
 public class GameSceneManagerACT2 : GameSceneManagerBase
 {
@@ -139,6 +140,25 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         }
     }
 	
+	public void Sack(ItemSO sackI)
+	{
+		Debug.Log("ah");
+
+		Image sack1 = GameObject.Find("Sack 1").GetComponent<Image>();
+        Image sack2 = GameObject.Find("Sack 2").GetComponent<Image>();
+
+        if (sack1.enabled)
+		{
+			sack1.enabled = false;
+			sack2.enabled = true;
+		}
+		else if (sack2.enabled)
+		{
+            sack2.enabled = false;
+            PDSO.Inventory.Add(sackI);
+		}
+	}
+
 	private void FixWindmillPanel(string item)
 	{
 		if (!String.IsNullOrEmpty(item))
@@ -339,7 +359,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					else
 					{
 						addTrigger("Spade Gained");
-						PDSO.AddToInventory(Spade);
+						PDSO.Inventory.Add(Spade);
                     }
                 }
                 else
