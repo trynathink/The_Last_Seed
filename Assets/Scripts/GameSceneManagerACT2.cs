@@ -16,10 +16,20 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     public ScriptsSO HareInit;
     public ScriptsSO HareIdle;
 
-	// windmill
+	// windmill outside
 	[SerializeField] private ScriptsSO brokenPanel;
 	[SerializeField] private Animator windmillAnim;
-	const string windmillFixedTrigger = "WindmillFixed";
+	const string panelFixedTrigger = "WindmillPanelFixed";
+	// TODO: should probably have a table or enum for triggers, since these will be used elsewhere too
+
+	// windmill inside
+	[SerializeField] private ScriptsSO missingRod;
+	[SerializeField] private ScriptsSO shovelAttempt;
+	[SerializeField] private GameObject brick;
+	private int brickStage = 0;
+	const string handleFixedTrigger = "WindmillHandleFixed";
+	const string brickTrigger = "BrickOut";
+	const string shovelTrigger = "ShovelNeedsRope";
 
     // This script manages every scene in Act 2
 
@@ -30,9 +40,15 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         switch (SceneManager.GetActiveScene().name)
         {
 			case "A2 Windmill Outside":
-				if (PDSO.triggers.Contains(windmillFixedTrigger))
+				if (PDSO.triggers.Contains(panelFixedTrigger))
 				{
 					FixWindmill();
+				}
+				break;
+			case "A2 Windmill Inside":
+				if (PDSO.triggers.Contains(brickTrigger))
+				{
+					BrickOut();
 				}
 				break;
         }
@@ -100,13 +116,62 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			}
 			case "Blanket": case "Fabric":
 			{
-                if (!PDSO.triggers.Contains(windmillFixedTrigger))
+                if (!PDSO.triggers.Contains(panelFixedTrigger))
 				{
 					FixWindmill();
-					PDSO.triggers.Add(windmillFixedTrigger);
+					PDSO.triggers.Add(panelFixedTrigger);
 				}
 				break;
 			}
+			default:
+				DM.SetLines(DefaultItemFail);
+				break;
+		}
+	}
+
+	private void BrickOut()
+	{
+		brick.SetActive(false);
+	}
+
+	public void TapBrick()
+	{
+		switch (++brickStage)
+		{
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				if (brick.activeSelf)
+				{
+					BrickOut();
+					PDSO.triggers.Add(brickTrigger);
+				}
+				break;
+		}
+	}
+
+	public void MissingRod()
+	{
+		switch (PDSO.HeldItem)
+		{
+			case "":
+				DM.SetLines(missingRod);
+				break;
+			case "Shovel Handle":
+                if (!PDSO.triggers.Contains(shovelTrigger))
+				{
+					PDSO.triggers.Add(shovelTrigger);
+				}
+				DM.SetLines(shovelAttempt);
+				break;
+			case "Reinforced Handle":
+                if (!PDSO.triggers.Contains(handleFixedTrigger))
+				{
+					PDSO.triggers.Add(handleFixedTrigger);
+				}
+				break;
 			default:
 				DM.SetLines(DefaultItemFail);
 				break;

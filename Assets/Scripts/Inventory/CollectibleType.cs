@@ -10,5 +10,6 @@ public enum CollectibleType
     Crowbar,
     Pitchfork,
     Fabric,
-	Sack
+	Sack,
+	Leaf
 }
