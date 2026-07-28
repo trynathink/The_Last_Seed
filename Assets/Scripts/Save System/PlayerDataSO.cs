@@ -72,6 +72,17 @@ public class PlayerDataSO : ScriptableObject
         return false;
     }
 
+	public void RemoveItem(string name)
+    {
+		for (int i = 0; i < Inventory.Count; i++)
+        {
+            if (Inventory[i].name == name)
+            {
+				Inventory.RemoveAt(i);
+            }
+        }
+    }
+
     public ItemSO GetItem(string name)
     {
         foreach (ItemSO i in Inventory)

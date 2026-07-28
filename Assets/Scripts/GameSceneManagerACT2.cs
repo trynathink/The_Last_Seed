@@ -17,17 +17,55 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     public ScriptsSO HareIdle;
 
     // Bird
-    public ScriptsSO BirdTrustMinigame;
+    [SerialReference]
+	ScriptsSO BirdTrustMinigame;
+
+	// windmill outside
+	[SerializeField] private ScriptsSO firstWindmillSight;
+	[SerializeField] private ScriptsSO brokenPanel;
+	[SerializeField] private Animator windmillAnim;
+	const string seenWindmillTrigger = "WindmillSeen";
+	const string panelFixedTrigger = "WindmillPanelFixed";
+	// TODO: should probably have a table or enum for triggers, since these will be used elsewhere too
+
+	// windmill inside
+	[SerializeField] private ScriptsSO missingRod;
+	[SerializeField] private ScriptsSO shovelAttempt;
+	[SerializeField] private GameObject brick;
+	private int brickStage = 0;
+	const string handleFixedTrigger = "WindmillHandleFixed";
+	const string brickTrigger = "BrickOut";
+	const string shovelTrigger = "ShovelNeedsRope";
 
     // This script manages every scene in Act 2
 
-    protected override void OnEnable()
+    private void Start()
     {
-		base.OnEnable();
-
         switch (SceneManager.GetActiveScene().name)
         {
-            
+			case "A2 Windmill Outside":
+				if (!PDSO.triggers.Contains(seenWindmillTrigger))
+				{
+					DM.SetLines(firstWindmillSight);
+					PDSO.triggers.Add(seenWindmillTrigger);
+				}
+
+				if (PDSO.triggers.Contains(panelFixedTrigger))
+				{
+					FixWindmillPanel(string.Empty);
+				}
+
+				if (PDSO.triggers.Contains(handleFixedTrigger))
+				{
+					windmillAnim.SetBool("spin", true);
+				}
+				break;
+			case "A2 Windmill Inside":
+				if (PDSO.triggers.Contains(brickTrigger))
+				{
+					BrickOut();
+				}
+				break;
         }
     }
 
@@ -94,4 +132,93 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 break;
         }
     }
+	
+	private void FixWindmillPanel(string item)
+	{
+		if (!String.IsNullOrEmpty(item))
+		{
+			PDSO.RemoveItem(item);
+			IM.HoldItem(string.Empty);
+		}
+
+		windmillAnim.SetTrigger("fix");
+	}
+
+	public void WindmillPanels()
+	{
+		switch (PDSO.HeldItem)
+		{
+			case "":
+			{
+				const string trigger = "WindmillScarecrowCloth";
+				if (!PDSO.ItemContains("Blanket") && ! PDSO.triggers.Contains(trigger))
+				{
+					PDSO.triggers.Add("WindmillScarecrowCloth");
+				}
+				DM.SetLines(brokenPanel);
+				break;
+			}
+			case "Blanket": case "Fabric":
+			{
+                if (!PDSO.triggers.Contains(panelFixedTrigger))
+				{
+					FixWindmillPanel(PDSO.HeldItem);
+					PDSO.triggers.Add(panelFixedTrigger);
+				}
+				break;
+			}
+			default:
+				DM.SetLines(DefaultItemFail);
+				break;
+		}
+	}
+
+	private void BrickOut()
+	{
+		brick.SetActive(false);
+	}
+
+	public void TapBrick()
+	{
+		switch (++brickStage)
+		{
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				if (brick.activeSelf)
+				{
+					BrickOut();
+					PDSO.triggers.Add(brickTrigger);
+				}
+				break;
+		}
+	}
+
+	public void MissingRod()
+	{
+		switch (PDSO.HeldItem)
+		{
+			case "":
+				DM.SetLines(missingRod);
+				break;
+			case "Shovel Handle":
+                if (!PDSO.triggers.Contains(shovelTrigger))
+				{
+					PDSO.triggers.Add(shovelTrigger);
+				}
+				DM.SetLines(shovelAttempt);
+				break;
+			case "Reinforced Handle":
+                if (!PDSO.triggers.Contains(handleFixedTrigger))
+				{
+					PDSO.triggers.Add(handleFixedTrigger);
+				}
+				break;
+			default:
+				DM.SetLines(DefaultItemFail);
+				break;
+		}
+	}
 }

@@ -11,5 +11,7 @@ public enum CollectibleType
     Pitchfork,
     Fabric,
     Lumber,
-    Twig
+    Twig,
+    Sack,
+	Leaf
 }
