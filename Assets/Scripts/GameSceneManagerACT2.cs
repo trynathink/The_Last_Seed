@@ -17,7 +17,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     public ScriptsSO HareIdle;
 
     // Bird
-    [SerialReference]
+    [SerializeReference]
 	ScriptsSO BirdTrustMinigame;
 
 	// windmill outside

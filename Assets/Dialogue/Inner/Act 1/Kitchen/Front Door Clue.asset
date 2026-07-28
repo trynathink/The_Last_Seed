@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: broken panel thought
+  m_Name: Front Door Clue
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - Some of the fabric on this blade seems have to been ripped open, can't catch
-    much wind like that...
-  trigger: Scarecrow Cloth Dia
+  - I should at least try to use the front door before climbing out the window
+  trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
   trust: 0

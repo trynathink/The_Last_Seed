@@ -151,7 +151,7 @@ RectTransform:
   - {fileID: 1107142647}
   - {fileID: 1579793727}
   - {fileID: 880989391}
-  m_Father: {fileID: 756296242}
+  m_Father: {fileID: 1943070011}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 427135794}
   - component: {fileID: 427135793}
   m_Layer: 5
-  m_Name: Grain Sac
+  m_Name: Sack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,8 +307,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 255, y: -450}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 187.26794, y: -439.91223}
+  m_SizeDelta: {x: 235.4641, y: 120.1755}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427135791
 MonoBehaviour:
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e89e20f1ddb325d47911b6a5d18f67e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
-  type: 4
+  type: 6
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
   destroyOnCollect: 1
 --- !u!114 &427135794
@@ -489,7 +489,6 @@ RectTransform:
   m_Children:
   - {fileID: 1943070011}
   - {fileID: 1367452343}
-  - {fileID: 7244331}
   - {fileID: 848193232}
   - {fileID: 1050429915}
   - {fileID: 1421785776}
@@ -518,6 +517,7 @@ MonoBehaviour:
   ScarecrowFabric: {fileID: 0}
   HareInit: {fileID: 0}
   HareIdle: {fileID: 0}
+  BirdTrustMinigame: {fileID: 0}
   firstWindmillSight: {fileID: 11400000, guid: 34db971d963bb49439fd50e16f7f5a4d, type: 2}
   brokenPanel: {fileID: 11400000, guid: 549148c099c3dc74982bd5c8eca3abfb, type: 2}
   windmillAnim: {fileID: 1274839379}
@@ -1725,6 +1725,7 @@ RectTransform:
   - {fileID: 1726924582}
   - {fileID: 1274839375}
   - {fileID: 427135790}
+  - {fileID: 7244331}
   m_Father: {fileID: 756296242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

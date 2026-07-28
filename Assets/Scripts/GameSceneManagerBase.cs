@@ -42,6 +42,7 @@ public class GameSceneManagerBase : MonoBehaviour
 
     public virtual void NextScene(string sceneName)
     {
+        PDSO.HeldItem = "";
         PDSO.PlayerLocation = sceneName;
         SceneManager.LoadScene(PDSO.PlayerLocation);
     }
