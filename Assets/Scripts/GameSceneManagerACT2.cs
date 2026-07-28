@@ -17,8 +17,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     public ScriptsSO HareIdle;
 
 	// windmill outside
+	[SerializeField] private ScriptsSO firstWindmillSight;
 	[SerializeField] private ScriptsSO brokenPanel;
 	[SerializeField] private Animator windmillAnim;
+	const string seenWindmillTrigger = "WindmillSeen";
 	const string panelFixedTrigger = "WindmillPanelFixed";
 	// TODO: should probably have a table or enum for triggers, since these will be used elsewhere too
 
@@ -33,16 +35,20 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
     // This script manages every scene in Act 2
 
-    protected override void OnEnable()
+    private void Start()
     {
-		base.OnEnable();
-
         switch (SceneManager.GetActiveScene().name)
         {
 			case "A2 Windmill Outside":
+				if (!PDSO.triggers.Contains(seenWindmillTrigger))
+				{
+					DM.SetLines(firstWindmillSight);
+					PDSO.triggers.Add(seenWindmillTrigger);
+				}
+
 				if (PDSO.triggers.Contains(panelFixedTrigger))
 				{
-					FixWindmill();
+					FixWindmill(string.Empty);
 				}
 				break;
 			case "A2 Windmill Inside":
@@ -95,8 +101,14 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         }
     }
 
-	private void FixWindmill()
+	private void FixWindmill(string item)
 	{
+		if (!String.IsNullOrEmpty(item))
+		{
+			PDSO.RemoveItem(item);
+			IM.HoldItem(string.Empty);
+		}
+
 		windmillAnim.SetTrigger("fix");
 	}
 
@@ -118,7 +130,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			{
                 if (!PDSO.triggers.Contains(panelFixedTrigger))
 				{
-					FixWindmill();
+					FixWindmill(PDSO.HeldItem);
 					PDSO.triggers.Add(panelFixedTrigger);
 				}
 				break;

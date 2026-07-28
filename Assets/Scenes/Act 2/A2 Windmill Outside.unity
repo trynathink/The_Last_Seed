@@ -518,8 +518,12 @@ MonoBehaviour:
   ScarecrowFabric: {fileID: 0}
   HareInit: {fileID: 0}
   HareIdle: {fileID: 0}
+  firstWindmillSight: {fileID: 11400000, guid: 34db971d963bb49439fd50e16f7f5a4d, type: 2}
   brokenPanel: {fileID: 11400000, guid: 549148c099c3dc74982bd5c8eca3abfb, type: 2}
   windmillAnim: {fileID: 1274839379}
+  missingRod: {fileID: 0}
+  shovelAttempt: {fileID: 0}
+  brick: {fileID: 0}
 --- !u!1 &848193231
 GameObject:
   m_ObjectHideFlags: 0

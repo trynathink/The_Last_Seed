@@ -73,7 +73,7 @@ public class DialogueManager : MonoBehaviour
     GameObject Inner, NPC, Choice;
 	private bool keepWord = false;
 
-    void Start()
+    void Awake()
     {
         DiaImg = GameObject.Find("Dialogue Image").GetComponent<Image>();
         Inner = transform.Find("Inner Text").gameObject;
