@@ -16,6 +16,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     public ScriptsSO HareInit;
     public ScriptsSO HareIdle;
 
+	// windmill
+	[SerializeField] private ScriptsSO brokenPanel;
+	[SerializeField] private Animator windmillAnim;
+	const string windmillFixedTrigger = "WindmillFixed";
+
     // This script manages every scene in Act 2
 
     protected override void OnEnable()
@@ -24,7 +29,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
         switch (SceneManager.GetActiveScene().name)
         {
-            
+			case "A2 Windmill Outside":
+				if (PDSO.triggers.Contains(windmillFixedTrigger))
+				{
+					FixWindmill();
+				}
+				break;
         }
     }
 
@@ -68,4 +78,38 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
             DM.SetLines(ScarecrowIdle);
         }
     }
+
+	private void FixWindmill()
+	{
+		windmillAnim.SetTrigger("fix");
+	}
+
+	public void WindmillPanels()
+	{
+		switch (PDSO.HeldItem)
+		{
+			case "":
+			{
+				const string trigger = "WindmillScarecrowCloth";
+				if (!PDSO.ItemContains("Blanket") && ! PDSO.triggers.Contains(trigger))
+				{
+					PDSO.triggers.Add("WindmillScarecrowCloth");
+				}
+				DM.SetLines(brokenPanel);
+				break;
+			}
+			case "Blanket": case "Fabric":
+			{
+                if (!PDSO.triggers.Contains(windmillFixedTrigger))
+				{
+					FixWindmill();
+					PDSO.triggers.Add(windmillFixedTrigger);
+				}
+				break;
+			}
+			default:
+				DM.SetLines(DefaultItemFail);
+				break;
+		}
+	}
 }
