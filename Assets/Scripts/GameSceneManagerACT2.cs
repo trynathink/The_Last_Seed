@@ -48,7 +48,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 				if (PDSO.triggers.Contains(panelFixedTrigger))
 				{
-					FixWindmill(string.Empty);
+					FixWindmillPanel(string.Empty);
+				}
+
+				if (PDSO.triggers.Contains(handleFixedTrigger))
+				{
+					windmillAnim.SetBool("spin", true);
 				}
 				break;
 			case "A2 Windmill Inside":
@@ -101,7 +106,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         }
     }
 
-	private void FixWindmill(string item)
+	private void FixWindmillPanel(string item)
 	{
 		if (!String.IsNullOrEmpty(item))
 		{
@@ -130,7 +135,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			{
                 if (!PDSO.triggers.Contains(panelFixedTrigger))
 				{
-					FixWindmill(PDSO.HeldItem);
+					FixWindmillPanel(PDSO.HeldItem);
 					PDSO.triggers.Add(panelFixedTrigger);
 				}
 				break;
