@@ -9,7 +9,7 @@ public class ButtonSFX : MonoBehaviour
 
 	private void OnEnable()
 	{
-		foreach (Button button in canvas.GetComponentsInChildren<Button>())
+		foreach (Button button in canvas.GetComponentsInChildren<Button>(true))
 		{
 			button.onClick.AddListener(PlaySound);
 		}

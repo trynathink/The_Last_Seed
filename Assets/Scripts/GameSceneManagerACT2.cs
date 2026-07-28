@@ -1,27 +1,26 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-public class GameSceneManagerACT2 : MonoBehaviour
+public class GameSceneManagerACT2 : GameSceneManagerBase
 {
     // Gaurav Singh
 
-    // This script manages every scene in Act 1 minus the main menu
+    // scarecrow
+    public ScriptsSO ScarecrowIdle;
+    public ScriptsSO ScarecrowFabric;
 
-    [SerializeField]
-    PlayerDataSO PDSO;
+    // hare
+    public ScriptsSO HareInit;
+    public ScriptsSO HareIdle;
 
-    DialogueManager DM;
-    InventoryManager IM;
-    MoveSFX MSFX;
+    // This script manages every scene in Act 2
 
-    // there is clearly a better way to do this, not rn
-    public ScriptsSO DefaultItemFail;
-
-    private void OnEnable()
+    protected override void OnEnable()
     {
-        DM = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
-        IM = GameObject.Find("Inventory").GetComponent<InventoryManager>();
-        MSFX = GameObject.Find("SFX").GetComponent<MoveSFX>();
+		base.OnEnable();
 
         switch (SceneManager.GetActiveScene().name)
         {
@@ -29,32 +28,7 @@ public class GameSceneManagerACT2 : MonoBehaviour
         }
     }
 
-    // All scenes
-    public void Item(ScriptsSO script)
-    {
-        IM.HoldItem("");
-
-        // for any items without item specific interactions
-        switch (PDSO.HeldItem)
-        {
-            case "":
-                DM.SetLines(script);
-                break;
-            default:
-                DM.SetLines(DefaultItemFail);
-                break;
-        }
-    }
-
-    public void addTrigger(string t)
-    {
-        if (!PDSO.triggers.Contains(t))
-        {
-            PDSO.triggers.Add(t);
-        }
-    }
-
-    public void NextScene(string sceneName)
+    public override void NextScene(string sceneName)
     {
         switch (PDSO.FireStage)
         {
@@ -71,9 +45,34 @@ public class GameSceneManagerACT2 : MonoBehaviour
                 break;
         }
 
+<<<<<<< HEAD
         IM.HoldItem("");
 
         PDSO.PlayerLocation = sceneName;
         SceneManager.LoadScene(PDSO.PlayerLocation);
+=======
+		base.NextScene(sceneName);
+    }
+
+    public void HareDialogue()
+    {
+        DM.SetLines(HareInit);
+    }
+
+    public void ScarecrowDialogue()
+    {
+        bool containsBlanketOrFabric = PDSO.Inventory
+                        .Any(item => item.Name == CollectibleType.Blanket.ToString()
+                                || item.Name == CollectibleType.Fabric.ToString());
+        
+        if(!containsBlanketOrFabric && PDSO.triggers.Contains("WindmillScarecrowCloth"))
+        {
+            DM.SetLines(ScarecrowFabric);
+        }
+        else
+        {
+            DM.SetLines(ScarecrowIdle);
+        }
+>>>>>>> dfcfb22c2762df5d0731fd20c7ab0301315f82d6
     }
 }

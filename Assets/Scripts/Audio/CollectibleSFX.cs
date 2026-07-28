@@ -1,21 +1,8 @@
 using UnityEngine;
 
-public class CollectibleSFX : MonoBehaviour
+public class CollectibleSFX : AudioSingleton<CollectibleSFX>
 {
-	[SerializeField] private AudioSource source;
 	[SerializeField] private AudioClip collectSound;
-
-    void Awake()
-    {
-        if (GameObject.FindObjectsByType<CollectibleSFX>().Length > 1)
-        {
-            GameObject.Destroy(gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
-    }
 
     private void OnEnable()
 	{

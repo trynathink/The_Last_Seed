@@ -6,6 +6,7 @@ public class ScriptsSO : ScriptableObject
 {
     public string Character;
 
+	// NOTE: If a word in `Lines` starts with "^", that word is interactable
     [SerializeReference]
     public List<string> Lines;
 

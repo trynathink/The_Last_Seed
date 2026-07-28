@@ -3,6 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class SettingsManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class SettingsManager : MonoBehaviour
 
     [SerializeReference]
     GameObject Menu, Confirmer;
+
+	[SerializeField]
+	private AudioMixer mix = null;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -73,5 +77,21 @@ public class SettingsManager : MonoBehaviour
         }
 
         Confirm(false);
+    }
+
+	private void ChangeVolume(string which, float sliderValue)
+	{
+		float progress = Mathf.Log10(sliderValue) + 1;
+		mix.SetFloat(which, Mathf.Lerp(-80, 0, progress));
+	}
+
+	public void OnMusicSliderValueChanged(float value)
+    {
+        ChangeVolume("Music Volume", value);
+    }
+
+    public void OnSFXSliderValueChanged(float value)
+    {
+        ChangeVolume("SFX Volume", value);
     }
 }
