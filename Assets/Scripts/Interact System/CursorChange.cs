@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
-    [SerializeReference]
+    [SerializeField]
     PlayerDataSO PDSO;
 
     [SerializeField]

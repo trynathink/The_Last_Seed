@@ -66,6 +66,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					BrickOut();
 				}
 				break;
+			case "A2 Beaver's River":
+                if (PDSO.triggers.Contains("Blockage"))
+                {
+                    BlockageRemoval();
+                }
+                break;
         }
     }
 
@@ -219,6 +225,131 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			default:
 				DM.SetLines(DefaultItemFail);
 				break;
+		}
+	}
+
+	// Beaver Scene
+
+    [SerializeReference]
+	ScriptsSO BlockageIdle, IdleMetal, PithforkMetal;
+
+	public void Blockage()
+	{
+        switch (PDSO.HeldItem)
+        {
+            case "":
+				if (PDSO.triggers.Contains("BlockageItem"))
+				{
+                    DM.SetLines(BlockageIdle); // does not add trigger
+                }
+				else
+				{
+                    DM.SetLines(IdleMetal); // adds "BlockageItem" trigger
+                }
+                break;
+            case "Pitchfork":
+                addTrigger("WWJamFix");
+                BlockageRemoval();
+
+                if (!PDSO.triggers.Contains("BlockageItem"))
+                {
+                    DM.SetLines(PithforkMetal); // adds "WWJamFix" + "BlockageItem" trigger
+                }
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
+                break;
+        }
+
+        IM.HoldItem("");
+    }
+
+	void BlockageRemoval()
+	{
+		GameObject.Find("Blockage").SetActive(false);
+	}
+
+    [SerializeReference]
+    ScriptsSO WWJamNBrok, WWJam, WWBrok, WW, LumberCraftHint, BrokFix;
+
+    public void WaterWheel()
+	{
+		switch (PDSO.HeldItem)
+		{
+			case "":
+
+				if (PDSO.triggers.Contains("WWJamFix"))
+				{
+					if (PDSO.triggers.Contains("WWBrokFix"))
+					{
+                        DM.SetLines(WW);
+                    }
+					else
+					{
+                        DM.SetLines(WWBrok);
+                    }
+				}
+				else if (PDSO.triggers.Contains("WWBrokFix"))
+				{
+                    DM.SetLines(WWJam);
+                }
+				else
+				{
+                    DM.SetLines(WWJamNBrok);
+                }
+
+				break;
+			case "Lumber":
+				DM.SetLines(LumberCraftHint);
+				break;
+			case "Paddles":
+				DM.SetLines(BrokFix);
+				break;
+			default:
+				DM.SetLines(DefaultItemFail);
+				break;
+		}
+	}
+
+    [SerializeReference]
+    ScriptsSO EngineOn, EngineOff, EngineOnCrowbar;
+	ItemSO Spade;
+
+    public void Engine()
+	{
+		switch (PDSO.HeldItem)
+		{
+			case "":
+				if (PDSO.triggers.Contains("EngineOff"))
+				{
+					DM.SetLines(EngineOff);
+				}
+				else
+				{
+					DM.SetLines(EngineOn);
+				}
+				break;
+			case "Crowbar":
+                if (PDSO.triggers.Contains("EngineOff"))
+                {
+					if (PDSO.triggers.Contains("Spade Gained"))
+					{
+						DM.SetLines(DefaultItemFail);
+					}
+					else
+					{
+						addTrigger("Spade Gained");
+						PDSO.AddToInventory(Spade);
+                    }
+                }
+                else
+                {
+                    DM.SetLines(EngineOnCrowbar);
+                }
+                break;
+			default:
+                DM.SetLines(DefaultItemFail);
+                break;
 		}
 	}
 }

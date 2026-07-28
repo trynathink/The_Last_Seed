@@ -17,6 +17,8 @@ public class GameSceneManagerBase : MonoBehaviour
         IM = GameObject.Find("Inventory").GetComponent<InventoryManager>();
 	}
 
+    // This does not work, Item interactions that should not work are just going through,
+    // I am going to cut this out for this build
 	protected void CatchAnyItemHeld(Action actionIfNoneHeld)
 	{
 		if (PDSO.HeldItem == "")
@@ -28,8 +30,18 @@ public class GameSceneManagerBase : MonoBehaviour
 	// All scenes
     public void Item(ScriptsSO script)
     {
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                DM.SetLines(script);
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
+                break;
+        }
+
         IM.HoldItem("");
-		CatchAnyItemHeld(() => DM.SetLines(script));
+
     }
 
 	public void addTrigger(string t)

@@ -15,7 +15,7 @@ using Unity.VisualScripting;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeReference]
+    [SerializeField]
     PlayerDataSO PDSO;
 
 
@@ -328,7 +328,15 @@ public class DialogueManager : MonoBehaviour
 
         if (script.itemGain != null)
         {
-            GameObject.Find(script.itemGain.Name).GetComponent<Collectible>().Collect(script.itemGain);
+            if (GameObject.Find(script.itemGain.Name) != null)
+            {
+                GameObject.Find(script.itemGain.Name).GetComponent<Collectible>().Collect(script.itemGain);
+            }
+            else
+            {
+                PDSO.AddToInventory(script.itemGain);
+            }
+            
         }
 
         if(script.trigger != string.Empty && script.trigger != null)
