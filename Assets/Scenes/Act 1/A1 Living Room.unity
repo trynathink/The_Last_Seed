@@ -488,6 +488,7 @@ MonoBehaviour:
   leaveWindow: {fileID: 0}
   questionWindow: {fileID: 0}
   DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
+  FrontDoorHint: {fileID: 0}
 --- !u!1 &241515850
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,6 +858,18 @@ PrefabInstance:
     - target: {fileID: 2624550720608419801, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_Name
       value: UI Holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 3746741073765112923, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: df06e145f0af4b64aa450c95aa780635, type: 2}
+    - target: {fileID: 3746741073765112923, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6272311626605882426, guid: df06e145f0af4b64aa450c95aa780635, type: 2}
+    - target: {fileID: 3746741073765112923, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8482493879213678171, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_Pivot.x

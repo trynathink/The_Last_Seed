@@ -14,11 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - The fires are growing outside
+  - The fires are growing outside.
   - I should find another way out.
-  NPCplacement: 
-  WordCount: 
   trigger: Front Door
-  itemGain: 
+  itemGain: {fileID: 0}
   SceneChange: 
   choice: {fileID: 0}
