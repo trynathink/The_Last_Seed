@@ -16,6 +16,9 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     public ScriptsSO HareInit;
     public ScriptsSO HareIdle;
 
+    // Bird
+    public ScriptsSO BirdTrustMinigame;
+
     // This script manages every scene in Act 2
 
     protected override void OnEnable()
@@ -45,12 +48,6 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 break;
         }
 
-<<<<<<< HEAD
-        IM.HoldItem("");
-
-        PDSO.PlayerLocation = sceneName;
-        SceneManager.LoadScene(PDSO.PlayerLocation);
-=======
 		base.NextScene(sceneName);
     }
 
@@ -73,6 +70,28 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         {
             DM.SetLines(ScarecrowIdle);
         }
->>>>>>> dfcfb22c2762df5d0731fd20c7ab0301315f82d6
+    }
+
+    public void BirdDialogue()
+    {
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                if (PDSO.triggers.Contains("BirdTrust"))
+                {
+
+                }
+                else
+                {
+                    DM.SetLines(BirdTrustMinigame);
+                }
+                    break;
+            case "Tree Token":
+                if (PDSO.triggers.Contains("BirdTrust"))
+                {
+
+                }
+                break;
+        }
     }
 }

@@ -18,7 +18,7 @@ public class GameSceneManager : GameSceneManagerBase
     private bool isAlarmOff = false;
 
     // there is clearly a better way to do this, not rn
-    public ScriptsSO AlarmOn, FrontDoorLock, FrontDoorGoal, InitWindow, leaveWindow, questionWindow, DefaultItemFail, FrontDoorHint;
+    public ScriptsSO AlarmOn, FrontDoorLock, FrontDoorGoal, InitWindow, leaveWindow, questionWindow, FrontDoorHint;
 
     protected override void OnEnable()
     {

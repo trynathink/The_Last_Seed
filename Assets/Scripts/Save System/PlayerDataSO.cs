@@ -10,7 +10,7 @@ public class PlayerDataSO : ScriptableObject
 
     public string SaveFile, PlayerLocation, HeldItem;
     public float Fire;
-    public int FireStage;
+    public int FireStage, BirdTrust;
     public List<ItemSO> Inventory;
     public List<string> triggers;
 
@@ -19,6 +19,7 @@ public class PlayerDataSO : ScriptableObject
         PlayerLocation = "A1 Bedroom";
         Fire = 0;
         FireStage = 0;
+        BirdTrust = 0;
         Inventory = new List<ItemSO>();
         triggers = new List<string>();
         HeldItem = string.Empty;
@@ -47,6 +48,7 @@ public class PlayerDataSO : ScriptableObject
         HeldItem = data.HeldItem; 
         Fire = data.Fire;
         FireStage = data.FireStage;
+        BirdTrust = data.BirdTrust;
         Inventory = data.Inventory;
         triggers = data.triggers;
     }
@@ -92,6 +94,7 @@ public class PlayerDataSO : ScriptableObject
         info.HeldItem = HeldItem;
         info.Fire = Fire;
         info.FireStage = FireStage;
+        info.BirdTrust = BirdTrust;
         info.Inventory = Inventory;
         info.triggers = triggers;
 

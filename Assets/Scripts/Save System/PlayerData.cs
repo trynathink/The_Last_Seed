@@ -18,6 +18,9 @@ public class PlayerData
     public float Fire;
     public int FireStage;
 
+    // How much the characters trust the player
+    public int BirdTrust;
+
     // Inventory is a list which contains every item the player has
     // If the player does not have an item then it isn't in the list
     public List<ItemSO> Inventory;
