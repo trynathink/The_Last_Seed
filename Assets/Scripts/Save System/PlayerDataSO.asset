@@ -27,6 +27,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 47e7fb565080ee44b8f2f63510d730e0, type: 2}
   - {fileID: 11400000, guid: 4bccc80e141fc914f988dead9ab5449e, type: 2}
   - {fileID: 11400000, guid: b2cd6c60daa723047b210d4359fd802a, type: 2}
+  reference:
+  - {fileID: 11400000, guid: abb076894db46844e95f6276dfb17677, type: 2}
+  - {fileID: 11400000, guid: 7f56dffbbebcc9c4da4876a189385903, type: 2}
+  - {fileID: 11400000, guid: de7c5128ed3293e58a698d37661f6011, type: 2}
+  - {fileID: 11400000, guid: 11f6dcb12a8fead4fbdf8f5bf1ffd005, type: 2}
+  - {fileID: 11400000, guid: 4bccc80e141fc914f988dead9ab5449e, type: 2}
+  - {fileID: 11400000, guid: 70137deefea6be74485eda5ae3abb9dc, type: 2}
+  - {fileID: 11400000, guid: b2cd6c60daa723047b210d4359fd802a, type: 2}
+  - {fileID: 11400000, guid: e1d84c707408d80a19949055f3ac449a, type: 2}
+  - {fileID: 11400000, guid: 678efd17efcdfe94182dec16037332c2, type: 2}
+  - {fileID: 11400000, guid: c2dd9b442ed0dd24ab26345ff9807bd1, type: 2}
+  - {fileID: 11400000, guid: e2a7b5160b90ec54884362ba45610fad, type: 2}
+  - {fileID: 11400000, guid: 47e7fb565080ee44b8f2f63510d730e0, type: 2}
+  - {fileID: 11400000, guid: c0b3f3ea3433d5c46b3a1def79e0bd2c, type: 2}
   triggers:
   - Clock
   - Goal Heard
