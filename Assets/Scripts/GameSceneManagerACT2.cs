@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine.UI;
 
 public class GameSceneManagerACT2 : GameSceneManagerBase
 {
@@ -25,6 +25,8 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	[SerializeField] private ScriptsSO firstWindmillSight;
 	[SerializeField] private ScriptsSO brokenPanel, fixedPanel;
 	[SerializeField] private Animator windmillAnim;
+	[SerializeField] private Image windmillPanels;
+	[SerializeReference] private Sprite windmillFixed;
 	const string seenWindmillTrigger = "WindmillSeen";
 	const string panelFixedTrigger = "WindmillPanelFixed";
 	// TODO: should probably have a table or enum for triggers, since these will be used elsewhere too
@@ -238,7 +240,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			IM.HoldItem(string.Empty);
 		}
 
-		windmillAnim.SetTrigger("fix");
+		windmillPanels.sprite = windmillFixed;
 	}
 
 	public void WindmillPanels()
