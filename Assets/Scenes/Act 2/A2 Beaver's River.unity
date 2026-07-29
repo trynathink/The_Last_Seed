@@ -718,10 +718,21 @@ MonoBehaviour:
   BirdTrustMinigame: {fileID: 0}
   firstWindmillSight: {fileID: 0}
   brokenPanel: {fileID: 0}
+  fixedPanel: {fileID: 0}
   windmillAnim: {fileID: 0}
   missingRod: {fileID: 0}
   shovelAttempt: {fileID: 0}
-  brick: {fileID: 0}
+  reinforcedShovelAttempt: {fileID: 0}
+  brickOver: {fileID: 0}
+  OpenBrick: {fileID: 0}
+  ReinforcedPole: {fileID: 0}
+  nakedScarecrow: {fileID: 0}
+  BeaverInit: {fileID: 11400000, guid: 6aed6967f853231479afc70e7fc97904, type: 2}
+  BeaverIdleUnhappy: {fileID: 11400000, guid: 955211213735b3743a1ba878bf6a3e43, type: 2}
+  BeaverIdleHappy: {fileID: 11400000, guid: e246e95eb1d7ac149beb2ac862aedc17, type: 2}
+  BeaverIdleFixed: {fileID: 11400000, guid: 754997c94a3e4fa47b93871ea76394da, type: 2}
+  b2: {fileID: 0}
+  b3: {fileID: 0}
   BlockageIdle: {fileID: 11400000, guid: 1de72cf474c8327408104571e8ecae53, type: 2}
   IdleMetal: {fileID: 11400000, guid: c0b663b3033fca3409e71d101274349b, type: 2}
   PithforkMetal: {fileID: 11400000, guid: ae0645bc4d092f74f9e79c7cffb7b51e, type: 2}
@@ -1386,6 +1397,8 @@ GameObject:
   - component: {fileID: 1641842031}
   - component: {fileID: 1641842033}
   - component: {fileID: 1641842032}
+  - component: {fileID: 1641842035}
+  - component: {fileID: 1641842034}
   m_Layer: 0
   m_Name: Beaver
   m_TagString: Untagged
@@ -1450,6 +1463,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641842030}
   m_CullTransparentMesh: 1
+--- !u!114 &1641842034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641842030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a136e9349f4aea448bfd4dd6c9f3a59b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorChange
+  PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  hover: {fileID: 2800000, guid: d8689d86e5e333d4186a1f810ba1e8af, type: 3}
+  click: {fileID: 2800000, guid: f5cd3747ad4441142992dfe47523318c, type: 3}
+--- !u!114 &1641842035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641842030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e363403b3aa52a379e9ccf4a6e1c7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableImage
+  alphaThreshold: 0.1
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 756296243}
+        m_TargetAssemblyTypeName: GameSceneManagerACT2, Assembly-CSharp
+        m_MethodName: BeaverDia
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1697797603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1853,8 +1909,8 @@ RectTransform:
   - {fileID: 874546394}
   - {fileID: 1487426172}
   - {fileID: 128128818}
-  - {fileID: 39113999}
   - {fileID: 1641842031}
+  - {fileID: 39113999}
   - {fileID: 1840548035}
   m_Father: {fileID: 756296242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1874,6 +1930,10 @@ PrefabInstance:
     - target: {fileID: 2624550720608419801, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_Name
       value: UI Holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510492715745641037, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -486
       objectReference: {fileID: 0}
     - target: {fileID: 8482493879213678171, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_Pivot.x

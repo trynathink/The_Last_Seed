@@ -139,6 +139,43 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         }
     }
 
+	[SerializeReference]
+	ScriptsSO BeaverInit, BeaverIdleUnhappy, BeaverIdleHappy, BeaverIdleFixed;
+
+	public void BeaverDia()
+	{
+		switch (PDSO.HeldItem)
+		{
+			case "":
+				if (PDSO.triggers.Contains("BeaverInit"))
+				{
+					if (PDSO.triggers.Contains("WWBrokFix") && PDSO.triggers.Contains("WWJamFix"))
+					{
+						if (PDSO.triggers.Contains(panelFixedTrigger) && PDSO.triggers.Contains(handleFixedTrigger))
+						{
+							DM.SetLines(BeaverIdleFixed);
+						}
+						else
+						{
+                            DM.SetLines(BeaverIdleHappy);
+                        }
+					}
+					else
+					{
+						DM.SetLines(BeaverIdleUnhappy);
+					}
+				}
+				else
+				{
+					DM.SetLines(BeaverInit);
+				}
+				break;
+			default:
+                DM.SetLines(DefaultItemFail);
+                break;
+		}
+	}
+
     public void BirdDialogue()
     {
         switch (PDSO.HeldItem)
