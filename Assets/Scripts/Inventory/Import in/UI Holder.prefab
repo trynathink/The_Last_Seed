@@ -48,7 +48,6 @@ GameObject:
   - component: {fileID: 2465796399405228200}
   - component: {fileID: 1985591479591155422}
   - component: {fileID: 6515858783208221135}
-  - component: {fileID: 2407190622928174589}
   m_Layer: 5
   m_Name: InfoButton
   m_TagString: Untagged
@@ -169,21 +168,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2407190622928174589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 282191854534464689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b42b6c38a4d503d34b4d1f4ccf064987, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonHover
-  idleIcon: {fileID: -2877565026040678181, guid: 7ec6b1b750bfa8c7aa325fa649f63543, type: 3}
-  onHoverIcon: {fileID: -7926026706275290103, guid: b3330770f867224108ebf9be991747df, type: 3}
-  buttonImage: {fileID: 1985591479591155422}
 --- !u!1 &322517712022817874
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,10 +592,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 359273772689569605}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 240c888eb163c69eab63e104eb1e5c72, type: 3}
+  m_Script: {fileID: 11500000, guid: 05e9cb78c8279274b9f4787085e9e975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableInventoryItem
-  itemSo: {fileID: 11400000, guid: 7f56dffbbebcc9c4da4876a189385903, type: 2}
+  itemSo: {fileID: 0}
 --- !u!1 &416124570037037645
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +678,7 @@ MonoBehaviour:
   validSprite: {fileID: 8780365379454397988, guid: 2a2033d3c66eb543e9fe6e2b497ed0c9, type: 3}
   invalidSprite: {fileID: 2822011539625082194, guid: da14f849ae2d6ffbd8c5fdc7d43bf53d, type: 3}
   craftButton: {fileID: 9217008519930881358}
+  craftingSize: {x: 75, y: 75}
 --- !u!222 &2080499684738799784
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -963,10 +948,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 493436623513631107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 240c888eb163c69eab63e104eb1e5c72, type: 3}
+  m_Script: {fileID: 11500000, guid: 05e9cb78c8279274b9f4787085e9e975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableInventoryItem
-  itemSo: {fileID: 11400000, guid: 805e4b437d27b5f628df74b313d0da42, type: 2}
+  itemSo: {fileID: 0}
 --- !u!1 &1060461678051768264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3584,6 +3569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b431f6b87c3a14fa423f7eacfe3811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+  PDSO: {fileID: 0}
   Bubbles:
   - {fileID: 2796048855900594582, guid: 1a09be2c25936b046a57ad06540208f2, type: 3}
   - {fileID: 2808264593536406702, guid: bad2c4b3a5be85d49a6a8032498f40d1, type: 3}
@@ -4442,10 +4428,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7654915028233358122}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 240c888eb163c69eab63e104eb1e5c72, type: 3}
+  m_Script: {fileID: 11500000, guid: 05e9cb78c8279274b9f4787085e9e975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableInventoryItem
-  itemSo: {fileID: 11400000, guid: abb076894db46844e95f6276dfb17677, type: 2}
+  itemSo: {fileID: 0}
 --- !u!1 &7755640755950591700
 GameObject:
   m_ObjectHideFlags: 0

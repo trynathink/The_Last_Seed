@@ -70,34 +70,34 @@ public class CraftingAreaManager : MonoBehaviour, IDropHandler
                 // left is present but uncombinable
                 if(transform.childCount == 1)
                 {
-                    leftItemIndicator.SetActive(true);
-                    leftImage.sprite = invalidSprite;
+                    leftItemIndicator.SetActive(false);
+                    //leftImage.sprite = invalidSprite;
                 }
                 else if(transform.childCount == 2)
                 {
-                    leftItemIndicator.SetActive(true);
-                    leftImage.sprite = invalidSprite;
-                    rightItemIndicator.SetActive(true);
-                    rightImage.sprite = invalidSprite;
+                    leftItemIndicator.SetActive(false);
+                    //leftImage.sprite = invalidSprite;
+                    rightItemIndicator.SetActive(false);
+                    //rightImage.sprite = invalidSprite;
                 }
                 break;
             case 1:
                 leftItemIndicator.SetActive(true);
-                leftImage.sprite = validSprite;
+                //leftImage.sprite = validSprite;
 
                 // right is present but incompatible
                 if(transform.childCount == 2)
                 {
-                    rightItemIndicator.SetActive(true);
-                    rightImage.sprite = invalidSprite;
+                    rightItemIndicator.SetActive(false);
+                    //rightImage.sprite = invalidSprite;
                 }
                 break;
             case 2:
                 leftItemIndicator.SetActive(true);
-                leftImage.sprite = validSprite;
+                //leftImage.sprite = validSprite;
 
                 rightItemIndicator.SetActive(true);
-                rightImage.sprite = validSprite;
+                //rightImage.sprite = validSprite;
 
                 craftButton.SetActive(true);
                 break;

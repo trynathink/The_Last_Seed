@@ -30,7 +30,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
-        anim = transform.GetChild(0).GetComponent<Animator>();
+        anim = transform.GetChild(1).GetComponent<Animator>();
 
         anim.runtimeAnimatorController = closed;
 

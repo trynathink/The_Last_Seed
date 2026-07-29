@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7d1f17d3b3eb33f98a02bc947087df5, type: 3}
+  m_Name: Reinforced Shovel
+  m_EditorClassIdentifier: Assembly-CSharp::CombinedItemSO
+  Name: Reinforced Shovel
+  InventorySprite: {fileID: -7461816933957899184, guid: ae3595aa68788ff4e9370680044c40b4, type: 3}
+  CursorSprite: {fileID: 2800000, guid: b812a50917bc6f04fbeadd698a030928, type: 3}
+  Ingredient1: {fileID: 11400000, guid: 47e7fb565080ee44b8f2f63510d730e0, type: 2}
+  Ingredient2: {fileID: 11400000, guid: c2dd9b442ed0dd24ab26345ff9807bd1, type: 2}

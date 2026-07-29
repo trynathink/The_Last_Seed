@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84da2884746d8fd48961a3aa067cac46, type: 3}
-  m_Name: Leaf
+  m_Name: Fabric
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
-  Name: Leaf
-  InventorySprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  CursorSprite: {fileID: 10904, guid: 0000000000000000f000000000000000, type: 0}
+  Name: Fabric
+  InventorySprite: {fileID: 8121652797266081843, guid: 5e4ad757f6c091444b1e47e04433a479, type: 3}
+  CursorSprite: {fileID: 2800000, guid: 3985adef234c71c489a67d879aaa9984, type: 3}

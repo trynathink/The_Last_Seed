@@ -23,7 +23,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 	// windmill outside
 	[SerializeField] private ScriptsSO firstWindmillSight;
-	[SerializeField] private ScriptsSO brokenPanel;
+	[SerializeField] private ScriptsSO brokenPanel, fixedPanel;
 	[SerializeField] private Animator windmillAnim;
 	const string seenWindmillTrigger = "WindmillSeen";
 	const string panelFixedTrigger = "WindmillPanelFixed";
@@ -31,9 +31,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 	// windmill inside
 	[SerializeField] private ScriptsSO missingRod;
-	[SerializeField] private ScriptsSO shovelAttempt;
-	[SerializeField] private GameObject brick;
-	private int brickStage = 0;
+	[SerializeField] private ScriptsSO shovelAttempt, reinforcedShovelAttempt;
+	[SerializeField] private GameObject brickOver, OpenBrick;
+    [SerializeReference]
+    GameObject ReinforcedPole;
+
+    private int brickStage = 0;
 	const string handleFixedTrigger = "WindmillHandleFixed";
 	const string brickTrigger = "BrickOut";
 	const string shovelTrigger = "ShovelNeedsRope";
@@ -66,9 +69,20 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				{
 					BrickOut();
 				}
+
+				if (PDSO.triggers.Contains(handleFixedTrigger))
+				{
+					FixedPole();
+                }
 				break;
+			case "A2 Hare's Farm":
+                if (PDSO.triggers.Contains("NakedScarecrow"))
+                {
+                    NakedScarecrow();
+                }
+                break;
 			case "A2 Beaver's River":
-                if (PDSO.triggers.Contains("Blockage"))
+                if (PDSO.triggers.Contains("WWJamFix"))
                 {
                     BlockageRemoval();
                 }
@@ -99,6 +113,14 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     public void HareDialogue()
     {
         DM.SetLines(HareInit);
+    }
+
+	[SerializeReference]
+	Sprite nakedScarecrow;
+
+	void NakedScarecrow()
+	{
+        GameObject.Find("Scarecrow").GetComponent<Image>().sprite = nakedScarecrow;
     }
 
     public void ScarecrowDialogue()
@@ -140,10 +162,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         }
     }
 	
+	// Windmill Outside Scene
+
 	public void Sack(ItemSO sackI)
 	{
-		Debug.Log("ah");
-
 		Image sack1 = GameObject.Find("Sack 1").GetComponent<Image>();
         Image sack2 = GameObject.Find("Sack 2").GetComponent<Image>();
 
@@ -176,12 +198,21 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		{
 			case "":
 			{
-				const string trigger = "WindmillScarecrowCloth";
-				if (!PDSO.ItemContains("Blanket") && ! PDSO.triggers.Contains(trigger))
+
+				if (!PDSO.triggers.Contains(panelFixedTrigger))
 				{
-					PDSO.triggers.Add("WindmillScarecrowCloth");
+                    const string trigger = "WindmillScarecrowCloth";
+                    if (!PDSO.ItemContains("Blanket") && !PDSO.triggers.Contains(trigger))
+                    {
+                        PDSO.triggers.Add("WindmillScarecrowCloth");
+                    }
+                    DM.SetLines(brokenPanel);
+                }
+				else
+				{
+						DM.SetLines(fixedPanel);
 				}
-				DM.SetLines(brokenPanel);
+
 				break;
 			}
 			case "Blanket": case "Fabric":
@@ -199,26 +230,42 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		}
 	}
 
+	// Windmill Insider Scene
+
 	private void BrickOut()
 	{
-		brick.SetActive(false);
+		brickOver.SetActive(false);
+		OpenBrick.SetActive(true);
 	}
+
+	[SerializeReference]
+	Sprite b2, b3;
 
 	public void TapBrick()
 	{
 		switch (++brickStage)
 		{
 			case 1:
+				brickOver.GetComponent<Image>().sprite = b2;
 				break;
 			case 2:
+				brickOver.GetComponent<Image>().sprite= b3;
 				break;
 			case 3:
-				if (brick.activeSelf)
+				if (brickOver.activeSelf)
 				{
 					BrickOut();
 					PDSO.triggers.Add(brickTrigger);
 				}
 				break;
+		}
+	}
+
+	void FixedPole()
+	{
+		if (PDSO.triggers.Contains(handleFixedTrigger))
+		{
+			ReinforcedPole.SetActive(true);
 		}
 	}
 
@@ -236,11 +283,18 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				}
 				DM.SetLines(shovelAttempt);
 				break;
-			case "Reinforced Handle":
+			case "Reinforced Shovel":
                 if (!PDSO.triggers.Contains(handleFixedTrigger))
 				{
 					PDSO.triggers.Add(handleFixedTrigger);
 				}
+
+				if (PDSO.ItemContains("Reinforced Shovel"))
+				{
+					PDSO.Inventory.Remove(PDSO.GetItem("Reinforced Shovel"));
+				}
+				FixedPole();
+                DM.SetLines(reinforcedShovelAttempt);
 				break;
 			default:
 				DM.SetLines(DefaultItemFail);

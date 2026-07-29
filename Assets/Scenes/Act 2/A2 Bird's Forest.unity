@@ -714,6 +714,31 @@ MonoBehaviour:
   HareInit: {fileID: 0}
   HareIdle: {fileID: 0}
   BirdTrustMinigame: {fileID: 0}
+  firstWindmillSight: {fileID: 0}
+  brokenPanel: {fileID: 0}
+  fixedPanel: {fileID: 0}
+  windmillAnim: {fileID: 0}
+  missingRod: {fileID: 0}
+  shovelAttempt: {fileID: 0}
+  reinforcedShovelAttempt: {fileID: 0}
+  brickOver: {fileID: 0}
+  OpenBrick: {fileID: 0}
+  ReinforcedPole: {fileID: 0}
+  nakedScarecrow: {fileID: 0}
+  b2: {fileID: 0}
+  b3: {fileID: 0}
+  BlockageIdle: {fileID: 0}
+  IdleMetal: {fileID: 0}
+  PithforkMetal: {fileID: 0}
+  WWJamNBrok: {fileID: 0}
+  WWJam: {fileID: 0}
+  WWBrok: {fileID: 0}
+  WW: {fileID: 0}
+  LumberCraftHint: {fileID: 0}
+  BrokFix: {fileID: 0}
+  EngineOn: {fileID: 0}
+  EngineOff: {fileID: 0}
+  EngineOnCrowbar: {fileID: 0}
 --- !u!1 &1109091462
 GameObject:
   m_ObjectHideFlags: 0

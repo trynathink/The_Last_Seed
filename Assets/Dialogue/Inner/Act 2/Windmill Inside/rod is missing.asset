@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - There's something missing here... I wonder if I can replace it with something.
+  - 'There''s something missing here... '
+  - I wonder if I can replace it with something.
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
+  trust: 0
   choice: {fileID: 0}

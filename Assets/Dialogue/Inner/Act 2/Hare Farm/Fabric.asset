@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
   m_Name: Fabric
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
-  Character: 
+  Character: Hare
   Lines:
-  - Taking Fabric
-  trigger: 
+  - Uh ...
+  - Sure??
+  trigger: NakedScarecrow
   itemGain: {fileID: 11400000, guid: de7c5128ed3293e58a698d37661f6011, type: 2}
   SceneChange: 
+  trust: 0
   choice: {fileID: 0}

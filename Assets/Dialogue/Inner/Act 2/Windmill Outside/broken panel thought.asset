@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - Some of the fabric on this blade seems have to been ripped open, can't catch
-    much wind like that...
-  trigger: Scarecrow Cloth Dia
+  - Some of the fabric on this blade seems to have been ripped open..
+  - It can't catch much wind like that.
+  trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
   trust: 0

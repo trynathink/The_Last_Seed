@@ -582,10 +582,16 @@ MonoBehaviour:
   BirdTrustMinigame: {fileID: 0}
   firstWindmillSight: {fileID: 11400000, guid: 34db971d963bb49439fd50e16f7f5a4d, type: 2}
   brokenPanel: {fileID: 11400000, guid: 549148c099c3dc74982bd5c8eca3abfb, type: 2}
+  fixedPanel: {fileID: 11400000, guid: c92f3330a6848a9429422077ce7a291d, type: 2}
   windmillAnim: {fileID: 1274839379}
   missingRod: {fileID: 0}
   shovelAttempt: {fileID: 0}
-  brick: {fileID: 0}
+  reinforcedShovelAttempt: {fileID: 0}
+  brickOver: {fileID: 0}
+  OpenBrick: {fileID: 0}
+  ReinforcedPole: {fileID: 0}
+  b2: {fileID: 0}
+  b3: {fileID: 0}
   BlockageIdle: {fileID: 0}
   IdleMetal: {fileID: 0}
   PithforkMetal: {fileID: 0}
@@ -1676,6 +1682,10 @@ PrefabInstance:
     - target: {fileID: 2624550720608419801, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_Name
       value: UI Holder
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938908227466585859, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8482493879213678171, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_Pivot.x
