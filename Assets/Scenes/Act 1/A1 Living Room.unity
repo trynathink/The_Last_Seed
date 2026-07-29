@@ -358,6 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   type: 1
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  destroyOnCollect: 1
 --- !u!1 &64215003
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BedroomButtonManager
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
   alarm: {fileID: 0}
   bearIdle: {fileID: 11400000, guid: c7342472d01459b969defb9a436d1c53, type: 2}
   bearInit: {fileID: 11400000, guid: 9f0a7f50c25960d48b2a98c87332918f, type: 2}
@@ -487,7 +489,6 @@ MonoBehaviour:
   InitWindow: {fileID: 0}
   leaveWindow: {fileID: 0}
   questionWindow: {fileID: 0}
-  DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
   FrontDoorHint: {fileID: 0}
 --- !u!1 &241515850
 GameObject:
@@ -619,7 +620,6 @@ MonoBehaviour:
   backgroundSongs:
   - {fileID: 8300000, guid: 2aa08ecfd2fb75040b2cb188b5e13404, type: 3}
   - {fileID: 8300000, guid: f0603736f1efd12468cd9ffc211faf30, type: 3}
-  source: {fileID: 241515851}
 --- !u!4 &241515853
 Transform:
   m_ObjectHideFlags: 0
@@ -951,6 +951,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8587240428572070076, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
+      propertyPath: BubbleAudio
+      value: 
+      objectReference: {fileID: 6418180475301049370, guid: fe97ae854804f6448943ab0d893eb331, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2217,3 +2221,4 @@ SceneRoots:
   - {fileID: 1260196496}
   - {fileID: 1960831728}
   - {fileID: 64215008}
+  - {fileID: 241515853}
