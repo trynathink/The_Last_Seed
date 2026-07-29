@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02dcc9824c258341a180c9160aed3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveSFX
-  _clip: {fileID: 8300000, guid: 77234faaad5f4194f82e339ac8eeb6a1, type: 3}
+  _clip: {fileID: 8300000, guid: ded0a18762a8e594da430cad726461ba, type: 3}
 --- !u!114 &3093203304456958755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,4 +156,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff981337ddc76494f910b60121323ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleSFX
-  collectSound: {fileID: 8300000, guid: 6348178c14f9e9c468de8d33a33cb3f6, type: 3}
+  collectSound: {fileID: 8300000, guid: 6a9b6b63d56b7cb49959459ce3ad634d, type: 3}

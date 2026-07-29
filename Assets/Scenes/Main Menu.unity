@@ -1673,7 +1673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986db56c25578cd4b9286ebefc80b02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonSFX
-  clickSound: {fileID: 8300000, guid: 26090a3017e178643b33b6fb447fa55e, type: 3}
+  clickSound: {fileID: 8300000, guid: 80fcb522ed06e7946a56ecc370879b39, type: 3}
   source: {fileID: 1483923742}
   canvas: {fileID: 956225477}
 --- !u!1 &983982589
