@@ -546,12 +546,20 @@ MonoBehaviour:
   brokenPanel: {fileID: 0}
   fixedPanel: {fileID: 0}
   windmillAnim: {fileID: 0}
+  windmillPanels: {fileID: 0}
+  windmillFixed: {fileID: 0}
   missingRod: {fileID: 11400000, guid: 48526a62fa7885c4dbb432e4a3197e51, type: 2}
   shovelAttempt: {fileID: 11400000, guid: d3184ab8d0cea56419012cbe5d3a5200, type: 2}
   reinforcedShovelAttempt: {fileID: 11400000, guid: 2dd49bd1f93d01c45bda21ff423eb825, type: 2}
   brickOver: {fileID: 231958116}
   OpenBrick: {fileID: 1760340367}
   ReinforcedPole: {fileID: 545932981}
+  nakedScarecrow: {fileID: 0}
+  BeaverInit: {fileID: 0}
+  BeaverIdleUnhappy: {fileID: 0}
+  BeaverIdleHappy: {fileID: 0}
+  BeaverIdleFixed: {fileID: 0}
+  BeaverPanelMake: {fileID: 0}
   b2: {fileID: -6476302864000941947, guid: 72f0e93901389ab4989204fce2f90eaf, type: 3}
   b3: {fileID: -2590902668247886376, guid: b5bfcf0f1e101c847b2eae7a88be1d63, type: 3}
   BlockageIdle: {fileID: 0}
@@ -927,6 +935,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1673299921369360853, guid: 18a493dd75c101d469e0069ce31b1962, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 0233f2d3e47defd4ea7ebbc3dcaf94b7, type: 3}
     - target: {fileID: 2715723397544825345, guid: 18a493dd75c101d469e0069ce31b1962, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
