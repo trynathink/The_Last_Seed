@@ -12,6 +12,8 @@ public class PlayerDataSO : ScriptableObject
     public float Fire;
     public int FireStage, BirdTrust;
     public List<ItemSO> Inventory;
+    [SerializeReference]
+    List<ItemSO> reference;
     public List<string> triggers;
 
 	public void Clear()
@@ -49,7 +51,7 @@ public class PlayerDataSO : ScriptableObject
         Fire = data.Fire;
         FireStage = data.FireStage;
         BirdTrust = data.BirdTrust;
-        Inventory = data.Inventory;
+        Inventory = GetInventoryList(data.Inventory);
         triggers = data.triggers;
     }
 
@@ -109,10 +111,57 @@ public class PlayerDataSO : ScriptableObject
         info.Fire = Fire;
         info.FireStage = FireStage;
         info.BirdTrust = BirdTrust;
-        info.Inventory = Inventory;
+        info.Inventory = SerialiseInven(Inventory);
         info.triggers = triggers;
 
         return info;
+    }
+
+    List<string> SerialiseInven(List<ItemSO> items)
+    {
+        List<string> list = new List<string>();
+
+        foreach (ItemSO i in items)
+        {
+            list.Add(i.name);
+        }
+
+        return list;
+    }
+
+    List<ItemSO> GetInventoryList(List<string> list)
+    {
+        List<ItemSO> items = new List<ItemSO>();
+
+        foreach (string s in list)
+        {
+            items.Add(referenceGet(s));
+        }
+
+        return items;
+    }
+
+    ItemSO referenceGet(string s)
+    {
+        ItemSO reff = null;
+
+        foreach(ItemSO r in reference)
+        {
+            if(r.name == s)
+            {
+                reff = r;
+            }
+        }
+
+        if (reff != null)
+        {
+            return reff;
+        }
+        else
+        {
+            return null;
+        }
+
     }
 
     public bool CheckSave(string FileName)
