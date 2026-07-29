@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Pitchfork
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
-  Lines: []
+  Lines:
+  - This Pitchfork could come in handy.
   trigger: 
   itemGain: {fileID: 11400000, guid: e1d84c707408d80a19949055f3ac449a, type: 2}
   SceneChange: 
+  trust: 0
   choice: {fileID: 0}

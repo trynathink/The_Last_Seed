@@ -10,8 +10,10 @@ public class PlayerDataSO : ScriptableObject
 
     public string SaveFile, PlayerLocation, HeldItem;
     public float Fire;
-    public int FireStage;
+    public int FireStage, BirdTrust;
     public List<ItemSO> Inventory;
+    [SerializeReference]
+    List<ItemSO> reference;
     public List<string> triggers;
 
 	public void Clear()
@@ -19,6 +21,7 @@ public class PlayerDataSO : ScriptableObject
         PlayerLocation = "A1 Bedroom";
         Fire = 0;
         FireStage = 0;
+        BirdTrust = 0;
         Inventory = new List<ItemSO>();
         triggers = new List<string>();
         HeldItem = string.Empty;
@@ -47,7 +50,8 @@ public class PlayerDataSO : ScriptableObject
         HeldItem = data.HeldItem; 
         Fire = data.Fire;
         FireStage = data.FireStage;
-        Inventory = data.Inventory;
+        BirdTrust = data.BirdTrust;
+        Inventory = GetInventoryList(data.Inventory);
         triggers = data.triggers;
     }
 
@@ -61,6 +65,9 @@ public class PlayerDataSO : ScriptableObject
     {
         foreach (ItemSO i in Inventory)
         {
+            Debug.Log(name);
+            Debug.Log(i.name);
+
             if (i.name == name)
             {
                 return true;
@@ -68,6 +75,17 @@ public class PlayerDataSO : ScriptableObject
         }
 
         return false;
+    }
+
+	public void RemoveItem(string name)
+    {
+		for (int i = 0; i < Inventory.Count; i++)
+        {
+            if (Inventory[i].name == name)
+            {
+				Inventory.RemoveAt(i);
+            }
+        }
     }
 
     public ItemSO GetItem(string name)
@@ -92,10 +110,58 @@ public class PlayerDataSO : ScriptableObject
         info.HeldItem = HeldItem;
         info.Fire = Fire;
         info.FireStage = FireStage;
-        info.Inventory = Inventory;
+        info.BirdTrust = BirdTrust;
+        info.Inventory = SerialiseInven(Inventory);
         info.triggers = triggers;
 
         return info;
+    }
+
+    List<string> SerialiseInven(List<ItemSO> items)
+    {
+        List<string> list = new List<string>();
+
+        foreach (ItemSO i in items)
+        {
+            list.Add(i.name);
+        }
+
+        return list;
+    }
+
+    List<ItemSO> GetInventoryList(List<string> list)
+    {
+        List<ItemSO> items = new List<ItemSO>();
+
+        foreach (string s in list)
+        {
+            items.Add(referenceGet(s));
+        }
+
+        return items;
+    }
+
+    ItemSO referenceGet(string s)
+    {
+        ItemSO reff = null;
+
+        foreach(ItemSO r in reference)
+        {
+            if(r.name == s)
+            {
+                reff = r;
+            }
+        }
+
+        if (reff != null)
+        {
+            return reff;
+        }
+        else
+        {
+            return null;
+        }
+
     }
 
     public bool CheckSave(string FileName)

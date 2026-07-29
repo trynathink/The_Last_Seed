@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
   m_Name: Hare Init
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
-  Character: 
+  Character: Hare
   Lines:
-  - Hare init...
+  - 'uh .. hello there! '
+  - My uh, dialouge is still a work in progress
+  - So I can't really talk riiight now, but uh, I will someday!
+  - T-thank you for playing our game!
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
+  trust: 0
   choice: {fileID: 0}

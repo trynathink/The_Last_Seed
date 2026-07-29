@@ -7,11 +7,18 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using System;
+using System.Reflection;
+using Unity.VisualScripting;
 
 // Gaurav Singh
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField]
+    PlayerDataSO PDSO;
+
+
 	[Header("Randomization Variables")]
 	[SerializeField]
 	private GameObject[] Bubbles;
@@ -73,7 +80,7 @@ public class DialogueManager : MonoBehaviour
     GameObject Inner, NPC, Choice;
 	private bool keepWord = false;
 
-    void Start()
+    void Awake()
     {
         DiaImg = GameObject.Find("Dialogue Image").GetComponent<Image>();
         Inner = transform.Find("Inner Text").gameObject;
@@ -168,13 +175,13 @@ public class DialogueManager : MonoBehaviour
 
 	int RandBubble(int previous)
 	{
-		float choice = Random.value;
+		float choice = UnityEngine.Random.value;
 
 		for (int i = 0; i < BubbleChances.Length; i++)
 		{
 			if (choice <= BubbleChances[i])
 			{
-				if (i != previous || Random.value < CurrentBubbleChance)
+				if (i != previous || UnityEngine.Random.value < CurrentBubbleChance)
 					return i;
 			}
 		}
@@ -207,14 +214,14 @@ public class DialogueManager : MonoBehaviour
 			{
 				// TODO: prefab not always small for interactable word
 				float bubbleWidth = NPCBubble(bubble, placement, words);
-				float moveRightBuffer = Random.Range(MoveRightBufferRange.x, MoveRightBufferRange.y);
+				float moveRightBuffer = UnityEngine.Random.Range(MoveRightBufferRange.x, MoveRightBufferRange.y);
 				placement.x += bubbleWidth + moveRightBuffer;
 				// TODO: possibly change y position just a little bit each time
 
-				if (Random.value <= MoveDownChance || placement.x > end)
+				if (UnityEngine.Random.value <= MoveDownChance || placement.x > end)
 				{
-					placement.y -= Random.Range(MoveDownRange.x, MoveDownRange.y);
-					float padding = Random.Range(LinePaddingRange.x, LinePaddingRange.y);
+					placement.y -= UnityEngine.Random.Range(MoveDownRange.x, MoveDownRange.y);
+					float padding = UnityEngine.Random.Range(LinePaddingRange.x, LinePaddingRange.y);
 					placement.x = TextArea.rect.x + padding;
 				}
 
@@ -321,12 +328,29 @@ public class DialogueManager : MonoBehaviour
 
         if (script.itemGain != null)
         {
-            GameObject.Find(script.itemGain.Name).GetComponent<Collectible>().Collect(script.itemGain);
+            if (GameObject.Find(script.itemGain.Name) != null)
+            {
+                GameObject.Find(script.itemGain.Name).GetComponent<Collectible>().Collect(script.itemGain);
+            }
+            else
+            {
+                PDSO.AddToInventory(script.itemGain);
+            }
+            
         }
 
         if(script.trigger != string.Empty && script.trigger != null)
         {
-            GameObject.Find("Canvas").GetComponent<GameSceneManager>().addTrigger(script.trigger);
+            GameObject.Find("Canvas").SendMessage("addTrigger", script.trigger);
+        }
+
+        if(script.trust != 0)
+        {
+            FieldInfo fi = PDSO.GetType().GetField($"{script.Character}Trust");
+
+            int oldTrust = (int)fi.GetValue(PDSO);
+
+            fi.SetValue(PDSO, oldTrust + script.trust);
         }
 
         if (script.SceneChange != string.Empty && script.SceneChange != null)

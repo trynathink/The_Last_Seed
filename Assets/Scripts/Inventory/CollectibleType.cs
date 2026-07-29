@@ -9,5 +9,10 @@ public enum CollectibleType
     Blanket,
     Crowbar,
     Pitchfork,
-    Fabric
+    Fabric,
+    Lumber,
+    Twig,
+    Sack,
+	Leaf,
+    ShovelHandle
 }

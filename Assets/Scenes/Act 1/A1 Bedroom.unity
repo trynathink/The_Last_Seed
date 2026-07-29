@@ -890,6 +890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   type: 0
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  destroyOnCollect: 1
 --- !u!114 &702136764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,6 +1340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BedroomButtonManager
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
   alarm: {fileID: 8300000, guid: 0c94bde5818f2cd459fa4aaae15ad838, type: 3}
   bearIdle: {fileID: 0}
   bearInit: {fileID: 0}
@@ -1348,7 +1350,7 @@ MonoBehaviour:
   InitWindow: {fileID: 0}
   leaveWindow: {fileID: 0}
   questionWindow: {fileID: 0}
-  DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
+  FrontDoorHint: {fileID: 0}
 --- !u!114 &749076960475859537
 MonoBehaviour:
   m_ObjectHideFlags: 0

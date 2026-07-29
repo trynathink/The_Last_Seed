@@ -18,9 +18,14 @@ public class PlayerData
     public float Fire;
     public int FireStage;
 
+    // How much the characters trust the player
+    public int BirdTrust;
+
     // Inventory is a list which contains every item the player has
     // If the player does not have an item then it isn't in the list
-    public List<ItemSO> Inventory;
+
+    // This is a string because Texture's are not serialsable
+    public List<string> Inventory;
 
     // triggers are a list of triggers the player has met
     // example could be if the player has finished a certain puzzle or reached a certain dialogue point

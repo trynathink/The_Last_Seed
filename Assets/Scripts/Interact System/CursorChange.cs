@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 // Gaurav Singh
 
 public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
-    [SerializeReference]
+    [SerializeField]
     PlayerDataSO PDSO;
 
     [SerializeField]
@@ -13,7 +14,7 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (PDSO.HeldItem == "")
+        if (PDSO.HeldItem == "" || SceneManager.GetActiveScene().name == "Main Menu")
         {
             Cursor.SetCursor(click, default, default);
         }
@@ -21,7 +22,7 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(PDSO.HeldItem == "")
+        if(PDSO.HeldItem == "" || SceneManager.GetActiveScene().name == "Main Menu")
         {
             Cursor.SetCursor(hover, default, default);
         }
@@ -29,7 +30,7 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (PDSO.HeldItem == "")
+        if (PDSO.HeldItem == "" || SceneManager.GetActiveScene().name == "Main Menu")
         {
             Cursor.SetCursor(default, default, default);
         }
@@ -37,7 +38,7 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (PDSO.HeldItem == "")
+        if (PDSO.HeldItem == "" || SceneManager.GetActiveScene().name == "Main Menu")
         {
             Cursor.SetCursor(hover, default, default);
         }

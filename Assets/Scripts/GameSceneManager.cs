@@ -18,7 +18,7 @@ public class GameSceneManager : GameSceneManagerBase
     private bool isAlarmOff = false;
 
     // there is clearly a better way to do this, not rn
-    public ScriptsSO AlarmOn, FrontDoorLock, FrontDoorGoal, InitWindow, leaveWindow, questionWindow;
+    public ScriptsSO AlarmOn, FrontDoorLock, FrontDoorGoal, InitWindow, leaveWindow, questionWindow, FrontDoorHint;
 
     protected override void OnEnable()
     {
@@ -48,14 +48,20 @@ public class GameSceneManager : GameSceneManagerBase
     // Bedroom & Bed Window Scene 
     public void OnClockClick()
     {
-		Action click = () => {
-			if (!isAlarmOff)
-			{
-				Clock();
-				PDSO.triggers.Add("Clock");
-			}
-		};
-		CatchAnyItemHeld(click);
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                if (!isAlarmOff)
+                {
+                    Clock();
+                    PDSO.triggers.Add("Clock");
+                }
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
+                break;
+        }
+			
     }
 
     public void Clock()
@@ -67,7 +73,9 @@ public class GameSceneManager : GameSceneManagerBase
     // Bedroom Scene
     public void BedroomWindow()
     {
-		CatchAnyItemHeld(() => NextScene("A1 Bed Window"));
+        IM.HoldItem("");
+
+        NextScene("A1 Bed Window");
     }
 
     public void ExitBedroom()
@@ -91,43 +99,58 @@ public class GameSceneManager : GameSceneManagerBase
     // Living Room Scene
     public void FrontDoor()
     {
-		Action click = () => {
-			if (PDSO.triggers.Contains("Goal Heard"))
-			{
-				DM.SetLines(FrontDoorGoal);
-			}
-			else
-			{
-				DM.SetLines(FrontDoorLock);
-			}
-		};
-		CatchAnyItemHeld(click);
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                if (PDSO.triggers.Contains("Goal Heard"))
+                {
+                    DM.SetLines(FrontDoorGoal);
+                }
+                else
+                {
+                    DM.SetLines(FrontDoorLock);
+                }
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
+                break;
+        }
     }
 
     public void Closet(bool open)
     {
-		Action click = () => {
-			GameObject.Find("Closet Closed").GetComponent<Image>().enabled = !open;
-			GameObject.Find("Closet Open").GetComponent<Image>().enabled = open;
-			GameObject.Find("Closet Open").transform.Find("Close Open Hitbox").gameObject.SetActive(open);
-			MoveSFX.Play();
-		};
-		CatchAnyItemHeld(click);
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                GameObject.Find("Closet Closed").GetComponent<Image>().enabled = !open;
+                GameObject.Find("Closet Open").GetComponent<Image>().enabled = open;
+                GameObject.Find("Closet Open").transform.Find("Close Open Hitbox").gameObject.SetActive(open);
+                MoveSFX.Play();
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
+                break;
+        }
     }
 
     public void BearDia()
     {
-		Action click = () => {
-			if(PDSO.triggers.Contains("Goal Heard"))
-			{
-				DM.SetLines(bearIdle);
-			}
-			else
-			{
-				DM.SetLines(bearInit);
-			}
-		};
-		CatchAnyItemHeld(click);
+        switch (PDSO.HeldItem)
+        {
+            case "":
+                if (PDSO.triggers.Contains("Goal Heard"))
+                {
+                    DM.SetLines(bearIdle);
+                }
+                else
+                {
+                    DM.SetLines(bearInit);
+                }
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
+                break;
+        }
     }
 
     public void LRtoBR()
@@ -170,10 +193,12 @@ public class GameSceneManager : GameSceneManagerBase
                 {
                     GameObject.Find("Boards").GetComponent<Image>().enabled = false;
                     PDSO.triggers.Add("Boards Removed");
+
+                    IM.HoldItem("");
                 }
                 else
                 {
-                    DM.SetLines(DefaultItemFail);
+                    DM.SetLines(FrontDoorHint);
                 }
                 break;
             default:

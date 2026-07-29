@@ -6,8 +6,8 @@ public class ItemSO : ScriptableObject
 {
     public string Name;
 
-    public Sprite InventorySprite;
-
     public Texture2D CursorSprite;
+
+    public byte[] CursorBytes;
 
 }

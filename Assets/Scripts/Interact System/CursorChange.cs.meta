@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: a136e9349f4aea448bfd4dd6c9f3a59b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  - hover: {fileID: 2800000, guid: d8689d86e5e333d4186a1f810ba1e8af, type: 3}
+  - click: {fileID: 2800000, guid: f5cd3747ad4441142992dfe47523318c, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
