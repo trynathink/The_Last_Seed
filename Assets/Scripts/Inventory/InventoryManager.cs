@@ -13,6 +13,7 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField]
     private GameObject inventoryPanel, informationPanel;
+    [SerializeField]
     private Transform itemContainer;
 
     [SerializeField]
@@ -115,10 +116,17 @@ public class InventoryManager : MonoBehaviour
     }
 
     public List<ItemSO> GetAllItems()
-    {
-        return itemContainer
-                .Cast<Transform>()
-                .Select(child => child.GetComponent<DraggableInventoryItem>().itemSo)
-                .ToList();
+    {   
+        List<ItemSO> items = new List<ItemSO>();
+
+        foreach(RectTransform child in itemContainer)
+        {
+            items.Add(child.GetComponent<DraggableInventoryItem>().itemSo);
+
+        }
+
+        return items;
+
+
     }
 }

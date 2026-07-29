@@ -890,6 +890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Collectible
   type: 0
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  destroyOnCollect: 1
 --- !u!114 &702136764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,6 +1340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BedroomButtonManager
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
   alarm: {fileID: 8300000, guid: 0c94bde5818f2cd459fa4aaae15ad838, type: 3}
   bearIdle: {fileID: 0}
   bearInit: {fileID: 0}
@@ -1348,7 +1350,7 @@ MonoBehaviour:
   InitWindow: {fileID: 0}
   leaveWindow: {fileID: 0}
   questionWindow: {fileID: 0}
-  DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
+  FrontDoorHint: {fileID: 0}
 --- !u!114 &749076960475859537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1375,18 +1377,6 @@ PrefabInstance:
     - target: {fileID: 2624550720608419801, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_Name
       value: UI Holder
-      objectReference: {fileID: 0}
-    - target: {fileID: 3746741073765112923, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 4384cd84a51b0c846a8294d0571c1398, type: 2}
-    - target: {fileID: 3746741073765112923, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2387246430420829424, guid: 4384cd84a51b0c846a8294d0571c1398, type: 2}
-    - target: {fileID: 3746741073765112923, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8482493879213678171, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_Pivot.x

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 72c4c6d865857d849ad2682f0ede39b1
+guid: 19f5c83d2398d1442b96673640cf8d13
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5474670111883319238
-    second: Act2_mainfarm_Pitchfork (INVENTORY)_0
+      213: -4144609779467375620
+    second: Act2_BirdScene_twig (INVENTORY)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 2
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act2_mainfarm_Pitchfork (INVENTORY)_0
+      name: Act2_BirdScene_twig (INVENTORY)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 534
-        height: 1440
+        width: 216
+        height: 374
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c7d041f57fe9fb40800000000000000
-      internalID: 5474670111883319238
+      spriteID: cfbac3a5d536b76c0800000000000000
+      internalID: -4144609779467375620
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Act2_mainfarm_Pitchfork (INVENTORY)_0: 5474670111883319238
+      Act2_BirdScene_twig (INVENTORY)_0: -4144609779467375620
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

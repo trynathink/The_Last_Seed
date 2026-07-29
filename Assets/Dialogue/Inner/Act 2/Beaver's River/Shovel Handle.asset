@@ -16,7 +16,7 @@ MonoBehaviour:
   Lines:
   - It looks like the handle of a shovel.
   - I'm sure noone would mind if I took this.
-  trigger: 
+  trigger: Shovel Handle
   itemGain: {fileID: 11400000, guid: 47e7fb565080ee44b8f2f63510d730e0, type: 2}
   SceneChange: 
   trust: 0

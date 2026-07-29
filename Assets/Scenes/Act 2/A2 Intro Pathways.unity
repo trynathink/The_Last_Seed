@@ -1392,7 +1392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff981337ddc76494f910b60121323ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleSFX
-  source: {fileID: 645576001}
   collectSound: {fileID: 8300000, guid: 6348178c14f9e9c468de8d33a33cb3f6, type: 3}
 --- !u!114 &645576000
 MonoBehaviour:
@@ -1406,9 +1405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02dcc9824c258341a180c9160aed3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveSFX
-  clip: {fileID: 8300000, guid: 77234faaad5f4194f82e339ac8eeb6a1, type: 3}
-  source: {fileID: 645576001}
-  door: 0
+  _clip: {fileID: 0}
 --- !u!82 &645576001
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1629,6 +1626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BedroomButtonManager
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
   alarm: {fileID: 0}
   bearIdle: {fileID: 0}
   bearInit: {fileID: 0}
@@ -1638,7 +1636,7 @@ MonoBehaviour:
   InitWindow: {fileID: 0}
   leaveWindow: {fileID: 0}
   questionWindow: {fileID: 0}
-  DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
+  FrontDoorHint: {fileID: 0}
 --- !u!114 &756296239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1668,7 +1666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -1779,6 +1777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
   inventoryPanel: {fileID: 1904558986}
+  informationPanel: {fileID: 0}
+  itemContainer: {fileID: 0}
   closed: {fileID: 9100000, guid: 5bd035b39d1ec03409eb7699d0abd8a9, type: 2}
   open: {fileID: 9100000, guid: 60e0200bee01b764c8063cc1365a1e34, type: 2}
   anim: {fileID: 0}
@@ -3079,14 +3079,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b431f6b87c3a14fa423f7eacfe3811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+  PDSO: {fileID: 0}
   Bubbles:
   - {fileID: 2796048855900594582, guid: 1a09be2c25936b046a57ad06540208f2, type: 3}
   - {fileID: 2808264593536406702, guid: bad2c4b3a5be85d49a6a8032498f40d1, type: 3}
   - {fileID: 5194724763292896191, guid: ad1d2301ae31b2a448d17e46fa4f37e7, type: 3}
+  interactableBubble: {fileID: 0}
   BubbleChances:
   - 0.25
   - 0.5
   - 0.25
+  BubbleAudio: []
   CurrentBubbleChance: 0.1
   MoveDownChance: 0.1
   MoveDownRange: {x: 75, y: 125}
@@ -3101,6 +3104,8 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls: []
+  click: {fileID: 0}
+  sound: {fileID: 0}
 --- !u!1 &1904558986
 GameObject:
   m_ObjectHideFlags: 0
@@ -3304,7 +3309,6 @@ MonoBehaviour:
   backgroundSongs:
   - {fileID: 8300000, guid: 2aa08ecfd2fb75040b2cb188b5e13404, type: 3}
   - {fileID: 8300000, guid: f0603736f1efd12468cd9ffc211faf30, type: 3}
-  source: {fileID: 2044285967}
 --- !u!4 &2044285969
 Transform:
   m_ObjectHideFlags: 0

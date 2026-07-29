@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Lumber
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   Name: Lumber
-  InventorySprite: {fileID: 0}
-  CursorSprite: {fileID: 0}
+  InventorySprite: {fileID: 4213875681916940367, guid: 003e7965f89a4b243a88edab5da1fdee, type: 3}
+  CursorSprite: {fileID: 2800000, guid: 2921db32285d46642b254b52e158c2da, type: 3}

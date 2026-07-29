@@ -557,7 +557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
@@ -636,10 +636,34 @@ MonoBehaviour:
   BirdTrustMinigame: {fileID: 0}
   firstWindmillSight: {fileID: 0}
   brokenPanel: {fileID: 0}
+  fixedPanel: {fileID: 0}
   windmillAnim: {fileID: 0}
   missingRod: {fileID: 0}
   shovelAttempt: {fileID: 0}
-  brick: {fileID: 0}
+  reinforcedShovelAttempt: {fileID: 0}
+  brickOver: {fileID: 0}
+  OpenBrick: {fileID: 0}
+  ReinforcedPole: {fileID: 0}
+  nakedScarecrow: {fileID: 0}
+  BeaverInit: {fileID: 0}
+  BeaverIdleUnhappy: {fileID: 0}
+  BeaverIdleHappy: {fileID: 0}
+  BeaverIdleFixed: {fileID: 0}
+  BeaverPanelMake: {fileID: 0}
+  b2: {fileID: 0}
+  b3: {fileID: 0}
+  BlockageIdle: {fileID: 0}
+  IdleMetal: {fileID: 0}
+  PithforkMetal: {fileID: 0}
+  WWJamNBrok: {fileID: 0}
+  WWJam: {fileID: 0}
+  WWBrok: {fileID: 0}
+  WW: {fileID: 0}
+  LumberCraftHint: {fileID: 0}
+  BrokFix: {fileID: 0}
+  EngineOn: {fileID: 0}
+  EngineOff: {fileID: 0}
+  EngineOnCrowbar: {fileID: 0}
 --- !u!1 &1421785775
 GameObject:
   m_ObjectHideFlags: 0

@@ -63,6 +63,9 @@ public class PlayerDataSO : ScriptableObject
     {
         foreach (ItemSO i in Inventory)
         {
+            Debug.Log(name);
+            Debug.Log(i.name);
+
             if (i.name == name)
             {
                 return true;

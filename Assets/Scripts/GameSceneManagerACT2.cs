@@ -86,6 +86,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 {
                     BlockageRemoval();
                 }
+				if (PDSO.triggers.Contains("Shovel Handle"))
+				{
+					GameObject scene = GameObject.Find("BG & Sprites");
+
+					scene.transform.Find("Shovel Handle").gameObject.SetActive(false);
+				}
                 break;
         }
     }
@@ -140,7 +146,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     }
 
 	[SerializeReference]
-	ScriptsSO BeaverInit, BeaverIdleUnhappy, BeaverIdleHappy, BeaverIdleFixed;
+	ScriptsSO BeaverInit, BeaverIdleUnhappy, BeaverIdleHappy, BeaverIdleFixed, BeaverPanelMake;
 
 	public void BeaverDia()
 	{
@@ -170,6 +176,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					DM.SetLines(BeaverInit);
 				}
 				break;
+			case "Lumber":
+				if (!PDSO.triggers.Contains("BeaverPanel"))
+				{
+                    DM.SetLines(BeaverPanelMake);
+                }
+                break;
 			default:
                 DM.SetLines(DefaultItemFail);
                 break;
@@ -413,7 +425,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			case "Lumber":
 				DM.SetLines(LumberCraftHint);
 				break;
-			case "Paddles":
+			case "Paddle":
 				DM.SetLines(BrokFix);
 				break;
 			default:
