@@ -47,7 +47,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     {
         switch (SceneManager.GetActiveScene().name)
         {
-			case "A2 Windmill Outside":
+			case SceneNames.ACT2_WINDMILL_OUTSIDE:
 				if (!PDSO.triggers.Contains(seenWindmillTrigger))
 				{
 					DM.SetLines(firstWindmillSight);
@@ -64,7 +64,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					windmillAnim.SetBool("spin", true);
 				}
 				break;
-			case "A2 Windmill Inside":
+			case SceneNames.ACT2_WINDMILL_INSIDE:
 				if (PDSO.triggers.Contains(brickTrigger))
 				{
 					BrickOut();
@@ -75,13 +75,13 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					FixedPole();
                 }
 				break;
-			case "A2 Hare's Farm":
+			case SceneNames.ACT2_HARE:
                 if (PDSO.triggers.Contains("NakedScarecrow"))
                 {
                     NakedScarecrow();
                 }
                 break;
-			case "A2 Beaver's River":
+			case SceneNames.ACT2_BEAVER:
                 if (PDSO.triggers.Contains("WWJamFix"))
                 {
                     BlockageRemoval();
@@ -93,6 +93,9 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					scene.transform.Find("Shovel Handle").gameObject.SetActive(false);
 				}
                 break;
+			case SceneNames.ACT2_LION:
+				break;
+				
         }
     }
 

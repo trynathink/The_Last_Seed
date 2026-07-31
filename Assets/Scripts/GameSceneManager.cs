@@ -26,7 +26,7 @@ public class GameSceneManager : GameSceneManagerBase
 
         switch (SceneManager.GetActiveScene().name)
         {
-            case "A1 Bedroom" or "A1 Bed Window":
+            case SceneNames.ACT1_BEDROOM or SceneNames.ACT1_BED_WINDOW:
                 if (PDSO.triggers.Contains("Clock"))
                 {
                     Clock();
@@ -36,7 +36,7 @@ public class GameSceneManager : GameSceneManagerBase
 					BackgroundSFX.PlayLoop(alarm);
 				}
                 break;
-            case "A1 Kitchen":
+            case SceneNames.ACT1_KITCHEN:
                 if (PDSO.triggers.Contains("Boards Removed"))
                 {
                     GameObject.Find("Boards").GetComponent<Image>().enabled = false;
@@ -75,7 +75,7 @@ public class GameSceneManager : GameSceneManagerBase
     {
         IM.HoldItem("");
 
-        NextScene("A1 Bed Window");
+        NextScene(SceneNames.ACT1_BED_WINDOW);
     }
 
     public void ExitBedroom()
@@ -87,13 +87,13 @@ public class GameSceneManager : GameSceneManagerBase
         }
 
 		MoveSFX.Play();
-        NextScene("A1 Living Room");
+        NextScene(SceneNames.ACT1_LIVING_ROOM);
     }
 
     // Bed Window Scene
     public void ExitWindow()
     {
-        NextScene("A1 Bedroom");
+        NextScene(SceneNames.ACT1_BEDROOM);
     }
 
     // Living Room Scene
@@ -156,18 +156,18 @@ public class GameSceneManager : GameSceneManagerBase
     public void LRtoBR()
     {
 		MoveSFX.Play();
-        NextScene("A1 Bedroom");
+        NextScene(SceneNames.ACT1_BEDROOM);
     }
 
     public void LRtoK()
     {
-        NextScene("A1 Kitchen");
+        NextScene(SceneNames.ACT1_KITCHEN);
     }
 
     // Kitchen Scene
     public void KtoLR()
     {
-        NextScene("A1 Living Room");
+        NextScene(SceneNames.ACT1_LIVING_ROOM);
     }
 
     public void BoardedUpWindows()

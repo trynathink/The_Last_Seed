@@ -41,7 +41,7 @@ public class BedroomWindowButtonManager : MonoBehaviour
         switch (PDSO.HeldItem)
         {
             case "":
-                NextScene("A1 Bedroom");
+                NextScene(SceneNames.ACT1_BEDROOM);
                 break;
             default:
                 DM.SetLines(DefaultItemFail);
