@@ -107,6 +107,14 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					DM.SetLines(LionInit);
 					PDSO.triggers.Add(TriggerNames.LION_SCENE_ENTRY);
 				}
+				if (PDSO.triggers.Contains(TriggerNames.LION_QUESTION_ASKED)
+					&& !PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
+				{
+					PDSO.triggers.RemoveAll(TriggerNames.LION_QUESTION_ASKED);
+					PDSO.triggers.RemoveAll(TriggerNames.LION_CROP);
+					PDSO.triggers.RemoveAll(TriggerNames.LION_SACK);
+					PDSO.triggers.RemoveAll(TriggerNames.LION_LUMBER);
+				}
 				break;
 				
         }
