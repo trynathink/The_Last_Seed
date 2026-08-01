@@ -110,10 +110,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				if (PDSO.triggers.Contains(TriggerNames.LION_QUESTION_ASKED)
 					&& !PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
 				{
-					PDSO.triggers.RemoveAll(TriggerNames.LION_QUESTION_ASKED);
-					PDSO.triggers.RemoveAll(TriggerNames.LION_CROP);
-					PDSO.triggers.RemoveAll(TriggerNames.LION_SACK);
-					PDSO.triggers.RemoveAll(TriggerNames.LION_LUMBER);
+					PDSO.triggers.RemoveAll(i => i == TriggerNames.LION_QUESTION_ASKED);
+					PDSO.triggers.RemoveAll(i => i == TriggerNames.LION_CROP);
+					PDSO.triggers.RemoveAll(i => i == TriggerNames.LION_SACK);
+					PDSO.triggers.RemoveAll(i => i == TriggerNames.LION_LUMBER);
 				}
 				break;
 				
@@ -199,6 +199,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					DM.SetLines(LionIdle);
 					break;
 			}
+		}
+		else
+		{
+			DM.SetLines(LionIdle);
 		}
 	}
 

@@ -635,6 +635,10 @@ MonoBehaviour:
   HareIdle: {fileID: 0}
   LionInit: {fileID: 11400000, guid: 74cea2430a3ab7ca68f3d99dfb22727e, type: 2}
   LionIdle: {fileID: 11400000, guid: 24e048ea5e1eeb698860f997e2d1c125, type: 2}
+  LionConvinced: {fileID: 11400000, guid: 2f2518b471c95da21a959a568ff1165c, type: 2}
+  LionSack: {fileID: 11400000, guid: db4cbeb0adedfc60384f68d781adf8d5, type: 2}
+  LionLumber: {fileID: 11400000, guid: eee7efc0e8ad430a59e4547a3c447597, type: 2}
+  LionCrop: {fileID: 11400000, guid: 8ac115ce2434b7fc3859e63e4a6d0a0e, type: 2}
   BirdTrustMinigame: {fileID: 0}
   firstWindmillSight: {fileID: 0}
   brokenPanel: {fileID: 0}
@@ -666,6 +670,110 @@ MonoBehaviour:
   EngineOn: {fileID: 0}
   EngineOff: {fileID: 0}
   EngineOnCrowbar: {fileID: 0}
+--- !u!1 &900374899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 900374900}
+  - component: {fileID: 900374902}
+  - component: {fileID: 900374901}
+  - component: {fileID: 900374903}
+  m_Layer: 5
+  m_Name: Lion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &900374900
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900374899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1943070011}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 417.0835, y: 37.709717}
+  m_SizeDelta: {x: 455.7905, y: 801.3317}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &900374901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900374899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &900374902
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900374899}
+  m_CullTransparentMesh: 1
+--- !u!114 &900374903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900374899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e363403b3aa52a379e9ccf4a6e1c7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableImage
+  alphaThreshold: 0.1
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 756296243}
+        m_TargetAssemblyTypeName: GameSceneManagerACT2, Assembly-CSharp
+        m_MethodName: LionDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1421785775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,6 +1151,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1726924582}
+  - {fileID: 900374900}
   m_Father: {fileID: 756296242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
