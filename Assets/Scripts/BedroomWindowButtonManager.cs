@@ -25,7 +25,7 @@ public class BedroomWindowButtonManager : MonoBehaviour
     {
         DM = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
 
-        if (PDSO.triggers.Contains("Clock"))
+        if (PDSO.triggers.Contains(TriggerNames.CLOCK))
         {
             Clock();
         }
