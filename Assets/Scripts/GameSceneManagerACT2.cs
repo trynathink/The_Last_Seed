@@ -25,6 +25,15 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	public ScriptsSO LionLumber;
 	public ScriptsSO LionCrop;
 
+	// Crowd
+	public ScriptsSO CrowdCropHint;
+	public ScriptsSO CrowdLumberHint;
+	public ScriptsSO CrowdSackHint;
+	public ScriptsSO CrowdLionPraise;
+
+	private ScriptsSO[] crowdLines;
+	private int crowdLineIndex;
+
     // Bird
     [SerializeReference]
 	ScriptsSO BirdTrustMinigame;
@@ -50,6 +59,16 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	const string shovelTrigger = TriggerNames.SHOVEL;
 
     // This script manages every scene in Act 2
+
+	private void Awake()
+	{
+		crowdLines = new ScriptsSO[4];
+		crowdLines[0] = CrowdLionPraise;
+		crowdLines[1] = CrowdCropHint;
+		crowdLines[2] = CrowdSackHint;
+		crowdLines[3] = CrowdLumberHint;
+		crowdLineIndex = 0;
+	}
 
     private void Start()
     {
@@ -171,6 +190,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 	public void LionDialogue()
 	{
+		Debug.Log("lion dialogue");
 		if(PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
 		{
 			DM.SetLines(LionConvinced);
@@ -204,6 +224,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		{
 			DM.SetLines(LionIdle);
 		}
+	}
+
+	public void CrowdDialogue()
+	{
+		DM.SetLines(crowdLines[crowdLineIndex]);
+		crowdLineIndex = (crowdLineIndex + 1) % 4;
 	}
 
 	[SerializeReference]
