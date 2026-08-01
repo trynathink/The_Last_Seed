@@ -20,6 +20,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	// Lion
 	public ScriptsSO LionInit;
 	public ScriptsSO LionIdle;
+	public ScriptsSO LionConvinced;
+	public ScriptsSO LionSack;
+	public ScriptsSO LionLumber;
+	public ScriptsSO LionCrop;
 
     // Bird
     [SerializeReference]
@@ -157,6 +161,39 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         }
     }
 
+	public void LionDialogue()
+	{
+		if(PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
+		{
+			DM.SetLines(LionConvinced);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_SACK) 
+					&& PDSO.triggers.Contains(TriggerNames.LION_CROP)
+					&& PDSO.triggers.Contains(TriggerNames.LION_LUMBER))
+		{
+			PDSO.triggers.Add(TriggerNames.LION_CONVINCED);
+			DM.SetLines(LionConvinced);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_QUESTION_ASKED))
+		{
+			switch (PDSO.HeldItem)
+			{
+				case ItemNames.LUMBER:
+					DM.SetLines(LionLumber);
+					break;
+				case ItemNames.SACK:
+					DM.SetLines(LionSack);
+					break;
+				case ItemNames.DEAD_CROP:
+					DM.SetLines(LionCrop);
+					break;
+				default:
+					DM.SetLines(LionIdle);
+					break;
+			}
+		}
+	}
+
 	[SerializeReference]
 	ScriptsSO BeaverInit, BeaverIdleUnhappy, BeaverIdleHappy, BeaverIdleFixed, BeaverPanelMake;
 
@@ -188,7 +225,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					DM.SetLines(BeaverInit);
 				}
 				break;
-			case "Lumber":
+			case ItemNames.LUMBER:
 				if (!PDSO.triggers.Contains(TriggerNames.BEAVER_PANEL))
 				{
                     DM.SetLines(BeaverPanelMake);
