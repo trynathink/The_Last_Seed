@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Lion
   Lines:
-  - I'm sorry, I was wrong
+  - omg what? I'm so sad
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 

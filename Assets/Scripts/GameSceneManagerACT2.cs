@@ -228,8 +228,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 	public void CrowdDialogue()
 	{
-		DM.SetLines(crowdLines[crowdLineIndex]);
-		crowdLineIndex = (crowdLineIndex + 1) % 4;
+		if (!PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
+		{
+			DM.SetLines(crowdLines[crowdLineIndex]);
+			crowdLineIndex = (crowdLineIndex + 1) % 4;
+		}
 	}
 
 	[SerializeReference]
