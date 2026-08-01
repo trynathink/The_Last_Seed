@@ -17,6 +17,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     public ScriptsSO HareInit;
     public ScriptsSO HareIdle;
 
+	// Lion
+	public ScriptsSO LionInit;
+	public ScriptsSO LionIdle;
+
     // Bird
     [SerializeReference]
 	ScriptsSO BirdTrustMinigame;
@@ -96,7 +100,8 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			case SceneNames.ACT2_LION:
 				if (!PDSO.triggers.Contains(TriggerNames.LION_SCENE_ENTRY))
 				{
-						
+					DM.SetLines(LionInit);
+					PDSO.triggers.Add(TriggerNames.LION_SCENE_ENTRY);
 				}
 				break;
 				

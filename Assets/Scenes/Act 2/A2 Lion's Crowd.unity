@@ -633,6 +633,8 @@ MonoBehaviour:
   ScarecrowFabric: {fileID: 0}
   HareInit: {fileID: 0}
   HareIdle: {fileID: 0}
+  LionInit: {fileID: 11400000, guid: 74cea2430a3ab7ca68f3d99dfb22727e, type: 2}
+  LionIdle: {fileID: 11400000, guid: 24e048ea5e1eeb698860f997e2d1c125, type: 2}
   BirdTrustMinigame: {fileID: 0}
   firstWindmillSight: {fileID: 0}
   brokenPanel: {fileID: 0}
