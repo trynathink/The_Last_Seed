@@ -25,7 +25,7 @@ public class BedroomWindowButtonManager : MonoBehaviour
     {
         DM = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
 
-        if (PDSO.triggers.Contains("Clock"))
+        if (PDSO.triggers.Contains(TriggerNames.CLOCK))
         {
             Clock();
         }
@@ -41,7 +41,7 @@ public class BedroomWindowButtonManager : MonoBehaviour
         switch (PDSO.HeldItem)
         {
             case "":
-                NextScene("A1 Bedroom");
+                NextScene(SceneNames.ACT1_BEDROOM);
                 break;
             default:
                 DM.SetLines(DefaultItemFail);

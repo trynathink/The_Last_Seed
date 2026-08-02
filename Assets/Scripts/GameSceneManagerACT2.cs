@@ -17,6 +17,23 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     public ScriptsSO HareInit;
     public ScriptsSO HareIdle;
 
+	// Lion
+	public ScriptsSO LionInit;
+	public ScriptsSO LionIdle;
+	public ScriptsSO LionConvinced;
+	public ScriptsSO LionSack;
+	public ScriptsSO LionLumber;
+	public ScriptsSO LionCrop;
+
+	// Crowd
+	public ScriptsSO CrowdCropHint;
+	public ScriptsSO CrowdLumberHint;
+	public ScriptsSO CrowdSackHint;
+	public ScriptsSO CrowdLionPraise;
+
+	private ScriptsSO[] crowdLines;
+	private int crowdLineIndex;
+
     // Bird
     [SerializeReference]
 	ScriptsSO BirdTrustMinigame;
@@ -37,17 +54,27 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     GameObject ReinforcedPole;
 
     private int brickStage = 0;
-	const string handleFixedTrigger = "WindmillHandleFixed";
-	const string brickTrigger = "BrickOut";
-	const string shovelTrigger = "ShovelNeedsRope";
+	const string handleFixedTrigger = TriggerNames.WINDMILL_HANDLE_FIXED;
+	const string brickTrigger = TriggerNames.BRICK;
+	const string shovelTrigger = TriggerNames.SHOVEL;
 
     // This script manages every scene in Act 2
+
+	private void Awake()
+	{
+		crowdLines = new ScriptsSO[4];
+		crowdLines[0] = CrowdLionPraise;
+		crowdLines[1] = CrowdCropHint;
+		crowdLines[2] = CrowdSackHint;
+		crowdLines[3] = CrowdLumberHint;
+		crowdLineIndex = 0;
+	}
 
     private void Start()
     {
         switch (SceneManager.GetActiveScene().name)
         {
-			case "A2 Windmill Outside":
+			case SceneNames.ACT2_WINDMILL_OUTSIDE:
 				if (!PDSO.triggers.Contains(seenWindmillTrigger))
 				{
 					DM.SetLines(firstWindmillSight);
@@ -64,7 +91,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					windmillAnim.SetBool("spin", true);
 				}
 				break;
-			case "A2 Windmill Inside":
+			case SceneNames.ACT2_WINDMILL_INSIDE:
 				if (PDSO.triggers.Contains(brickTrigger))
 				{
 					BrickOut();
@@ -75,14 +102,14 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					FixedPole();
                 }
 				break;
-			case "A2 Hare's Farm":
-                if (PDSO.triggers.Contains("NakedScarecrow"))
+			case SceneNames.ACT2_HARE:
+                if (PDSO.triggers.Contains(TriggerNames.HARE_NAKED_SCARECROW))
                 {
                     NakedScarecrow();
                 }
                 break;
-			case "A2 Beaver's River":
-                if (PDSO.triggers.Contains("WWJamFix"))
+			case SceneNames.ACT2_BEAVER:
+                if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_JAM_FIX))
                 {
                     BlockageRemoval();
                 }
@@ -93,6 +120,22 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					scene.transform.Find("Shovel Handle").gameObject.SetActive(false);
 				}
                 break;
+			case SceneNames.ACT2_LION:
+				if (!PDSO.triggers.Contains(TriggerNames.LION_SCENE_ENTRY))
+				{
+					DM.SetLines(LionInit);
+					PDSO.triggers.Add(TriggerNames.LION_SCENE_ENTRY);
+				}
+				if (PDSO.triggers.Contains(TriggerNames.LION_QUESTION_ASKED)
+					&& !PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
+				{
+					PDSO.triggers.RemoveAll(i => i == TriggerNames.LION_QUESTION_ASKED);
+					PDSO.triggers.RemoveAll(i => i == TriggerNames.LION_CROP);
+					PDSO.triggers.RemoveAll(i => i == TriggerNames.LION_SACK);
+					PDSO.triggers.RemoveAll(i => i == TriggerNames.LION_LUMBER);
+				}
+				break;
+				
         }
     }
 
@@ -135,7 +178,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                         .Any(item => item.Name == CollectibleType.Blanket.ToString()
                                 || item.Name == CollectibleType.Fabric.ToString());
         
-        if(!containsBlanketOrFabric && PDSO.triggers.Contains("WindmillScarecrowCloth"))
+        if(!containsBlanketOrFabric && PDSO.triggers.Contains(TriggerNames.WINDMILL_SCARECROW_CLOTH))
         {
             DM.SetLines(ScarecrowFabric);
         }
@@ -144,6 +187,53 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
             DM.SetLines(ScarecrowIdle);
         }
     }
+
+	public void LionDialogue()
+	{
+		Debug.Log("lion dialogue");
+		if(PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
+		{
+			DM.SetLines(LionConvinced);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_SACK) 
+					&& PDSO.triggers.Contains(TriggerNames.LION_CROP)
+					&& PDSO.triggers.Contains(TriggerNames.LION_LUMBER))
+		{
+			PDSO.triggers.Add(TriggerNames.LION_CONVINCED);
+			DM.SetLines(LionConvinced);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_QUESTION_ASKED))
+		{
+			switch (PDSO.HeldItem)
+			{
+				case ItemNames.LUMBER:
+					DM.SetLines(LionLumber);
+					break;
+				case ItemNames.SACK:
+					DM.SetLines(LionSack);
+					break;
+				case ItemNames.DEAD_CROP:
+					DM.SetLines(LionCrop);
+					break;
+				default:
+					DM.SetLines(LionIdle);
+					break;
+			}
+		}
+		else
+		{
+			DM.SetLines(LionIdle);
+		}
+	}
+
+	public void CrowdDialogue()
+	{
+		if (!PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
+		{
+			DM.SetLines(crowdLines[crowdLineIndex]);
+			crowdLineIndex = (crowdLineIndex + 1) % 4;
+		}
+	}
 
 	[SerializeReference]
 	ScriptsSO BeaverInit, BeaverIdleUnhappy, BeaverIdleHappy, BeaverIdleFixed, BeaverPanelMake;
@@ -155,7 +245,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			case "":
 				if (PDSO.triggers.Contains("BeaverInit"))
 				{
-					if (PDSO.triggers.Contains("WWBrokFix") && PDSO.triggers.Contains("WWJamFix"))
+					if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_BROK_FIX) && PDSO.triggers.Contains(TriggerNames.WATERWHEEL_JAM_FIX))
 					{
 						if (PDSO.triggers.Contains(panelFixedTrigger) && PDSO.triggers.Contains(handleFixedTrigger))
 						{
@@ -176,8 +266,8 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					DM.SetLines(BeaverInit);
 				}
 				break;
-			case "Lumber":
-				if (!PDSO.triggers.Contains("BeaverPanel"))
+			case ItemNames.LUMBER:
+				if (!PDSO.triggers.Contains(TriggerNames.BEAVER_PANEL))
 				{
                     DM.SetLines(BeaverPanelMake);
                 }
@@ -250,10 +340,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 				if (!PDSO.triggers.Contains(panelFixedTrigger))
 				{
-                    const string trigger = "WindmillScarecrowCloth";
+                    const string trigger = TriggerNames.WINDMILL_SCARECROW_CLOTH;
                     if (!PDSO.ItemContains("Blanket") && !PDSO.triggers.Contains(trigger))
                     {
-                        PDSO.triggers.Add("WindmillScarecrowCloth");
+                        PDSO.triggers.Add(TriggerNames.WINDMILL_SCARECROW_CLOTH);
                     }
                     DM.SetLines(brokenPanel);
                 }
@@ -361,7 +451,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         switch (PDSO.HeldItem)
         {
             case "":
-				if (PDSO.triggers.Contains("BlockageItem"))
+				if (PDSO.triggers.Contains(TriggerNames.BLOCKAGE_ITEM))
 				{
                     DM.SetLines(BlockageIdle); // does not add trigger
                 }
@@ -371,10 +461,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 }
                 break;
             case "Pitchfork":
-                addTrigger("WWJamFix");
+                addTrigger(TriggerNames.WATERWHEEL_JAM_FIX);
                 BlockageRemoval();
 
-                if (!PDSO.triggers.Contains("BlockageItem"))
+                if (!PDSO.triggers.Contains(TriggerNames.BLOCKAGE_ITEM))
                 {
                     DM.SetLines(PithforkMetal); // adds "WWJamFix" + "BlockageItem" trigger
                 }
@@ -401,9 +491,9 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		{
 			case "":
 
-				if (PDSO.triggers.Contains("WWJamFix"))
+				if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_JAM_FIX))
 				{
-					if (PDSO.triggers.Contains("WWBrokFix"))
+					if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_BROK_FIX))
 					{
                         DM.SetLines(WW);
                     }
@@ -412,7 +502,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                         DM.SetLines(WWBrok);
                     }
 				}
-				else if (PDSO.triggers.Contains("WWBrokFix"))
+				else if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_BROK_FIX))
 				{
                     DM.SetLines(WWJam);
                 }
@@ -443,7 +533,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		switch (PDSO.HeldItem)
 		{
 			case "":
-				if (PDSO.triggers.Contains("EngineOff"))
+				if (PDSO.triggers.Contains(TriggerNames.ENGINE_OFF))
 				{
 					DM.SetLines(EngineOff);
 				}
@@ -453,15 +543,15 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				}
 				break;
 			case "Crowbar":
-                if (PDSO.triggers.Contains("EngineOff"))
+                if (PDSO.triggers.Contains(TriggerNames.ENGINE_OFF))
                 {
-					if (PDSO.triggers.Contains("Spade Gained"))
+					if (PDSO.triggers.Contains(TriggerNames.SPADE_GAINED))
 					{
 						DM.SetLines(DefaultItemFail);
 					}
 					else
 					{
-						addTrigger("Spade Gained");
+						addTrigger(TriggerNames.SPADE_GAINED);
 						PDSO.Inventory.Add(Spade);
                     }
                 }

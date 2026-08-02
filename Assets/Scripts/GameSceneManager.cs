@@ -26,8 +26,8 @@ public class GameSceneManager : GameSceneManagerBase
 
         switch (SceneManager.GetActiveScene().name)
         {
-            case "A1 Bedroom" or "A1 Bed Window":
-                if (PDSO.triggers.Contains("Clock"))
+            case SceneNames.ACT1_BEDROOM or SceneNames.ACT1_BED_WINDOW:
+                if (PDSO.triggers.Contains(TriggerNames.CLOCK))
                 {
                     Clock();
                 }
@@ -36,8 +36,8 @@ public class GameSceneManager : GameSceneManagerBase
 					BackgroundSFX.PlayLoop(alarm);
 				}
                 break;
-            case "A1 Kitchen":
-                if (PDSO.triggers.Contains("Boards Removed"))
+            case SceneNames.ACT1_KITCHEN:
+                if (PDSO.triggers.Contains(TriggerNames.KITCHEN_BOARDS_REMOVED))
                 {
                     GameObject.Find("Boards").GetComponent<Image>().enabled = false;
                 }
@@ -54,7 +54,7 @@ public class GameSceneManager : GameSceneManagerBase
                 if (!isAlarmOff)
                 {
                     Clock();
-                    PDSO.triggers.Add("Clock");
+                    PDSO.triggers.Add(TriggerNames.CLOCK);
                 }
                 break;
             default:
@@ -75,7 +75,7 @@ public class GameSceneManager : GameSceneManagerBase
     {
         IM.HoldItem("");
 
-        NextScene("A1 Bed Window");
+        NextScene(SceneNames.ACT1_BED_WINDOW);
     }
 
     public void ExitBedroom()
@@ -87,13 +87,13 @@ public class GameSceneManager : GameSceneManagerBase
         }
 
 		MoveSFX.Play();
-        NextScene("A1 Living Room");
+        NextScene(SceneNames.ACT1_LIVING_ROOM);
     }
 
     // Bed Window Scene
     public void ExitWindow()
     {
-        NextScene("A1 Bedroom");
+        NextScene(SceneNames.ACT1_BEDROOM);
     }
 
     // Living Room Scene
@@ -102,7 +102,7 @@ public class GameSceneManager : GameSceneManagerBase
         switch (PDSO.HeldItem)
         {
             case "":
-                if (PDSO.triggers.Contains("Goal Heard"))
+                if (PDSO.triggers.Contains(TriggerNames.GOAL_HEARD))
                 {
                     DM.SetLines(FrontDoorGoal);
                 }
@@ -138,7 +138,7 @@ public class GameSceneManager : GameSceneManagerBase
         switch (PDSO.HeldItem)
         {
             case "":
-                if (PDSO.triggers.Contains("Goal Heard"))
+                if (PDSO.triggers.Contains(TriggerNames.GOAL_HEARD))
                 {
                     DM.SetLines(bearIdle);
                 }
@@ -156,18 +156,18 @@ public class GameSceneManager : GameSceneManagerBase
     public void LRtoBR()
     {
 		MoveSFX.Play();
-        NextScene("A1 Bedroom");
+        NextScene(SceneNames.ACT1_BEDROOM);
     }
 
     public void LRtoK()
     {
-        NextScene("A1 Kitchen");
+        NextScene(SceneNames.ACT1_KITCHEN);
     }
 
     // Kitchen Scene
     public void KtoLR()
     {
-        NextScene("A1 Living Room");
+        NextScene(SceneNames.ACT1_LIVING_ROOM);
     }
 
     public void BoardedUpWindows()
@@ -175,11 +175,11 @@ public class GameSceneManager : GameSceneManagerBase
         switch (PDSO.HeldItem)
         {
             case "":
-                if (PDSO.triggers.Contains("Boards Removed"))
+                if (PDSO.triggers.Contains(TriggerNames.KITCHEN_BOARDS_REMOVED))
                 {
                     DM.SetLines(leaveWindow);
                 }
-                else if(PDSO.triggers.Contains("Goal Heard") && PDSO.triggers.Contains("Front Door"))
+                else if(PDSO.triggers.Contains(TriggerNames.GOAL_HEARD) && PDSO.triggers.Contains(TriggerNames.FRONT_DOOR))
                 {
                     DM.SetLines(questionWindow);
                 }
@@ -189,10 +189,10 @@ public class GameSceneManager : GameSceneManagerBase
                 }
                 break;
             case "Crowbar":
-                if (PDSO.triggers.Contains("Goal Heard") && PDSO.triggers.Contains("Front Door"))
+                if (PDSO.triggers.Contains(TriggerNames.GOAL_HEARD) && PDSO.triggers.Contains(TriggerNames.FRONT_DOOR))
                 {
                     GameObject.Find("Boards").GetComponent<Image>().enabled = false;
-                    PDSO.triggers.Add("Boards Removed");
+                    PDSO.triggers.Add(TriggerNames.KITCHEN_BOARDS_REMOVED);
 
                     IM.HoldItem("");
                 }
