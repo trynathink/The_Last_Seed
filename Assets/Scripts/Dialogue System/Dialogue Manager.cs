@@ -109,18 +109,16 @@ public class DialogueManager : MonoBehaviour
 			if (animStarted)
 			{
 				skipAnim = true;
+				animStarted = false;
 				sound.Stop();
 				PlayBlip();
-				return;
 			}
-
-            if (++LineNum < script.Lines.Count)
+			else if (++LineNum < script.Lines.Count)
             {
                 if (Self)
                 {
                     TalkingToMyself();
                 }
-                //else if (!animStarted)
 				else
                 {
 					NPCReset();
@@ -217,6 +215,7 @@ public class DialogueManager : MonoBehaviour
 		for (int i = 1; i < line.Length; i++)
 		{
 			string word = line[i];
+			if (word.Length == 0) continue;
 
 			if (words.Length + word.Length > limit || word[0] == interactable || words[0] == interactable)
 			{
@@ -315,6 +314,7 @@ public class DialogueManager : MonoBehaviour
 		StopAllCoroutines();
 		sound.Stop();
 		skipAnim = false;
+		animStarted = false;
 
         foreach(Transform bubble in NPC.transform)
         {
