@@ -3880,9 +3880,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
   Bubbles:
-  - {fileID: 2796048855900594582, guid: 1a09be2c25936b046a57ad06540208f2, type: 3}
-  - {fileID: 2808264593536406702, guid: bad2c4b3a5be85d49a6a8032498f40d1, type: 3}
-  - {fileID: 5194724763292896191, guid: ad1d2301ae31b2a448d17e46fa4f37e7, type: 3}
+  - {fileID: 11400000, guid: c550567dc4490b847bbc5f5ce879d4b8, type: 2}
+  - {fileID: 11400000, guid: 8c5b85365054e2743bc51bd4445d1de3, type: 2}
+  - {fileID: 11400000, guid: 6a0047e88c2054944bd1b15f43014420, type: 2}
   interactableBubble: {fileID: 1954538899116268603, guid: d880cecd535943c4f885811e3cabdc70, type: 3}
   BubbleChances:
   - 0.25
