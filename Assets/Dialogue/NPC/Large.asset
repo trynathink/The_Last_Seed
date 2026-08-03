@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a18afbdfc9aaa4aa14f1b7165fc452, type: 3}
   m_Name: Large
   m_EditorClassIdentifier: Assembly-CSharp::RandomContainer
-  objects: []
+  objects:
+  - {fileID: 5194724763292896191, guid: ad1d2301ae31b2a448d17e46fa4f37e7, type: 3}
+  - {fileID: 5139612059385682640, guid: 7303832d53da5504280b2601aaf3bc71, type: 3}
+  - {fileID: 7604254340537741567, guid: 2835fa4b682c108488c21d9cfe408fd0, type: 3}
+  - {fileID: 4192313001910463177, guid: d5da40bf833d9f54bb1f9bd4ad36c499, type: 3}

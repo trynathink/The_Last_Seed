@@ -18,10 +18,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     PlayerDataSO PDSO;
 
-
 	[Header("Randomization Variables")]
 	[SerializeField]
-	private GameObject[] Bubbles;
+	private RandomContainer[] Bubbles;
 
 	[SerializeField]
 	private GameObject interactableBubble;
@@ -290,7 +289,7 @@ public class DialogueManager : MonoBehaviour
 		}
 		else
 		{
-			bubbleObject = Instantiate(Bubbles[bubble], NPC.transform);
+			bubbleObject = Instantiate(Bubbles[bubble].Get(), NPC.transform);
 		}
 		
 		if (sound != null) StartCoroutine(PlayAudio(BubbleAudio));
