@@ -214,6 +214,18 @@ MonoBehaviour:
           m_StringArgument: A2 Lion's Crowd
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1444679841}
+        m_TargetAssemblyTypeName: MoveSFX, Assembly-CSharp
+        m_MethodName: PlayCustom
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: abc828d57f3fb3d4e99033bddbbd4169, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &135913945
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,11 +422,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 0233f2d3e47defd4ea7ebbc3dcaf94b7, type: 3}
     - target: {fileID: 2715723397544825345, guid: 18a493dd75c101d469e0069ce31b1962, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1093.2194
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2715723397544825345, guid: 18a493dd75c101d469e0069ce31b1962, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 262.47153
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2715723397544825345, guid: 18a493dd75c101d469e0069ce31b1962, type: 3}
       propertyPath: m_LocalPosition.z
@@ -583,6 +595,16 @@ MonoBehaviour:
   ScarecrowFabric: {fileID: 0}
   HareInit: {fileID: 0}
   HareIdle: {fileID: 0}
+  LionInit: {fileID: 0}
+  LionIdle: {fileID: 0}
+  LionConvinced: {fileID: 0}
+  LionSack: {fileID: 0}
+  LionLumber: {fileID: 0}
+  LionCrop: {fileID: 0}
+  CrowdCropHint: {fileID: 0}
+  CrowdLumberHint: {fileID: 0}
+  CrowdSackHint: {fileID: 0}
+  CrowdLionPraise: {fileID: 0}
   BirdTrustMinigame: {fileID: 0}
   firstWindmillSight: {fileID: 11400000, guid: 34db971d963bb49439fd50e16f7f5a4d, type: 2}
   brokenPanel: {fileID: 11400000, guid: 549148c099c3dc74982bd5c8eca3abfb, type: 2}
@@ -746,6 +768,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: A2 Windmill Inside
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1444679841}
+        m_TargetAssemblyTypeName: MoveSFX, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &880989390
@@ -1415,6 +1449,17 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &1444679841 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5412976005174906715, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+  m_PrefabInstance: {fileID: 1512397919}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02dcc9824c258341a180c9160aed3d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveSFX
 --- !u!1001 &1512397919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1425,11 +1470,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1093.2194
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 262.47153
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1441,15 +1486,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

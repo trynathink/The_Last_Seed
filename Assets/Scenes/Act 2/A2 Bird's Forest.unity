@@ -380,6 +380,16 @@ MonoBehaviour:
   ScarecrowFabric: {fileID: 0}
   HareInit: {fileID: 0}
   HareIdle: {fileID: 0}
+  LionInit: {fileID: 0}
+  LionIdle: {fileID: 0}
+  LionConvinced: {fileID: 0}
+  LionSack: {fileID: 0}
+  LionLumber: {fileID: 0}
+  LionCrop: {fileID: 0}
+  CrowdCropHint: {fileID: 0}
+  CrowdLumberHint: {fileID: 0}
+  CrowdSackHint: {fileID: 0}
+  CrowdLionPraise: {fileID: 0}
   BirdTrustMinigame: {fileID: 0}
   firstWindmillSight: {fileID: 0}
   brokenPanel: {fileID: 0}
@@ -461,6 +471,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5412976005174906715, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: _clip
+      value: 
+      objectReference: {fileID: 8300000, guid: abc828d57f3fb3d4e99033bddbbd4169, type: 3}
     - target: {fileID: 8229800730321721057, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
       propertyPath: m_Name
       value: SFX
@@ -717,6 +731,17 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &1518082272 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5412976005174906715, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+  m_PrefabInstance: {fileID: 1137794439}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02dcc9824c258341a180c9160aed3d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveSFX
 --- !u!1 &1547030913
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,11 +973,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -961,14 +986,14 @@ PrefabInstance:
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 756296243}
+      objectReference: {fileID: 1518082272}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextScene
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: NextScene
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -976,7 +1001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: GameSceneManagerACT2, Assembly-CSharp
+      value: MoveSFX, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -984,7 +1009,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: A2 Beaver's River
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
