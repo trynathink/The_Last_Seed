@@ -18,7 +18,7 @@ public class PlayerDataSO : ScriptableObject
 
 	public void Clear()
 	{
-        PlayerLocation = "A1 Bedroom";
+        PlayerLocation = SceneNames.ACT1_BEDROOM;
         Fire = 0;
         FireStage = 0;
         BirdTrust = 0;
