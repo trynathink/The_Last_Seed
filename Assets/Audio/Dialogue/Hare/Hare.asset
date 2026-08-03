@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-8050271954590149199
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare18_{-8050271954590149199}
+  m_AudioClip: {fileID: 8300000, guid: df1da89ef4503cd4e918431cf7187370, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-7602281702935509779
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare11_{-7602281702935509779}
+  m_AudioClip: {fileID: 8300000, guid: 0813f2ad68576d04b8ff276bf24d98d2, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4914989950353912797
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare8_{-4914989950353912797}
+  m_AudioClip: {fileID: 8300000, guid: 11b15771598739a4fb49c3510c73a2d8, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4701758242131728537
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare10_{-4701758242131728537}
+  m_AudioClip: {fileID: 8300000, guid: 2e053c04b970c9b4ca8fa2ef65e02777, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2386920826978587441
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare4_{-2386920826978587441}
+  m_AudioClip: {fileID: 8300000, guid: 5914f1af66006cc49a1cb893582cb733, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2119905569505798660
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare6_{-2119905569505798660}
+  m_AudioClip: {fileID: 8300000, guid: 18123abc51758334fbf547a128b2eb3c, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-870048058505367828
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare9_{-870048058505367828}
+  m_AudioClip: {fileID: 8300000, guid: d29d96cc553e7a04583065618a1ac0e8, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &24870799008189194
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare7_{24870799008189194}
+  m_AudioClip: {fileID: 8300000, guid: 5fae12e400786eb4c80e00b892be2065, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &299879785753960743
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare5_{299879785753960743}
+  m_AudioClip: {fileID: 8300000, guid: 988006818ccc255408287306ebcdb4d2, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &705181962830974464
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare14_{705181962830974464}
+  m_AudioClip: {fileID: 8300000, guid: 2c67a34a99f80434fa68f4762db8da7d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1551185829285724816
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare16_{1551185829285724816}
+  m_AudioClip: {fileID: 8300000, guid: e914ec941c185564a8d3dc8be3f1e913, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1730783408101308521
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare13_{1730783408101308521}
+  m_AudioClip: {fileID: 8300000, guid: aae63755ddd8e614f9680c37329c1dff, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2591368876469690047
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare12_{2591368876469690047}
+  m_AudioClip: {fileID: 8300000, guid: 92e4deeaa156b37429b9016f31e634fb, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3000050931713875316
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare17_{3000050931713875316}
+  m_AudioClip: {fileID: 8300000, guid: 347aa9cc47702824a9b1e54130cc48a0, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4112426811957925698
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare3_{4112426811957925698}
+  m_AudioClip: {fileID: 8300000, guid: 505672c7ac06e7f489c32ad45bea8bcc, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4867460148914997373
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare20_{4867460148914997373}
+  m_AudioClip: {fileID: 8300000, guid: a5415bc259568644685359dc60a18a67, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5446041573727547043
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare2_{5446041573727547043}
+  m_AudioClip: {fileID: 8300000, guid: b6a09130928063b4f94e5a584ee421e1, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hare
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -600, y: 600}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: 7148327702645682018}
+  - {fileID: 5446041573727547043}
+  - {fileID: 4112426811957925698}
+  - {fileID: -2386920826978587441}
+  - {fileID: 299879785753960743}
+  - {fileID: -2119905569505798660}
+  - {fileID: 24870799008189194}
+  - {fileID: -4914989950353912797}
+  - {fileID: -870048058505367828}
+  - {fileID: -4701758242131728537}
+  - {fileID: -7602281702935509779}
+  - {fileID: 2591368876469690047}
+  - {fileID: 1730783408101308521}
+  - {fileID: 705181962830974464}
+  - {fileID: 7831430553730656675}
+  - {fileID: 1551185829285724816}
+  - {fileID: 3000050931713875316}
+  - {fileID: -8050271954590149199}
+  - {fileID: 6981113278209072879}
+  - {fileID: 4867460148914997373}
+  m_AvoidRepeatingLast: 3
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &6981113278209072879
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare19_{6981113278209072879}
+  m_AudioClip: {fileID: 8300000, guid: 7f5f0d82724a94447b34b4376231f31d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &7148327702645682018
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare1_{7148327702645682018}
+  m_AudioClip: {fileID: 8300000, guid: b1761fcf1de1fc04385c49950df7b449, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &7831430553730656675
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hare15_{7831430553730656675}
+  m_AudioClip: {fileID: 8300000, guid: 192d577bb2c6b3f478418b73bd20f2f0, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

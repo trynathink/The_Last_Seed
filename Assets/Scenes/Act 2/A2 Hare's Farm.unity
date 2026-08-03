@@ -219,6 +219,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8587240428572070076, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
+      propertyPath: BubbleAudio
+      value: 
+      objectReference: {fileID: 6418180475301049370, guid: 9bc41b5f35eca05489c12f0fb6c08b09, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -622,6 +626,16 @@ MonoBehaviour:
   ScarecrowFabric: {fileID: 11400000, guid: a6bdf2a71afcd7a038b72b95c8836ee7, type: 2}
   HareInit: {fileID: 11400000, guid: 7584c9a7f1413e7c4a2d6384e8c8e3c1, type: 2}
   HareIdle: {fileID: 11400000, guid: 9fff33103c462c0ef88dfb40d668b30c, type: 2}
+  LionInit: {fileID: 0}
+  LionIdle: {fileID: 0}
+  LionConvinced: {fileID: 0}
+  LionSack: {fileID: 0}
+  LionLumber: {fileID: 0}
+  LionCrop: {fileID: 0}
+  CrowdCropHint: {fileID: 0}
+  CrowdLumberHint: {fileID: 0}
+  CrowdSackHint: {fileID: 0}
+  CrowdLionPraise: {fileID: 0}
   BirdTrustMinigame: {fileID: 0}
   firstWindmillSight: {fileID: 0}
   brokenPanel: {fileID: 0}
