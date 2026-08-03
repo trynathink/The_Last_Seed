@@ -867,27 +867,51 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4729208999439586053, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4729208999439586053, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4729208999439586053, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729208999439586053, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 756296243}
     - target: {fileID: 4729208999439586053, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1444679841}
+    - target: {fileID: 4729208999439586053, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729208999439586053, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayCustom
       objectReference: {fileID: 0}
     - target: {fileID: 4729208999439586053, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameSceneManagerACT2, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4729208999439586053, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MoveSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729208999439586053, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: A2 Hare's Farm
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729208999439586053, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: abfc577c6d3c87a48ba386a5b55a5112, type: 3}
+    - target: {fileID: 4729208999439586053, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6932268486037283923, guid: 76991e5fe1075ad40a552c4bab12b97d, type: 3}
       propertyPath: m_Pivot.x
