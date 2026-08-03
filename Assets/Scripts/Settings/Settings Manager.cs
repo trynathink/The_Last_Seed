@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class SettingsManager : MonoBehaviour
 {
@@ -20,11 +21,20 @@ public class SettingsManager : MonoBehaviour
 	[SerializeField]
 	private AudioMixer mix = null;
 
+	const float minVolume = -80;
+	private Slider musicSlider = null;
+	private Slider sfxSlider = null;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Menu = transform.Find("BG").gameObject;
         Confirmer = transform.Find("Confirmer").gameObject;
+
+		musicSlider = Menu.transform.Find("Music Slider").GetComponent<Slider>();
+		sfxSlider = Menu.transform.Find("Sound Slider").GetComponent<Slider>();
+		musicSlider.value = GetVolume("Music Volume");
+		sfxSlider.value = GetVolume("SFX Volume");
 
         Confirm(false);
     }
@@ -79,10 +89,18 @@ public class SettingsManager : MonoBehaviour
         Confirm(false);
     }
 
+	private float GetVolume(string which)
+	{
+		float mixVolume; mix.GetFloat(which, out mixVolume);
+		float progress = Mathf.InverseLerp(minVolume, 0, mixVolume);
+		float volume = Mathf.Pow(100, progress - 1);
+		return volume;
+	}
+
 	private void ChangeVolume(string which, float sliderValue)
 	{
-		float progress = Mathf.Log10(sliderValue) + 1;
-		mix.SetFloat(which, Mathf.Lerp(-80, 0, progress));
+		float progress = Mathf.Log(sliderValue, 100) + 1;
+		mix.SetFloat(which, Mathf.Lerp(minVolume, 0, progress));
 	}
 
 	public void OnMusicSliderValueChanged(float value)
