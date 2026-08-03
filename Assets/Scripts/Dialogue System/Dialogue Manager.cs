@@ -77,6 +77,8 @@ public class DialogueManager : MonoBehaviour
     Image DiaImg;
     GameObject Inner, NPC, Choice;
 	private bool keepWord = false;
+	private bool animStarted = false;
+	private bool skipAnim = false;
 
     void Awake()
     {
@@ -104,15 +106,25 @@ public class DialogueManager : MonoBehaviour
     {
         if (Dia)
         {
+			if (animStarted)
+			{
+				skipAnim = true;
+				sound.Stop();
+				PlayBlip();
+				return;
+			}
+
             if (++LineNum < script.Lines.Count)
             {
                 if (Self)
                 {
                     TalkingToMyself();
                 }
-                else
+                //else if (!animStarted)
+				else
                 {
-                    NPCSpeak();
+					NPCReset();
+					StartCoroutine(NPCSpeak());
                 }
             }
 			else if (!keepWord && LineNum == script.Lines.Count)
@@ -136,10 +148,9 @@ public class DialogueManager : MonoBehaviour
         if (givenscript.Character != string.Empty)
         {
             Self = false;
-
             Dia = true;
-
-            NPCSpeak();
+			NPCReset();
+            StartCoroutine(NPCSpeak());
         }
         else
         {
@@ -190,10 +201,9 @@ public class DialogueManager : MonoBehaviour
     // Remove wN
     // Use LineNum to switch to next line
     // Method that gets called to switch to next line
-    void NPCSpeak()
+    private IEnumerator NPCSpeak()
     {
-		NPCReset();
-
+		animStarted = true;
         string[] line = script.Lines[LineNum].Split(' ');
 		const char interactable = '^';
 		Vector2 placement = TextArea.rect.position;
@@ -212,6 +222,8 @@ public class DialogueManager : MonoBehaviour
 			{
 				// TODO: prefab not always small for interactable word
 				float bubbleWidth = NPCBubble(bubble, placement, words);
+				yield return new WaitWhile(() => sound.isPlaying && !skipAnim);
+
 				float moveRightBuffer = UnityEngine.Random.Range(MoveRightBufferRange.x, MoveRightBufferRange.y);
 				placement.x += bubbleWidth + moveRightBuffer;
 				// TODO: possibly change y position just a little bit each time
@@ -233,6 +245,7 @@ public class DialogueManager : MonoBehaviour
 
 		// TODO: prefab not always right size for last word(s)
 		NPCBubble(bubble, placement, words);
+		animStarted = false;
     }
 
 	private void OnWordClick()
@@ -253,15 +266,13 @@ public class DialogueManager : MonoBehaviour
 		keepWord = false;
 	}
 
-	private IEnumerator PlayAudio(AudioResource audio)
+	private void PlayBlip()
 	{
-		while (sound.isPlaying)
+		if (sound != null) 
 		{
-			yield return new WaitForEndOfFrame();
+			sound.generator = (IAudioGenerator) BubbleAudio;
+			sound.Play();
 		}
-
-		sound.generator = (IAudioGenerator) audio;
-		sound.Play();
 	}
 
     // Method that places the strips of paper; returns paper object width for convenience
@@ -292,7 +303,7 @@ public class DialogueManager : MonoBehaviour
 			bubbleObject = Instantiate(Bubbles[bubble].Get(), NPC.transform);
 		}
 		
-		if (sound != null) StartCoroutine(PlayAudio(BubbleAudio));
+		if (!skipAnim) PlayBlip();	
 		RectTransform transform = bubbleObject.GetComponent<RectTransform>();
 		transform.localPosition = placement;
         bubbleObject.transform.GetChild(0).GetComponent<TMP_Text>().text = words;
@@ -303,6 +314,7 @@ public class DialogueManager : MonoBehaviour
     {
 		StopAllCoroutines();
 		sound.Stop();
+		skipAnim = false;
 
         foreach(Transform bubble in NPC.transform)
         {
