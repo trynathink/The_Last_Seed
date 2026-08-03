@@ -29,9 +29,8 @@ public class DialogueManager : MonoBehaviour
 	[SerializeField]
 	private float[] BubbleChances;
 
-	// NOTE: Should list the audio generators in order by short, medium, long
 	[SerializeField]
-	private AudioResource[] BubbleAudio;
+	private AudioResource BubbleAudio;
 
 	[SerializeField]
 	private float CurrentBubbleChance;
@@ -294,7 +293,7 @@ public class DialogueManager : MonoBehaviour
 			bubbleObject = Instantiate(Bubbles[bubble], NPC.transform);
 		}
 		
-		if (sound != null) StartCoroutine(PlayAudio(BubbleAudio[bubble]));
+		if (sound != null) StartCoroutine(PlayAudio(BubbleAudio));
 		RectTransform transform = bubbleObject.GetComponent<RectTransform>();
 		transform.localPosition = placement;
         bubbleObject.transform.GetChild(0).GetComponent<TMP_Text>().text = words;

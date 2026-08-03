@@ -1,37 +1,52 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
+using System.Collections;
 
 // Alexander Gottuso
 
-/* For now, this is designed to use one background song per scene in the build index,
+/* For now, this is designed to use one background song per scene,
  * but this won't be the final design since there are no transitions implemented yet. */
 
 public class BackgroundMusic : AudioSingleton<BackgroundMusic>
 {
-	[SerializeField] private List<AudioClip> backgroundSongs;
+	const float fadeTime = 1f; // Time in seconds for fade in and out respectively
 
-    private void OnEnable()
+	// NOTE: This override assumes that the clip on the AudioSource for this BGM contains that scene's song
+	protected override void Awake()
 	{
-		SceneManager.sceneLoaded += OnSceneLoaded;
-	}
+		AudioSource current = gameObject.GetComponent<AudioSource>();
 
-	private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-	{
-		// TODO: need a better way to use the same song uninterrupted across multiple scenes, for now this is good enough
-		if (scene.buildIndex < backgroundSongs.Count)
+		if (source != null && current.clip != source.clip)
 		{
-			AudioClip clip = backgroundSongs[scene.buildIndex];
-			if (source.clip != clip)
-			{
-				source.clip = backgroundSongs[scene.buildIndex];
-				source.Play();
-			}
+			current.Stop();
+			StartCoroutine(Fade(current.clip));
+		}
+		else
+		{
+			base.Awake();
 		}
 	}
 
-	private void OnDisable()
+	private IEnumerator Fade(AudioClip next)
 	{
-		SceneManager.sceneLoaded -= OnSceneLoaded;
+		float startVolume = source.volume;
+
+        while (source.volume > 0)
+		{
+            source.volume -= startVolume * Time.deltaTime / fadeTime;
+            yield return null;
+        }
+
+        source.Stop();
+		source.clip = next;
+		source.Play();
+
+        while (source.volume < 1)
+		{
+            source.volume += Time.deltaTime / fadeTime;
+            yield return null;
+        }
+
+		base.Awake();
 	}
 }
