@@ -45,9 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c995b1b393b674f9953bcfe6e05610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundMusic
-  backgroundSongs:
-  - {fileID: 8300000, guid: 2aa08ecfd2fb75040b2cb188b5e13404, type: 3}
-  - {fileID: 8300000, guid: f0603736f1efd12468cd9ffc211faf30, type: 3}
 --- !u!82 &1673299921369360853
 AudioSource:
   m_ObjectHideFlags: 0
@@ -59,7 +56,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2250412037450397062, guid: 42ada19ecc0fe4842bddcf4e2f8fac90, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: f0603736f1efd12468cd9ffc211faf30, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

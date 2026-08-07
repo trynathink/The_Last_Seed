@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-8619198442436432396
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver3_{-8619198442436432396}
+  m_AudioClip: {fileID: 8300000, guid: fde96763d5371784ea71082f54db0378, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-8314490870792654505
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver10_{-8314490870792654505}
+  m_AudioClip: {fileID: 8300000, guid: 0b442176010368f41900de4d1124430f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-7738718880071147006
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver4_{-7738718880071147006}
+  m_AudioClip: {fileID: 8300000, guid: 4bbeffffc8f47d746878d5bab65aea80, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-7123659990279948975
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver6_{-7123659990279948975}
+  m_AudioClip: {fileID: 8300000, guid: 4a069c4995a60364ea68551cd116d099, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-7087514905710664365
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver13_{-7087514905710664365}
+  m_AudioClip: {fileID: 8300000, guid: 9d82fda0da8301b4e99d8339d4486459, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6511877304697122222
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver5_{-6511877304697122222}
+  m_AudioClip: {fileID: 8300000, guid: cd531b232a0bb3541b4a809a9195901f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6433906956537090606
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver16_{-6433906956537090606}
+  m_AudioClip: {fileID: 8300000, guid: fcac9f0897e86264fbcf29be04fd2989, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5902217889094466471
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver7_{-5902217889094466471}
+  m_AudioClip: {fileID: 8300000, guid: ea49f1ab2fec09d4abe2684d9bc6efcf, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4143454427807465944
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver18_{-4143454427807465944}
+  m_AudioClip: {fileID: 8300000, guid: 1847b69490310c14ca026d3b500844bb, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3988920242035610927
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver1_{-3988920242035610927}
+  m_AudioClip: {fileID: 8300000, guid: f29c055622c9ba44a8bee47e3e5198b6, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-253516322743072725
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver17_{-253516322743072725}
+  m_AudioClip: {fileID: 8300000, guid: c999035a129d8f64896420973ea8d894, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1695355568185380213
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver12_{1695355568185380213}
+  m_AudioClip: {fileID: 8300000, guid: 733aa8ccaa8db924a8e8a140b8daacb0, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3725938324945661625
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver8_{3725938324945661625}
+  m_AudioClip: {fileID: 8300000, guid: d4a51cda95110c542887532e8e0414aa, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4167057767057368020
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver15_{4167057767057368020}
+  m_AudioClip: {fileID: 8300000, guid: ae780d2f5e2ce884298571cb22824f4f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4942131455266434066
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver14_{4942131455266434066}
+  m_AudioClip: {fileID: 8300000, guid: 45fa1491a06acea47aaf1197f743027b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &6097655855312325439
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver9_{6097655855312325439}
+  m_AudioClip: {fileID: 8300000, guid: 947601534bf81734dab083c289c9b6bc, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &6221580547271327691
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver2_{6221580547271327691}
+  m_AudioClip: {fileID: 8300000, guid: 24fc6a76b9b5c68468ccc96791d59bc6, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Beaver
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -600, y: 600}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -3988920242035610927}
+  - {fileID: 6221580547271327691}
+  - {fileID: -8619198442436432396}
+  - {fileID: -7738718880071147006}
+  - {fileID: -6511877304697122222}
+  - {fileID: -7123659990279948975}
+  - {fileID: -5902217889094466471}
+  - {fileID: 3725938324945661625}
+  - {fileID: 6097655855312325439}
+  - {fileID: -8314490870792654505}
+  - {fileID: 6759708415541146437}
+  - {fileID: 1695355568185380213}
+  - {fileID: -7087514905710664365}
+  - {fileID: 4942131455266434066}
+  - {fileID: 4167057767057368020}
+  - {fileID: -6433906956537090606}
+  - {fileID: -253516322743072725}
+  - {fileID: -4143454427807465944}
+  - {fileID: 8050994620487819190}
+  - {fileID: 6683139064247406904}
+  m_AvoidRepeatingLast: 3
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &6683139064247406904
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver20_{6683139064247406904}
+  m_AudioClip: {fileID: 8300000, guid: 034f62aa55f48df4092dae3a710aba80, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &6759708415541146437
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver11_{6759708415541146437}
+  m_AudioClip: {fileID: 8300000, guid: 997aa68128b89234d9465cb52b2722c2, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8050994620487819190
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: beaver19_{8050994620487819190}
+  m_AudioClip: {fileID: 8300000, guid: e667d8fa79c2cbe40a386d03853ade86, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

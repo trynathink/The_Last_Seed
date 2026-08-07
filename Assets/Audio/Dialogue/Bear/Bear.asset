@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-8880807461193295189
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear11_{-8880807461193295189}
+  m_AudioClip: {fileID: 8300000, guid: bb98319aaf406724e82e924978244803, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6445613247298528547
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear19_{-6445613247298528547}
+  m_AudioClip: {fileID: 8300000, guid: 47ee37c6aeb623346b44aef16c297121, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6328030360817458851
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear16_{-6328030360817458851}
+  m_AudioClip: {fileID: 8300000, guid: 2ec343fda80c1fe4e80e5f73a8ccd016, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5821673050736227331
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear18_{-5821673050736227331}
+  m_AudioClip: {fileID: 8300000, guid: 20fe3322fbb2e404b9a04e223df85772, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5770228051905245163
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear15_{-5770228051905245163}
+  m_AudioClip: {fileID: 8300000, guid: 2c25b6cab673df4418c757343ed4689e, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5156572488082450630
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear4_{-5156572488082450630}
+  m_AudioClip: {fileID: 8300000, guid: 8f04d328fcd2e5449be4b19a303594c7, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5081816714151528923
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear20_{-5081816714151528923}
+  m_AudioClip: {fileID: 8300000, guid: c3b80c258b060fc47905f738e4b0e068, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2981957682604363614
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear13_{-2981957682604363614}
+  m_AudioClip: {fileID: 8300000, guid: a065c2ce3f06fd94383d8aef10447189, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1533787381495344282
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear8_{-1533787381495344282}
+  m_AudioClip: {fileID: 8300000, guid: 7a807da36ad72c44a8280c2382623889, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1397626194562864868
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear2_{-1397626194562864868}
+  m_AudioClip: {fileID: 8300000, guid: c66637f91cb0e8a4c83a9e1aaad812b1, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-655873594731197554
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear7_{-655873594731197554}
+  m_AudioClip: {fileID: 8300000, guid: 2547725f9c7c3df4ba21ac0523cd1caa, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-182576432970440472
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear14_{-182576432970440472}
+  m_AudioClip: {fileID: 8300000, guid: 377c8a920b527b1449d0dba04add2327, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-80032840131718167
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear12_{-80032840131718167}
+  m_AudioClip: {fileID: 8300000, guid: 4b889e59665964144a80397bf64516f4, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &12763738962520609
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear1_{12763738962520609}
+  m_AudioClip: {fileID: 8300000, guid: f53a100742616b84aa1bea9b13920dbe, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5562734956052666338
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear5_{5562734956052666338}
+  m_AudioClip: {fileID: 8300000, guid: f28af74716555d1479894b5b9aa1e745, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5741109188092581330
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear9_{5741109188092581330}
+  m_AudioClip: {fileID: 8300000, guid: f586e9894333bcc47b2648c04426e23f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Bear
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -600, y: 600}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: 12763738962520609}
+  - {fileID: -1397626194562864868}
+  - {fileID: 8567188492019302915}
+  - {fileID: -5156572488082450630}
+  - {fileID: 5562734956052666338}
+  - {fileID: 8199318569477226485}
+  - {fileID: -655873594731197554}
+  - {fileID: -1533787381495344282}
+  - {fileID: 5741109188092581330}
+  - {fileID: 8902294173263183045}
+  - {fileID: -8880807461193295189}
+  - {fileID: -80032840131718167}
+  - {fileID: -2981957682604363614}
+  - {fileID: -182576432970440472}
+  - {fileID: -5770228051905245163}
+  - {fileID: -6328030360817458851}
+  - {fileID: 8136391294023712163}
+  - {fileID: -5821673050736227331}
+  - {fileID: -6445613247298528547}
+  - {fileID: -5081816714151528923}
+  m_AvoidRepeatingLast: 3
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &8136391294023712163
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear17_{8136391294023712163}
+  m_AudioClip: {fileID: 8300000, guid: 0026a2557758b6e48aa93fc5c63edea8, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8199318569477226485
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear6_{8199318569477226485}
+  m_AudioClip: {fileID: 8300000, guid: 400e7cffd7c75d94286606d9fd875dc7, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8567188492019302915
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear3_{8567188492019302915}
+  m_AudioClip: {fileID: 8300000, guid: 4594914b07a65f3418a661aacddad8ba, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8902294173263183045
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bear10_{8902294173263183045}
+  m_AudioClip: {fileID: 8300000, guid: 844747d8e77fa0440ad48214148bceb6, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

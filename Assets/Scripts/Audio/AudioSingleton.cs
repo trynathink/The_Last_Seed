@@ -8,6 +8,7 @@ public class AudioSingleton<T> : MonoBehaviour where T : UnityEngine.Object
 	{
 		if (GameObject.FindObjectsByType<T>().Length > 1)
         {
+			Debug.Log(GameObject.FindObjectsByType<T>());
             GameObject.Destroy(gameObject);
         }
         else

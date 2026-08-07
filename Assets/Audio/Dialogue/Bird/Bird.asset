@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-9210104556315454376
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird7_{-9210104556315454376}
+  m_AudioClip: {fileID: 8300000, guid: d3e5ff1cb9db2ff47a640c0d3f944fff, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-9143087382949142777
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird3_{-9143087382949142777}
+  m_AudioClip: {fileID: 8300000, guid: 83894531ea8311f45948224cae29409d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-8431935428657404138
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird1_{-8431935428657404138}
+  m_AudioClip: {fileID: 8300000, guid: 6cff80591f8d4e04db074d787a908593, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-7827697555852282743
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird16_{-7827697555852282743}
+  m_AudioClip: {fileID: 8300000, guid: 57cfffc74b7d3fd4da5f9aac3b2f5307, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6921311830872952831
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird20_{-6921311830872952831}
+  m_AudioClip: {fileID: 8300000, guid: f15069e8f6bf23f419d920f31c316dad, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6381330509578505003
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird5_{-6381330509578505003}
+  m_AudioClip: {fileID: 8300000, guid: bc64eeafe2611824e9b2ef93e974009d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6064553971363910399
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird17_{-6064553971363910399}
+  m_AudioClip: {fileID: 8300000, guid: e29dbf303281dc74bb04d94c4edc20c0, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6051711196607998702
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird18_{-6051711196607998702}
+  m_AudioClip: {fileID: 8300000, guid: 5a5e667942823d343ae1abfa6f13c7fa, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2571807413385134224
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird6_{-2571807413385134224}
+  m_AudioClip: {fileID: 8300000, guid: fa99ddfdbca8a82489d09001c3092557, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2420780971998651766
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird4_{-2420780971998651766}
+  m_AudioClip: {fileID: 8300000, guid: 50a593b9b4aa8ef47b76af576f866a5e, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2162706161690733623
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird11_{-2162706161690733623}
+  m_AudioClip: {fileID: 8300000, guid: 05d6016534616984291e0e4b78e1c22d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1875497941539279639
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird15_{-1875497941539279639}
+  m_AudioClip: {fileID: 8300000, guid: fa98f0a67b38c6b4a9fe8a541d5b1843, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-831077077710764789
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird19_{-831077077710764789}
+  m_AudioClip: {fileID: 8300000, guid: 9a260062b822d244f92eeb80ba591fc6, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1037506146352099877
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird14_{1037506146352099877}
+  m_AudioClip: {fileID: 8300000, guid: 02ea5c52f7ef386499576cb8149e13a0, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1149382440948636455
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird10_{1149382440948636455}
+  m_AudioClip: {fileID: 8300000, guid: 68f710e397278f440a3521a8d379fb31, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1859782545638782708
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird12_{1859782545638782708}
+  m_AudioClip: {fileID: 8300000, guid: 14899bec2efe12042878c85d16494d46, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3348721387846158718
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird2_{3348721387846158718}
+  m_AudioClip: {fileID: 8300000, guid: 29e2e8a468796a542a20235591e5f26a, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3507367462375650650
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird13_{3507367462375650650}
+  m_AudioClip: {fileID: 8300000, guid: 1171f72047eb2fa40860d236ffd0c614, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &6066860936735653795
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird9_{6066860936735653795}
+  m_AudioClip: {fileID: 8300000, guid: c82ee739225a8f84e989a2970ad5b5ab, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Bird
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -600, y: 600}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -8431935428657404138}
+  - {fileID: 3348721387846158718}
+  - {fileID: -9143087382949142777}
+  - {fileID: -2420780971998651766}
+  - {fileID: -6381330509578505003}
+  - {fileID: -2571807413385134224}
+  - {fileID: -9210104556315454376}
+  - {fileID: 7638310914018866166}
+  - {fileID: 6066860936735653795}
+  - {fileID: 1149382440948636455}
+  - {fileID: -2162706161690733623}
+  - {fileID: 1859782545638782708}
+  - {fileID: 3507367462375650650}
+  - {fileID: 1037506146352099877}
+  - {fileID: -1875497941539279639}
+  - {fileID: -7827697555852282743}
+  - {fileID: -6064553971363910399}
+  - {fileID: -6051711196607998702}
+  - {fileID: -831077077710764789}
+  - {fileID: -6921311830872952831}
+  m_AvoidRepeatingLast: 3
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &7638310914018866166
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: bird8_{7638310914018866166}
+  m_AudioClip: {fileID: 8300000, guid: fa953a8f5516763418bc8429fa6c6e7d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
