@@ -32,6 +32,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	public ScriptsSO LionIdle5;
 	public ScriptsSO LionTrust;
 
+	// Lion Scene - Fire
+	public ScriptsSO FireInit;
+	public ScriptsSO FireBeforeLionIdle3;
+
 	// Crowd
 	public ScriptsSO CrowdCropHint;
 	public ScriptsSO CrowdLumberHint;
@@ -266,6 +270,26 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		else
 		{
 			DM.SetLines(LionIdle);
+		}
+	}
+
+	public void LionSceneFireDialogue()
+	{
+		DM.SetLines(FireInit);
+		switch (PDSO.HeldItem)
+		{
+			case ItemNames.METAL:
+				if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_WATERLIE))
+				{
+					PDSO.triggers.Add(TriggerNames.LION_FIRE_INTERACTION);
+				}
+				else
+				{
+					DM.SetLines(FireBeforeLionIdle3);
+				}
+				break;
+			default:
+				break;
 		}
 	}
 

@@ -825,6 +825,8 @@ MonoBehaviour:
   LionIdle4: {fileID: 11400000, guid: 1d5c6740888e8c657912bb338c4454e5, type: 2}
   LionIdle5: {fileID: 11400000, guid: ed831d3ec03b7145ca260d3a5ce900ed, type: 2}
   LionTrust: {fileID: 11400000, guid: 0e74fa8449840d61484727fb0ce77ba8, type: 2}
+  FireInit: {fileID: 11400000, guid: 767e53d7411f4168bb127f013898b728, type: 2}
+  FireBeforeLionIdle3: {fileID: 11400000, guid: 0eef73fb73be6bf77a9ab24f252d05d6, type: 2}
   CrowdCropHint: {fileID: 11400000, guid: a277d3aade991840db93c12979ee8c84, type: 2}
   CrowdLumberHint: {fileID: 11400000, guid: 70da00501050e36de97800f5d051385b, type: 2}
   CrowdSackHint: {fileID: 11400000, guid: ba631ad5985982ec5bc9496e7ed4bc3f, type: 2}
