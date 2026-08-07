@@ -7,10 +7,22 @@ public static class TriggerNames
     
     public const string LION_SCENE_ENTRY = "FirstTimeInScene";
     public const string LION_QUESTION_ASKED = "LionQuestionAsked";
+    public const string LION_QUESTION_ASKED_2 = "LionQuestionAsked_FireWillComeBack";
+    public const string LION_QUESTION_ASKED_3 = "LionQuestionAsked_BurnAway";
     public const string LION_SACK = "LionSack";
     public const string LION_CROP = "LionCrop";
     public const string LION_LUMBER = "LionLumber";
     public const string LION_CONVINCED = "LionConvinced";
+    public const string LION_CONVINCED_2 = "LionConvinced2";
+    public const string LION_CONVINCED_3 = "LionConvinced3";
+    public const string LION_OBSTACLE_THEWORLDWOULDDIE = "TheWorldWouldDie";
+    public const string LION_OBSTACLE_WATERLIE = "WaterLie";
+    public const string LION_OBSTACLE_NATURESRAGE = "NaturesRage";
+    public const string LION_OBSTACLE_SANDWICH = "Sandwich";
+    public const string LION_OBSTACLE_BUILDLION = "BuildLion";
+    public const string LION_OBSTACLE_TELLFOLLOWERS = "TellFollowers";
+
+    public const string LION_FIRE_INTERACTION = "LionFireInteraction";
 
     public const string HARE_NAKED_SCARECROW = "NakedScarecrow";
     public const string WINDMILL_HANDLE_FIXED = "WindmillHandleFixed";
