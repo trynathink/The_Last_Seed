@@ -541,17 +541,35 @@ MonoBehaviour:
   ScarecrowFabric: {fileID: 0}
   HareInit: {fileID: 0}
   HareIdle: {fileID: 0}
+  LionInit: {fileID: 0}
+  LionIdle: {fileID: 0}
+  LionConvinced: {fileID: 0}
+  LionSack: {fileID: 0}
+  LionLumber: {fileID: 0}
+  LionCrop: {fileID: 0}
+  CrowdCropHint: {fileID: 0}
+  CrowdLumberHint: {fileID: 0}
+  CrowdSackHint: {fileID: 0}
+  CrowdLionPraise: {fileID: 0}
   BirdTrustMinigame: {fileID: 0}
   firstWindmillSight: {fileID: 0}
   brokenPanel: {fileID: 0}
   fixedPanel: {fileID: 0}
   windmillAnim: {fileID: 0}
+  windmillPanels: {fileID: 0}
+  windmillFixed: {fileID: 0}
   missingRod: {fileID: 11400000, guid: 48526a62fa7885c4dbb432e4a3197e51, type: 2}
   shovelAttempt: {fileID: 11400000, guid: d3184ab8d0cea56419012cbe5d3a5200, type: 2}
   reinforcedShovelAttempt: {fileID: 11400000, guid: 2dd49bd1f93d01c45bda21ff423eb825, type: 2}
   brickOver: {fileID: 231958116}
   OpenBrick: {fileID: 1760340367}
   ReinforcedPole: {fileID: 545932981}
+  nakedScarecrow: {fileID: 0}
+  BeaverInit: {fileID: 0}
+  BeaverIdleUnhappy: {fileID: 0}
+  BeaverIdleHappy: {fileID: 0}
+  BeaverIdleFixed: {fileID: 0}
+  BeaverPanelMake: {fileID: 0}
   b2: {fileID: -6476302864000941947, guid: 72f0e93901389ab4989204fce2f90eaf, type: 3}
   b3: {fileID: -2590902668247886376, guid: b5bfcf0f1e101c847b2eae7a88be1d63, type: 3}
   BlockageIdle: {fileID: 0}
@@ -660,27 +678,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 756296243}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2028835311}
+    - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameSceneManagerACT2, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MoveSFX, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: A2 Windmill Outside
+      objectReference: {fileID: 0}
+    - target: {fileID: 7006053700173506647, guid: 69c1b3118c673b340ad80c881d80834b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -927,6 +965,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1673299921369360853, guid: 18a493dd75c101d469e0069ce31b1962, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 0233f2d3e47defd4ea7ebbc3dcaf94b7, type: 3}
     - target: {fileID: 2715723397544825345, guid: 18a493dd75c101d469e0069ce31b1962, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1510,6 +1552,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+--- !u!114 &2028835311 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5412976005174906715, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+  m_PrefabInstance: {fileID: 2028835310}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02dcc9824c258341a180c9160aed3d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveSFX
 --- !u!1 &2143393564
 GameObject:
   m_ObjectHideFlags: 0

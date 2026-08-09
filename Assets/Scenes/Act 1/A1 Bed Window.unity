@@ -572,7 +572,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BedroomButtonManager
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
   alarm: {fileID: 8300000, guid: 0c94bde5818f2cd459fa4aaae15ad838, type: 3}
+  boards: {fileID: 0}
   bearIdle: {fileID: 0}
   bearInit: {fileID: 0}
   AlarmOn: {fileID: 11400000, guid: 5d7ce30a60904344cb14bda9fceda9c6, type: 2}
@@ -581,7 +583,7 @@ MonoBehaviour:
   InitWindow: {fileID: 0}
   leaveWindow: {fileID: 0}
   questionWindow: {fileID: 0}
-  DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
+  FrontDoorHint: {fileID: 0}
 --- !u!1001 &515971939
 PrefabInstance:
   m_ObjectHideFlags: 0

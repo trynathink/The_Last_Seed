@@ -16,4 +16,10 @@ public class MoveSFX : AudioSingleton<MoveSFX>
     {
         source.PlayOneShot(clip);
     }
+
+	// PlayClip doesn't show up as an option for Unity Events
+	public static void PlayCustom(AudioClip clip)
+	{
+		PlayClip(clip);
+	}
 }

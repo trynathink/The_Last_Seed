@@ -11,6 +11,7 @@ public class GameSceneManager : GameSceneManagerBase
     // This script manages every scene in Act 1 minus the main menu
 
     [SerializeField] private AudioClip alarm;
+    [SerializeField] private AudioClip boards;
 
     [SerializeReference]
     ScriptsSO bearIdle, bearInit;
@@ -195,6 +196,7 @@ public class GameSceneManager : GameSceneManagerBase
                     PDSO.triggers.Add(TriggerNames.KITCHEN_BOARDS_REMOVED);
 
                     IM.HoldItem("");
+					BackgroundSFX.PlayClip(boards);
                 }
                 else
                 {

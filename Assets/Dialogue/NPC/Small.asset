@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a18afbdfc9aaa4aa14f1b7165fc452, type: 3}
+  m_Name: Small
+  m_EditorClassIdentifier: Assembly-CSharp::RandomContainer
+  objects:
+  - {fileID: 2796048855900594582, guid: 1a09be2c25936b046a57ad06540208f2, type: 3}
+  - {fileID: 4571532385989971177, guid: 63e64020741add348b1b544c63cb878e, type: 3}
+  - {fileID: 987802065332006738, guid: 326dc18015ec6144f9159dff34ed448d, type: 3}
+  - {fileID: 2885275457070973328, guid: 38f602bb4d10b1549a9eb09dd4f63049, type: 3}
