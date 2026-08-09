@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7b060ba08e6b440847ecdea19e04b1, type: 3}
   m_Name: PlayerDataSO
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDataSO
-  SaveFile: Save2
-  PlayerLocation: A2 Beaver's River
+  SaveFile: Save1
+  PlayerLocation: A2 Hare's Farm
   HeldItem: 
-  Fire: 4
+  Fire: 9
   FireStage: 0
   BirdTrust: 0
   Inventory:
@@ -23,9 +23,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e2a7b5160b90ec54884362ba45610fad, type: 2}
   - {fileID: 11400000, guid: 11f6dcb12a8fead4fbdf8f5bf1ffd005, type: 2}
   - {fileID: 11400000, guid: e1d84c707408d80a19949055f3ac449a, type: 2}
-  - {fileID: 11400000, guid: de7c5128ed3293e58a698d37661f6011, type: 2}
-  - {fileID: 11400000, guid: 47e7fb565080ee44b8f2f63510d730e0, type: 2}
+  - {fileID: 11400000, guid: 70137deefea6be74485eda5ae3abb9dc, type: 2}
   - {fileID: 11400000, guid: 4bccc80e141fc914f988dead9ab5449e, type: 2}
+  - {fileID: 11400000, guid: c0b3f3ea3433d5c46b3a1def79e0bd2c, type: 2}
   - {fileID: 11400000, guid: b2cd6c60daa723047b210d4359fd802a, type: 2}
   reference:
   - {fileID: 11400000, guid: abb076894db46844e95f6276dfb17677, type: 2}
@@ -48,9 +48,16 @@ MonoBehaviour:
   - Boards Removed
   - WindmillSeen
   - BrickOut
-  - WindmillScarecrowCloth
-  - NakedScarecrow
-  - Shovel Handle
-  - BlockageItem
-  - BeaverPanel
+  - WindmillPanelFixed
   - WWJamFix
+  - BlockageItem
+  - Shovel Handle
+  - BeaverInit
+  - BeaverPanel
+  - WWBrokFix
+  - WindmillHandleFixed
+  - EngineOff
+  - FirstTimeInScene
+  - LionQuestionAsked
+  - LionLumber
+  - LionSack
