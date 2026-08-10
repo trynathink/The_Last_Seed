@@ -21,9 +21,20 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	public ScriptsSO LionInit;
 	public ScriptsSO LionIdle;
 	public ScriptsSO LionConvinced;
+	public ScriptsSO LionConvinced2;
+	public ScriptsSO LionConvinced3;
 	public ScriptsSO LionSack;
 	public ScriptsSO LionLumber;
 	public ScriptsSO LionCrop;
+	public ScriptsSO LionIdle2;
+	public ScriptsSO LionIdle3;
+	public ScriptsSO LionIdle4;
+	public ScriptsSO LionIdle5;
+	public ScriptsSO LionTrust;
+
+	// Lion Scene - Fire
+	public ScriptsSO FireInit;
+	public ScriptsSO FireBeforeLionIdle3;
 
 	// Crowd
 	public ScriptsSO CrowdCropHint;
@@ -191,8 +202,44 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 	public void LionDialogue()
 	{
-		Debug.Log("lion dialogue");
-		if(PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
+		if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_TELLFOLLOWERS))
+		{
+			DM.SetLines(LionTrust);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_BUILDLION))
+		{
+			DM.SetLines(LionIdle5);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_NATURESRAGE)
+			&& PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_SANDWICH))
+		{
+			DM.SetLines(LionIdle4);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_CONVINCED_3))
+		{
+			DM.SetLines(LionConvinced3);
+		}
+		else if (PDSO.triggers.Contains(TriggerNames.LION_QUESTION_ASKED_3)
+			&& PDSO.triggers.Contains(TriggerNames.LION_FIRE_INTERACTION))
+		{
+			DM.SetLines(LionConvinced3);
+			PDSO.triggers.Add(TriggerNames.LION_CONVINCED_3);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_WATERLIE)
+			&& PDSO.triggers.Contains(TriggerNames.LION_CONVINCED_2))
+		{
+			DM.SetLines(LionIdle3);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_CONVINCED_2))
+		{
+			DM.SetLines(LionConvinced2);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_THEWORLDWOULDDIE)
+				&& PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
+		{
+			DM.SetLines(LionIdle2);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
 		{
 			DM.SetLines(LionConvinced);
 		}
@@ -224,6 +271,26 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		else
 		{
 			DM.SetLines(LionIdle);
+		}
+	}
+
+	public void LionSceneFireDialogue()
+	{
+		DM.SetLines(FireInit);
+		switch (PDSO.HeldItem)
+		{
+			case ItemNames.METAL:
+				if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_WATERLIE))
+				{
+					PDSO.triggers.Add(TriggerNames.LION_FIRE_INTERACTION);
+				}
+				else
+				{
+					DM.SetLines(FireBeforeLionIdle3);
+				}
+				break;
+			default:
+				break;
 		}
 	}
 

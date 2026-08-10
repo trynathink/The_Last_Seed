@@ -95,6 +95,78 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
   m_LightingSettings: {fileID: 0}
+--- !u!114 &1326546615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5412976005174906715, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+  m_PrefabInstance: {fileID: 1109722386}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02dcc9824c258341a180c9160aed3d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveSFX
+--- !u!1001 &1109722386
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5412976005174906715, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: _clip
+      value: 
+      objectReference: {fileID: 8300000, guid: abc828d57f3fb3d4e99033bddbbd4169, type: 3}
+    - target: {fileID: 8229800730321721057, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
+      propertyPath: m_Name
+      value: SFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -674,9 +746,18 @@ MonoBehaviour:
   LionInit: {fileID: 11400000, guid: 74cea2430a3ab7ca68f3d99dfb22727e, type: 2}
   LionIdle: {fileID: 11400000, guid: 24e048ea5e1eeb698860f997e2d1c125, type: 2}
   LionConvinced: {fileID: 11400000, guid: 2f2518b471c95da21a959a568ff1165c, type: 2}
+  LionConvinced2: {fileID: 11400000, guid: e3302329de2f9ee2688dbb4be23e165f, type: 2}
+  LionConvinced3: {fileID: 11400000, guid: a52d292fe2c5e5be7a2423b72842ffd2, type: 2}
   LionSack: {fileID: 11400000, guid: db4cbeb0adedfc60384f68d781adf8d5, type: 2}
   LionLumber: {fileID: 11400000, guid: eee7efc0e8ad430a59e4547a3c447597, type: 2}
   LionCrop: {fileID: 11400000, guid: 8ac115ce2434b7fc3859e63e4a6d0a0e, type: 2}
+  LionIdle2: {fileID: 11400000, guid: 71746e9c2e5f67bb3b86216410fb59f0, type: 2}
+  LionIdle3: {fileID: 11400000, guid: b0e7731b38174f6d4abdcc2371e8546d, type: 2}
+  LionIdle4: {fileID: 11400000, guid: 1d5c6740888e8c657912bb338c4454e5, type: 2}
+  LionIdle5: {fileID: 11400000, guid: ed831d3ec03b7145ca260d3a5ce900ed, type: 2}
+  LionTrust: {fileID: 11400000, guid: 0e74fa8449840d61484727fb0ce77ba8, type: 2}
+  FireInit: {fileID: 11400000, guid: 767e53d7411f4168bb127f013898b728, type: 2}
+  FireBeforeLionIdle3: {fileID: 11400000, guid: 0eef73fb73be6bf77a9ab24f252d05d6, type: 2}
   CrowdCropHint: {fileID: 11400000, guid: a277d3aade991840db93c12979ee8c84, type: 2}
   CrowdLumberHint: {fileID: 11400000, guid: 70da00501050e36de97800f5d051385b, type: 2}
   CrowdSackHint: {fileID: 11400000, guid: ba631ad5985982ec5bc9496e7ed4bc3f, type: 2}
@@ -726,6 +807,7 @@ GameObject:
   - component: {fileID: 834552814}
   - component: {fileID: 834552817}
   - component: {fileID: 834552816}
+  - component: {fileID: 834552818}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Untagged
@@ -790,78 +872,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834552813}
   m_CullTransparentMesh: 1
---- !u!1001 &1109722386
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 893243107301207155, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5412976005174906715, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-      propertyPath: _clip
-      value: 
-      objectReference: {fileID: 8300000, guid: abc828d57f3fb3d4e99033bddbbd4169, type: 3}
-    - target: {fileID: 8229800730321721057, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-      propertyPath: m_Name
-      value: SFX
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
---- !u!114 &1326546615 stripped
+--- !u!114 &834552818
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5412976005174906715, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
-  m_PrefabInstance: {fileID: 1109722386}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 834552813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a02dcc9824c258341a180c9160aed3d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e363403b3aa52a379e9ccf4a6e1c7f6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MoveSFX
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableImage
+  alphaThreshold: 0.1
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 756296243}
+        m_TargetAssemblyTypeName: GameSceneManagerACT2, Assembly-CSharp
+        m_MethodName: LionSceneFireDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1421785775
 GameObject:
   m_ObjectHideFlags: 0
