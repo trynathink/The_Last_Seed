@@ -685,6 +685,7 @@ MonoBehaviour:
   firstWindmillSight: {fileID: 0}
   brokenPanel: {fileID: 0}
   fixedPanel: {fileID: 0}
+  brokenWindmill: {fileID: 0}
   windmillAnim: {fileID: 0}
   windmillPanels: {fileID: 0}
   windmillFixed: {fileID: 0}

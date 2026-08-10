@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - This shovel handle seems to do the trick, but if I don't affix it with something,
-    it won't stay for long...
+  - "It won\u2019t stay attached\u2026"
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
+  trust: 0
   choice: {fileID: 0}

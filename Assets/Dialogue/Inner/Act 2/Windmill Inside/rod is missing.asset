@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - 'There''s something missing here... '
-  - I wonder if I can replace it with something.
+  - "It looks like there\u2019s a piece missing."
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 

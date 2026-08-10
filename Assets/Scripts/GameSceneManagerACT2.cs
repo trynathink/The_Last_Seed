@@ -40,13 +40,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 	// windmill outside
 	[SerializeField] private ScriptsSO firstWindmillSight;
-	[SerializeField] private ScriptsSO brokenPanel, fixedPanel;
+	[SerializeField] private ScriptsSO brokenPanel, fixedPanel, cantFixPanel;
+	[SerializeField] private ScriptsSO brokenWindmill;
+	[SerializeField] private ScriptsSO sackOpen;
 	[SerializeField] private Animator windmillAnim;
 	[SerializeField] private Image windmillPanels;
 	[SerializeReference] private Sprite windmillFixed;
-	const string seenWindmillTrigger = "WindmillSeen";
-	const string panelFixedTrigger = "WindmillPanelFixed";
-	// TODO: should probably have a table or enum for triggers, since these will be used elsewhere too
 
 	// windmill inside
 	[SerializeField] private ScriptsSO missingRod;
@@ -77,13 +76,13 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         switch (SceneManager.GetActiveScene().name)
         {
 			case SceneNames.ACT2_WINDMILL_OUTSIDE:
-				if (!PDSO.triggers.Contains(seenWindmillTrigger))
+				if (!PDSO.triggers.Contains(TriggerNames.WINDMILL_SEEN))
 				{
 					DM.SetLines(firstWindmillSight);
-					PDSO.triggers.Add(seenWindmillTrigger);
+					PDSO.triggers.Add(TriggerNames.WINDMILL_SEEN);
 				}
 
-				if (PDSO.triggers.Contains(panelFixedTrigger))
+				if (PDSO.triggers.Contains(TriggerNames.WINDMILL_PANEL_FIXED))
 				{
 					FixWindmillPanel(string.Empty);
 				}
@@ -249,7 +248,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				{
 					if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_BROK_FIX) && PDSO.triggers.Contains(TriggerNames.WATERWHEEL_JAM_FIX))
 					{
-						if (PDSO.triggers.Contains(panelFixedTrigger) && PDSO.triggers.Contains(handleFixedTrigger))
+						if (PDSO.triggers.Contains(TriggerNames.WINDMILL_PANEL_FIXED) && PDSO.triggers.Contains(handleFixedTrigger))
 						{
 							DM.SetLines(BeaverIdleFixed);
 						}
@@ -314,6 +313,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		{
 			sack1.enabled = false;
 			sack2.enabled = true;
+			DM.SetLines(sackOpen);
 		}
 		else if (sack2.enabled)
 		{
@@ -339,11 +339,9 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		{
 			case "":
 			{
-
-				if (!PDSO.triggers.Contains(panelFixedTrigger))
+				if (!PDSO.triggers.Contains(TriggerNames.WINDMILL_PANEL_FIXED))
 				{
-                    const string trigger = TriggerNames.WINDMILL_SCARECROW_CLOTH;
-                    if (!PDSO.ItemContains("Blanket") && !PDSO.triggers.Contains(trigger))
+                    if (!PDSO.ItemContains("Blanket") && !PDSO.triggers.Contains(TriggerNames.WINDMILL_SCARECROW_CLOTH))
                     {
                         PDSO.triggers.Add(TriggerNames.WINDMILL_SCARECROW_CLOTH);
                     }
@@ -351,17 +349,20 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 }
 				else
 				{
-						DM.SetLines(fixedPanel);
+					DM.SetLines(fixedPanel);
 				}
-
 				break;
 			}
 			case "Blanket": case "Fabric":
 			{
-                if (!PDSO.triggers.Contains(panelFixedTrigger))
+                if (PDSO.triggers.Contains(TriggerNames.WINDMILL_HANDLE_FIXED))
+				{
+					DM.SetLines(cantFixPanel);
+				}
+				else if (!PDSO.triggers.Contains(TriggerNames.WINDMILL_PANEL_FIXED))
 				{
 					FixWindmillPanel(PDSO.HeldItem);
-					PDSO.triggers.Add(panelFixedTrigger);
+					PDSO.triggers.Add(TriggerNames.WINDMILL_PANEL_FIXED);
 				}
 				break;
 			}
@@ -369,6 +370,24 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				DM.SetLines(DefaultItemFail);
 				break;
 		}
+	}
+
+	public bool WindmillFixed()
+	{
+		var fixedTriggers = new List<String> { TriggerNames.WINDMILL_PANEL_FIXED, TriggerNames.WINDMILL_HANDLE_FIXED };
+		return PDSO.triggers.Intersect(fixedTriggers).Count() == 2;
+	}
+	
+
+	public void WindmillInteract()
+	{
+		Action action = () => {
+			{
+				if (!WindmillFixed())
+					DM.SetLines(brokenWindmill);
+			}
+		};
+		CatchAnyItemHeld(action);
 	}
 
 	// Windmill Insider Scene

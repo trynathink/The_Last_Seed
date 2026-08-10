@@ -15,6 +15,8 @@ public static class TriggerNames
     public const string HARE_NAKED_SCARECROW = "NakedScarecrow";
     public const string WINDMILL_HANDLE_FIXED = "WindmillHandleFixed";
     public const string WINDMILL_SCARECROW_CLOTH = "WindmillScarecrowCloth";
+	public const string WINDMILL_SEEN = "WindmillSeen";
+	public const string WINDMILL_PANEL_FIXED = "WindmillPanelFixed";
     public const string ENGINE_OFF = "EngineOff";
     public const string SPADE_GAINED = "Spade Gained";
     public const string SHOVEL = "ShovelNeedsRope";
