@@ -276,7 +276,6 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 	public void LionSceneFireDialogue()
 	{
-		DM.SetLines(FireInit);
 		switch (PDSO.HeldItem)
 		{
 			case ItemNames.METAL:
@@ -290,6 +289,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				}
 				break;
 			default:
+				DM.SetLines(FireInit);
 				break;
 		}
 	}

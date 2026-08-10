@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - The metal wouldn't do well in that fire
+  - "This fire looks like it could even burn metal\u2026"
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
