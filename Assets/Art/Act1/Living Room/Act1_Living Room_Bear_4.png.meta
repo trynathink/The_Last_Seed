@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0e5e496ddbbeb10e4a7545d18f45fe97
+guid: bb5b83f9ae428df04b5c0f94c9c3afe2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1874212805457855844
-    second: Act1_Living Room_Crowbar (open closet)_0
+      213: -7854594637911940118
+    second: Act1_Living Room_Bear_4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act1_Living Room_Crowbar (open closet)_0
+      name: Act1_Living Room_Bear_4_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 465cdc6dd9a820a10800000000000000
-      internalID: 1874212805457855844
+      spriteID: ae32290dacfdef290800000000000000
+      internalID: -7854594637911940118
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 168d14175bdd78cbea3aa8b4befffedf
+    spriteID: 4fb52636e1654b960aa21dbed66c8b6b
     internalID: 0
     vertices: []
     indices: 
@@ -150,7 +150,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3840.0,"y":2160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Act1_Living Room_Crowbar (open closet)_0: 1874212805457855844
+      Act1_Living Room_Bear_4_0: -7854594637911940118
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
