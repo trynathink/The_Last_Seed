@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bc00b0163cb4c408dcbe8105759903, type: 3}
+  m_Name: beaver idle choice
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  Choices:
+  - What is that thing causing the smoke?
+  - Nevermind.
+  Outcomes:
+  - {fileID: 11400000, guid: e77494f702656514e9385265ef08f748, type: 2}
+  - {fileID: 11400000, guid: 4ab5bcc98e81dea408aef9776ae2e53e, type: 2}

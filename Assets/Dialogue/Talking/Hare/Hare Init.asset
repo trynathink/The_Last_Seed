@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Hare
   Lines:
-  - 'uh .. hello there! '
-  - My uh, dialouge is still a work in progress
-  - So I can't really talk riiight now, but uh, I will someday!
-  - T-thank you for playing our game!
-  trigger: 
+  - ...H-hello.
+  - Welcome to my...
+  - ' ...farm.'
+  - A-although nothing grows no more...
+  trigger: HareFirstInteraction
   itemGain: {fileID: 0}
   SceneChange: 
   trust: 0
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: 94dd70a3127cabd49a13f8856a110acb, type: 2}

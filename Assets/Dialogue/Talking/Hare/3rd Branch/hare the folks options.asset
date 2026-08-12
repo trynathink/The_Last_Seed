@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bc00b0163cb4c408dcbe8105759903, type: 3}
+  m_Name: hare the folks options
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  Choices:
+  - What did the beaver do?
+  - The Lion?
+  - What's wrong with the bird?
+  - Nevermind.
+  Outcomes:
+  - {fileID: 11400000, guid: acebd5ad28e154b4794a0ce17a2e1c37, type: 2}
+  - {fileID: 11400000, guid: 2f80ef8b051d7b74089755a4140b5704, type: 2}
+  - {fileID: 11400000, guid: 7f3e5cef410b7304eb1552d67feac6a7, type: 2}
+  - {fileID: 11400000, guid: be7695768fe532c46bea48536e01118e, type: 2}

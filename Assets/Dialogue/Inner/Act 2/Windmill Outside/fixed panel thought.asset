@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - The Windmill works again!
+  - That can catch wind much better now.
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
