@@ -233,6 +233,15 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			// TODO: correctly decide which index of afterSubgoalOutcomes should be added at the end
 			HareIdle = hareIdleAdded;
 		}
+		else if (t == "BeaverCheckShovelAsk")
+		{
+			return;
+		}
+		else if (t == "BeaverCheckRope")
+		{
+			// TODO: check rope status, then change outcome of help choice
+			return;
+		}
 
 		base.addTrigger(t);
 	}
@@ -341,45 +350,54 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	}
 
 	[SerializeReference]
-	ScriptsSO BeaverInit, BeaverIdleUnhappy, BeaverIdleHappy, BeaverIdleFixed, BeaverPanelMake;
+	ScriptsSO BeaverInit, beaverIdle;
+	[SerializeField] ChoiceSO beaverIdleHare, beaverIdleBoth;
+	[SerializeField] ScriptsSO beaverNoneFixed, beaverPartialFixed, beaverFixed;
+	[SerializeField] ChoiceSO beaverHelped;
+	// TODO: use these to change outcome on turn off engine choice
+	// TODO: going back to idle choices from interaction should be changed dynamically, but can stay for now
 
 	public void BeaverDia()
 	{
-		switch (PDSO.HeldItem)
+		if (PDSO.triggers.Contains("BeaverInit"))
 		{
-			case "":
-				if (PDSO.triggers.Contains("BeaverInit"))
+			if (HasAllTriggers("BeaverShovelAsked", "BeaverEngineAsked"))
+			{
+				int last = beaverIdleBoth.Outcomes.Count - 1;
+
+				if (HasAllTriggers(TriggerNames.WATERWHEEL_BROK_FIX, TriggerNames.WATERWHEEL_JAM_FIX))
 				{
-					if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_BROK_FIX) && PDSO.triggers.Contains(TriggerNames.WATERWHEEL_JAM_FIX))
+					if (HasAllTriggers(TriggerNames.WINDMILL_PANEL_FIXED, handleFixedTrigger))
 					{
-						if (PDSO.triggers.Contains(TriggerNames.WINDMILL_PANEL_FIXED) && PDSO.triggers.Contains(handleFixedTrigger))
-						{
-							DM.SetLines(BeaverIdleFixed);
-						}
-						else
-						{
-                            DM.SetLines(BeaverIdleHappy);
-                        }
+						beaverIdleBoth.Outcomes[last] = beaverFixed;
 					}
 					else
 					{
-						DM.SetLines(BeaverIdleUnhappy);
+						if (PDSO.ItemContains("Rope"))
+						{
+							beaverPartialFixed.choice = beaverHelped;
+						}
+
+						beaverIdleBoth.Outcomes[last] = beaverPartialFixed;
 					}
 				}
 				else
 				{
-					DM.SetLines(BeaverInit);
+					beaverIdleBoth.Outcomes[last] = beaverNoneFixed;
 				}
-				break;
-			case ItemNames.LUMBER:
-				if (!PDSO.triggers.Contains(TriggerNames.BEAVER_PANEL))
-				{
-                    DM.SetLines(BeaverPanelMake);
-                }
-                break;
-			default:
-                DM.SetLines(DefaultItemFail);
-                break;
+
+				beaverIdle.choice = beaverIdleBoth;
+			}
+			else if (PDSO.triggers.Contains("HareBeaverTalk"))
+			{
+				beaverIdle.choice = beaverIdleHare;
+			}
+
+			DM.SetLines(beaverIdle);
+		}
+		else
+		{
+			DM.SetLines(BeaverInit);
 		}
 	}
 
@@ -472,12 +490,15 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		}
 	}
 
+	private bool HasAllTriggers(params string[] triggers)
+	{
+		return PDSO.triggers.Intersect(triggers).Count() == triggers.Length;
+	}
+
 	public bool WindmillFixed()
 	{
-		var fixedTriggers = new List<String> { TriggerNames.WINDMILL_PANEL_FIXED, TriggerNames.WINDMILL_HANDLE_FIXED };
-		return PDSO.triggers.Intersect(fixedTriggers).Count() == 2;
+		return HasAllTriggers(TriggerNames.WINDMILL_PANEL_FIXED, TriggerNames.WINDMILL_HANDLE_FIXED);
 	}
-	
 
 	public void WindmillInteract()
 	{

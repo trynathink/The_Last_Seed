@@ -39,5 +39,4 @@ public static class TriggerNames
     public const string BLOCKAGE_ITEM = "BlockageItem";
     public const string WATERWHEEL_JAM_FIX = "WWJamFix";
     public const string WATERWHEEL_BROK_FIX = "WWBrokFix";
-    public const string BEAVER_PANEL = "BeaverPanel";
 }

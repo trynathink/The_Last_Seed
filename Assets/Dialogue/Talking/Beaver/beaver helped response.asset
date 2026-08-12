@@ -10,19 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Beaver Init
+  m_Name: beaver helped response
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Beaver
   Lines:
-  - Hey, what are you doing here!
-  - My dialogue is still a work in progress dontcha know!
-  - Take nothings I says here as final, you hear
-  - Anyhow, Names Beaver.
-  - Heard yous looking for a shovel.
-  - Well I used it here for my ENGINE.
-  - So yous ain't getting it.
+  - I did plenty!
+  - Now get workin' and leave me be.
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
   trust: 0
-  choice: {fileID: 11400000, guid: 62f2c1e55c19d2649bba1dd24763d9de, type: 2}
+  choice: {fileID: 0}

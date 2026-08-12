@@ -619,12 +619,24 @@ MonoBehaviour:
   ScarecrowFabric: {fileID: 0}
   HareInit: {fileID: 0}
   HareIdle: {fileID: 0}
+  hareIdleAdded: {fileID: 0}
+  hareAfterSubgoalOutcomes: []
+  harePlantIdle: {fileID: 0}
   LionInit: {fileID: 0}
   LionIdle: {fileID: 0}
   LionConvinced: {fileID: 0}
+  LionConvinced2: {fileID: 0}
+  LionConvinced3: {fileID: 0}
   LionSack: {fileID: 0}
   LionLumber: {fileID: 0}
   LionCrop: {fileID: 0}
+  LionIdle2: {fileID: 0}
+  LionIdle3: {fileID: 0}
+  LionIdle4: {fileID: 0}
+  LionIdle5: {fileID: 0}
+  LionTrust: {fileID: 0}
+  FireInit: {fileID: 0}
+  FireBeforeLionIdle3: {fileID: 0}
   CrowdCropHint: {fileID: 0}
   CrowdLumberHint: {fileID: 0}
   CrowdSackHint: {fileID: 0}
@@ -633,6 +645,9 @@ MonoBehaviour:
   firstWindmillSight: {fileID: 0}
   brokenPanel: {fileID: 0}
   fixedPanel: {fileID: 0}
+  cantFixPanel: {fileID: 0}
+  brokenWindmill: {fileID: 0}
+  sackOpen: {fileID: 0}
   windmillAnim: {fileID: 0}
   windmillPanels: {fileID: 0}
   windmillFixed: {fileID: 0}
@@ -644,10 +659,13 @@ MonoBehaviour:
   ReinforcedPole: {fileID: 0}
   nakedScarecrow: {fileID: 0}
   BeaverInit: {fileID: 11400000, guid: 6aed6967f853231479afc70e7fc97904, type: 2}
-  BeaverIdleUnhappy: {fileID: 11400000, guid: 955211213735b3743a1ba878bf6a3e43, type: 2}
-  BeaverIdleHappy: {fileID: 11400000, guid: e246e95eb1d7ac149beb2ac862aedc17, type: 2}
-  BeaverIdleFixed: {fileID: 11400000, guid: 754997c94a3e4fa47b93871ea76394da, type: 2}
-  BeaverPanelMake: {fileID: 11400000, guid: b7bf4bec0cf4c6d439cee62c88990938, type: 2}
+  beaverIdle: {fileID: 11400000, guid: 70cc78a3d2834e148883f84e92ed05ff, type: 2}
+  beaverIdleHare: {fileID: 11400000, guid: 0ea1d0741847f9847a630fcf6f28d2c1, type: 2}
+  beaverIdleBoth: {fileID: 11400000, guid: e492afad2f67b4049a9935e86cff8b83, type: 2}
+  beaverNoneFixed: {fileID: 11400000, guid: 955211213735b3743a1ba878bf6a3e43, type: 2}
+  beaverPartialFixed: {fileID: 11400000, guid: e246e95eb1d7ac149beb2ac862aedc17, type: 2}
+  beaverFixed: {fileID: 11400000, guid: 754997c94a3e4fa47b93871ea76394da, type: 2}
+  beaverHelped: {fileID: 11400000, guid: a928a0ec883ae4b40a578eb341f6fa99, type: 2}
   b2: {fileID: 0}
   b3: {fileID: 0}
   BlockageIdle: {fileID: 11400000, guid: 1de72cf474c8327408104571e8ecae53, type: 2}
