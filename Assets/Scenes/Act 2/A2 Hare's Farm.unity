@@ -807,18 +807,12 @@ MonoBehaviour:
   ScarecrowFabric: {fileID: 11400000, guid: a6bdf2a71afcd7a038b72b95c8836ee7, type: 2}
   HareInit: {fileID: 11400000, guid: 7584c9a7f1413e7c4a2d6384e8c8e3c1, type: 2}
   HareIdle: {fileID: 11400000, guid: 9fff33103c462c0ef88dfb40d668b30c, type: 2}
-  hareIdleChoices: {fileID: 11400000, guid: bbc8d217a1ea6fe45b5d030a689704be, type: 2}
-  hareNewChoices:
-  - What can we do?
-  - Let's plant a seed.
-  hareNewOutcomes:
-  - {fileID: 11400000, guid: 3d528298c9d0d6840bc2107b4f4e97ab, type: 2}
+  hareIdleAdded: {fileID: 11400000, guid: aacdbcdd86555094993175475adfa846, type: 2}
   hareAfterSubgoalOutcomes:
-  - {fileID: 11400000, guid: 0409ec87b63919c4c9c511c74f570908, type: 2}
   - {fileID: 11400000, guid: 3eaf21656404548448b1de4bfeed77f8, type: 2}
   - {fileID: 11400000, guid: 13e90d4452b2a844d8b9ebfa2e03f683, type: 2}
   - {fileID: 11400000, guid: 4e1be4c50a844564ba5b4afe4dadcd16, type: 2}
-  hareNumInitialChoices: 3
+  harePlantIdle: {fileID: 11400000, guid: 8857540e601713e448e43003ee358d44, type: 2}
   LionInit: {fileID: 0}
   LionIdle: {fileID: 0}
   LionConvinced: {fileID: 0}

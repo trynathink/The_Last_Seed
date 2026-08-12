@@ -16,5 +16,5 @@ MonoBehaviour:
   - Yes.
   - Not yet.
   Outcomes:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 3ee1019342bbfc845bf42323566460b9, type: 2}
+  - {fileID: 11400000, guid: 037b9bb33eb8cb34fa976d4e9dd4db64, type: 2}

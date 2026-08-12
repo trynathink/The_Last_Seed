@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: hare ready idle
+  m_Name: hare ready yes
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Hare
   Lines:
-  - Are you ready to plant the seed?
+  - Okay, let's do it.
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
   trust: 0
-  choice: {fileID: 11400000, guid: a097b8421991d53489133401040bfd19, type: 2}
+  choice: {fileID: 0}
