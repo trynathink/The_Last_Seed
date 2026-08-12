@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e5e496ddbbeb10e4a7545d18f45fe97
+guid: e50dbd621e5d74040bf7cb7ce8b09a4e
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 168d14175bdd78cbea3aa8b4befffedf
+    spriteID: c955f66d3c544c842b2628ccbf31ae83
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +146,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3840.0,"y":2160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
       Act1_Living Room_Crowbar (open closet)_0: 1874212805457855844
   mipmapLimitGroupName: 
