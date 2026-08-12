@@ -16,14 +16,28 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     // hare
     public ScriptsSO HareInit;
     public ScriptsSO HareIdle;
+	[SerializeField] private ScriptsSO hareIdleAdded;
+	[SerializeField] private ScriptsSO[] hareAfterSubgoalOutcomes;
+	[SerializeField] private ScriptsSO harePlantIdle;
 
 	// Lion
 	public ScriptsSO LionInit;
 	public ScriptsSO LionIdle;
 	public ScriptsSO LionConvinced;
+	public ScriptsSO LionConvinced2;
+	public ScriptsSO LionConvinced3;
 	public ScriptsSO LionSack;
 	public ScriptsSO LionLumber;
 	public ScriptsSO LionCrop;
+	public ScriptsSO LionIdle2;
+	public ScriptsSO LionIdle3;
+	public ScriptsSO LionIdle4;
+	public ScriptsSO LionIdle5;
+	public ScriptsSO LionTrust;
+
+	// Lion Scene - Fire
+	public ScriptsSO FireInit;
+	public ScriptsSO FireBeforeLionIdle3;
 
 	// Crowd
 	public ScriptsSO CrowdCropHint;
@@ -40,13 +54,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 	// windmill outside
 	[SerializeField] private ScriptsSO firstWindmillSight;
-	[SerializeField] private ScriptsSO brokenPanel, fixedPanel;
+	[SerializeField] private ScriptsSO brokenPanel, fixedPanel, cantFixPanel;
+	[SerializeField] private ScriptsSO brokenWindmill;
+	[SerializeField] private ScriptsSO sackOpen;
 	[SerializeField] private Animator windmillAnim;
 	[SerializeField] private Image windmillPanels;
 	[SerializeReference] private Sprite windmillFixed;
-	const string seenWindmillTrigger = "WindmillSeen";
-	const string panelFixedTrigger = "WindmillPanelFixed";
-	// TODO: should probably have a table or enum for triggers, since these will be used elsewhere too
 
 	// windmill inside
 	[SerializeField] private ScriptsSO missingRod;
@@ -77,13 +90,13 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         switch (SceneManager.GetActiveScene().name)
         {
 			case SceneNames.ACT2_WINDMILL_OUTSIDE:
-				if (!PDSO.triggers.Contains(seenWindmillTrigger))
+				if (!PDSO.triggers.Contains(TriggerNames.WINDMILL_SEEN))
 				{
 					DM.SetLines(firstWindmillSight);
-					PDSO.triggers.Add(seenWindmillTrigger);
+					PDSO.triggers.Add(TriggerNames.WINDMILL_SEEN);
 				}
 
-				if (PDSO.triggers.Contains(panelFixedTrigger))
+				if (PDSO.triggers.Contains(TriggerNames.WINDMILL_PANEL_FIXED))
 				{
 					FixWindmillPanel(string.Empty);
 				}
@@ -109,6 +122,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 {
                     NakedScarecrow();
                 }
+
+				if (PDSO.triggers.Contains(TriggerNames.HARE_MORE_DIALOGUE))
+				{
+					HareIdle = hareIdleAdded;
+					// TODO: swap out the current afterSubgoalOutcome if the current one is incorrect
+				}
                 break;
 			case SceneNames.ACT2_BEAVER:
                 if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_JAM_FIX))
@@ -163,7 +182,18 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
     public void HareDialogue()
     {
-        DM.SetLines(HareInit);
+		if (PDSO.triggers.Contains(TriggerNames.HARE_NEW_IDLE))
+		{
+			DM.SetLines(harePlantIdle);
+		}
+		else if (PDSO.triggers.Contains(TriggerNames.HARE_FIRST_INTERACTION))
+		{
+			DM.SetLines(HareIdle);
+		}
+		else
+		{
+			DM.SetLines(HareInit);
+		}
     }
 
 	[SerializeReference]
@@ -179,21 +209,74 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         bool containsBlanketOrFabric = PDSO.Inventory
                         .Any(item => item.Name == CollectibleType.Blanket.ToString()
                                 || item.Name == CollectibleType.Fabric.ToString());
+		bool notFirst = PDSO.triggers.Contains(TriggerNames.SCARECROW_FIRST_INTERACTION);
         
-        if(!containsBlanketOrFabric && PDSO.triggers.Contains(TriggerNames.WINDMILL_SCARECROW_CLOTH))
+        if(!containsBlanketOrFabric && notFirst)
         {
             DM.SetLines(ScarecrowFabric);
         }
         else
         {
             DM.SetLines(ScarecrowIdle);
+			if (!notFirst) PDSO.triggers.Add(TriggerNames.SCARECROW_FIRST_INTERACTION);
         }
     }
 
+	public override void addTrigger(string t)
+	{
+		if (t == TriggerNames.HARE_NAKED_SCARECROW)
+		{
+			NakedScarecrow();
+		}
+		else if (t == TriggerNames.HARE_MORE_DIALOGUE && !PDSO.triggers.Contains(TriggerNames.HARE_MORE_DIALOGUE))
+		{
+			// TODO: correctly decide which index of afterSubgoalOutcomes should be added at the end
+			HareIdle = hareIdleAdded;
+		}
+
+		base.addTrigger(t);
+	}
+
 	public void LionDialogue()
 	{
-		Debug.Log("lion dialogue");
-		if(PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
+		if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_TELLFOLLOWERS))
+		{
+			DM.SetLines(LionTrust);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_BUILDLION))
+		{
+			DM.SetLines(LionIdle5);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_NATURESRAGE)
+			&& PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_SANDWICH))
+		{
+			DM.SetLines(LionIdle4);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_CONVINCED_3))
+		{
+			DM.SetLines(LionConvinced3);
+		}
+		else if (PDSO.triggers.Contains(TriggerNames.LION_QUESTION_ASKED_3)
+			&& PDSO.triggers.Contains(TriggerNames.LION_FIRE_INTERACTION))
+		{
+			DM.SetLines(LionConvinced3);
+			PDSO.triggers.Add(TriggerNames.LION_CONVINCED_3);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_WATERLIE)
+			&& PDSO.triggers.Contains(TriggerNames.LION_CONVINCED_2))
+		{
+			DM.SetLines(LionIdle3);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_CONVINCED_2))
+		{
+			DM.SetLines(LionConvinced2);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_THEWORLDWOULDDIE)
+				&& PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
+		{
+			DM.SetLines(LionIdle2);
+		}
+		else if(PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
 		{
 			DM.SetLines(LionConvinced);
 		}
@@ -228,6 +311,26 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		}
 	}
 
+	public void LionSceneFireDialogue()
+	{
+		switch (PDSO.HeldItem)
+		{
+			case ItemNames.METAL:
+				if(PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_WATERLIE))
+				{
+					PDSO.triggers.Add(TriggerNames.LION_FIRE_INTERACTION);
+				}
+				else
+				{
+					DM.SetLines(FireBeforeLionIdle3);
+				}
+				break;
+			default:
+				DM.SetLines(FireInit);
+				break;
+		}
+	}
+
 	public void CrowdDialogue()
 	{
 		if (!PDSO.triggers.Contains(TriggerNames.LION_CONVINCED))
@@ -249,7 +352,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				{
 					if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_BROK_FIX) && PDSO.triggers.Contains(TriggerNames.WATERWHEEL_JAM_FIX))
 					{
-						if (PDSO.triggers.Contains(panelFixedTrigger) && PDSO.triggers.Contains(handleFixedTrigger))
+						if (PDSO.triggers.Contains(TriggerNames.WINDMILL_PANEL_FIXED) && PDSO.triggers.Contains(handleFixedTrigger))
 						{
 							DM.SetLines(BeaverIdleFixed);
 						}
@@ -314,6 +417,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		{
 			sack1.enabled = false;
 			sack2.enabled = true;
+			DM.SetLines(sackOpen);
 		}
 		else if (sack2.enabled)
 		{
@@ -339,29 +443,26 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		{
 			case "":
 			{
-
-				if (!PDSO.triggers.Contains(panelFixedTrigger))
+				if (!PDSO.triggers.Contains(TriggerNames.WINDMILL_PANEL_FIXED))
 				{
-                    const string trigger = TriggerNames.WINDMILL_SCARECROW_CLOTH;
-                    if (!PDSO.ItemContains("Blanket") && !PDSO.triggers.Contains(trigger))
-                    {
-                        PDSO.triggers.Add(TriggerNames.WINDMILL_SCARECROW_CLOTH);
-                    }
                     DM.SetLines(brokenPanel);
                 }
 				else
 				{
-						DM.SetLines(fixedPanel);
+					DM.SetLines(fixedPanel);
 				}
-
 				break;
 			}
 			case "Blanket": case "Fabric":
 			{
-                if (!PDSO.triggers.Contains(panelFixedTrigger))
+                if (PDSO.triggers.Contains(TriggerNames.WINDMILL_HANDLE_FIXED))
+				{
+					DM.SetLines(cantFixPanel);
+				}
+				else if (!PDSO.triggers.Contains(TriggerNames.WINDMILL_PANEL_FIXED))
 				{
 					FixWindmillPanel(PDSO.HeldItem);
-					PDSO.triggers.Add(panelFixedTrigger);
+					PDSO.triggers.Add(TriggerNames.WINDMILL_PANEL_FIXED);
 				}
 				break;
 			}
@@ -369,6 +470,24 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				DM.SetLines(DefaultItemFail);
 				break;
 		}
+	}
+
+	public bool WindmillFixed()
+	{
+		var fixedTriggers = new List<String> { TriggerNames.WINDMILL_PANEL_FIXED, TriggerNames.WINDMILL_HANDLE_FIXED };
+		return PDSO.triggers.Intersect(fixedTriggers).Count() == 2;
+	}
+	
+
+	public void WindmillInteract()
+	{
+		Action action = () => {
+			{
+				if (!WindmillFixed())
+					DM.SetLines(brokenWindmill);
+			}
+		};
+		CatchAnyItemHeld(action);
 	}
 
 	// Windmill Insider Scene
