@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7c8101346d1736d4db30ca98c8db4b0b
+guid: 964637d322db053b882562fc9a792607
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 4503774bdcf01354d9dcd6f9d4459a4d
+    spriteID: a9055c4e51390cdbdbbc2c8efa9f1c2f
     internalID: 0
     vertices: []
     indices: 
@@ -146,7 +146,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3840.0,"y":2160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Act1_Living Room_Closet_Open_0: -19943025192287271
   mipmapLimitGroupName: 

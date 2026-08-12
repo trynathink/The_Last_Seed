@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - Some of the fabric on this blade seems to have been ripped open..
-  - It can't catch much wind like that.
+  - "Looks like one of the sails is broken\u2026"
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 

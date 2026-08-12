@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
   m_Name: Hare Idle
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
-  Character: 
+  Character: Hare
   Lines:
-  - Hare idle...
+  - Nothing grows no more...
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
-  choice: {fileID: 0}
+  trust: 0
+  choice: {fileID: 11400000, guid: 5f55b9e26d226ce47ad94f9458f93dca, type: 2}

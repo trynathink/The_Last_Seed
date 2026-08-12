@@ -12,6 +12,7 @@ public class GameSceneManager : GameSceneManagerBase
 
     [SerializeField] private AudioClip alarm;
     [SerializeField] private AudioClip boards;
+    [SerializeField] private GameObject clockAnimation;
 
     [SerializeReference]
     ScriptsSO bearIdle, bearInit;
@@ -69,6 +70,7 @@ public class GameSceneManager : GameSceneManagerBase
     {
         isAlarmOff = true;
 		BackgroundSFX.StopLoop();
+        clockAnimation.SetActive(false);
     }
 
     // Bedroom Scene

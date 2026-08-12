@@ -119,7 +119,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     TalkingToMyself();
                 }
-				else
+				else if (!keepWord)
                 {
 					NPCReset();
 					StartCoroutine(NPCSpeak());
