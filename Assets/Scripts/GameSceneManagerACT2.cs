@@ -139,6 +139,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 					scene.transform.Find("Shovel Handle").gameObject.SetActive(false);
 				}
+				if (PDSO.triggers.Contains(TriggerNames.SPADE_GAINED))
+				{
+					spadeImage.SetActive(false);
+				}
                 break;
 			case SceneNames.ACT2_LION:
 				if (!PDSO.triggers.Contains(TriggerNames.LION_SCENE_ENTRY))
@@ -162,10 +166,9 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	private void HareSubgoals()
 	{
 		int subgoals = 0;
-		// TODO: these item/trigger names are currently incorrect
-		if (PDSO.ItemContains("Water")) subgoals++;
-		if (PDSO.ItemContains("Shovel")) subgoals++;
-		if (PDSO.triggers.Contains("SeedArea")) subgoals++;
+		if (PDSO.triggers.Contains(TriggerNames.LION_OBSTACLE_TELLFOLLOWERS)) subgoals++;
+		if (PDSO.triggers.Contains(TriggerNames.SPADE_GAINED)) subgoals++;
+		if (PDSO.triggers.Contains("Bird Move")) subgoals++;
 		hareIdleAdded.choice.Outcomes[hareIdleAdded.choice.Outcomes.Count-1] = hareAfterSubgoalOutcomes[subgoals];
 		HareIdle = hareIdleAdded;
 	}
@@ -667,7 +670,8 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
     [SerializeReference]
     ScriptsSO EngineOn, EngineOff, EngineOnCrowbar;
-	ItemSO Spade;
+    [SerializeField] ItemSO Spade;
+    [SerializeField] GameObject spadeImage;
 
     public void Engine()
 	{
@@ -694,6 +698,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					{
 						addTrigger(TriggerNames.SPADE_GAINED);
 						PDSO.Inventory.Add(Spade);
+						spadeImage.SetActive(false);
                     }
                 }
                 else

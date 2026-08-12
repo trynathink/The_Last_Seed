@@ -20,4 +20,4 @@ MonoBehaviour:
   itemGain: {fileID: 0}
   SceneChange: 
   trust: 0
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: 8ee8059ebf7411743991db6223b2c651, type: 2}

@@ -16,7 +16,7 @@ MonoBehaviour:
   Lines:
   - Okay, let's do it.
   trigger: 
-  itemGain: {fileID: 0}
+  itemGain: {fileID: 11400000, guid: bd5ff789c0ee6394b9c9401324075594, type: 2}
   SceneChange: 
   trust: 0
   choice: {fileID: 0}
