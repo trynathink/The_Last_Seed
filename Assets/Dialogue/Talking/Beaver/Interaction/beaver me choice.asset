@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9bc00b0163cb4c408dcbe8105759903, type: 3}
-  m_Name: Temp Choice 1 Beaver
+  m_Name: beaver me choice
   m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
   Choices:
-  - But like, I need it
-  - Why do you even have an engine
+  - Me?
   Outcomes:
-  - {fileID: 11400000, guid: 4fd63ff1e05b72c418c787753df07f97, type: 2}
-  - {fileID: 11400000, guid: e03d1420baf71a142bd2ea09ffac8647, type: 2}
+  - {fileID: 11400000, guid: a4fd59789686b624c82997015e317d00, type: 2}

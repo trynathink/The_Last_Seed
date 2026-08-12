@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: hare scared
+  m_Name: beaver shovel response
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
-  Character: Hare
+  Character: Beaver
   Lines:
-  - ...
-  - I-I'm scared.
-  trigger: 
+  - HA! That good for nothin' hare can't grow no crops anyhow.
+  - Ask me, I did em a favor!
+  trigger: BeaverShovelAsked
   itemGain: {fileID: 0}
   SceneChange: 
   trust: 0
-  choice: {fileID: 11400000, guid: 8ee8059ebf7411743991db6223b2c651, type: 2}
+  choice: {fileID: 11400000, guid: 0ea1d0741847f9847a630fcf6f28d2c1, type: 2}

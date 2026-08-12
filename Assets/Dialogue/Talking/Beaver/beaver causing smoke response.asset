@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Beaver Idle Fixed
+  m_Name: beaver causing smoke response
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Beaver
   Lines:
-  - Everything is fixed!
-  - Well I suppose I can turn off that machine there then
-  - My ENGINE is no more
-  trigger: EngineOff
+  - That's my ENGINE! I ^made it!
+  trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
   trust: 0
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: f67aae42643b2534f85ca339f50a2e4d, type: 2}

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Beaver Idle Unhappy
+  m_Name: beaver smog response
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Beaver
   Lines:
-  - What did I tells yous about talking to me!
-  - This water wheel looks so very broken to me!
-  - And if this ain'ts fixed, then that windmill can't possibly work either.
+  - Look around! The worlds hurtin' plenty.
+  - Might as well do what I want.
+  - Won't make no difference.
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
   trust: 0
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: ddcf82f7a052a2241b9b5833fabbd9ad, type: 2}

@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: hare scared
+  m_Name: beaver help response
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
-  Character: Hare
+  Character: Beaver
   Lines:
-  - ...
-  - I-I'm scared.
+  - Hmph...
+  - I gotta do everything 'round here.
+  - Take this and get outta here.
   trigger: 
-  itemGain: {fileID: 0}
+  itemGain: {fileID: 11400000, guid: c2dd9b442ed0dd24ab26345ff9807bd1, type: 2}
   SceneChange: 
   trust: 0
-  choice: {fileID: 11400000, guid: 8ee8059ebf7411743991db6223b2c651, type: 2}
+  choice: {fileID: 0}
