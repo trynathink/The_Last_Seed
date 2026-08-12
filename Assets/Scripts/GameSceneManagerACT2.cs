@@ -125,8 +125,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 				if (PDSO.triggers.Contains(TriggerNames.HARE_MORE_DIALOGUE))
 				{
-					HareIdle = hareIdleAdded;
-					// TODO: swap out the current afterSubgoalOutcome if the current one is incorrect
+					HareSubgoals();
 				}
                 break;
 			case SceneNames.ACT2_BEAVER:
@@ -159,6 +158,17 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				
         }
     }
+
+	private void HareSubgoals()
+	{
+		int subgoals = 0;
+		// TODO: these item/trigger names are currently incorrect
+		if (PDSO.ItemContains("Water")) subgoals++;
+		if (PDSO.ItemContains("Shovel")) subgoals++;
+		if (PDSO.triggers.Contains("SeedArea")) subgoals++;
+		hareIdleAdded.choice.Outcomes[hareIdleAdded.choice.Outcomes.Count-1] = hareAfterSubgoalOutcomes[subgoals];
+		HareIdle = hareIdleAdded;
+	}
 
     public override void NextScene(string sceneName)
     {
@@ -230,17 +240,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		}
 		else if (t == TriggerNames.HARE_MORE_DIALOGUE && !PDSO.triggers.Contains(TriggerNames.HARE_MORE_DIALOGUE))
 		{
-			// TODO: correctly decide which index of afterSubgoalOutcomes should be added at the end
-			HareIdle = hareIdleAdded;
-		}
-		else if (t == "BeaverCheckShovelAsk")
-		{
-			return;
-		}
-		else if (t == "BeaverCheckRope")
-		{
-			// TODO: check rope status, then change outcome of help choice
-			return;
+			HareSubgoals();
 		}
 
 		base.addTrigger(t);
@@ -354,8 +354,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	[SerializeField] ChoiceSO beaverIdleHare, beaverIdleBoth;
 	[SerializeField] ScriptsSO beaverNoneFixed, beaverPartialFixed, beaverFixed;
 	[SerializeField] ChoiceSO beaverHelped;
-	// TODO: use these to change outcome on turn off engine choice
-	// TODO: going back to idle choices from interaction should be changed dynamically, but can stay for now
+	// TODO: going back to idle choices from word interaction should be changed dynamically, but can stay for now
 
 	public void BeaverDia()
 	{
