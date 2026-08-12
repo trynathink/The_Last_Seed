@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - Ask the Hare if you could take the scarecrow's jacket?
+  - Should I ask the hare for the jacket?
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 

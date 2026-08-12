@@ -27,8 +27,8 @@ public static class TriggerNames
     public const string HARE_NAKED_SCARECROW = "NakedScarecrow";
 	public const string HARE_MORE_DIALOGUE = "HareMoreDialogue";
 	public const string HARE_FIRST_INTERACTION = "HareFirstInteraction";
+	public const string SCARECROW_FIRST_INTERACTION = "ScarecrowFirstInteraction";
     public const string WINDMILL_HANDLE_FIXED = "WindmillHandleFixed";
-    public const string WINDMILL_SCARECROW_CLOTH = "WindmillScarecrowCloth";
 	public const string WINDMILL_SEEN = "WindmillSeen";
 	public const string WINDMILL_PANEL_FIXED = "WindmillPanelFixed";
     public const string ENGINE_OFF = "EngineOff";

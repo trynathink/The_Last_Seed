@@ -21,7 +21,6 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	[SerializeField] private ScriptsSO[] hareNewOutcomes;
 	[SerializeField] private ScriptsSO[] hareAfterSubgoalOutcomes;
 	[SerializeField] private int hareNumInitialChoices;
-	private bool hareNewChoicesUnlocked = false;
 
 	// Lion
 	public ScriptsSO LionInit;
@@ -221,16 +220,28 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         bool containsBlanketOrFabric = PDSO.Inventory
                         .Any(item => item.Name == CollectibleType.Blanket.ToString()
                                 || item.Name == CollectibleType.Fabric.ToString());
+		bool notFirst = PDSO.triggers.Contains(TriggerNames.SCARECROW_FIRST_INTERACTION);
         
-        if(!containsBlanketOrFabric && PDSO.triggers.Contains(TriggerNames.WINDMILL_SCARECROW_CLOTH))
+        if(!containsBlanketOrFabric && notFirst)
         {
             DM.SetLines(ScarecrowFabric);
         }
         else
         {
             DM.SetLines(ScarecrowIdle);
+			if (!notFirst) PDSO.triggers.Add(TriggerNames.SCARECROW_FIRST_INTERACTION);
         }
     }
+
+	public override void addTrigger(string t)
+	{
+		base.addTrigger(t);
+
+		if (t == TriggerNames.HARE_NAKED_SCARECROW)
+		{
+			NakedScarecrow();
+		}
+	}
 
 	public void LionDialogue()
 	{
@@ -440,10 +451,6 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			{
 				if (!PDSO.triggers.Contains(TriggerNames.WINDMILL_PANEL_FIXED))
 				{
-                    if (!PDSO.ItemContains("Blanket") && !PDSO.triggers.Contains(TriggerNames.WINDMILL_SCARECROW_CLOTH))
-                    {
-                        PDSO.triggers.Add(TriggerNames.WINDMILL_SCARECROW_CLOTH);
-                    }
                     DM.SetLines(brokenPanel);
                 }
 				else

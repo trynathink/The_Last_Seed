@@ -44,7 +44,7 @@ public class GameSceneManagerBase : MonoBehaviour
 
     }
 
-	public void addTrigger(string t)
+	public virtual void addTrigger(string t)
     {
         if (!PDSO.triggers.Contains(t))
         {
