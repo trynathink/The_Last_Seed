@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 366b66216f3f5b0a6921e88d2efcb4b4
+guid: 15481c062608f9c4eb71686a1079ea4a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2837418013844445624
-    second: Act1_Kitchen_Boards_0
-  - first:
-      213: -6989948867869590710
-    second: Act1_Kitchen_Boards_1
+      213: -6776373413603824847
+    second: Act1_Kitchen_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act1_Kitchen_Boards_0
+      name: Act1_Kitchen_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,15 +121,15 @@ TextureImporter:
         width: 3840
         height: 2160
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 846e18589577f98d0800000000000000
-      internalID: -2837418013844445624
+      spriteID: 13b2eb8784c75f1a0800000000000000
+      internalID: -6776373413603824847
       vertices: []
       indices: 
       edges: []
@@ -141,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: cd0d15fbfc8a68e1bbac0bb905654dce
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -149,11 +146,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3840.0,"y":2160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Act1_Kitchen_Boards_0: -2837418013844445624
+      Act1_Kitchen_0: -6776373413603824847
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
