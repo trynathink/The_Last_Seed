@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e1b87a47dd87ca145be0cd25789aab85
+guid: 2f9b70a66a1d795c4a4f42382065b941
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3667460307331931938
-    second: Act1_Bedroom_Clock_0
+      213: 4172723044427190317
+    second: Act1_Bedroom_blanket_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act1_Bedroom_Clock_0
+      name: Act1_Bedroom_blanket_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22f5d5ee7bf65e230800000000000000
-      internalID: 3667460307331931938
+      spriteID: d205b29308d78e930800000000000000
+      internalID: 4172723044427190317
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 388d91d419ea1e340bc88890ce1fafac
+    spriteID: 1d20b873adcb1eb5c94c259fd4d89819
     internalID: 0
     vertices: []
     indices: 
@@ -150,7 +150,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3840.0,"y":2160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Act1_Bedroom_Clock_0: 3667460307331931938
+      Act1_Bedroom_blanket_0: 4172723044427190317
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

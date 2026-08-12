@@ -1,10 +1,37 @@
 fileFormatVersion: 2
-guid: d7bf7ccd35fc1f541909228548d8e28e
+guid: 86632b5e87ebd10e0b87a0abf2acd229
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4951453466454309862
-    second: Act1_Bedroom_0
+      213: -8392980649483141374
+    second: Act1_Bedroom_Sound_3_0
+  - first:
+      213: -324214961070392530
+    second: Act1_Bedroom_Sound_3_1
+  - first:
+      213: -7800908207658749697
+    second: Act1_Bedroom_Sound_3_2
+  - first:
+      213: -5175908060944009948
+    second: Act1_Bedroom_Sound_3_3
+  - first:
+      213: -8983580514957896460
+    second: Act1_Bedroom_Sound_3_4
+  - first:
+      213: 4327906733738874028
+    second: Act1_Bedroom_Sound_3_5
+  - first:
+      213: -4538213039918289841
+    second: Act1_Bedroom_Sound_3_6
+  - first:
+      213: 4446637256736002816
+    second: Act1_Bedroom_Sound_3_7
+  - first:
+      213: 1119611236552163199
+    second: Act1_Bedroom_Sound_3_8
+  - first:
+      213: 1382954535987063743
+    second: Act1_Bedroom_Sound_3_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,11 +123,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act1_Bedroom_0
+      name: Act1_Bedroom_Sound_3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -108,15 +148,15 @@ TextureImporter:
         width: 3840
         height: 2160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a144d126e47e84bb0800000000000000
-      internalID: -4951453466454309862
+      spriteID: 20f74d43194268b80800000000000000
+      internalID: -8392980649483141374
       vertices: []
       indices: 
       edges: []
@@ -125,7 +165,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: de02d0b890522561c956abd22709a5fe
     internalID: 0
     vertices: []
     indices: 
@@ -133,9 +173,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3840.0,"y":2160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Act1_Bedroom_0: -4951453466454309862
+      Act1_Bedroom_Sound_3_0: -8392980649483141374
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
