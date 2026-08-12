@@ -349,18 +349,26 @@ public class DialogueManager : MonoBehaviour
             
         }
 
-        if(script.trigger != string.Empty && script.trigger != null)
+        if (script.trust != 0)
         {
-            GameObject.Find("Canvas").SendMessage("addTrigger", script.trigger);
+            switch (script.Character)
+            {
+                case "Bird":
+                    string check = script.trustVal;
+
+                    if (!PDSO.triggers.Contains(check))
+                    {
+                        GameObject.Find("Canvas").SendMessage("addTrigger", check);
+
+                        PDSO.BirdTrust += script.trust;
+                    }
+                    break;
+            }
         }
 
-        if(script.trust != 0)
+        if (script.trigger != string.Empty && script.trigger != null)
         {
-            FieldInfo fi = PDSO.GetType().GetField($"{script.Character}Trust");
-
-            int oldTrust = (int)fi.GetValue(PDSO);
-
-            fi.SetValue(PDSO, oldTrust + script.trust);
+            GameObject.Find("Canvas").SendMessage("addTrigger", script.trigger);
         }
 
         if (script.SceneChange != string.Empty && script.SceneChange != null)
@@ -390,17 +398,58 @@ public class DialogueManager : MonoBehaviour
     {
         for (int i = 0; i < script.choice.Choices.Count; i++)
         {
-            Transform c = Choice.transform.GetChild(i);
-            c.gameObject.SetActive(true);
-            c.GetComponent<Button>().enabled = true;
-            c.GetComponent<Image>().enabled = true;
-            c.GetChild(0).GetComponent<TMP_Text>().text = script.choice.Choices[i];
+            if (script.Character == "Bird")
+            {
+                if (script.choice.TrigReq[i] == null || script.choice.TrigReq[i] == "" || PDSO.triggers.Contains(script.choice.TrigReq[i]))
+                {
+                    Transform c = Choice.transform.GetChild(i);
+                    c.gameObject.SetActive(true);
+                    c.GetComponent<Button>().enabled = true;
+                    c.GetComponent<Image>().enabled = true;
+                    c.GetChild(0).GetComponent<TMP_Text>().text = script.choice.Choices[i];
+                }
+            }
+            else
+            {
+                Transform c = Choice.transform.GetChild(i);
+                c.gameObject.SetActive(true);
+                c.GetComponent<Button>().enabled = true;
+                c.GetComponent<Image>().enabled = true;
+                c.GetChild(0).GetComponent<TMP_Text>().text = script.choice.Choices[i];
+            }
         }
     }
 
+    [SerializeReference]
+    ScriptsSO BirdFail;
+
     public void Chose(int c)
     {
-        SetLines(script.choice.Outcomes[c]);
+        if (script.Character == "Bird")
+        {
+            if (script.choice.TrustReq[c] <= PDSO.BirdTrust)
+            {
+                SetLines(script.choice.Outcomes[c]);
+            }
+            else
+            {
+                if (script.choice.TrustFail.Count > 0)
+                {
+                    if (script.choice.TrustFail[c] != null)
+                    {
+                        SetLines(script.choice.TrustFail[c]);
+                    }
+                }
+                else
+                {
+                    SetLines(BirdFail);
+                }
+            }
+        }
+        else
+        {
+            SetLines(script.choice.Outcomes[c]);
+        }
     }
 
     void ResetChoice()

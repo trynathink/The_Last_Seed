@@ -64,13 +64,8 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 	private void Awake()
 	{
-		crowdLines = new ScriptsSO[4];
-		crowdLines[0] = CrowdLionPraise;
-		crowdLines[1] = CrowdCropHint;
-		crowdLines[2] = CrowdSackHint;
-		crowdLines[3] = CrowdLumberHint;
-		crowdLineIndex = 0;
-	}
+        Cursor.SetCursor(default, default, CursorMode.ForceSoftware);
+    }
 
     private void Start()
     {
@@ -123,7 +118,15 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				}
                 break;
 			case SceneNames.ACT2_LION:
-				if (!PDSO.triggers.Contains(TriggerNames.LION_SCENE_ENTRY))
+
+                crowdLines = new ScriptsSO[4];
+                crowdLines[0] = CrowdLionPraise;
+                crowdLines[1] = CrowdCropHint;
+                crowdLines[2] = CrowdSackHint;
+                crowdLines[3] = CrowdLumberHint;
+                crowdLineIndex = 0;
+
+                if (!PDSO.triggers.Contains(TriggerNames.LION_SCENE_ENTRY))
 				{
 					DM.SetLines(LionInit);
 					PDSO.triggers.Add(TriggerNames.LION_SCENE_ENTRY);
@@ -280,25 +283,32 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		}
 	}
 
+	[SerializeReference]
+	ScriptsSO BirdIntro, BirdToken, BirdIdle;
+
     public void BirdDialogue()
     {
         switch (PDSO.HeldItem)
         {
             case "":
-                if (PDSO.triggers.Contains("BirdTrust"))
-                {
-
+				if (PDSO.triggers.Contains(TriggerNames.BIRD_CONVICED) && PDSO.triggers.Contains(TriggerNames.BIRD_TOKEN))
+				{
+                    DM.SetLines(BirdIdle);
                 }
-                else
-                {
-                    DM.SetLines(BirdTrustMinigame);
+				else
+				{
+                    DM.SetLines(BirdIntro);
                 }
-                    break;
+				break;
             case "Tree Token":
-                if (PDSO.triggers.Contains("BirdTrust"))
+                if (PDSO.triggers.Contains(TriggerNames.BIRD_CONVICED))
                 {
-
+                    DM.SetLines(BirdToken);
+					PDSO.RemoveItem("Tree Token");
                 }
+                break;
+            default:
+                DM.SetLines(DefaultItemFail);
                 break;
         }
     }

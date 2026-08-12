@@ -16,6 +16,7 @@ public class ScriptsSO : ScriptableObject
 
     public string SceneChange;
 
+    public string trustVal;
     public int trust;
 
     public ChoiceSO choice;

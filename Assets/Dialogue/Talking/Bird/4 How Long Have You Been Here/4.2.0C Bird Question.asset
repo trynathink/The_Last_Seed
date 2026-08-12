@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bc00b0163cb4c408dcbe8105759903, type: 3}
+  m_Name: 4.2.0C Bird Question
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  Choices:
+  - I'm sorry this happened.
+  - It must be hard to talk about.
+  Outcomes:
+  - {fileID: 11400000, guid: 22c418c59145e8840b09dda13975a555, type: 2}
+  - {fileID: 11400000, guid: b7e584c6b7662744ea35c6b25b982c80, type: 2}
+  TrustReq: 0000000000000000
+  TrustFail: []
+  TrigReq:
+  - 
+  - 
