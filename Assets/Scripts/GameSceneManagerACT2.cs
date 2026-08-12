@@ -16,6 +16,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     // hare
     public ScriptsSO HareInit;
     public ScriptsSO HareIdle;
+	[SerializeField] private ChoiceSO hareIdleChoices;
+	[SerializeField] private string[] hareNewChoices;
+	[SerializeField] private ScriptsSO[] hareNewOutcomes;
+	[SerializeField] private ScriptsSO[] hareAfterSubgoalOutcomes;
+	[SerializeField] private int hareNumInitialChoices;
+	private bool hareNewChoicesUnlocked = false;
 
 	// Lion
 	public ScriptsSO LionInit;
@@ -119,6 +125,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 {
                     NakedScarecrow();
                 }
+				TryAddNewHareDialogue();
                 break;
 			case SceneNames.ACT2_BEAVER:
                 if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_JAM_FIX))
@@ -171,9 +178,34 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		base.NextScene(sceneName);
     }
 
+	private void TryAddNewHareDialogue()
+	{
+		if (PDSO.triggers.Contains(TriggerNames.HARE_MORE_DIALOGUE))
+		{
+			// TODO: correctly decide which index of afterSubgoalOutcomes should be added at the end
+			if (hareIdleChoices.Choices.Count == hareNumInitialChoices)
+			{
+				hareIdleChoices.Choices.AddRange(hareNewChoices);
+				hareIdleChoices.Outcomes.AddRange(hareNewOutcomes);
+				hareIdleChoices.Outcomes.Add(hareAfterSubgoalOutcomes[0]);
+			}
+			//else
+			// TODO: swap out the current afterSubgoalOutcome if the current one is incorrect
+		}
+	}
+
     public void HareDialogue()
     {
-        DM.SetLines(HareInit);
+		if (PDSO.triggers.Contains(TriggerNames.HARE_FIRST_INTERACTION))
+		{
+			DM.SetLines(HareIdle);
+			TryAddNewHareDialogue();
+		}
+		else
+		{
+			DM.SetLines(HareInit);
+		}
+		// TODO: setting new idle when u get to end of last branch
     }
 
 	[SerializeReference]

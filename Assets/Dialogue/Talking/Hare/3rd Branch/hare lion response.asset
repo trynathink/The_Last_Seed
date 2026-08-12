@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Hare Idle
+  m_Name: hare lion response
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Hare
   Lines:
-  - Nothing grows no more...
+  - I haven't seen no water since the lion came.
+  - S-some big plan he has.
+  - ...No seed could survive without water.
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
   trust: 0
-  choice: {fileID: 11400000, guid: bbc8d217a1ea6fe45b5d030a689704be, type: 2}
+  choice: {fileID: 11400000, guid: 414a4151c264441418efd50b8a5ecf7d, type: 2}

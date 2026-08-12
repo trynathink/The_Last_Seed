@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Hare Idle
+  m_Name: hare folks interact miss
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Hare
-  Lines:
-  - Nothing grows no more...
+  Lines: []
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
