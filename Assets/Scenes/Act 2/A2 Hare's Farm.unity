@@ -1810,6 +1810,7 @@ GameObject:
   - component: {fileID: 1451499263}
   - component: {fileID: 1451499262}
   - component: {fileID: 1451499264}
+  - component: {fileID: 1451499265}
   m_Layer: 0
   m_Name: SunAnimation
   m_TagString: Untagged
@@ -1968,6 +1969,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb08a6c318a18d4a9253abe7b5b47ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SRAnimClipToImageAnimClip
+--- !u!114 &1451499265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451499258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e363403b3aa52a379e9ccf4a6e1c7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableImage
+  alphaThreshold: 0.1
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 770648960}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: SetLines
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: adadeb80c9df8f24aa71902f4ac3dd97, type: 2}
+          m_ObjectArgumentAssemblyTypeName: ScriptsSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1547030913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2184,7 +2213,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1926109766
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2299,8 +2328,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 533424908}
-  - {fileID: 1451499259}
   - {fileID: 576756879}
+  - {fileID: 1451499259}
   - {fileID: 1926109766}
   - {fileID: 768128110}
   - {fileID: 959848501}
