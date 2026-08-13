@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b812a50917bc6f04fbeadd698a030928
+guid: 2505e96871b193a419538d0dfdeb2ebf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7461816933957899184
-    second: Act2_windmill inside_COMBINED rope and stick (INVENTORY)_0
+      213: -5116399651150455308
+    second: Act2_BeaverScene_scrap (INVENTORY)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 2
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act2_windmill inside_COMBINED rope and stick (INVENTORY)_0
+      name: Act2_BeaverScene_scrap (INVENTORY)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 516
-        height: 112
+        width: 373
+        height: 341
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05ce170780d427890800000000000000
-      internalID: -7461816933957899184
+      spriteID: 4fd9e3800a5eef8b0800000000000000
+      internalID: -5116399651150455308
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Act2_windmill inside_COMBINED rope and stick (INVENTORY)_0: -7461816933957899184
+      Act2_BeaverScene_scrap (INVENTORY)_0: -5116399651150455308
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
