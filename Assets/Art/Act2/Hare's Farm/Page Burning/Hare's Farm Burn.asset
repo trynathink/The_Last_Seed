@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 491024942992b87488dd167a6ef7199a, type: 3}
+  m_Name: Hare's Farm Burn
+  m_EditorClassIdentifier: Assembly-CSharp::PageBurnerSO
+  Burn:
+  - {fileID: 21300000, guid: 40eff79a7f8c9bd448e9b230b8382b84, type: 3}
+  - {fileID: 21300000, guid: 14681fdcb53a80e488e100c7c2ae44fa, type: 3}
+  - {fileID: 21300000, guid: 943afb7a274910a47a925d3dad75b54a, type: 3}
+  - {fileID: 21300000, guid: d3780909fd15c3b459c9d76912f42fc4, type: 3}
+  - {fileID: 21300000, guid: 462e30c22d646c84faa522bc65ee55bd, type: 3}
+  - {fileID: 21300000, guid: 42b800d9fe23e5f488173dab1b1a2071, type: 3}
+  - {fileID: 21300000, guid: 13754399de47ba54c929cbaf11dcbb59, type: 3}
+  - {fileID: 21300000, guid: c49794086c50a9a4684695d138ec36b0, type: 3}
+  - {fileID: 21300000, guid: 395b70e7aee8f7e4e821ac6f54dff4df, type: 3}
+  - {fileID: 21300000, guid: 9c94adec7fcaef645af992c0f876fdaa, type: 3}
+  - {fileID: 21300000, guid: d530a90bd2b3dd94aaba9cc51eb69968, type: 3}
+  - {fileID: 21300000, guid: 445197b16dc459742b85ab310459202e, type: 3}
+  - {fileID: 21300000, guid: dab450fa76438c94eb73233a38b5c876, type: 3}
+  - {fileID: 21300000, guid: 8479b2d28b43964419560dac65dbb825, type: 3}
+  - {fileID: 21300000, guid: 8fd81dd884389674fbe9173589528b29, type: 3}
+  - {fileID: 21300000, guid: a2bfcb46dcea0114cbbedb7801e923fe, type: 3}
+  - {fileID: 21300000, guid: a90e991e5f059164b9058a1564574f73, type: 3}
+  - {fileID: 21300000, guid: 4baaa6411fc44e74090eadd5a352934d, type: 3}
+  - {fileID: 21300000, guid: 2113042c3ea113146a35195ce0f6274e, type: 3}
+  - {fileID: 21300000, guid: d532f898603803745967e41e1b7a3697, type: 3}
+  - {fileID: 21300000, guid: 7bf92d8566cc36945ba6f279488f0231, type: 3}
+  - {fileID: 21300000, guid: 5a7b1d2466a698c4b8e283a179ee505f, type: 3}
+  - {fileID: 21300000, guid: 211443b0d8e0edd43a0080efbf8bdc52, type: 3}
+  - {fileID: 21300000, guid: 12a9dcb5aea711445b6f8b5013a9e813, type: 3}
+  - {fileID: 21300000, guid: bd0eaf2ee03e6f8409fe87c6dfeceebb, type: 3}
+  - {fileID: 21300000, guid: 42c08ad1922dccb47a555d98f0f6255c, type: 3}
+  - {fileID: 21300000, guid: 995af3707c1b8684d98f82c6227332a6, type: 3}
+  - {fileID: 21300000, guid: 2ff33b37cb11e6946874a11f5b3044b8, type: 3}
+  - {fileID: 21300000, guid: d214b3f718b11ae4ea00fcdec36697a2, type: 3}
+  - {fileID: 21300000, guid: dfe2e42a6643f8344bcc17aaa4068743, type: 3}
+  - {fileID: 21300000, guid: 5e21f4a2a5dac8f4293c5e1e283da0eb, type: 3}
+  - {fileID: 21300000, guid: de4bdcd7ddf81864c85824f202e3cc71, type: 3}
+  - {fileID: 21300000, guid: a6d6ff3f3dcadfa4e9fcf4b5cff93bbb, type: 3}
+  - {fileID: 21300000, guid: 8b0b07c96c853bf4a869d1f454dcd010, type: 3}
+  - {fileID: 21300000, guid: 2e99a41106a3fd24498a4adac7eb5a43, type: 3}
+  - {fileID: 21300000, guid: 8134dfbeef4d3a34894ae5fa0a536e66, type: 3}
+  - {fileID: 21300000, guid: 12eeb3704c1d8c4418f2a7cab7e8ab4b, type: 3}
+  - {fileID: 21300000, guid: 2e512316b3e0c934fbc0deb3f10d2d80, type: 3}
+  - {fileID: 21300000, guid: c01db5fe7d55a8745a6fb7d52698b0c0, type: 3}
+  - {fileID: 21300000, guid: dad74cacc66d04c44b0cbbde56e77b39, type: 3}

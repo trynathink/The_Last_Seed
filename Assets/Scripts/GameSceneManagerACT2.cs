@@ -109,8 +109,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 				if (PDSO.triggers.Contains(handleFixedTrigger))
 				{
-					FixedPole();
+					FixedPole(true);
                 }
+				else
+				{
+					FixedPole(false);
+				}
 				break;
 			case SceneNames.ACT2_HARE:
                 if (PDSO.triggers.Contains(TriggerNames.HARE_NAKED_SCARECROW))
@@ -184,20 +188,27 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
         switch (PDSO.FireStage)
         {
             case 0:
-                PDSO.Fire += 0.5f;
+                PDSO.Fire = Mathf.Clamp(PDSO.Fire+0.5f, 0, 10);
                 break;
             case 1:
-                PDSO.Fire += 1.5f;
+                PDSO.Fire = Mathf.Clamp(PDSO.Fire + 1f, 0, 20);
                 break;
             case 2:
-                PDSO.Fire += 2.5f;
+                PDSO.Fire = Mathf.Clamp(PDSO.Fire + 1.5f, 0, 30);
                 break;
             case 3:
                 break;
         }
 
+		Debug.Log(PDSO.Fire);
+
 		base.NextScene(sceneName);
     }
+
+	public void FireStateUp()
+	{
+		PDSO.FireStage++;
+	}
 
     public void HareDialogue()
     {
@@ -560,20 +571,29 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		}
 	}
 
-	void FixedPole()
+	void FixedPole(bool state)
 	{
-		if (PDSO.triggers.Contains(handleFixedTrigger))
-		{
-			ReinforcedPole.SetActive(true);
-		}
+		ReinforcedPole.SetActive(state);
 	}
+
+	[SerializeField]
+	ItemSO ReShovel;
 
 	public void MissingRod()
 	{
 		switch (PDSO.HeldItem)
 		{
 			case "":
-				DM.SetLines(missingRod);
+                if (!PDSO.triggers.Contains(handleFixedTrigger))
+                {
+                    DM.SetLines(missingRod);
+                }
+				else
+				{
+                    PDSO.triggers.Remove(handleFixedTrigger);
+                    PDSO.AddToInventory(ReShovel);
+                    FixedPole(false);
+                }
 				break;
 			case "Shovel Handle":
                 if (!PDSO.triggers.Contains(shovelTrigger))
@@ -586,14 +606,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 if (!PDSO.triggers.Contains(handleFixedTrigger))
 				{
 					PDSO.triggers.Add(handleFixedTrigger);
-				}
-
-				if (PDSO.ItemContains("Reinforced Shovel"))
-				{
-					PDSO.Inventory.Remove(PDSO.GetItem("Reinforced Shovel"));
-				}
-				FixedPole();
-                DM.SetLines(reinforcedShovelAttempt);
+                    PDSO.RemoveItem("Reinforced Shovel");
+                    FixedPole(true);
+                    DM.SetLines(reinforcedShovelAttempt);
+                }
 				break;
 			default:
 				DM.SetLines(DefaultItemFail);
@@ -708,6 +724,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					if (PDSO.triggers.Contains(TriggerNames.SPADE_GAINED))
 					{
 						DM.SetLines(DefaultItemFail);
+						FireStateUp();
 					}
 					else
 					{

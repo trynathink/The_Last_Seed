@@ -20,6 +20,6 @@ MonoBehaviour:
   trigger: Bird Conviced
   itemGain: {fileID: 0}
   SceneChange: 
-  trustVal: 
-  trust: 0
+  trustVal: BIRDFIREUP
+  trust: 150
   choice: {fileID: 0}

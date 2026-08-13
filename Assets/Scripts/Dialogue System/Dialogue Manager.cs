@@ -366,7 +366,14 @@ public class DialogueManager : MonoBehaviour
                     {
                         GameObject.Find("Canvas").SendMessage("addTrigger", check);
 
-                        PDSO.BirdTrust += script.trust;
+                        if(script.trust > 100)
+                        {
+                            GameObject.Find("Canvas").SendMessage("FireStateUp");
+                        }
+                        else
+                        {
+                            PDSO.BirdTrust += script.trust;
+                        }
                     }
                     break;
             }

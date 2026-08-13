@@ -1,0 +1,364 @@
+fileFormatVersion: 2
+guid: f6bbef45a44254e4b89661baac2aaa97
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7415441943604778632
+    second: act2_windmilloutside_pageburn_stage2_08_0
+  - first:
+      213: -8374430289192070434
+    second: act2_windmilloutside_pageburn_stage2_08_1
+  - first:
+      213: -4534986816990481165
+    second: act2_windmilloutside_pageburn_stage2_08_2
+  - first:
+      213: 4746810922800202085
+    second: act2_windmilloutside_pageburn_stage2_08_3
+  - first:
+      213: 8095068215736945229
+    second: act2_windmilloutside_pageburn_stage2_08_4
+  - first:
+      213: -9085081832889186595
+    second: act2_windmilloutside_pageburn_stage2_08_5
+  - first:
+      213: -8093975826886109799
+    second: act2_windmilloutside_pageburn_stage2_08_6
+  - first:
+      213: -2044696911407001680
+    second: act2_windmilloutside_pageburn_stage2_08_7
+  - first:
+      213: -5009030094570967225
+    second: act2_windmilloutside_pageburn_stage2_08_8
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 2
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: act2_windmilloutside_pageburn_stage2_08_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1226
+        width: 1865
+        height: 934
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8865815b821f8e660800000000000000
+      internalID: 7415441943604778632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: act2_windmilloutside_pageburn_stage2_08_1
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 1696
+        width: 1408
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed25f68850c08cb80800000000000000
+      internalID: -8374430289192070434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: act2_windmilloutside_pageburn_stage2_08_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 815
+        width: 72
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f4f330748d7011c0800000000000000
+      internalID: -4534986816990481165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: act2_windmilloutside_pageburn_stage2_08_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 773
+        height: 773
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5614375726f00e140800000000000000
+      internalID: 4746810922800202085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: act2_windmilloutside_pageburn_stage2_08_4
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 0
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a4e8717a5775070800000000000000
+      internalID: 8095068215736945229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: act2_windmilloutside_pageburn_stage2_08_5
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 0
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd60943353e4be180800000000000000
+      internalID: -9085081832889186595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: act2_windmilloutside_pageburn_stage2_08_6
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 0
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995dad18edb6caf80800000000000000
+      internalID: -8093975826886109799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: act2_windmilloutside_pageburn_stage2_08_7
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 0
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf4f3a0ef6cf93e0800000000000000
+      internalID: -2044696911407001680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: act2_windmilloutside_pageburn_stage2_08_8
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 0
+        width: 2970
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74f2bdffaa95c7ab0800000000000000
+      internalID: -5009030094570967225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      act2_windmilloutside_pageburn_stage2_08_0: 7415441943604778632
+      act2_windmilloutside_pageburn_stage2_08_1: -8374430289192070434
+      act2_windmilloutside_pageburn_stage2_08_2: -4534986816990481165
+      act2_windmilloutside_pageburn_stage2_08_3: 4746810922800202085
+      act2_windmilloutside_pageburn_stage2_08_4: 8095068215736945229
+      act2_windmilloutside_pageburn_stage2_08_5: -9085081832889186595
+      act2_windmilloutside_pageburn_stage2_08_6: -8093975826886109799
+      act2_windmilloutside_pageburn_stage2_08_7: -2044696911407001680
+      act2_windmilloutside_pageburn_stage2_08_8: -5009030094570967225
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
