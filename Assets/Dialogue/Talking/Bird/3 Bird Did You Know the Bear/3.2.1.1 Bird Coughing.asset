@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
+  m_Name: 3.2.1.1 Bird Coughing
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
+  Character: Bird
+  Lines:
+  - 'On account of the fire I assume? '
+  - ...
+  - I remember, ha..
+  - I remember when we would have picnics in this very forest.
+  - Such fun times...
+  - Tell her hi for me, okay?
+  trigger: 
+  itemGain: {fileID: 0}
+  SceneChange: 
+  trustVal: BTV3.2.1
+  trust: 1
+  choice: {fileID: 11400000, guid: d51af1a0009ac874f9f9719ddaf7a19b, type: 2}

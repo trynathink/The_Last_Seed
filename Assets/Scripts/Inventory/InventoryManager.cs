@@ -98,7 +98,7 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            Cursor.SetCursor(default, default, default);
+            Cursor.SetCursor(default, default, CursorMode.ForceSoftware);
         } 
     }
 

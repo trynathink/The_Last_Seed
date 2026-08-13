@@ -28,6 +28,9 @@ public class MainMenuButtonManager : MonoBehaviour
 
     void Start()
     {
+        Cursor.SetCursor(default, default, CursorMode.ForceSoftware);
+
+
         TitleButtons = GameObject.Find("Title Screen");
         SaveButtons = GameObject.Find("Saves Screens");
 

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Seed
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   Name: Seed
-  CursorSprite: {fileID: 2800000, guid: d0036fd114f0a724398d274082c4b7eb, type: 3}
+  CursorSprite: {fileID: 2800000, guid: 33a36e7f843981646a4f82cfcf263008, type: 3}
   CursorBytes: 

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Twig
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   Name: Twig
-  InventorySprite: {fileID: -4144609779467375620, guid: 19f5c83d2398d1442b96673640cf8d13, type: 3}
-  CursorSprite: {fileID: 2800000, guid: 5ca2850b1fdbb1d498f51bcc57674cee, type: 3}
+  CursorSprite: {fileID: 2800000, guid: f2a572f9bc2d3984692b4af472a9fe2f, type: 3}
+  CursorBytes: 

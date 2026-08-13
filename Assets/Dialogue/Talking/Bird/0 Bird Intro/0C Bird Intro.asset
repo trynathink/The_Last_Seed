@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bc00b0163cb4c408dcbe8105759903, type: 3}
+  m_Name: 0C Bird Intro
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  Choices:
+  - Who are you?
+  - What happened here?
+  - Did you know the Bear?
+  - How long have you been here?
+  - Was this your home?
+  - Nevermind.
+  Outcomes:
+  - {fileID: 11400000, guid: a0a122743228b1643a7845f2bfe8ad8b, type: 2}
+  - {fileID: 11400000, guid: 7d9ff36e350b99745b697b97f9364f4a, type: 2}
+  - {fileID: 11400000, guid: 8cfbedd38d6e2c7489903767bbd81207, type: 2}
+  - {fileID: 11400000, guid: 29f38537d02ef31469b87c9b6034bcb2, type: 2}
+  - {fileID: 11400000, guid: 7535d7625441733499cb3b087e17a735, type: 2}
+  - {fileID: 11400000, guid: c32859665f90a814b93b37f08c6d2278, type: 2}
+  TrustReq: 000000000100000001000000020000000500000000000000
+  TrustFail: []
+  TrigReq:
+  - 
+  - 
+  - Bird Story
+  - BD1
+  - BD2
+  - 
