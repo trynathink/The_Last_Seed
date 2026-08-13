@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: eafa06784a440874dbfb1e38a3efd800
+guid: 1731f2a0c6bb6211ead381a65f7c42df
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7977678605105220465
-    second: Act2_MainFarm_Hare_0
+      213: -1818747186366024709
+    second: act2_mainfarm_flame two_3_0
+  - first:
+      213: 580561044757635609
+    second: act2_mainfarm_flame two_3_1
+  - first:
+      213: 4742819564947129866
+    second: act2_mainfarm_flame two_3_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +30,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -113,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act2_MainFarm_Hare_0
+      name: act2_mainfarm_flame two_3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8438728397994190800000000000000
-      internalID: -7977678605105220465
+      spriteID: bf37964f11382c6e0800000000000000
+      internalID: -1818747186366024709
       vertices: []
       indices: 
       edges: []
@@ -138,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1acb7548312a02f4f838d7f49d3c7d31
+    spriteID: ee13334070bfe8960931f797ad07a517
     internalID: 0
     vertices: []
     indices: 
@@ -150,7 +156,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3840.0,"y":2160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Act2_MainFarm_Hare_0: -7977678605105220465
+      act2_mainfarm_flame two_3_0: -1818747186366024709
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

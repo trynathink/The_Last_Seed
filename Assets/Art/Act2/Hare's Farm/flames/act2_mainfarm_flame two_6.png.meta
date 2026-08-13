@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: eafa06784a440874dbfb1e38a3efd800
+guid: c58133e8474d040db888fbab794f459d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7977678605105220465
-    second: Act2_MainFarm_Hare_0
+      213: -1409773234101048977
+    second: act2_mainfarm_flame two_6_0
+  - first:
+      213: -1884819725464247534
+    second: act2_mainfarm_flame two_6_1
+  - first:
+      213: -4379460546215953868
+    second: act2_mainfarm_flame two_6_2
+  - first:
+      213: -8915535198116619032
+    second: act2_mainfarm_flame two_6_3
+  - first:
+      213: 5010541631457730212
+    second: act2_mainfarm_flame two_6_4
+  - first:
+      213: -8160837870305401789
+    second: act2_mainfarm_flame two_6_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +39,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -113,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act2_MainFarm_Hare_0
+      name: act2_mainfarm_flame two_6_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +143,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8438728397994190800000000000000
-      internalID: -7977678605105220465
+      spriteID: f69ad8f76ba7f6ce0800000000000000
+      internalID: -1409773234101048977
       vertices: []
       indices: 
       edges: []
@@ -138,7 +153,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1acb7548312a02f4f838d7f49d3c7d31
+    spriteID: ec2d70e7d29f1fbeea5c9404d3f3c318
     internalID: 0
     vertices: []
     indices: 
@@ -150,7 +165,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3840.0,"y":2160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Act2_MainFarm_Hare_0: -7977678605105220465
+      act2_mainfarm_flame two_6_0: -1409773234101048977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

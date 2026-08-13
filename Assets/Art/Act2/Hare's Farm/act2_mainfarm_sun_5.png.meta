@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 10d050a4c0ab894499b2354e7da60ed2
+guid: ac89e0d6991a61cb99e229d3bfbd8f4c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 330208397619070586
-    second: Act2_Main Farm (1)_0
+      213: 3494968206485085833
+    second: act2_mainfarm_sun_5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act2_Main Farm (1)_0
+      name: act2_mainfarm_sun_5_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,15 +121,15 @@ TextureImporter:
         width: 3840
         height: 2160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a768fe1c9c2259400800000000000000
-      internalID: 330208397619070586
+      spriteID: 98ed3d0111f908030800000000000000
+      internalID: 3494968206485085833
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bd9b4958660c6e96fa88bb4a4a255d0d
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +146,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3840.0,"y":2160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Act2_Main Farm (1)_0: 330208397619070586
+      act2_mainfarm_sun_5_0: 3494968206485085833
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
