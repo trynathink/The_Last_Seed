@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Paddle
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   Name: Paddle
-  InventorySprite: {fileID: 2387146268941751991, guid: 5e06c4acf244e2f4182081bb016744d3, type: 3}
-  CursorSprite: {fileID: 2800000, guid: e8e9c1a94736d8c419af5f2514fd6462, type: 3}
+  CursorSprite: {fileID: 2800000, guid: fffa716bdef0000408b1ade826be6f6a, type: 3}
+  CursorBytes: 

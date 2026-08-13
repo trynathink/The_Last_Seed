@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shovel Handle
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   Name: Shovel Handle
-  InventorySprite: {fileID: 4632351409788589458, guid: 4efc8f7c1ae404d46b4f353e1ed19d06, type: 3}
-  CursorSprite: {fileID: 2800000, guid: e87322f7f81845e48815473a69bdbc53, type: 3}
+  CursorSprite: {fileID: 2800000, guid: 6ec3f95ea62050a4aaec9935bf8aa23f, type: 3}
+  CursorBytes: 

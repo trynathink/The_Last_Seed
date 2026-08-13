@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Reinforced Shovel
   m_EditorClassIdentifier: Assembly-CSharp::CombinedItemSO
   Name: Reinforced Shovel
-  InventorySprite: {fileID: -7461816933957899184, guid: ae3595aa68788ff4e9370680044c40b4, type: 3}
-  CursorSprite: {fileID: 2800000, guid: b812a50917bc6f04fbeadd698a030928, type: 3}
+  CursorSprite: {fileID: 2800000, guid: bfa0c8f4d944aaa40bc6262063eb9977, type: 3}
+  CursorBytes: 
   Ingredient1: {fileID: 11400000, guid: 47e7fb565080ee44b8f2f63510d730e0, type: 2}
   Ingredient2: {fileID: 11400000, guid: c2dd9b442ed0dd24ab26345ff9807bd1, type: 2}

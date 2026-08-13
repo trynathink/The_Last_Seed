@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shrub
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   Name: Shrub
-  CursorSprite: {fileID: 2800000, guid: d0036fd114f0a724398d274082c4b7eb, type: 3}
+  CursorSprite: {fileID: 2800000, guid: a757f71bc66993a4f98a244ec79eed74, type: 3}
   CursorBytes: 

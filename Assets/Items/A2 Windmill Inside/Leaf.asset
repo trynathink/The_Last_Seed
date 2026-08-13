@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Leaf
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   Name: Leaf
-  InventorySprite: {fileID: -2378491660320860586, guid: 3f27da6ff09b2ce4fa840a4384f0ebdb, type: 3}
-  CursorSprite: {fileID: 2800000, guid: 3ac28afcaefeaa04095d97ec3356d941, type: 3}
+  CursorSprite: {fileID: 2800000, guid: a05e86c49cabb7e4480655fa43b03b1e, type: 3}
+  CursorBytes: 
