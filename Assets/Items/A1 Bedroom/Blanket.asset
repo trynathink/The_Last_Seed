@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Blanket
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   Name: Blanket
-  InventorySprite: {fileID: -276591211, guid: 07b0c84f461e9464095f91353a1859c3, type: 3}
-  CursorSprite: {fileID: 2800000, guid: 84cda86fbdbb6584cb6359b528c3b56b, type: 3}
+  CursorSprite: {fileID: 2800000, guid: ebb7425516d255f40ae8c67ee1873b97, type: 3}
+  CursorBytes: 

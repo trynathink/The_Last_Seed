@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Crowbar
   m_EditorClassIdentifier: Assembly-CSharp::ItemSO
   Name: Crowbar
-  InventorySprite: {fileID: -1370197775, guid: 72ca0b77732258848a8b0dbb36090296, type: 3}
-  CursorSprite: {fileID: 2800000, guid: 817e0eab941262d48b3d4f433102ef38, type: 3}
+  CursorSprite: {fileID: 2800000, guid: 866cb1fa4cd7968408f5adc913f2ac57, type: 3}
+  CursorBytes: 
