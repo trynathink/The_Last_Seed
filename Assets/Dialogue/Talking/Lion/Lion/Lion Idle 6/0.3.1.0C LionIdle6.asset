@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bc00b0163cb4c408dcbe8105759903, type: 3}
+  m_Name: 0.3.1.0C LionIdle6
+  m_EditorClassIdentifier: Assembly-CSharp::ChoiceSO
+  Choices:
+  - You should be embarrased.
+  - There's always time to fix things.
+  - What are you going to do now?
+  Outcomes:
+  - {fileID: 11400000, guid: e45bfcbc40320924d89ca5f172858370, type: 2}
+  - {fileID: 11400000, guid: 0eefd80924ade5c4ab2cf7c1829c5911, type: 2}
+  - {fileID: 11400000, guid: 21c2e21db9719ff4cbec59de3468ee46, type: 2}
+  TrustReq: 000000000000000000000000
+  TrustFail: []
+  TrigReq:
+  - 
+  - 
+  - BuildLion

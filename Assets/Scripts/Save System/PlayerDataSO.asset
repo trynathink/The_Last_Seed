@@ -15,10 +15,14 @@ MonoBehaviour:
   SaveFile: Save2
   PlayerLocation: A2 Lion's Crowd
   HeldItem: 
-  Fire: 30
-  FireStage: 2
+  Fire: 0
+  FireStage: 0
   BirdTrust: 0
-  Inventory: []
+  Inventory:
+  - {fileID: 11400000, guid: e2a7b5160b90ec54884362ba45610fad, type: 2}
+  - {fileID: 11400000, guid: 4bccc80e141fc914f988dead9ab5449e, type: 2}
+  - {fileID: 11400000, guid: 57a0f6f50136669769af2e7e9331b8b1, type: 2}
+  - {fileID: 11400000, guid: 70137deefea6be74485eda5ae3abb9dc, type: 2}
   reference:
   - {fileID: 11400000, guid: abb076894db46844e95f6276dfb17677, type: 2}
   - {fileID: 11400000, guid: 7f56dffbbebcc9c4da4876a189385903, type: 2}
@@ -37,8 +41,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b2cd6c60daa723047b210d4359fd802a, type: 2}
   - {fileID: 11400000, guid: 678efd17efcdfe94182dec16037332c2, type: 2}
   triggers:
-  - WindmillSeen
-  - WindmillHandleFixed
   - FirstTimeInScene
+  - LionQuestionAsked
+  - LionLumber
+  - LionCrop
+  - LionSack
+  - LionConvinced
+  - LionQuestionAsked_BurnAway
+  - LionConvinced2
+  - WaterLie
+  - LionFireInteraction
   CursorHover: {fileID: 2800000, guid: 859797a8b2e04a2479e81da00bab9ef8, type: 3}
   CursorClick: {fileID: 2800000, guid: 805768040ca65ef4cb1f704b859b8512, type: 3}

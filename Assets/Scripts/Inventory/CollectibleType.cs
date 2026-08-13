@@ -16,5 +16,6 @@ public enum CollectibleType
 	Leaf,
     ShovelHandle,
     Shrub,
-    Spade
+    Spade,
+    Water
 }
