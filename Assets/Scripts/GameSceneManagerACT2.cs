@@ -139,6 +139,9 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					spadeImage.SetActive(false);
 				}
                 break;
+			case SceneNames.ACT2_BIRD:
+				BirdFace(false, "no");
+				break;
 			case SceneNames.ACT2_LION:
 
                 crowdLines = new ScriptsSO[4];
@@ -407,7 +410,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	}
 
 	[SerializeReference]
-	ScriptsSO BirdIntro, BirdToken, BirdIdle;
+	ScriptsSO BirdIntro, BirdToken, BirdIdle, BirdMoveFin;
 
     public void BirdDialogue()
     {
@@ -430,6 +433,9 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					PDSO.RemoveItem("Tree Token");
                 }
                 break;
+			case "Seed":
+				DM.SetLines(BirdMoveFin);
+				break;
             default:
                 DM.SetLines(DefaultItemFail);
                 break;
@@ -682,7 +688,6 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     ScriptsSO EngineOn, EngineOff, EngineOnCrowbar;
     [SerializeField] ItemSO Spade;
     [SerializeField] GameObject spadeImage;
-
     public void Engine()
 	{
 		switch (PDSO.HeldItem)
@@ -721,4 +726,41 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 break;
 		}
 	}
+
+	[SerializeReference]
+	GameObject closedFace, openFace, happyFace;
+    public void BirdFace(bool talking, string context)
+    {
+		if(context == "Bird Good Luck." || PDSO.triggers.Contains(TriggerNames.FINAL))
+		{
+            closedFace.SetActive(false);
+            openFace.SetActive(false);
+            happyFace.SetActive(false);
+			GameObject.Find("Bird Animated").SetActive(false);
+
+			return;
+        }
+
+		if (PDSO.triggers.Contains(TriggerNames.BIRD_CONVICED2) || context == "Bird Token Interaction")
+		{
+			closedFace.SetActive(false);
+			openFace.SetActive(false);
+			happyFace.SetActive(true);
+
+			return;
+		}
+
+		if (talking)
+		{
+            closedFace.SetActive(false);
+            openFace.SetActive(true);
+            happyFace.SetActive(false);
+        }
+		else
+		{
+            closedFace.SetActive(true);
+            openFace.SetActive(false);
+            happyFace.SetActive(false);
+        }
+    }
 }

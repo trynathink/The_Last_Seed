@@ -147,6 +147,12 @@ public class DialogueManager : MonoBehaviour
         {
             Self = false;
             Dia = true;
+
+            if(givenscript.Character == "Bird")
+            {
+                GameObject.Find("Canvas").GetComponent<GameSceneManagerACT2>().BirdFace(true, givenscript.name);
+            }
+
 			NPCReset();
             StartCoroutine(NPCSpeak());
         }
@@ -387,6 +393,11 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            if(script.Character == "Bird")
+            {
+                GameObject.Find("Canvas").GetComponent<GameSceneManagerACT2>().BirdFace(false, "no");
+            }
+
             Dia = false;
             DiaImg.enabled = false;
             LineNum = 0;

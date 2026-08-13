@@ -15,9 +15,10 @@ MonoBehaviour:
   Character: Bird
   Lines:
   - ...
-  - Go away
+  - Go away.
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}

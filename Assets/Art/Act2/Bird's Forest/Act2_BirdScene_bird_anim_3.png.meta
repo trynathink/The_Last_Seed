@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f5cd3747ad4441142992dfe47523318c
+guid: f9b64be5b0999c94fb6145e7e5f96256
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5233277947727493958
-    second: CURSOR CLICKED_0
+      213: -4687223447987415061
+    second: Act2_BirdScene_bird_anim_3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,18 +46,18 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 2
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 2
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CURSOR CLICKED_0
+      name: Act2_BirdScene_bird_anim_3_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 5
-        width: 126
-        height: 142
+        x: 1597
+        y: 317
+        width: 799
+        height: 902
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64bbe2df09650a840800000000000000
-      internalID: 5233277947727493958
+      spriteID: be714d7ab13a3feb0800000000000000
+      internalID: -4687223447987415061
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CURSOR CLICKED_0: 5233277947727493958
+      Act2_BirdScene_bird_anim_3_0: -4687223447987415061
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

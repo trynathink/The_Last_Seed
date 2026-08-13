@@ -17,7 +17,7 @@ MonoBehaviour:
   - 'I would give anything to see a tree planted in this very spot. '
   - ...
   - When you're ready, I would gladly help reach that goal.
-  trigger: 
+  trigger: Bird Conviced
   itemGain: {fileID: 0}
   SceneChange: 
   trustVal: 

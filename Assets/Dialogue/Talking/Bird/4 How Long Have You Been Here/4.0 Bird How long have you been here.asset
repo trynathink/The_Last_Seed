@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: Bird
   Lines:
-  - I can't remember now
+  - I can't remember now.
   - ...
-  - How long ago they took it from me
+  - How long ago they took it from me.
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 

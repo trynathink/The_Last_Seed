@@ -20,4 +20,4 @@ MonoBehaviour:
   SceneChange: 
   trustVal: BTV4
   trust: 1
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: d51af1a0009ac874f9f9719ddaf7a19b, type: 2}

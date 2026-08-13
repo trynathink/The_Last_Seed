@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 003e7965f89a4b243a88edab5da1fdee
+guid: 743dd96c8fef7564d9e18aa60cd7eea9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4213875681916940367
-    second: Act2_BirdScene_woodenpiece (INVENTORY)_0
+      213: 6632930544608690950
+    second: Act2_BirdScene_cloud_2_0
+  - first:
+      213: -4029231630990532134
+    second: Act2_BirdScene_cloud_2_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +27,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,23 +116,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act2_BirdScene_woodenpiece (INVENTORY)_0
+      name: Act2_BirdScene_cloud_2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 457
-        height: 310
+        width: 3840
+        height: 2160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f40f05c4b91ba7a30800000000000000
-      internalID: 4213875681916940367
+      spriteID: 6034d330037ec0c50800000000000000
+      internalID: 6632930544608690950
       vertices: []
       indices: 
       edges: []
@@ -138,7 +141,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 011a97080b0ae49499fd469f6296745d
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +149,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3840.0,"y":2160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Act2_BirdScene_woodenpiece (INVENTORY)_0: 4213875681916940367
+      Act2_BirdScene_cloud_2_0: 6632930544608690950
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

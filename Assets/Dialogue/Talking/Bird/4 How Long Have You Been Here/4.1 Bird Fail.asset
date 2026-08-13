@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
   m_Name: 4.1 Bird Fail
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
-  Character: 
+  Character: Bird
   Lines:
   - I ...
-  - I don't want to talk about it
+  - I don't want to talk about it.
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
   trustVal: 
   trust: 0
-  choice: {fileID: 0}
+  choice: {fileID: 11400000, guid: 1dc1099b452ba344680c887e77644738, type: 2}

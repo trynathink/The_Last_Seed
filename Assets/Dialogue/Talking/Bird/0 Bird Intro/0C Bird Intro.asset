@@ -18,7 +18,7 @@ MonoBehaviour:
   - Did you know the Bear?
   - How long have you been here?
   - Was this your home?
-  - Nevermind
+  - Nevermind.
   Outcomes:
   - {fileID: 11400000, guid: a0a122743228b1643a7845f2bfe8ad8b, type: 2}
   - {fileID: 11400000, guid: 7d9ff36e350b99745b697b97f9364f4a, type: 2}

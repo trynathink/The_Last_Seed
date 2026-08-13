@@ -34,14 +34,14 @@ public static class TriggerNames
 
     // Act 2 Hare
     public const string HARE_NAKED_SCARECROW = "NakedScarecrow";
+    public const string HARE_MORE_DIALOGUE = "HareMoreDialogue";
+    public const string HARE_FIRST_INTERACTION = "HareFirstInteraction";
+    public const string HARE_NEW_IDLE = "HareNewIdle";
+    public const string SCARECROW_FIRST_INTERACTION = "ScarecrowFirstInteraction";
+    public const string WINDMILL_SEEN = "WindmillSeen";
+    public const string WINDMILL_PANEL_FIXED = "WindmillPanelFixed";
 
     // Act 2 Beaver
-	public const string HARE_MORE_DIALOGUE = "HareMoreDialogue";
-	public const string HARE_FIRST_INTERACTION = "HareFirstInteraction";
-	public const string HARE_NEW_IDLE = "HareNewIdle";
-	public const string SCARECROW_FIRST_INTERACTION = "ScarecrowFirstInteraction";
-	public const string WINDMILL_SEEN = "WindmillSeen";
-	public const string WINDMILL_PANEL_FIXED = "WindmillPanelFixed";
     public const string ENGINE_OFF = "EngineOff";
     public const string SPADE_GAINED = "Spade Gained";
     public const string SHOVEL = "ShovelNeedsRope";
@@ -56,5 +56,9 @@ public static class TriggerNames
     public const string BIRD_HOWLONG = "Bird Story";
     public const string BIRD_CONVICED = "BD4";
     public const string BIRD_TOKEN = "Bird Token";
+    public const string BIRD_CONVICED2 = "Bird Conviced";
     public const string BIRD_MOVE = "Bird Move";
+
+    // GAME END
+    public const string FINAL = "FINAL";
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 669b19c9e878d4248b2182655c4e07a5
+guid: e398f3ecc68830c4e9f3cc5ae24e019a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8851710756616646293
-    second: Act2_BirdScene_0
+      213: -4770536066237043227
+    second: Act2_BirdScene_woodenpiece (INVENTORY) (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act2_BirdScene_0
+      name: Act2_BirdScene_woodenpiece (INVENTORY) (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3840
-        height: 2160
+        width: 628
+        height: 293
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b615c5917f7682580800000000000000
-      internalID: -8851710756616646293
+      spriteID: 5ed60cf19b6abcdb0800000000000000
+      internalID: -4770536066237043227
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Act2_BirdScene_0: -8851710756616646293
+      Act2_BirdScene_woodenpiece (INVENTORY) (1)_0: -4770536066237043227
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

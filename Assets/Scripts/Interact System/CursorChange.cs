@@ -12,6 +12,13 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     [SerializeField]
     Texture2D hover, click;
 
+
+    void Awake()
+    {
+        hover = PDSO.CursorHover;
+        click = PDSO.CursorClick;
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         if (PDSO.HeldItem == "" || SceneManager.GetActiveScene().name == "Main Menu")
