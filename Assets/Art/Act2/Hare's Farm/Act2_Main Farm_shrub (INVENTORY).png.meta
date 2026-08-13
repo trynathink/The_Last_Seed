@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8f60e4c25b67ff0d1bbeab514522aa55
+guid: 7d46e79c5d231830188ba5d74f6d5fa9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7977678605105220465
-    second: Act2_MainFarm_Hare_0
+      213: -8432304889077078254
+    second: Act2_Main Farm_shrub (INVENTORY)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act2_MainFarm_Hare_0
+      name: Act2_Main Farm_shrub (INVENTORY)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3840
-        height: 2160
+        width: 243
+        height: 203
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f8438728397994190800000000000000
-      internalID: -7977678605105220465
+      spriteID: 21765c0316f6afa80800000000000000
+      internalID: -8432304889077078254
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e8b87b51f9a5b7cbaaf168278628cd0a
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -146,11 +146,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":3840.0,"y":2160.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Act2_MainFarm_Hare_0: -7977678605105220465
+      Act2_Main Farm_shrub (INVENTORY)_0: -8432304889077078254
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
