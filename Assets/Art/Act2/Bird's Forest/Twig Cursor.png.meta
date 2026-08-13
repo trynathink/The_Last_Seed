@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5ca2850b1fdbb1d498f51bcc57674cee
+guid: f2a572f9bc2d3984692b4af472a9fe2f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4144609779467375620
-    second: Act2_BirdScene_twig (INVENTORY)_0
+      213: 2952404227266765462
+    second: Act2_BirdScene_twig (INVENTORY) (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Act2_BirdScene_twig (INVENTORY)_0
+      name: Act2_BirdScene_twig (INVENTORY) (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 216
-        height: 374
+        width: 264
+        height: 372
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cfbac3a5d536b76c0800000000000000
-      internalID: -4144609779467375620
+      spriteID: 692e89f800c09f820800000000000000
+      internalID: 2952404227266765462
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Act2_BirdScene_twig (INVENTORY)_0: -4144609779467375620
+      Act2_BirdScene_twig (INVENTORY) (1)_0: 2952404227266765462
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

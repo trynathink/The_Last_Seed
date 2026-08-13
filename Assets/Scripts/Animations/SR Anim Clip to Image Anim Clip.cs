@@ -25,6 +25,10 @@ public class SRAnimClipToImageAnimClip : MonoBehaviour
         Img.sprite = SR.sprite;
 
         Rect rec = SR.sprite.rect;
-        Img.rectTransform.sizeDelta = new Vector2(rec.width, rec.height);
+
+        if(!(rec.width >= 2048 && rec.height >= 1152))
+        {
+            Img.rectTransform.sizeDelta = new Vector2(rec.width, rec.height);
+        }
     }
 }

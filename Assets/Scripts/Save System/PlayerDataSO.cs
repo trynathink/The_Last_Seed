@@ -16,6 +16,10 @@ public class PlayerDataSO : ScriptableObject
     List<ItemSO> reference;
     public List<string> triggers;
 
+    public Texture2D CursorHover;
+    public Texture2D CursorClick;
+
+
 	public void Clear()
 	{
         PlayerLocation = SceneNames.ACT1_BEDROOM;

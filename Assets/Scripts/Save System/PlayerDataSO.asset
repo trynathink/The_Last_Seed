@@ -13,20 +13,17 @@ MonoBehaviour:
   m_Name: PlayerDataSO
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDataSO
   SaveFile: Save1
-  PlayerLocation: A2 Hare's Farm
+  PlayerLocation: A2 Bird's Forest
   HeldItem: 
-  Fire: 9
+  Fire: 7
   FireStage: 0
-  BirdTrust: 0
+  BirdTrust: 6
   Inventory:
   - {fileID: 11400000, guid: 7f56dffbbebcc9c4da4876a189385903, type: 2}
   - {fileID: 11400000, guid: e2a7b5160b90ec54884362ba45610fad, type: 2}
-  - {fileID: 11400000, guid: 11f6dcb12a8fead4fbdf8f5bf1ffd005, type: 2}
-  - {fileID: 11400000, guid: e1d84c707408d80a19949055f3ac449a, type: 2}
-  - {fileID: 11400000, guid: 70137deefea6be74485eda5ae3abb9dc, type: 2}
+  - {fileID: 11400000, guid: 47e7fb565080ee44b8f2f63510d730e0, type: 2}
   - {fileID: 11400000, guid: 4bccc80e141fc914f988dead9ab5449e, type: 2}
-  - {fileID: 11400000, guid: c0b3f3ea3433d5c46b3a1def79e0bd2c, type: 2}
-  - {fileID: 11400000, guid: b2cd6c60daa723047b210d4359fd802a, type: 2}
+  - {fileID: 11400000, guid: bd5ff789c0ee6394b9c9401324075594, type: 2}
   reference:
   - {fileID: 11400000, guid: abb076894db46844e95f6276dfb17677, type: 2}
   - {fileID: 11400000, guid: 7f56dffbbebcc9c4da4876a189385903, type: 2}
@@ -42,22 +39,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 47e7fb565080ee44b8f2f63510d730e0, type: 2}
   - {fileID: 11400000, guid: c0b3f3ea3433d5c46b3a1def79e0bd2c, type: 2}
   triggers:
-  - Clock
-  - Goal Heard
-  - Front Door
-  - Boards Removed
+  - BTV1
+  - BD1
+  - BTV2.2
+  - BD2
+  - BTV4
+  - Bird Story
+  - BTV2.0
+  - BTV3.2.1
+  - BD4
   - WindmillSeen
   - BrickOut
-  - WindmillPanelFixed
-  - WWJamFix
-  - BlockageItem
-  - Shovel Handle
-  - BeaverInit
-  - BeaverPanel
-  - WWBrokFix
-  - WindmillHandleFixed
-  - EngineOff
-  - FirstTimeInScene
-  - LionQuestionAsked
-  - LionLumber
-  - LionSack
+  - Bird Token
+  - Bird Conviced
+  CursorHover: {fileID: 2800000, guid: 859797a8b2e04a2479e81da00bab9ef8, type: 3}
+  CursorClick: {fileID: 2800000, guid: 805768040ca65ef4cb1f704b859b8512, type: 3}
