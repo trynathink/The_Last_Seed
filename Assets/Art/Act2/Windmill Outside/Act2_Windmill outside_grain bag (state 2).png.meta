@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 028a0cd2587faef48a64b248cf4c342b
+guid: fe82b192151f2804195670af91740888
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 2996291645165754077
     second: Act2_Windmill outside_grain bag (state 2)_0
-  - first:
-      213: -8221749223486632593
-    second: Act2_Windmill outside_grain bag (state 2)_1
-  - first:
-      213: 7948155848234939908
-    second: Act2_Windmill outside_grain bag (state 2)_2
-  - first:
-      213: 5675326660496483489
-    second: Act2_Windmill outside_grain bag (state 2)_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -147,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a8736c4c95a821c44bc14122f3b8948a
+    spriteID: 7060a10d0f7490433941654bf848882b
     internalID: 0
     vertices: []
     indices: 
