@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -118,7 +119,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				break;
 			case SceneNames.ACT2_HARE:
                 if (PDSO.triggers.Contains(TriggerNames.HARE_NAKED_SCARECROW))
-                {
+                {PDSO.triggers.RemoveAll(i => i == TriggerNames.LION_QUESTION_ASKED);
                     NakedScarecrow();
                 }
 
@@ -145,6 +146,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 break;
 			case SceneNames.ACT2_BIRD:
 				BirdFace(false, "no");
+				videoPanel.SetActive(false);
+				PDSO.triggers.RemoveAll(i => i == TriggerNames.SEED_DIG);
+				PDSO.triggers.RemoveAll(i => i == TriggerNames.SEED_WATER);
+				PDSO.triggers.RemoveAll(i => i == TriggerNames.SEED_PLANT);
 				break;
 			case SceneNames.ACT2_LION:
 
@@ -780,4 +785,62 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
             happyFace.SetActive(false);
         }
     }
+
+	[SerializeField] private ScriptsSO missingStepsMsg;
+	[SerializeField] private ScriptsSO digSeed;
+	[SerializeField] private ScriptsSO plantSeed;
+	[SerializeField] private ScriptsSO waterSeed;
+
+	[SerializeField] private GameObject videoPanel;
+	[SerializeField] private VideoPlayer videoPlayer;
+	[SerializeField] private AudioSource audioSource;
+
+	public void PlantSeed()
+	{
+		if (!PDSO.triggers.Contains(TriggerNames.BIRD_MOVE))
+		{
+			return;
+		}
+
+		switch (PDSO.HeldItem) 
+		{
+			case ItemNames.SPADE:
+				PDSO.triggers.Add(TriggerNames.SEED_DIG);
+				DM.SetLines(digSeed);
+				break;
+
+			case ItemNames.SEED:
+				if (!PDSO.triggers.Contains(TriggerNames.SEED_DIG))
+				{
+					DM.SetLines(missingStepsMsg);
+				}
+				else
+				{
+					PDSO.triggers.Add(TriggerNames.SEED_PLANT);
+					DM.SetLines(plantSeed);
+				}
+				break;
+
+			case ItemNames.WATER:
+				if (!PDSO.triggers.Contains(TriggerNames.SEED_PLANT))
+				{
+					DM.SetLines(missingStepsMsg);
+				}
+				else
+				{
+					PDSO.triggers.Add(TriggerNames.SEED_WATER);
+					DM.SetLines(waterSeed);
+
+					BackgroundMusic.Stop();
+					videoPanel.SetActive(true);
+					videoPlayer.Play();
+					audioSource.Play();
+				}
+				break;
+
+			default:
+				DM.SetLines(missingStepsMsg);
+				break;
+		}
+	}
 }
