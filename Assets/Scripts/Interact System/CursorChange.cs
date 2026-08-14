@@ -21,7 +21,7 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (PDSO.HeldItem == "" || SceneManager.GetActiveScene().name == "Main Menu")
+        if ((PDSO.HeldItem == "" || SceneManager.GetActiveScene().name == "Main Menu") && click != null)
         {
             Cursor.SetCursor(click, default, CursorMode.ForceSoftware);
         }
@@ -29,7 +29,7 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(PDSO.HeldItem == "" || SceneManager.GetActiveScene().name == "Main Menu")
+        if((PDSO.HeldItem == "" || SceneManager.GetActiveScene().name == "Main Menu") && hover != null)
         {
             Cursor.SetCursor(hover, default, CursorMode.ForceSoftware);
         }
@@ -45,7 +45,7 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        if (PDSO.HeldItem == "" || SceneManager.GetActiveScene().name == "Main Menu")
+        if ((PDSO.HeldItem == "" || SceneManager.GetActiveScene().name == "Main Menu") && hover != null)
         {
             Cursor.SetCursor(hover, default, default);
         }
