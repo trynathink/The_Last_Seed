@@ -21,7 +21,7 @@ public class PageBurner : MonoBehaviour
 
         img.color = new Color(1, 1, 1, 1);
 
-        if (PDSO.FireStage > 4)
+        if (PDSO.FireStage >= 4)
         {
             BURN = true;
         }
@@ -38,8 +38,21 @@ public class PageBurner : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         
+
+        if (PDSO.FireStage >= 4)
+        {
+            BURN = true;
+        }
+
+        if (BURN)
+        {
+
+            PDSO.Fire = Mathf.Clamp(PDSO.Fire + Time.deltaTime / 2, 0, 40);
+
+            img.sprite = Burner.Burn[Mathf.FloorToInt(PDSO.Fire) - 1];
+        }
     }
 }

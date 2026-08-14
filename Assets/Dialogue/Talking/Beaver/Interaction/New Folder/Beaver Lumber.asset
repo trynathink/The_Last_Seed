@@ -10,13 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: hare ready yes
+  m_Name: Beaver Lumber
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
-  Character: Hare
+  Character: Beaver
   Lines:
-  - Okay, let's do it.
-  trigger: MidPointFire
-  itemGain: {fileID: 11400000, guid: bd5ff789c0ee6394b9c9401324075594, type: 2}
+  - WHAT.
+  - Why are giving me this lumber?
+  - Oh do you need me to turn it chip away at it?
+  - HA, why not.
+  trigger: 
+  itemGain: {fileID: 11400000, guid: b2cd6c60daa723047b210d4359fd802a, type: 2}
   SceneChange: 
   trustVal: 
   trust: 0

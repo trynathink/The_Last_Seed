@@ -865,18 +865,21 @@ MonoBehaviour:
   hareAfterSubgoalOutcomes: []
   harePlantIdle: {fileID: 0}
   LionInit: {fileID: 0}
-  LionIdle: {fileID: 0}
-  LionConvinced: {fileID: 0}
-  LionConvinced2: {fileID: 0}
-  LionConvinced3: {fileID: 0}
+  LionIdle0: {fileID: 0}
+  LionItemHint: {fileID: 0}
+  LionIdle1: {fileID: 0}
   LionSack: {fileID: 0}
   LionLumber: {fileID: 0}
   LionCrop: {fileID: 0}
+  LionIdle1a: {fileID: 0}
+  LionIdle1b: {fileID: 0}
+  LionIdle1c: {fileID: 0}
   LionIdle2: {fileID: 0}
   LionIdle3: {fileID: 0}
   LionIdle4: {fileID: 0}
   LionIdle5: {fileID: 0}
-  LionTrust: {fileID: 0}
+  LionWaterLie: {fileID: 0}
+  LionIdle6: {fileID: 0}
   FireInit: {fileID: 0}
   FireBeforeLionIdle3: {fileID: 0}
   CrowdCropHint: {fileID: 0}
@@ -902,6 +905,7 @@ MonoBehaviour:
   nakedScarecrow: {fileID: 0}
   BeaverInit: {fileID: 0}
   beaverIdle: {fileID: 0}
+  beaverLumber: {fileID: 0}
   beaverIdleHare: {fileID: 0}
   beaverIdleBoth: {fileID: 0}
   beaverNoneFixed: {fileID: 0}
@@ -939,8 +943,6 @@ MonoBehaviour:
   videoPanel: {fileID: 1165258719}
   videoPlayer: {fileID: 1966770442}
   audioSource: {fileID: 1966770443}
-  seed: {fileID: 11400000, guid: bd5ff789c0ee6394b9c9401324075594, type: 2}
-  spade: {fileID: 11400000, guid: ef708af3fb16d9d4baa05127942335b7, type: 2}
 --- !u!1 &905780013
 GameObject:
   m_ObjectHideFlags: 0

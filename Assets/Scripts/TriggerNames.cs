@@ -52,7 +52,7 @@ public static class TriggerNames
     public const string BIRD_CONVICED = "BD4";
     public const string BIRD_TOKEN = "Bird Token";
     public const string BIRD_CONVICED2 = "Bird Conviced";
-    public const string BIRD_MOVE = "Bird Move";
+    public const string BIRD_MOVE = "FINAL";
 
     // Act 3 Plant Seed
     public const string SEED_DIG = "SeedDig";

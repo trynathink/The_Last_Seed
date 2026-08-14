@@ -1023,18 +1023,21 @@ MonoBehaviour:
   hareAfterSubgoalOutcomes: []
   harePlantIdle: {fileID: 0}
   LionInit: {fileID: 0}
-  LionIdle: {fileID: 0}
-  LionConvinced: {fileID: 0}
-  LionConvinced2: {fileID: 0}
-  LionConvinced3: {fileID: 0}
+  LionIdle0: {fileID: 0}
+  LionItemHint: {fileID: 0}
+  LionIdle1: {fileID: 0}
   LionSack: {fileID: 0}
   LionLumber: {fileID: 0}
   LionCrop: {fileID: 0}
+  LionIdle1a: {fileID: 0}
+  LionIdle1b: {fileID: 0}
+  LionIdle1c: {fileID: 0}
   LionIdle2: {fileID: 0}
   LionIdle3: {fileID: 0}
   LionIdle4: {fileID: 0}
   LionIdle5: {fileID: 0}
-  LionTrust: {fileID: 0}
+  LionWaterLie: {fileID: 0}
+  LionIdle6: {fileID: 0}
   FireInit: {fileID: 0}
   FireBeforeLionIdle3: {fileID: 0}
   CrowdCropHint: {fileID: 0}
@@ -1060,6 +1063,7 @@ MonoBehaviour:
   nakedScarecrow: {fileID: 0}
   BeaverInit: {fileID: 11400000, guid: 6aed6967f853231479afc70e7fc97904, type: 2}
   beaverIdle: {fileID: 11400000, guid: 70cc78a3d2834e148883f84e92ed05ff, type: 2}
+  beaverLumber: {fileID: 11400000, guid: 08c9987690739bb42913f3e6f3d11ec3, type: 2}
   beaverIdleHare: {fileID: 11400000, guid: 0ea1d0741847f9847a630fcf6f28d2c1, type: 2}
   beaverIdleBoth: {fileID: 11400000, guid: e492afad2f67b4049a9935e86cff8b83, type: 2}
   beaverNoneFixed: {fileID: 11400000, guid: 955211213735b3743a1ba878bf6a3e43, type: 2}
@@ -1086,10 +1090,17 @@ MonoBehaviour:
   EngineOff: {fileID: 11400000, guid: d1c9714def8c03f459eeb0e98a89c0a9, type: 2}
   EngineOnCrowbar: {fileID: 11400000, guid: d2fbbe6a9d6d3424b8a567b380ad76f5, type: 2}
   Spade: {fileID: 11400000, guid: ef708af3fb16d9d4baa05127942335b7, type: 2}
-  spadeImage: {fileID: 0}
+  spadeImage: {fileID: 232873868}
   closedFace: {fileID: 0}
   openFace: {fileID: 0}
   happyFace: {fileID: 0}
+  missingStepsMsg: {fileID: 0}
+  digSeed: {fileID: 0}
+  plantSeed: {fileID: 0}
+  waterSeed: {fileID: 0}
+  videoPanel: {fileID: 0}
+  videoPlayer: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!114 &831170366 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5412976005174906715, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
@@ -2682,6 +2693,10 @@ PrefabInstance:
     - target: {fileID: 3510492715745641037, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -486
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938908227466585859, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8482493879213678171, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_Pivot.x
