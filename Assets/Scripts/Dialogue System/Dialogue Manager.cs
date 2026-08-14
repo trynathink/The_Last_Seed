@@ -382,6 +382,11 @@ public class DialogueManager : MonoBehaviour
         if (script.trigger != string.Empty && script.trigger != null)
         {
             GameObject.Find("Canvas").SendMessage("addTrigger", script.trigger);
+
+            if(script.trigger == "MidPointFire")
+            {
+                PDSO.FireStage = 4;
+            }
         }
 
         if (script.SceneChange != string.Empty && script.SceneChange != null)

@@ -122,7 +122,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				break;
 			case SceneNames.ACT2_HARE:
                 if (PDSO.triggers.Contains(TriggerNames.HARE_NAKED_SCARECROW))
-                {PDSO.triggers.RemoveAll(i => i == TriggerNames.LION_QUESTION_ASKED);
+                {
                     NakedScarecrow();
                 }
 
@@ -177,7 +177,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		int subgoals = 0;
 		if (PDSO.triggers.Contains(TriggerNames.LION_FIN)) subgoals++;
 		if (PDSO.triggers.Contains(TriggerNames.SPADE_GAINED)) subgoals++;
-		if (PDSO.triggers.Contains("Bird Move")) subgoals++;
+		if (PDSO.triggers.Contains(TriggerNames.BIRD_CONVICED2)) subgoals++;
 		hareIdleAdded.choice.Outcomes[hareIdleAdded.choice.Outcomes.Count-1] = hareAfterSubgoalOutcomes[subgoals];
 		HareIdle = hareIdleAdded;
 	}
@@ -196,15 +196,16 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 PDSO.Fire = Mathf.Clamp(PDSO.Fire + 1.5f, 0, 30);
                 break;
             case 3:
+                PDSO.Fire = Mathf.Clamp(PDSO.Fire + 2f, 0, 30);
                 break;
+			case 4:
+				break;
         }
-
-		Debug.Log(PDSO.Fire);
 
 		base.NextScene(sceneName);
     }
 
-	public void FireStateUp()
+    public void FireStateUp()
 	{
 		PDSO.FireStage++;
 	}
@@ -390,7 +391,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	}
 
 	[SerializeReference]
-	ScriptsSO BeaverInit, beaverIdle;
+	ScriptsSO BeaverInit, beaverIdle, beaverLumber;
 	[SerializeField] ChoiceSO beaverIdleHare, beaverIdleBoth;
 	[SerializeField] ScriptsSO beaverNoneFixed, beaverPartialFixed, beaverFixed;
 	[SerializeField] ChoiceSO beaverHelped;
@@ -398,6 +399,14 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 	public void BeaverDia()
 	{
+		if(PDSO.HeldItem == ItemNames.LUMBER)
+		{
+			DM.SetLines(beaverLumber);
+
+			return;
+		}
+
+
 		if (PDSO.triggers.Contains("BeaverInit"))
 		{
 			if (HasAllTriggers("BeaverShovelAsked", "BeaverEngineAsked"))
@@ -744,13 +753,13 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					if (PDSO.triggers.Contains(TriggerNames.SPADE_GAINED))
 					{
 						DM.SetLines(DefaultItemFail);
-						FireStateUp();
 					}
 					else
 					{
 						addTrigger(TriggerNames.SPADE_GAINED);
 						PDSO.Inventory.Add(Spade);
 						spadeImage.SetActive(false);
+                        FireStateUp();
                     }
                 }
                 else
@@ -814,12 +823,15 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	{
 		if (!PDSO.triggers.Contains(TriggerNames.BIRD_MOVE))
 		{
-			return;
+			Debug.Log("Bird has not moved");
+            return;
+			
 		}
 
 		switch (PDSO.HeldItem) 
 		{
 			case ItemNames.SPADE:
+				Debug.Log("Spade Interaction Happened");
 				PDSO.triggers.Add(TriggerNames.SEED_DIG);
 				DM.SetLines(digSeed);
 				break;
