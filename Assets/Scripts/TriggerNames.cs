@@ -59,6 +59,11 @@ public static class TriggerNames
     public const string BIRD_CONVICED2 = "Bird Conviced";
     public const string BIRD_MOVE = "Bird Move";
 
+    // Act 3 Plant Seed
+    public const string SEED_DIG = "SeedDig";
+    public const string SEED_PLANT = "SeedPlant";
+    public const string SEED_WATER = "SeedWater";
+
     // GAME END
     public const string FINAL = "FINAL";
 }
