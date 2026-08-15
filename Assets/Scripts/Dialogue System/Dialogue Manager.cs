@@ -102,7 +102,7 @@ public class DialogueManager : MonoBehaviour
 		}
     }
 
-    private void OnPointerClick(InputAction.CallbackContext context)
+    void FixedUpdate()
     {
         if (Dia)
         {

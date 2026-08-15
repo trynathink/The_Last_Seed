@@ -31,6 +31,7 @@ public class SaveSystem : IDataService
                 File.WriteAllText(path, JsonConvert.SerializeObject(data));
 
                 Debug.Log("Rewrite Successful");
+                Debug.Log(path);
                 return true;
             }
             catch(Exception e)
