@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - This shrub looks useful.
+  - "Maybe I should bring this\u2026"
   trigger: 
   itemGain: {fileID: 11400000, guid: 57a0f6f50136669769af2e7e9331b8b1, type: 2}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}

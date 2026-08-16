@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-8972645691967780806
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion15_{-8972645691967780806}
+  m_AudioClip: {fileID: 8300000, guid: f47bb8af37ab6554b8d311f0a36d9e6d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-7417422254000311897
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion7_{-7417422254000311897}
+  m_AudioClip: {fileID: 8300000, guid: 147f55f1fbf8d5b469733bcd810ebd6e, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-6536766333496032094
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion10_{-6536766333496032094}
+  m_AudioClip: {fileID: 8300000, guid: c3a99b693a45d734c8bcd501c189f8ce, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-5485760474713220525
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion14_{-5485760474713220525}
+  m_AudioClip: {fileID: 8300000, guid: 4c64e7b3f8a735a4b95414ad4e1173ea, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-4432600851281196293
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion12_{-4432600851281196293}
+  m_AudioClip: {fileID: 8300000, guid: 62924d408589eb64cbfd3682a5e91a9e, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3940012345039296161
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion19_{-3940012345039296161}
+  m_AudioClip: {fileID: 8300000, guid: 999c5b6ca096d494ab758ba002b037cf, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3844772790921139260
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion20_{-3844772790921139260}
+  m_AudioClip: {fileID: 8300000, guid: 2efeb540773840b43a05e8aef95b024c, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3171983464073615944
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion18_{-3171983464073615944}
+  m_AudioClip: {fileID: 8300000, guid: d2ceab97c7241454f89d233097c9f3f4, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-3093690531598891905
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion6_{-3093690531598891905}
+  m_AudioClip: {fileID: 8300000, guid: 0c9410186e173f645a8a13213435e2b0, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2854033743995372737
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion5_{-2854033743995372737}
+  m_AudioClip: {fileID: 8300000, guid: 5295ba90e2870a44d92d4f5c9f59a47b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2473679367697012270
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion1_{-2473679367697012270}
+  m_AudioClip: {fileID: 8300000, guid: 5f9b516863b34984a8d088bb7576398a, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1423495292192923776
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion9_{-1423495292192923776}
+  m_AudioClip: {fileID: 8300000, guid: 142c50225cce2cd42ad73fe8de7099db, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1293341725431351350
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion16_{1293341725431351350}
+  m_AudioClip: {fileID: 8300000, guid: 1dda2e509fce2694ebac146978bff040, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2019065891225615879
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion4_{2019065891225615879}
+  m_AudioClip: {fileID: 8300000, guid: c4b4d457d70383b4996f7d2742b39982, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2020885332083769448
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion3_{2020885332083769448}
+  m_AudioClip: {fileID: 8300000, guid: 8ef1f2174f3fc89459f81f75644fc5a9, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &3469392882924691395
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion13_{3469392882924691395}
+  m_AudioClip: {fileID: 8300000, guid: 3f15b32f655877e49b79d342b254c6f5, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &4720125968555707705
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion2_{4720125968555707705}
+  m_AudioClip: {fileID: 8300000, guid: c207e1dfbe34e444c97c052cf34193e3, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5201991385498372239
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion11_{5201991385498372239}
+  m_AudioClip: {fileID: 8300000, guid: 93e8a6af3d2bbd64e8306e6073499b8f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lion
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: -600, y: 600}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -2473679367697012270}
+  - {fileID: 4720125968555707705}
+  - {fileID: 2020885332083769448}
+  - {fileID: 2019065891225615879}
+  - {fileID: -2854033743995372737}
+  - {fileID: -3093690531598891905}
+  - {fileID: -7417422254000311897}
+  - {fileID: 7485164077683351795}
+  - {fileID: -1423495292192923776}
+  - {fileID: -6536766333496032094}
+  - {fileID: 5201991385498372239}
+  - {fileID: -4432600851281196293}
+  - {fileID: 3469392882924691395}
+  - {fileID: -5485760474713220525}
+  - {fileID: -8972645691967780806}
+  - {fileID: 1293341725431351350}
+  - {fileID: 8586334455158438149}
+  - {fileID: -3171983464073615944}
+  - {fileID: -3940012345039296161}
+  - {fileID: -3844772790921139260}
+  m_AvoidRepeatingLast: 3
+  m_PlaybackMode: 2
+  m_TriggerMode: 0
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &7485164077683351795
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion8_{7485164077683351795}
+  m_AudioClip: {fileID: 8300000, guid: d73b5747c43c144419f1138df545f824, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &8586334455158438149
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: lion17_{8586334455158438149}
+  m_AudioClip: {fileID: 8300000, guid: a971ce13a0722854f96fa7f0cd5837e6, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

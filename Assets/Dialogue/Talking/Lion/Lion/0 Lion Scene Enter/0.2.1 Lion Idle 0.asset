@@ -15,7 +15,7 @@ MonoBehaviour:
   Character: Lion
   Lines:
   - We are going to take ALL this water here and simply put out the fires!
-  - Come brig your water here!
+  - Come bring your water here!
   - Now if you have no water, please move along.
   - Autographs will have to wait.
   trigger: FirstTimeInScene

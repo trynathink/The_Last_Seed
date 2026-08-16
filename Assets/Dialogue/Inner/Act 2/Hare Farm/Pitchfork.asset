@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - This Pitchfork could come in handy.
+  - "This could be useful\u2026"
   trigger: 
   itemGain: {fileID: 11400000, guid: e1d84c707408d80a19949055f3ac449a, type: 2}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}

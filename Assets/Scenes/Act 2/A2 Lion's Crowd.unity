@@ -737,6 +737,10 @@ PrefabInstance:
       propertyPath: PDSO
       value: 
       objectReference: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+    - target: {fileID: 8587240428572070076, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
+      propertyPath: BubbleAudio
+      value: 
+      objectReference: {fileID: 6418180475301049370, guid: 402ff2b581090f045b571eaa89e99441, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1093,6 +1097,7 @@ MonoBehaviour:
   nakedScarecrow: {fileID: 0}
   BeaverInit: {fileID: 0}
   beaverIdle: {fileID: 0}
+  beaverLumber: {fileID: 0}
   beaverIdleHare: {fileID: 0}
   beaverIdleBoth: {fileID: 0}
   beaverNoneFixed: {fileID: 0}
@@ -1123,6 +1128,13 @@ MonoBehaviour:
   closedFace: {fileID: 1906157460}
   openFace: {fileID: 1906157460}
   happyFace: {fileID: 1906157460}
+  missingStepsMsg: {fileID: 0}
+  digSeed: {fileID: 0}
+  plantSeed: {fileID: 0}
+  waterSeed: {fileID: 0}
+  videoPanel: {fileID: 0}
+  videoPlayer: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &1001305949
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,6 +2051,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1673299921369360853, guid: 18a493dd75c101d469e0069ce31b1962, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 7ac8c8e7c0b75c049ae4dffd2bcef038, type: 3}
     - target: {fileID: 2715723397544825345, guid: 18a493dd75c101d469e0069ce31b1962, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

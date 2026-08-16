@@ -1555,6 +1555,7 @@ MonoBehaviour:
   DefaultItemFail: {fileID: 0}
   ScarecrowIdle: {fileID: 11400000, guid: 83e78edbba868e851a894f2a4ec768bb, type: 2}
   ScarecrowFabric: {fileID: 11400000, guid: a6bdf2a71afcd7a038b72b95c8836ee7, type: 2}
+  scarecrowIdleNaked: {fileID: 11400000, guid: f30fea9550342eb4c802da579ac0225b, type: 2}
   HareInit: {fileID: 11400000, guid: 7584c9a7f1413e7c4a2d6384e8c8e3c1, type: 2}
   HareIdle: {fileID: 11400000, guid: 9fff33103c462c0ef88dfb40d668b30c, type: 2}
   hareIdleAdded: {fileID: 11400000, guid: aacdbcdd86555094993175475adfa846, type: 2}
@@ -1565,18 +1566,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e1be4c50a844564ba5b4afe4dadcd16, type: 2}
   harePlantIdle: {fileID: 11400000, guid: 8857540e601713e448e43003ee358d44, type: 2}
   LionInit: {fileID: 0}
-  LionIdle: {fileID: 0}
-  LionConvinced: {fileID: 0}
-  LionConvinced2: {fileID: 0}
-  LionConvinced3: {fileID: 0}
+  LionIdle0: {fileID: 0}
+  LionItemHint: {fileID: 0}
+  LionIdle1: {fileID: 0}
   LionSack: {fileID: 0}
   LionLumber: {fileID: 0}
   LionCrop: {fileID: 0}
+  LionIdle1a: {fileID: 0}
+  LionIdle1b: {fileID: 0}
+  LionIdle1c: {fileID: 0}
   LionIdle2: {fileID: 0}
   LionIdle3: {fileID: 0}
   LionIdle4: {fileID: 0}
   LionIdle5: {fileID: 0}
-  LionTrust: {fileID: 0}
+  LionWaterLie: {fileID: 0}
+  LionIdle6: {fileID: 0}
   FireInit: {fileID: 0}
   FireBeforeLionIdle3: {fileID: 0}
   CrowdCropHint: {fileID: 0}
@@ -1602,6 +1606,7 @@ MonoBehaviour:
   nakedScarecrow: {fileID: 4402505074041093237, guid: 47982d51c787ae049973b21ca2bab476, type: 3}
   BeaverInit: {fileID: 0}
   beaverIdle: {fileID: 0}
+  beaverLumber: {fileID: 0}
   beaverIdleHare: {fileID: 0}
   beaverIdleBoth: {fileID: 0}
   beaverNoneFixed: {fileID: 0}
@@ -1632,6 +1637,13 @@ MonoBehaviour:
   closedFace: {fileID: 0}
   openFace: {fileID: 0}
   happyFace: {fileID: 0}
+  missingStepsMsg: {fileID: 0}
+  digSeed: {fileID: 0}
+  plantSeed: {fileID: 0}
+  waterSeed: {fileID: 0}
+  videoPanel: {fileID: 0}
+  videoPlayer: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &768128109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,8 +2198,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f3c0c59843bc96a4d980884b72469de0, type: 2}
+  m_sharedMaterial: {fileID: -8495322303355730733, guid: f3c0c59843bc96a4d980884b72469de0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
