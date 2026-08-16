@@ -505,14 +505,6 @@ PrefabInstance:
       value: UI Holder
       objectReference: {fileID: 0}
     - target: {fileID: 3746741073765112923, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: df06e145f0af4b64aa450c95aa780635, type: 2}
-    - target: {fileID: 3746741073765112923, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 6272311626605882426, guid: df06e145f0af4b64aa450c95aa780635, type: 2}
-    - target: {fileID: 3746741073765112923, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}

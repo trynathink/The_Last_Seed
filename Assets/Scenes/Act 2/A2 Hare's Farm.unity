@@ -1566,21 +1566,23 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e1be4c50a844564ba5b4afe4dadcd16, type: 2}
   harePlantIdle: {fileID: 11400000, guid: 8857540e601713e448e43003ee358d44, type: 2}
   LionInit: {fileID: 0}
-  LionIdle: {fileID: 0}
-  LionConvinced: {fileID: 0}
-  LionConvinced2: {fileID: 0}
-  LionConvinced3: {fileID: 0}
+  LionIdle0: {fileID: 0}
+  LionItemHint: {fileID: 0}
+  LionIdle1: {fileID: 0}
   LionSack: {fileID: 0}
   LionLumber: {fileID: 0}
   LionCrop: {fileID: 0}
+  LionIdle1a: {fileID: 0}
+  LionIdle1b: {fileID: 0}
+  LionIdle1c: {fileID: 0}
   LionIdle2: {fileID: 0}
   LionIdle3: {fileID: 0}
   LionIdle4: {fileID: 0}
   LionIdle5: {fileID: 0}
-  LionTrust: {fileID: 0}
+  LionWaterLie: {fileID: 0}
+  LionIdle6: {fileID: 0}
   FireInit: {fileID: 0}
   FireBeforeLionIdle3: {fileID: 0}
-  metalBurn: {fileID: 0}
   CrowdCropHint: {fileID: 0}
   CrowdLumberHint: {fileID: 0}
   CrowdSackHint: {fileID: 0}
@@ -1601,18 +1603,16 @@ MonoBehaviour:
   brickOver: {fileID: 0}
   OpenBrick: {fileID: 0}
   ReinforcedPole: {fileID: 0}
-  missingPole: {fileID: 0}
-  reinforcedShovel: {fileID: 0}
   nakedScarecrow: {fileID: 4402505074041093237, guid: 47982d51c787ae049973b21ca2bab476, type: 3}
   BeaverInit: {fileID: 0}
   beaverIdle: {fileID: 0}
+  beaverLumber: {fileID: 0}
   beaverIdleHare: {fileID: 0}
   beaverIdleBoth: {fileID: 0}
   beaverNoneFixed: {fileID: 0}
   beaverPartialFixed: {fileID: 0}
   beaverFixed: {fileID: 0}
   beaverHelped: {fileID: 0}
-  beaverShovel: {fileID: 0}
   BirdIntro: {fileID: 0}
   BirdToken: {fileID: 0}
   BirdIdle: {fileID: 0}
@@ -1637,6 +1637,13 @@ MonoBehaviour:
   closedFace: {fileID: 0}
   openFace: {fileID: 0}
   happyFace: {fileID: 0}
+  missingStepsMsg: {fileID: 0}
+  digSeed: {fileID: 0}
+  plantSeed: {fileID: 0}
+  waterSeed: {fileID: 0}
+  videoPanel: {fileID: 0}
+  videoPlayer: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &768128109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,8 +2198,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f3c0c59843bc96a4d980884b72469de0, type: 2}
+  m_sharedMaterial: {fileID: -8495322303355730733, guid: f3c0c59843bc96a4d980884b72469de0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
