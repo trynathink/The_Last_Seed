@@ -1555,6 +1555,7 @@ MonoBehaviour:
   DefaultItemFail: {fileID: 0}
   ScarecrowIdle: {fileID: 11400000, guid: 83e78edbba868e851a894f2a4ec768bb, type: 2}
   ScarecrowFabric: {fileID: 11400000, guid: a6bdf2a71afcd7a038b72b95c8836ee7, type: 2}
+  scarecrowIdleNaked: {fileID: 11400000, guid: f30fea9550342eb4c802da579ac0225b, type: 2}
   HareInit: {fileID: 11400000, guid: 7584c9a7f1413e7c4a2d6384e8c8e3c1, type: 2}
   HareIdle: {fileID: 11400000, guid: 9fff33103c462c0ef88dfb40d668b30c, type: 2}
   hareIdleAdded: {fileID: 11400000, guid: aacdbcdd86555094993175475adfa846, type: 2}
@@ -1579,6 +1580,7 @@ MonoBehaviour:
   LionTrust: {fileID: 0}
   FireInit: {fileID: 0}
   FireBeforeLionIdle3: {fileID: 0}
+  metalBurn: {fileID: 0}
   CrowdCropHint: {fileID: 0}
   CrowdLumberHint: {fileID: 0}
   CrowdSackHint: {fileID: 0}
@@ -1599,6 +1601,8 @@ MonoBehaviour:
   brickOver: {fileID: 0}
   OpenBrick: {fileID: 0}
   ReinforcedPole: {fileID: 0}
+  missingPole: {fileID: 0}
+  reinforcedShovel: {fileID: 0}
   nakedScarecrow: {fileID: 4402505074041093237, guid: 47982d51c787ae049973b21ca2bab476, type: 3}
   BeaverInit: {fileID: 0}
   beaverIdle: {fileID: 0}
@@ -1608,6 +1612,7 @@ MonoBehaviour:
   beaverPartialFixed: {fileID: 0}
   beaverFixed: {fileID: 0}
   beaverHelped: {fileID: 0}
+  beaverShovel: {fileID: 0}
   BirdIntro: {fileID: 0}
   BirdToken: {fileID: 0}
   BirdIdle: {fileID: 0}

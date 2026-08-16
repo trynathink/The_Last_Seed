@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - Scarecrow idling around
+  - "What is it protecting anymore\u2026?"
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
+  trustVal: 
+  trust: 0
   choice: {fileID: 0}

@@ -13,6 +13,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     // scarecrow
     public ScriptsSO ScarecrowIdle;
     public ScriptsSO ScarecrowFabric;
+    [SerializeField] private ScriptsSO scarecrowIdleNaked;
 
     // hare
     public ScriptsSO HareInit;
@@ -236,15 +237,18 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
     public void ScarecrowDialogue()
     {
-        bool containsBlanketOrFabric = PDSO.Inventory
-                        .Any(item => item.Name == CollectibleType.Blanket.ToString()
-                                || item.Name == CollectibleType.Fabric.ToString());
+		bool fabric = PDSO.ItemContains("Fabric");
+		bool blanket = PDSO.ItemContains("Blanket");
 		bool notFirst = PDSO.triggers.Contains(TriggerNames.SCARECROW_FIRST_INTERACTION);
         
-        if(!containsBlanketOrFabric && notFirst)
+		if (fabric)
         {
-            DM.SetLines(ScarecrowFabric);
+            DM.SetLines(scarecrowIdleNaked);
         }
+		else if (notFirst && !blanket)
+		{
+            DM.SetLines(ScarecrowFabric);
+		}
         else
         {
             DM.SetLines(ScarecrowIdle);

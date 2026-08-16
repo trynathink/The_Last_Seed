@@ -18,9 +18,10 @@ MonoBehaviour:
   - Th-The ^folks 'round here seem to have lost hope...
   - ...My plants don't grow.
   - ...
-  - Neither does anyone else's no more.
+  - Neither does anyone else no more.
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 11400000, guid: 8a822f919b96a0a47b94422dc925ec2b, type: 2}
