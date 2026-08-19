@@ -4227,6 +4227,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  ClickIA:
+    m_Name: Click IA
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e54246cb-08f2-4b0f-9bf4-c2cde8e77e43
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   Bubbles:
   - {fileID: 11400000, guid: c550567dc4490b847bbc5f5ce879d4b8, type: 2}
   - {fileID: 11400000, guid: 8c5b85365054e2743bc51bd4445d1de3, type: 2}
@@ -4251,7 +4260,6 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls: []
-  click: {fileID: 1120369429361536294, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   sound: {fileID: 1949760078452079709}
   BirdFail: {fileID: 0}
 --- !u!1 &5656747082087850295

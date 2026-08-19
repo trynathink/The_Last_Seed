@@ -15,7 +15,7 @@ MonoBehaviour:
   SaveFile: Save2
   PlayerLocation: A2 Bird's Forest
   HeldItem: 
-  Fire: 40
+  Fire: 3.7799966
   FireStage: 4
   BirdTrust: 0
   Inventory:

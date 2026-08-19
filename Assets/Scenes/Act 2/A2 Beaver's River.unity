@@ -1017,6 +1017,7 @@ MonoBehaviour:
   DefaultItemFail: {fileID: 11400000, guid: e862f77e54f48ce4f9935d29a8875007, type: 2}
   ScarecrowIdle: {fileID: 0}
   ScarecrowFabric: {fileID: 0}
+  scarecrowIdleNaked: {fileID: 0}
   HareInit: {fileID: 0}
   HareIdle: {fileID: 0}
   hareIdleAdded: {fileID: 0}
@@ -1633,6 +1634,7 @@ GameObject:
   - component: {fileID: 1144314507}
   - component: {fileID: 1144314506}
   - component: {fileID: 1144314505}
+  - component: {fileID: 1144314508}
   m_Layer: 0
   m_Name: Hit Box
   m_TagString: Untagged
@@ -1753,6 +1755,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144314503}
   m_CullTransparentMesh: 1
+--- !u!114 &1144314508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144314503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a136e9349f4aea448bfd4dd6c9f3a59b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorChange
+  PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  hover: {fileID: 2800000, guid: 859797a8b2e04a2479e81da00bab9ef8, type: 3}
+  click: {fileID: 2800000, guid: 805768040ca65ef4cb1f704b859b8512, type: 3}
 --- !u!1 &1191175599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,6 +2477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1840548035}
   - component: {fileID: 1840548036}
+  - component: {fileID: 1840548037}
   m_Layer: 5
   m_Name: Path to Forest
   m_TagString: Untagged
@@ -2556,6 +2574,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1840548037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840548034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a136e9349f4aea448bfd4dd6c9f3a59b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorChange
+  PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
+  hover: {fileID: 2800000, guid: 859797a8b2e04a2479e81da00bab9ef8, type: 3}
+  click: {fileID: 2800000, guid: 805768040ca65ef4cb1f704b859b8512, type: 3}
 --- !u!1 &1857041456
 GameObject:
   m_ObjectHideFlags: 0
@@ -2693,10 +2726,6 @@ PrefabInstance:
     - target: {fileID: 3510492715745641037, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -486
-      objectReference: {fileID: 0}
-    - target: {fileID: 3938908227466585859, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8482493879213678171, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_Pivot.x

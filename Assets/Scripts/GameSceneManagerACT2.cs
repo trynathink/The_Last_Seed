@@ -378,6 +378,8 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				if(PDSO.triggers.Contains(TriggerNames.LION_IDLE_5))
 				{
 					DM.SetLines(LionWaterLie);
+
+					PDSO.RemoveItem("Lump of Metal");
 				}
 				else
 				{
