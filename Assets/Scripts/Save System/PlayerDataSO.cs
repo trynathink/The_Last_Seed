@@ -67,14 +67,16 @@ public class PlayerDataSO : ScriptableObject
 
     public bool ItemContains(string name)
     {
-        foreach (ItemSO i in Inventory)
+        if (Inventory != null)
         {
-            if (i.name == name)
+            foreach (ItemSO i in Inventory)
             {
-                return true;
+                if (i.name == name)
+                {
+                    return true;
+                }
             }
         }
-
         return false;
     }
 

@@ -70,7 +70,10 @@ public class GameSceneManager : GameSceneManagerBase
     {
         isAlarmOff = true;
 		BackgroundSFX.StopLoop();
-        clockAnimation.SetActive(false);
+        if (clockAnimation != null)
+        {
+            clockAnimation.SetActive(false);
+        }
     }
 
     // Bedroom Scene

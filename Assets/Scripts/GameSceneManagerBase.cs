@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameSceneManagerBase : MonoBehaviour
 {
-	[SerializeField] protected PlayerDataSO PDSO;
+	[SerializeField] public PlayerDataSO PDSO;
 
     protected DialogueManager DM;
     protected InventoryManager IM;

@@ -18,6 +18,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     PlayerDataSO PDSO;
 
+    [SerializeField]
+    InputAction ClickIA;
+
 	[Header("Randomization Variables")]
 	[SerializeField]
 	private RandomContainer[] Bubbles;
@@ -69,9 +72,6 @@ public class DialogueManager : MonoBehaviour
     private UnityEvent onClick;
 
     [SerializeField]
-    private InputActionReference click;
-
-    [SerializeField]
     private AudioSource sound;
 
     Image DiaImg;
@@ -82,6 +82,17 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
+        Debug.Log("HAPPENS");
+
+        var playerMap = InputSystem.actions.FindActionMap("Player");
+
+        Debug.Log(playerMap);
+
+        playerMap.Enable();
+
+        ClickIA = InputSystem.actions.FindAction("Attack");
+        ClickIA.Enable();
+
         DiaImg = GameObject.Find("Dialogue Image").GetComponent<Image>();
         Inner = transform.Find("Inner Text").gameObject;
         NPC = transform.Find("NPC Text").gameObject;
@@ -94,18 +105,16 @@ public class DialogueManager : MonoBehaviour
 			current += BubbleChances[i];
 			BubbleChances[i] = current;
 		}
-
-		if (click != null)
-		{
-			click.action.performed += OnPointerClick;
-			click.action.Enable();
-		}
     }
 
     void FixedUpdate()
     {
-        if (Dia)
+        Debug.Log(ClickIA.phase);
+
+        if (Dia && ClickIA.phase == InputActionPhase.Started)
         {
+            Debug.Log("click");
+
 			if (animStarted)
 			{
 				skipAnim = true;
