@@ -15,6 +15,15 @@ public class CursorChange : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     void Awake()
     {
+        if (SceneManager.GetActiveScene().name == "Main Menu")
+        {
+            PDSO = GameObject.Find("Canvas").GetComponent<MainMenuButtonManager>().PDSO;
+        }
+        else
+        {
+            PDSO = GameObject.Find("Canvas").GetComponent<GameSceneManagerBase>().PDSO;
+        }
+
         hover = PDSO.CursorHover;
         click = PDSO.CursorClick;
     }

@@ -781,8 +781,10 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	GameObject closedFace, openFace, happyFace;
     public void BirdFace(bool talking, string context)
     {
-		if(context == "Bird Good Luck." || PDSO.triggers.Contains(TriggerNames.FINAL))
+		if(PDSO.triggers.Contains(TriggerNames.FINAL))
 		{
+			Debug.Log("Bird Left");
+			
             closedFace.SetActive(false);
             openFace.SetActive(false);
             happyFace.SetActive(false);

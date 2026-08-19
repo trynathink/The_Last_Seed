@@ -1810,6 +1810,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8587240428572070076, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
+      propertyPath: ClickIA.m_Name
+      value: Click IA
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587240428572070076, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
+      propertyPath: HAHAHAHAHA.m_Name
+      value: HAHAHAHAHA
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
