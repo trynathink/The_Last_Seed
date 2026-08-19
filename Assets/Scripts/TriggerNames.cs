@@ -20,6 +20,7 @@ public static class TriggerNames
     public const string LION_CONVINCED_3 = "LionConvinced3";
     public const string LION_IDLE_5 = "WaterLie";
     public const string LION_IDLE_6 = "LionFireInteraction";
+    public const string LION_FIRE = "Lion Fire";
     public const string LION_FIN = "LionFIN";
 
     // Act 2 Windmill

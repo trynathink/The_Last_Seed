@@ -276,8 +276,13 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		if (PDSO.triggers.Contains(TriggerNames.LION_IDLE_6))
 		{
 			DM.SetLines(LionIdle6);
+			
+			if (!PDSO.triggers.Contains(TriggerNames.LION_FIRE))
+			{
+                FireStateUp();
 
-			FireStateUp();
+				addTrigger(TriggerNames.LION_FIRE);
+            }
 		}
 		// Idle 5
 		else if(PDSO.triggers.Contains(TriggerNames.LION_IDLE_5))
