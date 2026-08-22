@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: windmill first sighting
+  m_Name: produce sign thought
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - "I wonder if anyone here knows about the seed\u2026"
+  - "I wonder if there\u2019s any produce left\u2026"
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
