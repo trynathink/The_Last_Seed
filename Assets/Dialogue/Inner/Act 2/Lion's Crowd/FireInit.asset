@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - The fire is dancing in front of the crowd.
-  - It is angry
-  - I wonder if the Lion finds the irony in this being here or not.
+  - "That\u2019s one powerful fire\u2026"
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 

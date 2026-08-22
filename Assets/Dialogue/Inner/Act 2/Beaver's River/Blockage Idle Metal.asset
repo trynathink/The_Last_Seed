@@ -14,13 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - All the trash from the river seems to getting stuck here.
-  - If I could find a way to move that tire out of the way, I think it would clear
-    up the blockage.
-  - Theres also a lump of metal sitting in there.
-  - I'm sure that will come in handy!
+  - "It looks like it\u2019s stopping the waterwheel from turning\u2026"
   trigger: BlockageItem
-  itemGain: {fileID: 11400000, guid: 70137deefea6be74485eda5ae3abb9dc, type: 2}
+  itemGain: {fileID: 0}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}

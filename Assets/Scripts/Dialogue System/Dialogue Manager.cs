@@ -82,14 +82,8 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("HAPPENS");
-
         var playerMap = InputSystem.actions.FindActionMap("Player");
-
-        Debug.Log(playerMap);
-
         playerMap.Enable();
-
         ClickIA = InputSystem.actions.FindAction("Attack");
         ClickIA.Enable();
 
@@ -109,12 +103,8 @@ public class DialogueManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log(ClickIA.phase);
-
         if (Dia && ClickIA.phase == InputActionPhase.Started)
         {
-            Debug.Log("click");
-
 			if (animStarted)
 			{
 				skipAnim = true;

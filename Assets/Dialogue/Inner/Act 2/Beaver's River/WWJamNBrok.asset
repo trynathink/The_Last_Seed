@@ -14,12 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - This water wheel has certainly seen better days
-  - It looks to be stuck due to the blockage
-  - It's also missing it's wooden paddles
-  - A lot of work left to fix this up, better get to it!
+  - This waterwheel needs a lot of work.
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}

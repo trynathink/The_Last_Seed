@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - Huh, something just fell from the tire beside me.
-  - There was a lump of metal sitting in there!
-  - I'm sure that will come in handy!
-  trigger: BlockageItem
+  - A piece of scrap metal? Maybe I should hold onto this.
+  trigger: 
   itemGain: {fileID: 11400000, guid: 70137deefea6be74485eda5ae3abb9dc, type: 2}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}

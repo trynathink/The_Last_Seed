@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - I think the hare's farm isn't far from here...
+  - "I wonder if anyone here knows about the seed\u2026"
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
+  trustVal: 
+  trust: 0
   choice: {fileID: 0}

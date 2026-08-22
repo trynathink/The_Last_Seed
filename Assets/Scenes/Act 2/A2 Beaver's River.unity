@@ -1079,7 +1079,7 @@ MonoBehaviour:
   b3: {fileID: 0}
   ReShovel: {fileID: 0}
   BlockageIdle: {fileID: 11400000, guid: 1de72cf474c8327408104571e8ecae53, type: 2}
-  IdleMetal: {fileID: 11400000, guid: c0b663b3033fca3409e71d101274349b, type: 2}
+  IdleMetal: {fileID: 11400000, guid: 6c4c09a31db67e1498643ab8e3e92581, type: 2}
   PithforkMetal: {fileID: 11400000, guid: ae0645bc4d092f74f9e79c7cffb7b51e, type: 2}
   WWJamNBrok: {fileID: 11400000, guid: 9d8c9e4a856af5d4e83fbc9e4245fd66, type: 2}
   WWJam: {fileID: 11400000, guid: ab6a2be80bc78cb48b3e0fff25a773bb, type: 2}
@@ -1090,7 +1090,7 @@ MonoBehaviour:
   EngineOn: {fileID: 11400000, guid: 9063d4f3063dd274aad4c08e30fb800d, type: 2}
   EngineOff: {fileID: 11400000, guid: d1c9714def8c03f459eeb0e98a89c0a9, type: 2}
   EngineOnCrowbar: {fileID: 11400000, guid: d2fbbe6a9d6d3424b8a567b380ad76f5, type: 2}
-  Spade: {fileID: 11400000, guid: ef708af3fb16d9d4baa05127942335b7, type: 2}
+  SpadePickup: {fileID: 11400000, guid: 4292f9d18ae5369478c75a1fc2967ad2, type: 2}
   spadeImage: {fileID: 232873868}
   closedFace: {fileID: 0}
   openFace: {fileID: 0}

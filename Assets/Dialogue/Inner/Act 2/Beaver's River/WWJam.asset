@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - This water wheel is looking better but still not functional
-  - It looks to be stuck due to the blockage
-  - Good progress but theres still work left to be done!
+  - "Looks like it\u2019s jammed\u2026"
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}

@@ -14,12 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - So this is the thing causing all of this smoke and horror.
-  - The clanking noise it makes is unsettling
-  - I probably couldn't go near this with my crowbar
-  - I don't think the Beaver would like that.
+  - "I can\u2019t get it with this engine running\u2026"
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}

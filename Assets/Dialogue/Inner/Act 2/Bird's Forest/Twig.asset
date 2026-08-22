@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - It's a twig!!
-  - I'm betting I could find a use for this.
+  - This twig looks a little like a tree.
   trigger: 
   itemGain: {fileID: 11400000, guid: c0b3f3ea3433d5c46b3a1def79e0bd2c, type: 2}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}
