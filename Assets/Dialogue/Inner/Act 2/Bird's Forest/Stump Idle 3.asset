@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Twig
+  m_Name: Stump Idle 3
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - This twig looks a little like a tree.
+  - "I wonder what this forest was like\u2026"
   trigger: 
-  itemGain: {fileID: 11400000, guid: c0b3f3ea3433d5c46b3a1def79e0bd2c, type: 2}
+  itemGain: {fileID: 0}
   SceneChange: 
   trustVal: 
   trust: 0

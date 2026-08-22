@@ -14,12 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - Pieces of Lumber?
-  - They must have been left here from way long ago.
-  - ...
-  - These might come in handy.
+  - "So this is all that\u2019s left of the trees\u2026"
   trigger: 
   itemGain: {fileID: 11400000, guid: 4bccc80e141fc914f988dead9ab5449e, type: 2}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}

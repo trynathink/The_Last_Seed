@@ -572,10 +572,8 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	public void WindmillInteract()
 	{
 		Action action = () => {
-			{
-				if (!WindmillFixed())
-					DM.SetLines(brokenWindmill);
-			}
+			if (!WindmillFixed())
+				DM.SetLines(brokenWindmill);
 		};
 		CatchAnyItemHeld(action);
 	}
@@ -881,5 +879,17 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				DM.SetLines(missingStepsMsg);
 				break;
 		}
+	}
+
+	[SerializeField] private ScriptsSO[] stumpIdles;
+	private int stumpIdleIdx;
+
+	public void TreeStumps()
+	{
+		Action action = () => {
+			DM.SetLines(stumpIdles[stumpIdleIdx]);
+			stumpIdleIdx = (stumpIdleIdx + 1) % stumpIdles.Length;
+		};
+		CatchAnyItemHeld(action);
 	}
 }
