@@ -14,10 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - The water is so murky.
-  - Trash has just been thrown into it with no care it seems
-  - It's cause a pile up near the water wheel.
-  - I could get a better look at that pile up.
+  - "\u2026Doesn\u2019t look much like water anymore."
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 

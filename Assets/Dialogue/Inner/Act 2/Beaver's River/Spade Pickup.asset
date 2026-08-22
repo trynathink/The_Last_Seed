@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa66102b9ba1d2458f0bb46681511c2, type: 3}
-  m_Name: Blockage Idle Metal
+  m_Name: Spade Pickup
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - "It looks like it\u2019s stopping the waterwheel from turning\u2026"
-  trigger: BlockageItem
-  itemGain: {fileID: 0}
+  - I could use this.
+  trigger: 
+  itemGain: {fileID: 11400000, guid: ef708af3fb16d9d4baa05127942335b7, type: 2}
   SceneChange: 
   trustVal: 
   trust: 0

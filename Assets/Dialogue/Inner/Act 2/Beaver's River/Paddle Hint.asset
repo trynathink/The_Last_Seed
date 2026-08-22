@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - I bet I could use this lumber to get some new paddles
+  - I bet I could use this lumber to get some new paddles.
   - Maybe the Beaver can help me with that?
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}

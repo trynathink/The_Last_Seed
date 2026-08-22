@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
   Lines:
-  - This water wheel is looking better but still not functional
-  - It's missing it's wooden paddles
-  - Good progress but theres still work left to be done!
+  - "It\u2019s missing some paddles\u2026"
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}

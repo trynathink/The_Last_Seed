@@ -741,8 +741,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	}
 
     [SerializeReference]
-    ScriptsSO EngineOn, EngineOff, EngineOnCrowbar;
-    [SerializeField] ItemSO Spade;
+    ScriptsSO EngineOn, EngineOff, EngineOnCrowbar, SpadePickup;
     [SerializeField] GameObject spadeImage;
     public void Engine()
 	{
@@ -768,7 +767,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 					else
 					{
 						addTrigger(TriggerNames.SPADE_GAINED);
-						PDSO.Inventory.Add(Spade);
+						DM.SetLines(SpadePickup);
 						spadeImage.SetActive(false);
                         FireStateUp();
                     }
