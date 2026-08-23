@@ -148,6 +148,14 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				{
 					spadeImage.SetActive(false);
 				}
+				if (!PDSO.triggers.Contains(TriggerNames.ENGINE_OFF))
+				{
+					BackgroundSFX.PlayLoop(engine);
+				}
+				else
+				{
+					smog.SetActive(false);
+				}
                 break;
 			case SceneNames.ACT2_BIRD:
 				BirdFace(false, "no");
@@ -266,6 +274,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		else if (t == TriggerNames.HARE_MORE_DIALOGUE && !PDSO.triggers.Contains(TriggerNames.HARE_MORE_DIALOGUE))
 		{
 			HareSubgoals();
+		}
+		else if (t == TriggerNames.ENGINE_OFF)
+		{
+			BackgroundSFX.StopLoop();
+			smog.SetActive(false);
 		}
 
 		base.addTrigger(t);
@@ -407,6 +420,8 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	[SerializeField] ChoiceSO beaverIdleHare, beaverIdleBoth;
 	[SerializeField] ScriptsSO beaverNoneFixed, beaverPartialFixed, beaverFixed;
 	[SerializeField] ChoiceSO beaverHelped;
+	[SerializeField] AudioClip engine;
+	[SerializeField] GameObject smog;
 	// TODO: going back to idle choices from word interaction should be changed dynamically, but can stay for now
 
 	public void BeaverDia()

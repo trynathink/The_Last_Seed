@@ -421,6 +421,63 @@ MonoBehaviour:
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
   hover: {fileID: 2800000, guid: 859797a8b2e04a2479e81da00bab9ef8, type: 3}
   click: {fileID: 2800000, guid: 805768040ca65ef4cb1f704b859b8512, type: 3}
+--- !u!1001 &321196188
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3060511495263611942, guid: ac922bbff3adc864ab4ee79f72029c89, type: 3}
+      propertyPath: m_Name
+      value: Background SFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 3347713193158076690, guid: ac922bbff3adc864ab4ee79f72029c89, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3347713193158076690, guid: ac922bbff3adc864ab4ee79f72029c89, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3347713193158076690, guid: ac922bbff3adc864ab4ee79f72029c89, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3347713193158076690, guid: ac922bbff3adc864ab4ee79f72029c89, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3347713193158076690, guid: ac922bbff3adc864ab4ee79f72029c89, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3347713193158076690, guid: ac922bbff3adc864ab4ee79f72029c89, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3347713193158076690, guid: ac922bbff3adc864ab4ee79f72029c89, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3347713193158076690, guid: ac922bbff3adc864ab4ee79f72029c89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3347713193158076690, guid: ac922bbff3adc864ab4ee79f72029c89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3347713193158076690, guid: ac922bbff3adc864ab4ee79f72029c89, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ac922bbff3adc864ab4ee79f72029c89, type: 3}
 --- !u!1 &443676902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,6 +1098,7 @@ MonoBehaviour:
   LionIdle6: {fileID: 0}
   FireInit: {fileID: 0}
   FireBeforeLionIdle3: {fileID: 0}
+  sizzle: {fileID: 0}
   CrowdCropHint: {fileID: 0}
   CrowdLumberHint: {fileID: 0}
   CrowdSackHint: {fileID: 0}
@@ -1071,6 +1129,8 @@ MonoBehaviour:
   beaverPartialFixed: {fileID: 11400000, guid: e246e95eb1d7ac149beb2ac862aedc17, type: 2}
   beaverFixed: {fileID: 11400000, guid: 754997c94a3e4fa47b93871ea76394da, type: 2}
   beaverHelped: {fileID: 11400000, guid: a928a0ec883ae4b40a578eb341f6fa99, type: 2}
+  engine: {fileID: 8300000, guid: c484de390ea3adb4f90bb57b44e471a7, type: 3}
+  smog: {fileID: 1022004447}
   BirdIntro: {fileID: 0}
   BirdToken: {fileID: 0}
   BirdIdle: {fileID: 0}
@@ -1102,6 +1162,7 @@ MonoBehaviour:
   videoPanel: {fileID: 0}
   videoPlayer: {fileID: 0}
   audioSource: {fileID: 0}
+  stumpIdles: []
 --- !u!114 &831170366 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5412976005174906715, guid: 6b51fb5f831f44d47935246c86047497, type: 3}
@@ -2977,6 +3038,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1547030916}
   - {fileID: 589803317}
+  - {fileID: 321196188}
   - {fileID: 1020774459}
   - {fileID: 756296242}
   - {fileID: 1421785776}
