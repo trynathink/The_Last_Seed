@@ -43,6 +43,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	// Lion Scene - Fire
 	public ScriptsSO FireInit;
 	public ScriptsSO FireBeforeLionIdle3;
+	[SerializeField] AudioClip sizzle;
 
 	// Crowd
 	public ScriptsSO CrowdCropHint;
@@ -378,8 +379,8 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				if(PDSO.triggers.Contains(TriggerNames.LION_IDLE_5))
 				{
 					DM.SetLines(LionWaterLie);
-
 					PDSO.RemoveItem("Lump of Metal");
+					BackgroundSFX.PlayClip(sizzle);
 				}
 				else
 				{
