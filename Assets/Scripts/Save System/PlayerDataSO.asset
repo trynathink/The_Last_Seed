@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PlayerDataSO
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDataSO
   SaveFile: Save2
-  PlayerLocation: A2 Windmill Inside
+  PlayerLocation: A2 Beaver's River
   HeldItem: 
-  Fire: 9
+  Fire: 10
   FireStage: 0
   BirdTrust: 0
   Inventory:

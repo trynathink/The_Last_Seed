@@ -672,6 +672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI Holder
       objectReference: {fileID: 0}
+    - target: {fileID: 3938908227466585859, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8482493879213678171, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
