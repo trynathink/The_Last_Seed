@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 229157041}
   - component: {fileID: 229157044}
   - component: {fileID: 229157045}
+  - component: {fileID: 229157046}
   m_Layer: 0
   m_Name: Water Wheel
   m_TagString: Untagged
@@ -314,6 +315,28 @@ MonoBehaviour:
   PDSO: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
   hover: {fileID: 2800000, guid: 859797a8b2e04a2479e81da00bab9ef8, type: 3}
   click: {fileID: 2800000, guid: 805768040ca65ef4cb1f704b859b8512, type: 3}
+--- !u!95 &229157046
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229157039}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fa0df167b881c45439a0497757be3e7e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &232873868
 GameObject:
   m_ObjectHideFlags: 0

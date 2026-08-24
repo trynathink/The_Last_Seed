@@ -147,6 +147,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_JAM_FIX))
                 {
                     BlockageRemoval();
+
+					if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_BROK_FIX))
+					{
+                        WaterWheelAnim();
+                    }
                 }
 				if (PDSO.triggers.Contains("Shovel Handle"))
 				{
@@ -712,6 +717,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 {
                     DM.SetLines(PithforkMetal); // adds "WWJamFix" + "BlockageItem" trigger
                 }
+
+				if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_BROK_FIX))
+				{
+                    WaterWheelAnim();
+                }
                 break;
             default:
                 DM.SetLines(DefaultItemFail);
@@ -762,12 +772,22 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			case "Paddle":
 				DM.SetLines(BrokFix);
 				PDSO.RemoveItem("Paddle");
+
+				if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_JAM_FIX))
+				{
+					WaterWheelAnim();
+                }
 				break;
 			default:
 				DM.SetLines(DefaultItemFail);
 				break;
 		}
 	}
+
+	void WaterWheelAnim()
+	{
+        GameObject.Find("Water Wheel").GetComponent<Animator>().SetTrigger("Fix");
+    }
 
     [SerializeReference]
     ScriptsSO EngineOn, EngineOff, EngineOnCrowbar, SpadePickup;
