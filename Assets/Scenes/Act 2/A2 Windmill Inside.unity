@@ -701,6 +701,7 @@ MonoBehaviour:
   LionIdle6: {fileID: 0}
   FireInit: {fileID: 0}
   FireBeforeLionIdle3: {fileID: 0}
+  sizzle: {fileID: 0}
   CrowdCropHint: {fileID: 0}
   CrowdLumberHint: {fileID: 0}
   CrowdSackHint: {fileID: 0}
@@ -731,6 +732,8 @@ MonoBehaviour:
   beaverPartialFixed: {fileID: 0}
   beaverFixed: {fileID: 0}
   beaverHelped: {fileID: 0}
+  engine: {fileID: 0}
+  smog: {fileID: 0}
   BirdIntro: {fileID: 0}
   BirdToken: {fileID: 0}
   BirdIdle: {fileID: 0}
@@ -750,7 +753,7 @@ MonoBehaviour:
   EngineOn: {fileID: 0}
   EngineOff: {fileID: 0}
   EngineOnCrowbar: {fileID: 0}
-  Spade: {fileID: 0}
+  SpadePickup: {fileID: 0}
   spadeImage: {fileID: 0}
   closedFace: {fileID: 0}
   openFace: {fileID: 0}
@@ -762,6 +765,7 @@ MonoBehaviour:
   videoPanel: {fileID: 0}
   videoPlayer: {fileID: 0}
   audioSource: {fileID: 0}
+  stumpIdles: []
 --- !u!1001 &962900927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1027,6 +1031,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 756296243}
+        m_TargetAssemblyTypeName: GameSceneManagerACT2, Assembly-CSharp
+        m_MethodName: addTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Leaffer
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1420687917

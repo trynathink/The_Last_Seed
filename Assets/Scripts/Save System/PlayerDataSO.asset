@@ -15,7 +15,7 @@ MonoBehaviour:
   SaveFile: Save2
   PlayerLocation: A2 Windmill Inside
   HeldItem: 
-  Fire: 7
+  Fire: 9
   FireStage: 0
   BirdTrust: 0
   Inventory:
@@ -43,5 +43,6 @@ MonoBehaviour:
   - WindmillSeen
   - Grainner
   - BrickOut
+  - Leaffer
   CursorHover: {fileID: 2800000, guid: 859797a8b2e04a2479e81da00bab9ef8, type: 3}
   CursorClick: {fileID: 2800000, guid: 805768040ca65ef4cb1f704b859b8512, type: 3}
