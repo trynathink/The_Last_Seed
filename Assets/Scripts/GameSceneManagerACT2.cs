@@ -761,6 +761,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				break;
 			case "Paddle":
 				DM.SetLines(BrokFix);
+				PDSO.RemoveItem("Paddle");
 				break;
 			default:
 				DM.SetLines(DefaultItemFail);
