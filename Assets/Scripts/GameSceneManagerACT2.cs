@@ -116,6 +116,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				if (PDSO.triggers.Contains(brickTrigger))
 				{
 					BrickOut();
+
+					if (PDSO.triggers.Contains(TriggerNames.LEAFOUT))
+					{
+						GameObject.Find("BG & Sprites").transform.Find("Leaf").gameObject.SetActive(false);
+					}
 				}
 
 				if (PDSO.triggers.Contains(handleFixedTrigger))

@@ -28,6 +28,7 @@ public static class TriggerNames
     public const string WINDMILL_HANDLE_FIXED = "WindmillHandleFixed";
     public const string WINDMILL_SCARECROW_CLOTH = "WindmillScarecrowCloth";
     public const string BRICK = "BrickOut";
+    public const string LEAFOUT = "Leaffer";
 
     // Act 2 Hare
     public const string HARE_NAKED_SCARECROW = "NakedScarecrow";
