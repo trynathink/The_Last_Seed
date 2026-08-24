@@ -43,6 +43,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	// Lion Scene - Fire
 	public ScriptsSO FireInit;
 	public ScriptsSO FireBeforeLionIdle3;
+	[SerializeField] AudioClip sizzle;
 
 	// Crowd
 	public ScriptsSO CrowdCropHint;
@@ -146,6 +147,14 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				if (PDSO.triggers.Contains(TriggerNames.SPADE_GAINED))
 				{
 					spadeImage.SetActive(false);
+				}
+				if (!PDSO.triggers.Contains(TriggerNames.ENGINE_OFF))
+				{
+					BackgroundSFX.PlayLoop(engine);
+				}
+				else
+				{
+					smog.SetActive(false);
 				}
                 break;
 			case SceneNames.ACT2_BIRD:
@@ -266,6 +275,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		{
 			HareSubgoals();
 		}
+		else if (t == TriggerNames.ENGINE_OFF)
+		{
+			BackgroundSFX.StopLoop();
+			smog.SetActive(false);
+		}
 
 		base.addTrigger(t);
 	}
@@ -378,8 +392,8 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				if(PDSO.triggers.Contains(TriggerNames.LION_IDLE_5))
 				{
 					DM.SetLines(LionWaterLie);
-
 					PDSO.RemoveItem("Lump of Metal");
+					BackgroundSFX.PlayClip(sizzle);
 				}
 				else
 				{
@@ -406,6 +420,8 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	[SerializeField] ChoiceSO beaverIdleHare, beaverIdleBoth;
 	[SerializeField] ScriptsSO beaverNoneFixed, beaverPartialFixed, beaverFixed;
 	[SerializeField] ChoiceSO beaverHelped;
+	[SerializeField] AudioClip engine;
+	[SerializeField] GameObject smog;
 	// TODO: going back to idle choices from word interaction should be changed dynamically, but can stay for now
 
 	public void BeaverDia()
