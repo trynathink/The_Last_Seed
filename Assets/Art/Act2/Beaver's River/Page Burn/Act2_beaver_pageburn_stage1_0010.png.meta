@@ -5,6 +5,21 @@ TextureImporter:
   - first:
       213: 793431314823182373
     second: Act2_beaver_pageburn_stage1_0010_0
+  - first:
+      213: 2765950956381669780
+    second: Act2_beaver_pageburn_stage1_0010_1
+  - first:
+      213: 5622284108376511833
+    second: Act2_beaver_pageburn_stage1_0010_2
+  - first:
+      213: 7128824664041830237
+    second: Act2_beaver_pageburn_stage1_0010_3
+  - first:
+      213: 7623542928133739654
+    second: Act2_beaver_pageburn_stage1_0010_4
+  - first:
+      213: -5416445720974589643
+    second: Act2_beaver_pageburn_stage1_0010_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -117,9 +132,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 3840
-        height: 2160
+        y: 1966
+        width: 677
+        height: 194
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,6 +145,116 @@ TextureImporter:
       bones: []
       spriteID: 528f4b9b395d20b00800000000000000
       internalID: 793431314823182373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Act2_beaver_pageburn_stage1_0010_1
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 2154
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 499084d7db1a26620800000000000000
+      internalID: 2765950956381669780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Act2_beaver_pageburn_stage1_0010_2
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 1776
+        width: 336
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9551b12cb9d560e40800000000000000
+      internalID: 5622284108376511833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Act2_beaver_pageburn_stage1_0010_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 429
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57b146034caee260800000000000000
+      internalID: 7128824664041830237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Act2_beaver_pageburn_stage1_0010_4
+      rect:
+        serializedVersion: 2
+        x: 3252
+        y: 0
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6845a51e6e34cc960800000000000000
+      internalID: 7623542928133739654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Act2_beaver_pageburn_stage1_0010_5
+      rect:
+        serializedVersion: 2
+        x: 3263
+        y: 0
+        width: 577
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5310028705be4d4b0800000000000000
+      internalID: -5416445720974589643
       vertices: []
       indices: 
       edges: []
@@ -149,6 +274,11 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Act2_beaver_pageburn_stage1_0010_0: 793431314823182373
+      Act2_beaver_pageburn_stage1_0010_1: 2765950956381669780
+      Act2_beaver_pageburn_stage1_0010_2: 5622284108376511833
+      Act2_beaver_pageburn_stage1_0010_3: 7128824664041830237
+      Act2_beaver_pageburn_stage1_0010_4: 7623542928133739654
+      Act2_beaver_pageburn_stage1_0010_5: -5416445720974589643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,8 +15,9 @@ MonoBehaviour:
   Character: 
   Lines:
   - "There\u2019s no grain left\u2026 I hope no one\u2019s hungry."
-  trigger: 
+  trigger: Grainner
   itemGain: {fileID: 0}
   SceneChange: 
+  trustVal: 
   trust: 0
   choice: {fileID: 0}

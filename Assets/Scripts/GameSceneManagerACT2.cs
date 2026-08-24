@@ -106,11 +106,21 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				{
 					windmillAnim.SetBool("spin", true);
 				}
+
+				if (PDSO.triggers.Contains(TriggerNames.GRAIN) && !PDSO.ItemContains("Sack"))
+				{
+					Sack(null);
+				}
 				break;
 			case SceneNames.ACT2_WINDMILL_INSIDE:
 				if (PDSO.triggers.Contains(brickTrigger))
 				{
 					BrickOut();
+
+					if (PDSO.triggers.Contains(TriggerNames.LEAFOUT))
+					{
+						GameObject.Find("BG & Sprites").transform.Find("Leaf").gameObject.SetActive(false);
+					}
 				}
 
 				if (PDSO.triggers.Contains(handleFixedTrigger))
@@ -137,6 +147,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_JAM_FIX))
                 {
                     BlockageRemoval();
+
+					if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_BROK_FIX))
+					{
+                        WaterWheelAnim();
+                    }
                 }
 				if (PDSO.triggers.Contains("Shovel Handle"))
 				{
@@ -520,7 +535,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		{
 			sack1.enabled = false;
 			sack2.enabled = true;
-			DM.SetLines(sackOpen);
+
+			if (!PDSO.triggers.Contains(TriggerNames.GRAIN))
+			{
+                DM.SetLines(sackOpen);
+            }
 		}
 		else if (sack2.enabled)
 		{
@@ -698,6 +717,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
                 {
                     DM.SetLines(PithforkMetal); // adds "WWJamFix" + "BlockageItem" trigger
                 }
+
+				if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_BROK_FIX))
+				{
+                    WaterWheelAnim();
+                }
                 break;
             default:
                 DM.SetLines(DefaultItemFail);
@@ -747,12 +771,23 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				break;
 			case "Paddle":
 				DM.SetLines(BrokFix);
+				PDSO.RemoveItem("Paddle");
+
+				if (PDSO.triggers.Contains(TriggerNames.WATERWHEEL_JAM_FIX))
+				{
+					WaterWheelAnim();
+                }
 				break;
 			default:
 				DM.SetLines(DefaultItemFail);
 				break;
 		}
 	}
+
+	void WaterWheelAnim()
+	{
+        GameObject.Find("Water Wheel").GetComponent<Animator>().SetTrigger("Fix");
+    }
 
     [SerializeReference]
     ScriptsSO EngineOn, EngineOff, EngineOnCrowbar, SpadePickup;
