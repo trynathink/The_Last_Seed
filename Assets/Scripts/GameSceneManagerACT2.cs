@@ -106,6 +106,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				{
 					windmillAnim.SetBool("spin", true);
 				}
+
+				if (PDSO.triggers.Contains(TriggerNames.GRAIN) && !PDSO.ItemContains("Sack"))
+				{
+					Sack(null);
+				}
 				break;
 			case SceneNames.ACT2_WINDMILL_INSIDE:
 				if (PDSO.triggers.Contains(brickTrigger))
@@ -520,7 +525,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		{
 			sack1.enabled = false;
 			sack2.enabled = true;
-			DM.SetLines(sackOpen);
+
+			if (!PDSO.triggers.Contains(TriggerNames.GRAIN))
+			{
+                DM.SetLines(sackOpen);
+            }
 		}
 		else if (sack2.enabled)
 		{
