@@ -103,7 +103,7 @@ public class DialogueManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Dia && ClickIA.phase == InputActionPhase.Started)
+        if (Dia && ClickIA.WasPerformedThisFrame())
         {
 			if (animStarted)
 			{
