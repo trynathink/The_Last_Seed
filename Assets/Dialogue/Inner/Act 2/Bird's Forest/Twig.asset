@@ -15,7 +15,7 @@ MonoBehaviour:
   Character: 
   Lines:
   - This twig looks a little like a tree.
-  trigger: 
+  trigger: Twig Gained
   itemGain: {fileID: 11400000, guid: c0b3f3ea3433d5c46b3a1def79e0bd2c, type: 2}
   SceneChange: 
   trustVal: 

@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Beaver Spade
   m_EditorClassIdentifier: Assembly-CSharp::ScriptsSO
   Character: 
-  Lines: []
+  Lines:
+  - Is that...?
+  - That's a spade!
+  - It looks like the beaver took apart the shovel to make this engine.
   trigger: 
   itemGain: {fileID: 0}
   SceneChange: 

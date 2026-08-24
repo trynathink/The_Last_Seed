@@ -49,6 +49,7 @@ public static class TriggerNames
     public const string BEAVER_PANEL = "BeaverPanel";
 
     // Act 2 Bird
+    public const string TWIG_GAINED = "Twig Gained";
     public const string BIRD_INTRO = "BD1";
     public const string BIRD_WHATHAP = "BD2";
     public const string BIRD_HOWLONG = "Bird Story";

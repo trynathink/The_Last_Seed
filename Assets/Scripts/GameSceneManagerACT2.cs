@@ -178,6 +178,11 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 				PDSO.triggers.RemoveAll(i => i == TriggerNames.SEED_DIG);
 				PDSO.triggers.RemoveAll(i => i == TriggerNames.SEED_WATER);
 				PDSO.triggers.RemoveAll(i => i == TriggerNames.SEED_PLANT);
+
+				if (PDSO.triggers.Contains(TriggerNames.TWIG_GAINED))
+				{
+					GameObject.Find("BG & Sprites").transform.Find("Twig").gameObject.SetActive(false);
+				}
 				break;
 			case SceneNames.ACT2_LION:
 
