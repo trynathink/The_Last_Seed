@@ -16,7 +16,7 @@ MonoBehaviour:
   Lines:
   - WHAT.
   - Why are giving me this lumber?
-  - Oh do you need me to turn it chip away at it?
+  - Oh. Do you need me to chip away at it?
   - HA, why not.
   trigger: 
   itemGain: {fileID: 11400000, guid: b2cd6c60daa723047b210d4359fd802a, type: 2}
