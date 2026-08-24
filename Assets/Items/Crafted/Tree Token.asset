@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tree Token
   m_EditorClassIdentifier: Assembly-CSharp::CombinedItemSO
   Name: Tree Token
-  CursorSprite: {fileID: 2800000, guid: a73a333d45f06a045b34f62afe8c2790, type: 3}
+  CursorSprite: {fileID: 2800000, guid: a9d9e0ebd3cef9349860510c5fbf3375, type: 3}
   CursorBytes: 
   Ingredient1: {fileID: 11400000, guid: c0b3f3ea3433d5c46b3a1def79e0bd2c, type: 2}
   Ingredient2: {fileID: 11400000, guid: 11f6dcb12a8fead4fbdf8f5bf1ffd005, type: 2}
