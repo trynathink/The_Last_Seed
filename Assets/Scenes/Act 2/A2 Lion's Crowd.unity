@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 244479294}
   - component: {fileID: 244479296}
   - component: {fileID: 244479295}
+  - component: {fileID: 244479297}
   m_Layer: 0
   m_Name: Crowd
   m_TagString: Untagged
@@ -389,7 +390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -413,6 +414,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244479293}
   m_CullTransparentMesh: 1
+--- !u!114 &244479297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244479293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e363403b3aa52a379e9ccf4a6e1c7f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickableImage
+  alphaThreshold: 0.1
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 756296243}
+        m_TargetAssemblyTypeName: GameSceneManagerACT2, Assembly-CSharp
+        m_MethodName: CrowdDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &262558830
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,6 +871,81 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8482493879213678171, guid: 93c801c84d22f2b4ca943c61e69516a4, type: 3}
   m_PrefabInstance: {fileID: 558783684}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &613173032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 613173033}
+  - component: {fileID: 613173035}
+  - component: {fileID: 613173034}
+  m_Layer: 0
+  m_Name: Water Full
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &613173033
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613173032}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1943070011}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1919.9999, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &613173034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613173032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 96f3006466ed8f74f9becdcb5bd704c2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &613173035
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613173032}
+  m_CullTransparentMesh: 1
 --- !u!1 &733830565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1265,7 @@ MonoBehaviour:
   LionIdle5: {fileID: 11400000, guid: ed831d3ec03b7145ca260d3a5ce900ed, type: 2}
   LionWaterLie: {fileID: 11400000, guid: 14a0469ce0d3dc644891c38331a3e543, type: 2}
   LionIdle6: {fileID: 11400000, guid: 0e74fa8449840d61484727fb0ce77ba8, type: 2}
+  LionIdle7: {fileID: 11400000, guid: 2ee4d76dc8c33ef4e9465a50c650a6e4, type: 2}
   FireInit: {fileID: 11400000, guid: 767e53d7411f4168bb127f013898b728, type: 2}
   FireBeforeLionIdle3: {fileID: 11400000, guid: 0eef73fb73be6bf77a9ab24f252d05d6, type: 2}
   sizzle: {fileID: 8300000, guid: 49246002d11b5aa4781417d45b02423a, type: 3}
@@ -1194,6 +1299,8 @@ MonoBehaviour:
   beaverPartialFixed: {fileID: 0}
   beaverFixed: {fileID: 0}
   beaverHelped: {fileID: 0}
+  engine: {fileID: 0}
+  smog: {fileID: 0}
   BirdIntro: {fileID: 0}
   BirdToken: {fileID: 0}
   BirdIdle: {fileID: 0}
@@ -2532,6 +2639,7 @@ RectTransform:
   - {fileID: 92691769}
   - {fileID: 244479294}
   - {fileID: 2048438131}
+  - {fileID: 613173033}
   - {fileID: 1485616306}
   - {fileID: 1910054412}
   - {fileID: 1020824810}

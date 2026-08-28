@@ -39,6 +39,7 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
     public ScriptsSO LionIdle5;
 	public ScriptsSO LionWaterLie;
     public ScriptsSO LionIdle6;
+	public ScriptsSO LionIdle7;
 
 	// Lion Scene - Fire
 	public ScriptsSO FireInit;
@@ -300,23 +301,27 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			BackgroundSFX.StopLoop();
 			smog.SetActive(false);
 		}
+		else if(t == "Lion Crowd Speech")
+		{
+			GameObject.Find("Water Full").SetActive(false);
+		}
 
-		base.addTrigger(t);
+			base.addTrigger(t);
 	}
 
 	public void LionDialogue()
 	{
+		// Idle 7
+		if (PDSO.triggers.Contains(TriggerNames.LION_FIRE))
+		{
+			DM.SetLines(LionIdle7);
+		}
 		// Idle 6
-		if (PDSO.triggers.Contains(TriggerNames.LION_IDLE_6))
+		else if (PDSO.triggers.Contains(TriggerNames.LION_IDLE_6))
 		{
 			DM.SetLines(LionIdle6);
-			
-			if (!PDSO.triggers.Contains(TriggerNames.LION_FIRE))
-			{
-                FireStateUp();
-
-				addTrigger(TriggerNames.LION_FIRE);
-            }
+            FireStateUp();
+			addTrigger(TriggerNames.LION_FIRE);
 		}
 		// Idle 5
 		else if(PDSO.triggers.Contains(TriggerNames.LION_IDLE_5))
@@ -428,6 +433,8 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 
 	public void CrowdDialogue()
 	{
+		Debug.Log("DRAGONFWONF");
+
 		if (!PDSO.triggers.Contains(TriggerNames.LION_IDLE_2))
 		{
 			DM.SetLines(crowdLines[crowdLineIndex]);

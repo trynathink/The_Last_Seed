@@ -103,7 +103,9 @@ public class DialogueManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Dia && ClickIA.phase == InputActionPhase.Started)
+        Debug.Log(ClickIA.phase);
+
+        if (Dia && ClickIA.WasPressedThisFrame())
         {
 			if (animStarted)
 			{
@@ -368,6 +370,10 @@ public class DialogueManager : MonoBehaviour
                         if(script.trust > 100)
                         {
                             GameObject.Find("Canvas").SendMessage("FireStateUp");
+                        }
+                        else if (script.trust > 50)
+                        {
+                            break;
                         }
                         else
                         {
