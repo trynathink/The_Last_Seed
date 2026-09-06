@@ -1147,6 +1147,7 @@ MonoBehaviour:
   LionIdle6: {fileID: 0}
   FireInit: {fileID: 0}
   FireBeforeLionIdle3: {fileID: 0}
+  sizzle: {fileID: 0}
   CrowdCropHint: {fileID: 0}
   CrowdLumberHint: {fileID: 0}
   CrowdSackHint: {fileID: 0}
@@ -1177,6 +1178,8 @@ MonoBehaviour:
   beaverPartialFixed: {fileID: 0}
   beaverFixed: {fileID: 0}
   beaverHelped: {fileID: 0}
+  engine: {fileID: 0}
+  smog: {fileID: 0}
   BirdIntro: {fileID: 11400000, guid: 719518a736211ed44a572ca19cd693a6, type: 2}
   BirdToken: {fileID: 11400000, guid: 41e4dd6709862c94284d450e55d9be4e, type: 2}
   BirdIdle: {fileID: 11400000, guid: 2619c06c47455d545bee535027b5a65b, type: 2}
@@ -1380,7 +1383,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 70}
+  m_SizeDelta: {x: 500, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &927958777
 MonoBehaviour:
@@ -1429,8 +1432,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3202,7 +3205,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 70}
+  m_SizeDelta: {x: 500, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2009385622
 MonoBehaviour:
@@ -3251,8 +3254,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

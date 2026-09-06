@@ -48,8 +48,6 @@ public class DialogueManager : MonoBehaviour
 
 	[SerializeField]
 	private Vector2 LinePaddingRange;
-
-	[SerializeField]
 	private int[] CharacterLimits;
 
 	[SerializeField]
@@ -99,11 +97,18 @@ public class DialogueManager : MonoBehaviour
 			current += BubbleChances[i];
 			BubbleChances[i] = current;
 		}
+
+		CharacterLimits = new int[Bubbles.Length];
+		for (int i = 0; i < Bubbles.Length; i++)
+		{
+			CharacterLimits[i] = Bubbles[i].Get().GetComponentInChildren<TMP_Text>().text.Length;
+		}
     }
 
     void FixedUpdate()
     {
         if (Dia && ClickIA.phase == InputActionPhase.Started)
+		//if (Dia && !sound.isPlaying)
         {
 			if (animStarted)
 			{
@@ -208,47 +213,44 @@ public class DialogueManager : MonoBehaviour
     {
 		animStarted = true;
         string[] line = script.Lines[LineNum].Split(' ');
+		int wi = 0;
+		int previous = -1;
 		const char interactable = '^';
 		Vector2 placement = TextArea.rect.position;
 		placement.y += TextArea.rect.height;
 		float end = placement.x + TextArea.rect.width;
 
-		int bubble = RandBubble(0);
-		int limit = CharacterLimits[bubble];
-		string words = line[0] + ' ';
-
-		for (int i = 1; i < line.Length; i++)
+		while(wi < line.Length)
 		{
-			string word = line[i];
-			if (word.Length == 0) continue;
+			int bubble = RandBubble(previous);
+			int limit = CharacterLimits[bubble];
+			string words = string.Empty;
+			string word = line[wi];
 
-			if (words.Length + word.Length > limit || word[0] == interactable || words[0] == interactable)
+			while (words.Length + word.Length < limit && wi < line.Length)
 			{
-				// TODO: prefab not always small for interactable word
-				float bubbleWidth = NPCBubble(bubble, placement, words);
-				yield return new WaitWhile(() => sound.isPlaying && !skipAnim);
-
-				float moveRightBuffer = UnityEngine.Random.Range(MoveRightBufferRange.x, MoveRightBufferRange.y);
-				placement.x += bubbleWidth + moveRightBuffer;
-				// TODO: possibly change y position just a little bit each time
-
-				if (UnityEngine.Random.value <= MoveDownChance || placement.x > end)
-				{
-					placement.y -= UnityEngine.Random.Range(MoveDownRange.x, MoveDownRange.y);
-					float padding = UnityEngine.Random.Range(LinePaddingRange.x, LinePaddingRange.y);
-					placement.x = TextArea.rect.x + padding;
-				}
-
-				bubble = RandBubble(bubble);
-				limit = CharacterLimits[bubble];
-				words = "";
+				words += word + ' ';
+				if (word[0] == interactable) break;
+				word = line[++wi % line.Length];
 			}
 
-			words += word + ' ';
+			if (words.Length == 0) continue;
+			float bubbleWidth = NPCBubble(bubble, placement, words);
+			previous = bubble;
+			yield return new WaitWhile(() => sound.isPlaying && !skipAnim);
+
+			float moveRightBuffer = UnityEngine.Random.Range(MoveRightBufferRange.x, MoveRightBufferRange.y);
+			placement.x += bubbleWidth + moveRightBuffer;
+			// TODO: possibly change y position just a little bit each time
+
+			if (UnityEngine.Random.value <= MoveDownChance || placement.x > end)
+			{
+				placement.y -= UnityEngine.Random.Range(MoveDownRange.x, MoveDownRange.y);
+				float padding = UnityEngine.Random.Range(LinePaddingRange.x, LinePaddingRange.y);
+				placement.x = TextArea.rect.x + padding;
+			}
 		}
 
-		// TODO: prefab not always right size for last word(s)
-		NPCBubble(bubble, placement, words);
 		animStarted = false;
     }
 
