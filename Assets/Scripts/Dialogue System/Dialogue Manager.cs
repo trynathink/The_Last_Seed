@@ -10,6 +10,7 @@ using UnityEngine.Audio;
 using System;
 using System.Reflection;
 using Unity.VisualScripting;
+using Unity.Mathematics;
 
 // Gaurav Singh
 
@@ -49,6 +50,7 @@ public class DialogueManager : MonoBehaviour
 	[SerializeField]
 	private Vector2 LinePaddingRange;
 	private int[] CharacterLimits;
+	private int MaxCharacterLimit;
 
 	[SerializeField]
 	private RectTransform TextArea;
@@ -102,6 +104,7 @@ public class DialogueManager : MonoBehaviour
 		for (int i = 0; i < Bubbles.Length; i++)
 		{
 			CharacterLimits[i] = Bubbles[i].Get().GetComponentInChildren<TMP_Text>().text.Length;
+			MaxCharacterLimit = math.max(CharacterLimits[i], MaxCharacterLimit);
 		}
     }
 
@@ -226,12 +229,22 @@ public class DialogueManager : MonoBehaviour
 			string words = string.Empty;
 			string word = line[wi];
 
-			while (words.Length + word.Length < limit && wi++ < line.Length)
+			// NOTE: This shouldn't happen, but prevents an infinite loop for the outer loop just in case
+			if (word.Length > MaxCharacterLimit)
 			{
-				if (word.Length == 0) continue; // Handles accidental whitespace
-				words += word + ' ';
-				if (word[0] == interactable) break; 
-				word = line[wi % line.Length];
+				words = word;
+				wi++;
+			}
+			else
+			{
+				while (words.Length + word.Length <= limit)
+				{
+					if (word.Length == 0) continue; // Handles accidental whitespace
+					words += word + ' ';
+					wi++;
+					if (wi >= line.Length || word[0] == interactable) break;
+					word = line[wi];
+				}
 			}
 
 			if (words.Length == 0) continue;
