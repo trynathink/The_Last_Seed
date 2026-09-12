@@ -107,8 +107,7 @@ public class DialogueManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Dia && ClickIA.phase == InputActionPhase.Started)
-		//if (Dia && !sound.isPlaying)
+        if (Dia && ClickIA.WasPerformedThisFrame())
         {
 			if (animStarted)
 			{
@@ -227,11 +226,12 @@ public class DialogueManager : MonoBehaviour
 			string words = string.Empty;
 			string word = line[wi];
 
-			while (words.Length + word.Length < limit && wi < line.Length)
+			while (words.Length + word.Length < limit && wi++ < line.Length)
 			{
+				if (word.Length == 0) continue; // Handles accidental whitespace
 				words += word + ' ';
-				if (word[0] == interactable) break;
-				word = line[++wi % line.Length];
+				if (word[0] == interactable) break; 
+				word = line[wi % line.Length];
 			}
 
 			if (words.Length == 0) continue;
