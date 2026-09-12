@@ -410,13 +410,18 @@ public class DialogueManager : MonoBehaviour
             {
                 GameObject.Find("Canvas").GetComponent<GameSceneManagerACT2>().BirdFace(false, "no");
             }
-
-            Dia = false;
-            DiaImg.enabled = false;
-            LineNum = 0;
-            script = null;
+			StartCoroutine(EndDia());
         }
     }
+
+	IEnumerator EndDia()
+	{
+		yield return new WaitForEndOfFrame();
+		Dia = false;
+		DiaImg.enabled = false;
+		LineNum = 0;
+		script = null;
+	}
 
     void SetChoice()
     {
