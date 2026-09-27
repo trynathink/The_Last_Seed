@@ -436,13 +436,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 	}
 
 	[SerializeReference]
-	ScriptsSO BeaverInit, beaverIdle, beaverLumber;
+	ScriptsSO BeaverInit, beaverIdle, beaverLumber, beaverShovel;
 	[SerializeField] ChoiceSO beaverIdleHare, beaverIdleBoth;
 	[SerializeField] ScriptsSO beaverNoneFixed, beaverPartialFixed, beaverFixed;
 	[SerializeField] ChoiceSO beaverHelped;
 	[SerializeField] AudioClip engine;
 	[SerializeField] GameObject smog;
-	// TODO: going back to idle choices from word interaction should be changed dynamically, but can stay for now
 
 	public void BeaverDia()
 	{
@@ -453,39 +452,12 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 			return;
 		}
 
-
 		if (PDSO.triggers.Contains("BeaverInit"))
 		{
-			if (HasAllTriggers("BeaverShovelAsked", "BeaverEngineAsked"))
-			{
-				int last = beaverIdleBoth.Outcomes.Count - 1;
-
-				if (HasAllTriggers(TriggerNames.WATERWHEEL_BROK_FIX, TriggerNames.WATERWHEEL_JAM_FIX))
-				{
-					if (HasAllTriggers(TriggerNames.WINDMILL_PANEL_FIXED, handleFixedTrigger))
-					{
-						beaverIdleBoth.Outcomes[last] = beaverFixed;
-					}
-					else
-					{
-						if (PDSO.ItemContains("Rope"))
-						{
-							beaverPartialFixed.choice = beaverHelped;
-						}
-
-						beaverIdleBoth.Outcomes[last] = beaverPartialFixed;
-					}
-				}
-				else
-				{
-					beaverIdleBoth.Outcomes[last] = beaverNoneFixed;
-				}
-
-				beaverIdle.choice = beaverIdleBoth;
-			}
-			else if (PDSO.triggers.Contains("HareBeaverTalk"))
+			if (!CheckBeaverIdleBoth() && PDSO.triggers.Contains("HareBeaverTalk"))
 			{
 				beaverIdle.choice = beaverIdleHare;
+				beaverShovel.choice = beaverIdleHare;
 			}
 
 			DM.SetLines(beaverIdle);
@@ -494,6 +466,45 @@ public class GameSceneManagerACT2 : GameSceneManagerBase
 		{
 			DM.SetLines(BeaverInit);
 		}
+	}
+
+	private bool CheckBeaverIdleBoth()
+	{
+		if (PDSO.triggers.Contains(TriggerNames.BEAVER_ENGINE_ASKED))
+		{
+			int last = beaverIdleBoth.Outcomes.Count - 1;
+
+			if (HasAllTriggers(TriggerNames.WATERWHEEL_BROK_FIX, TriggerNames.WATERWHEEL_JAM_FIX))
+			{
+				if (HasAllTriggers(TriggerNames.WINDMILL_PANEL_FIXED, handleFixedTrigger))
+				{
+					beaverIdleBoth.Outcomes[last] = beaverFixed;
+				}
+				else
+				{
+					if (PDSO.ItemContains("Rope"))
+					{
+						beaverPartialFixed.choice = beaverHelped;
+					}
+
+					beaverIdleBoth.Outcomes[last] = beaverPartialFixed;
+				}
+			}
+			else
+			{
+				beaverIdleBoth.Outcomes[last] = beaverNoneFixed;
+			}
+
+			beaverShovel.choice = beaverIdleBoth;
+
+			if (PDSO.triggers.Contains(TriggerNames.BEAVER_SHOVEL_ASKED))
+			{
+				beaverIdle.choice = beaverIdleBoth;
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	[SerializeReference]
