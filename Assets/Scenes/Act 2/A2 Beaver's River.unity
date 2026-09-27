@@ -1364,6 +1364,7 @@ MonoBehaviour:
   BeaverInit: {fileID: 11400000, guid: 6aed6967f853231479afc70e7fc97904, type: 2}
   beaverIdle: {fileID: 11400000, guid: 70cc78a3d2834e148883f84e92ed05ff, type: 2}
   beaverLumber: {fileID: 11400000, guid: 08c9987690739bb42913f3e6f3d11ec3, type: 2}
+  beaverShovel: {fileID: 11400000, guid: bb042ac1d38a46541b99ff65574d84b5, type: 2}
   beaverIdleHare: {fileID: 11400000, guid: 0ea1d0741847f9847a630fcf6f28d2c1, type: 2}
   beaverIdleBoth: {fileID: 11400000, guid: e492afad2f67b4049a9935e86cff8b83, type: 2}
   beaverNoneFixed: {fileID: 11400000, guid: 955211213735b3743a1ba878bf6a3e43, type: 2}
