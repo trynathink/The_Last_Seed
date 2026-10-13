@@ -47,6 +47,8 @@ public static class TriggerNames
     public const string WATERWHEEL_JAM_FIX = "WWJamFix";
     public const string WATERWHEEL_BROK_FIX = "WWBrokFix";
     public const string BEAVER_PANEL = "BeaverPanel";
+    public const string BEAVER_SHOVEL_ASKED = "BeaverShovelAsked";
+    public const string BEAVER_ENGINE_ASKED = "BeaverEngineAsked";
 
     // Act 2 Bird
     public const string TWIG_GAINED = "Twig Gained";

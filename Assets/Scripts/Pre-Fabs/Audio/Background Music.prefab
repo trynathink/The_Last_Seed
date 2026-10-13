@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3c995b1b393b674f9953bcfe6e05610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundMusic
+  alwaysChangeTrack: 0
+  fireMusic: {fileID: 8300000, guid: 5e0caeb82a7619e4bac25dcffc74c838, type: 3}
+  playerData: {fileID: 11400000, guid: 00012e2bd0c5479408dbba379ce047e1, type: 2}
 --- !u!82 &1673299921369360853
 AudioSource:
   m_ObjectHideFlags: 0
