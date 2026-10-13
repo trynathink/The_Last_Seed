@@ -2205,6 +2205,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 586137922226128758, guid: 18a493dd75c101d469e0069ce31b1962, type: 3}
+      propertyPath: alwaysUnlock
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 586137922226128758, guid: 18a493dd75c101d469e0069ce31b1962, type: 3}
+      propertyPath: alwaysChangeTrack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1673299921369360853, guid: 18a493dd75c101d469e0069ce31b1962, type: 3}
       propertyPath: m_Resource
       value: 

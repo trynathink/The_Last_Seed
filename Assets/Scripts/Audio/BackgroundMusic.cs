@@ -10,11 +10,24 @@ using System.Collections;
 public class BackgroundMusic : AudioSingleton<BackgroundMusic>
 {
 	const float fadeTime = 1f; // Time in seconds for fade in and out respectively
+	[SerializeField] private bool alwaysChangeTrack = false; // Change track on awake even if fire music is playing
+	[SerializeField] private AudioClip fireMusic;
+	[SerializeField] private PlayerDataSO playerData;
 
 	// NOTE: This override assumes that the clip on the AudioSource for this BGM contains that scene's song
 	protected override void Awake()
 	{
 		AudioSource current = gameObject.GetComponent<AudioSource>();
+
+		if (playerData.FireStage >= 4 && !alwaysChangeTrack)
+		{
+			current.clip = fireMusic;
+
+			if (source == null)
+			{
+				current.Play();
+			}
+		}
 
 		if (source != null && current.clip != source.clip)
 		{
