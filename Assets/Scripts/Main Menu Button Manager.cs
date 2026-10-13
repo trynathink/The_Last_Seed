@@ -30,12 +30,11 @@ public class MainMenuButtonManager : MonoBehaviour
     {
         Cursor.SetCursor(default, default, CursorMode.ForceSoftware);
 
-
         TitleButtons = GameObject.Find("Title Screen");
         SaveButtons = GameObject.Find("Saves Screens");
 
-        TitleButtons.SetActive(false);
-        SaveButtons.SetActive(true);
+        TitleButtons.SetActive(true);
+        SaveButtons.SetActive(false);
 
         SaveImgSet();
     }
